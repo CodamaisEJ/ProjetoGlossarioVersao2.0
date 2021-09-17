@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
 *{
   margin: 0; padding: 0;
 }
@@ -69,11 +71,20 @@ h2{
   height: 50px;
   left: 752px;
   top: 316px;
-
+  display: flex;
   background: #3485FF;
   border: 2px solid #3485FF;
   box-sizing: border-box;
   border-radius: 8px;
+}
+#admin p{
+  margin:auto;
+  margin-right: 50px;
+}
+#admin i{
+  margin: auto;
+  margin-left: 50px;
+  color:#FFF;
 }
 
 #text1{
@@ -110,41 +121,49 @@ h2{
   height: 50px;
   left: 752px;
   top: 416px;
-
-  background: #B234FF;
+  display: flex;
+  background: #430D64;
   border-radius: 8px;
 }
+#editor p{
+  margin: auto;
+  margin-right: 85px;
 
+}
+#editor i{
+  margin: auto;
+  margin-left:45px;
+  color: #FFF;
+}
 #outs{
   position: absolute;
   width: 282px;
   height: 50px;
   left: 752px;
   top: 514px;
-
+  display: flex;
   background: #0D4F3F;
   border-radius: 8px;
 }
+#outs p{
+  margin: auto;
+  margin-right: 45px;
 
+}
+#outs i{
+  margin: auto;
+  margin-left: 40px;
+  color: #FFF;
+}
 footer{
   background: #3485FF;  
   grid-area: f;
 }
-
-#rodape{
-  position: absolute;
-  width: 475px;
-  height: 51px;
-  left: 652px;
-  top: 781px;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 26px;
-  line-height: 39px;
-
-  color: #0D114F;
+footer p{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #FFF;
 }
 
 .icon{
