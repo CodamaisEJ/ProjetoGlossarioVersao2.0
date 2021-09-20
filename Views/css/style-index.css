@@ -4,8 +4,6 @@
   margin: 0; padding: 0;
 }
 
-body{}
-
 section{
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -17,7 +15,8 @@ section{
 
 header{
   background: #3485FF;
-  height: 87px;
+  width: 100%;
+  height: 10vh;
   left: 0px;
   top: 0px; 
   grid-area: h;
@@ -156,6 +155,10 @@ h2{
   color: #FFF;
 }
 footer{
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  bottom: 0;
   background: #3485FF;  
   grid-area: f;
 }

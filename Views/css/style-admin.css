@@ -24,6 +24,7 @@
 }
 .admin-content{
   display: flexbox;
+  text-align: center;
   margin: auto;
   width: 150vh;
   height: 40vh;
@@ -66,7 +67,7 @@
   border-radius: 8px;
 }
 .btn-acessar{
-  width: 20vw;
+  width: 22vw;
   height: 6vh;
   background: #3485FF;
   border: 2px solid #A1B2CD;
