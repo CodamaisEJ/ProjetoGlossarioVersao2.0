@@ -1,0 +1,122 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Barra de navegação */
+header,.navbar{
+  background-color: var(--color-profissional);
+  height: 83px;
+  left: 0px;
+  top: 0px; 
+}
+
+<<<<<<< Updated upstream
+.topo h2{
+  margin-right:2px;
+  justify-content: left;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-right:auto;
+  color: #FFF;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.admin-content{
+  text-align: center;
+  display: flexbox;
+  margin: auto;
+  width: 150vh;
+  height: 40vh;
+  padding: 0;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+=======
+h1{
+  position: absolute;
+  width: 505px;
+  height: 77px;
+  left: 25px;
+  top: 10px;
+>>>>>>> Stashed changes
+
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 52px;
+
+  color: #FFFFFF;
+}
+
+
+.input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.input input{
+  padding-left: 20px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  height: 6vh;
+  width: 15vw;
+  border: 1px solid #A1B2CD;
+  border-radius: 8px;
+}
+.btn-acessar{
+<<<<<<< Updated upstream
+  color: #FFF;
+  width: 22vw;
+=======
+  width: 15vw;
+>>>>>>> Stashed changes
+  height: 6vh;
+  background: var(--color-profissional);
+  border: 2px solid #A1B2CD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 350px;
+  margin-bottom: 10px;
+}
+
+
+.container{
+  justify-items: center;
+}
+.btn-acessar i{
+  color: #FFF;
+}
+.btn-acessar a{
+  margin-left: 10px;
+  color: #FFF;
+}
+
+p{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  margin-left: -205px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 52px;
+}
+
+/* Footer */
+
+.text-center{
+  margin-top: 0px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #FFF;
+}
+

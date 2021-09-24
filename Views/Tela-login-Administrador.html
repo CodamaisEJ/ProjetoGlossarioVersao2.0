@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projeto Glossário</title>
+  <script src="./js/index.js"></script>
+  <title>Administrador</title>
   <!-- Bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <!-- Fonte-->
@@ -14,8 +15,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style-index.css">
-  <link rel="stylesheet" href="css/main-index.css">
+  <link rel="stylesheet" href="/css/style-admin.css">
+  <link rel="stylesheet" href="/css/main-index.css">
   <!-- JavaScript do Bootstrap-->
   <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -27,35 +28,45 @@
   <!-- Font Awesome-->
   <script src="https://kit.fontawesome.com/d3a5293b98.js" crossorigin="anonymous"></script>
   <!-- Progess Bar-->
-  <script src="js/progressbar.min.js"></script>
+  <script src="/js/progressbar.min.js"></script>
   <!-- Parallax-->
   <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 </head>
-<body>
-  <header>
-    <div class="container" id="nav-container">
-      <nav class="navbar navbar fixed-top">
-        <h1>Glossário COVID-19</h1>
-      </nav>
-    </div>
-  </header>
+  <body>
+    <header>
+      <div class="container" id="nav-container">
+        <nav class="navbar navbar fixed-top">
+          <h1>Glossário COVID-19</h1>
+        </nav>
+      </div>
+    </header>
+
+ 
   <main>
     <div class="container">
       <h2>Para acessar a ficha selecione o tipo de usuário</h2>
       <div class="d-grid gap-2 col-6 mx-auto">
-          <a href="./Tela-login-Administrador.html">
-          <button id="admin"><i class="fas fa-user-friends" ></i><p id="text1">Administrador</p></button>
-          </a>
-          <a href="./Tela-Login-Profissional.html">
-          <button id="editor"><i class="fas fa-user-friends"></i><p id="text1">Profissional</p></button>
-          </a>
-          <a href="./Tela-Login-OutroUsuario.html">
-          <button id="outs"><i class="fas fa-user-friends"></i><p id="text1">Outro</p></button>
-          </a>
+        <p>Usuário:</p>
+          <div class="input">
+            <input type="text" placeholder="ADMIN" class="input">
+          </div>
+        <p>Senha:</p>
+          <div class="input">
+            <input type="password" placeholder="********" class="input">
+          </div>
       </div>
-      
+<<<<<<< Updated upstream
+      <a href="Tela-cadastrar.html">
+        <button class="btn-acessar"><i class="fas fa-user-friends">Acessar</i></button>
+      </a>
     </div>
+  </section>
+=======
+      <button class="btn-acessar"><i class="fas fa-user-friends"></i><a href="Tela-cadastrar.html">Acessar</a></i></button>
+    </div> 
   </main>
+>>>>>>> Stashed changes
+
   <!-- Footer -->
 <footer class="text-center text-white">
   <!-- Copyright -->
@@ -65,6 +76,5 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
-  <script src="./js/index.js"></script>
-</body>
+  </body>
 </html>
