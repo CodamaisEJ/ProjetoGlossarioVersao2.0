@@ -6,7 +6,7 @@ Olá 🐱‍🏍, seguem esses passos abaixo para startar o prototipo do sistema
 
 
 ### OBS: 
-Chequem, o arquivos config.json que está na pasta config dentro de src, este arquivo é onde está a credenciais do bd, o nome de usuario do banco de dados que no meu caso é o postgres e a senha,
+Chequem, o arquivo <code>config.json</code> que está em: <code>back-end/src/config</code>, este arquivo é onde está a credenciais do bd, o nome de usuario do banco de dados que no meu caso é o postgres e a senha,
 chequem para ver se são as mesmas credenciais do banco de voces.
 
 
@@ -24,7 +24,7 @@ Para startar rode:
 
 ## Atenção 💣
 
- Criem outro terminal para executar os comandos abaixo, pois no terminal anterior tem que está rodando o server com nodemon
+ ### Criem outro terminal para executar os comandos abaixo, pois no terminal anterior tem que está rodando o server com nodemon!
 
 Para criar a database:
 
