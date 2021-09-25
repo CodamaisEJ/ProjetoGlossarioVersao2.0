@@ -6,7 +6,7 @@ Olá 🐱‍🏍, seguem esses passos abaixo para startar o prototipo do sistema
 
 
 ### OBS: 
-Chequem, no arquivos config.json lá é onde está a credenciais do bd, o nome de usuario do banco de dados que no meu caso é o postgres e a senha,
+Chequem, o arquivos config.json que está na pasta config dentro de src, este arquivo é onde está a credenciais do bd, o nome de usuario do banco de dados que no meu caso é o postgres e a senha,
 chequem para ver se são as mesmas credenciais do banco de voces.
 
 
