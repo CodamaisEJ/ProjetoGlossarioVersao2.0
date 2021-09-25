@@ -28,7 +28,9 @@ Para startar rode:
 
 Para criar a database:
 
+    cd back-end 
     npx sequelize-cli db:create
+    
 
 Para criar as migrations no bd:
 
