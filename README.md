@@ -28,7 +28,8 @@ Para startar rode:
 
 Para criar a database:
 
-    cd back-end 
+    cd back-end/ 
+    
     npx sequelize-cli db:create
     
 
