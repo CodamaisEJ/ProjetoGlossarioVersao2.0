@@ -1,0 +1,148 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+html, body{
+  height: 100%;
+}
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecalho{
+  background-color: #186EEF;
+  color: #FFF;
+  padding: 20px;
+  display: flex;
+}
+.cabecalho a{
+  margin-left: auto;
+}
+.cabecalho button{
+  width: 15vw;
+  height: 5vh;
+  background: #FFFFFF;
+  border:1px solid #3485FF;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+}
+.cabecalho h2{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.conteudo{
+  flex:1 0 auto;
+}
+.conteudo-main{
+  margin-left: 50px;
+  margin-top: 25px;
+}
+.conteudo-main h2{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  color: #101564;
+}
+.conteudo-main label{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #4D5E77;
+}
+.conteudo-main p {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.conteudo-main a{
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+}
+.divBusca{
+  margin-right: 50px;
+  text-align: right;
+}
+.divBusca input{
+  width: 17vw;
+  height: 7vh;
+  padding-left: 10px;
+  background: #FFFFFF;
+  border: 1px solid #A1B2CD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+}
+.total-termos{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 7rem);
+}
+.termos{
+  opacity: 0;
+  height: 60px;
+  width: 293px;
+  background: #FFFFFF;
+  border: 2px solid #A1B2CD;
+  box-sizing: border-box;
+  border-radius: 8px;  
+  display: flex;
+}
+.termos i{
+  margin: auto;
+  color: #E83F5B;
+  cursor: pointer;
+}
+.termo-especifico{
+  margin: auto;
+  margin-top: 15px;
+  width: 193px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #47D9B6;
+  border: 1px solid #47D9B6;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.termo-especifico p{
+  margin-top: 2px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.rodape{
+  flex-shrink: 0;
+  background-color: #186EEF;
+  color: #FFF;
+  padding: 20px;
+  text-align: center;
+}
+.rodape h2{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+}

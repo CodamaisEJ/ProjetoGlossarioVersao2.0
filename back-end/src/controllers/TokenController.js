@@ -4,13 +4,13 @@ const authConfig = require('../config/auth')
 
 class TokenController {
 
-    static async criaToken(req, res, next){
-        const { login, senha } = req.body
+    static async createToken(req, res, next){
+        const { email, senha } = req.body
         try { 
 
-            const userLogin = await database.Users.findOne({ where: { login } })
+            const userEmail = await database.Users.findOne({ where: { email } })
 
-            if(!userLogin){
+            if(!userEmail){
                 return res.status(401).json({error: "Login não encontrado!"})
             }
 
@@ -23,7 +23,7 @@ class TokenController {
             const { id, nome } = userSenha
 
             return await res.json({ 
-                user: { id, nome, login },
+                user: { id, nome, email },
                 token: jwt.sign({ id }, authConfig.secret, {
                     expiresIn: authConfig.expiresIn
                 }

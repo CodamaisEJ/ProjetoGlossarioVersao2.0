@@ -1,4 +1,5 @@
 'use strict';
+const { text } = require('express');
 const {
   Model
 } = require('sequelize');
@@ -11,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   Users.init({
     nome: DataTypes.STRING,
-    login: DataTypes.STRING,
+    email: DataTypes.STRING,
     senha: DataTypes.STRING,
     type_user: DataTypes.STRING
   }, {

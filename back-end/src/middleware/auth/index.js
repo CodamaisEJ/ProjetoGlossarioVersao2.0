@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 const { promisify } = require('util')
-const authConfig = require('../config/auth')
+const authConfig = require('../../config/auth')
 
 
 const verifyToken = async (req, res, next) => {
@@ -15,9 +15,6 @@ const verifyToken = async (req, res, next) => {
 
     try {
         const decoded = await promisify(jwt.verify)(token, authConfig.secret)
-
-        req.userId = decode.id
-        console.log(decoded)
         return next();
 
     } catch (error) {
