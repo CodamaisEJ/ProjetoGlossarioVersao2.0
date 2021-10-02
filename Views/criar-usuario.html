@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/usuario-style.css">
+    <link rel="stylesheet" href="css/criar-usuario-style.css">
 
     <title>Cadastro</title>
 
   </head>
   <body onload="mudaCor()">
-    <script src="js/script-usuario.js"></script>
+    <script src="js/script-criar-usuario.js"></script>
 
     <header class="cabecalho" id="header">
 
@@ -30,36 +30,27 @@
 
     <section class="conteudo">
       <div class="conteudo-main">
-        <h2>Usuários cadastrados</h2>
+        <h2>Cadastrar Usuário</h2>
 
-        <div class="users">
-          <h3>Nome</h3>
+        <div class="cadastro">
+          <label for="nome">Nome Completo: <br>
+            <input type="text" id="nome" placeholder="Seu nome">
+          </label>
 
-          <h3>Tipo de usuário</h3>
+          <label for="email">E-mail: <br>
+            <input type="email" id="email" placeholder="Seu e-mail">
+          </label>
 
-          <h3>E-mail</h3>
+          <label for="tipo-usuario">Tipo de Usuário: <br>
+            <input type="radio" id="tipo-usuario">
+          </label>
 
-          <h3>Ações</h3>
-
-          <p>Isabella</p>
-
-          <p>Pesquisador</p>
-
-          <p>fulano@fulano.com.br</p>
-
-          <p><i class="fas fa-pencil-alt" id="lapis"></i><i class="fas fa-trash-alt" id="lixeira"></i></p>
-          <p>Isabella</p>
-
-          <p>Pesquisador</p>
-
-          <p>fulano@fulano.com.br</p>
-
-          <p><i class="fas fa-pencil-alt" id="lapis"></i><i class="fas fa-trash-alt" id="lixeira"></i></p>
-  
+          <label for="senha">Senha Gerada: <br>
+            <input type="password" id="senha" placeholder="********">
+          </label>
         </div>
-
-        <button id="btn-criar-user" onclick="trocarPagina1()">Criar Usuário</button>
-
+        <button id="btn-voltar" onclick="trocarPagina()">Voltar</button>
+        <button id="btn-salvar">Salvar</button>
       </div>
     </section>
 

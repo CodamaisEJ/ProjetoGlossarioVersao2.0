@@ -70,8 +70,19 @@ body{
 .conteudo{
   flex:1 0 auto;
 }
-.conteudo-main {
-  text-align: right;
+.conteudo-main{
+ text-align: center;
+}
+.conteudo-main button{
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+  border-style: none;
+  width: 117px;
+  height: 35px;
+  background-color: #314C85;
+  color: #FFF;
+  border-radius: 8px;
 }
 .conteudo-main h2{
   text-align: center;
@@ -83,52 +94,34 @@ body{
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.conteudo-main button{
-  padding: 5px;
-  background-color: #234F90;
-  border-style: none;
-  border-radius: 8px;
+.cadastro{
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
-.users{
-  text-align: left;
- display: grid;
- grid-template-columns: repeat(4, 1fr);
- grid-template-rows: repeat(5, 1fr);
- margin-bottom: 30px;
-}
-.users h3{
-  margin-left: 100px;
+.cadastro label{
   font-family: 'Popins', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 18px;
   color: #234F90;
 }
-.users p{
-  font-family: 'Popins', sans-serif;
-  margin-bottom: 15px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  margin-left: 105px;
-  color: #0D114F;
+.cadastro input{
+  padding-left: 20px;
+  width: 626px;
+  background-color: #FFFFFF;
+  border: 1px solid #7B8AC7;
+  box-sizing:border-box;
+  border-radius: 8px;
 }
-.users i{
-  cursor: pointer;
-  font-size: 20px;
-  color: #0D114F;
+#btn-voltar{
+  opacity: 50%;
+  transition-duration:1s;
 }
-#lixeira{
-  margin-left: 25px;
+#btn-voltar:hover{
+  opacity: 100%;
 }
-#btn-criar-user{
-  font-family: 'Popins', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  color: #FFFFFF;
-  margin-right: 50px;
-}
+
 
 .rodape{
   flex-shrink: 0;

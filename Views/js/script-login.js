@@ -34,6 +34,8 @@ function validador(){
   
     if(user === usuario && password === senha){
       location.href = "tela-cadastro.html"
+      var value = 1;
+      localStorage.setItem("StorageName",value);
     }
     else{
       window.alert("Usuário ou senha incorretos!")
@@ -51,6 +53,8 @@ function validador(){
   
     if(user === usuario && password === senha){
       location.href = "tela-cadastro.html"
+      var value = 2;
+      localStorage.setItem("StorageName",value);
     }
     else{
       window.alert("Usuário ou senha incorretos!")
@@ -68,6 +72,8 @@ function validador(){
   
     if(user === usuario && password === senha){
       location.href = "tela-cadastro.html"
+      var value = 3;
+      localStorage.setItem("StorageName",value);
     }
     else{
       window.alert("Usuário ou senha incorretos!")
