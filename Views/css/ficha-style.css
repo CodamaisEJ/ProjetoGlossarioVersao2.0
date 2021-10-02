@@ -7,7 +7,7 @@
   list-style: none;
 }
 root{
-  --bg-admin: #186EEF;
+  --bg-admin: #314C85;
   --bg-prof:  #430D64;
   --bg-others: #0D4F3F;
 }
@@ -19,27 +19,128 @@ body{
   flex-direction: column;
 }
 .cabecalho{
-  background-color: #186EEF;
+  background-color: #314C85;
   color: #FFF;
   padding: 20px;
+  display: flex;
+}
+.cabecalho img{
+  margin-right: 10px;
+  border-radius:100%;
+  width: 5vw;
 }
 .cabecalho h2{
+  margin-top: 15px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
 }
+#btn-notificacao{
+  background-color: #FFF;
+  border-style: none;
+  margin-left: auto;
+  margin-top: 10px;
+  width: 60px;
+  height: 50px;
+  border-radius: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+#btn-users{
+  margin-top: 10px;
+  border-style: none;
+  width: 60px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 100%;
+  font-size: 30px;
+  text-align: center;
+}
 
 .conteudo{
   flex:1 0 auto;
 }
+.conteudo-main{
+  margin-top: 30px;
+}
+.conteudo-main h2{
+  color: #101564;
+  font-family: 'Popins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
 .ficha{
+  margin-left: 30px;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+.ficha label{
+  color: #234F90;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+}
+.ficha input{
+  width: 626px;
+  background-color: #FFFFFF;
+  border: 1px solid #7B8CA7;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.variante{
+  display: none;
+}
+.definicao{
+  display: none;
+}
+.idiomas{
+  display: none;
+}
+.fonte-contexto{
+  display: none;
+}
+.contexto{
+  display: none;
+}
+.fonte-definicao{
+  display: none;
+}
+.remissiva{
+  display: none;
+}
+.btn{
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  cursor:unset;
+}
+.btn button{
+  border-style: none;
+  width: 7vw;
+  height: 5vh;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+#btn-verificar{
+  color: #FFF;
+  background-color: #314C85;
+  margin-right: 20px;
+}
+#btn-salvar{
+  color: #FFF;
+  background-color: #9D1C33;
+  margin-left: 50px;
+  margin-right: 30px;
 }
 
+
 .rodape{
-  background-color: #186EEF;
+  background-color: #314C85;
   flex-shrink: 0;
   color: #FFF;
   padding: 20px;

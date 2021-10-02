@@ -20,11 +20,6 @@ body{
   padding: 20px;
   display: flex;
 }
-.cabecalho img{
-  margin-right: 10px;
-  border-radius:100%;
-  width: 5vw;
-}
 .cabecalho h2{
   margin-top: 15px;
   font-family: 'Poppins', sans-serif;
@@ -32,56 +27,52 @@ body{
   font-weight: bold;
   font-size: 30px;
 }
+.cabecalho img{
+  margin-right: 10px;
+  border-radius:100%;
+  width: 5vw;
+}
+.cabecalho button{
+  width: 15vw;
+  height: 5vh;
+  background: #FFFFFF;
+  border:1px solid #314C85;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+}
+#btn-cadastro{
+  margin-left: auto;
+  margin-top: 15px;
+}
+#btn-notificacao{
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 60px;
+  height: 50px;
+  border-radius: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+#btn-users{
+  margin-top: 10px;
+  width: 60px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 100%;
+  font-size: 30px;
+  text-align: center;
+}
 
 .conteudo{
   flex:1 0 auto;
 }
-.conteudo-main{
-  margin-top: 80px;
-}
-.conteudo-main h2{
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  color: #101564;
-  text-align: center;
-}
-.login{
-  margin-top: 30px;
-  text-align: center;
-}
-.login button{
-  background-color: #314C85;
-  margin-top: 10px;
-  width: 20vw;
-  height: 5vh;
-  border: 0;
-  border-radius: 8px;
-  color: #FFF;
-}
-i{
-  margin-right: 5px;
-}
-.login-input{
-  margin-top: 20px;
-}
-.login-input label{
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  color: #4D5E77;
-  text-align: left;
-}
-.login-input input{
-  padding-left: 10px;
-  width: 20vw;
-  height: 5vh;
-  background-color: #FFFFFF;
-  border: 1px solid #A1B2CD;
-  box-sizing: border-box;
-  border-radius: 8px;
+.users{
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
 }
 
 .rodape{

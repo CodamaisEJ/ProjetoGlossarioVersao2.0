@@ -6,21 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/cadastro-style.css">
+    <link rel="stylesheet" href="css/usuario-style.css">
 
     <title>Cadastro</title>
 
   </head>
   <body>
-    <script src="js/script-cadastro.js"></script>
+    <script src="js/script-usuario.js"></script>
 
     <header class="cabecalho">
 
         <img src="img/Lexic.jpg" alt="Logo Lexic">
 
         <h2>Ficha terminológica</h2>
-
-        <button id="btn-gerenciamento" onclick="trocarPagina1()">Gerenciar Usuários</button>
 
         <button id="btn-cadastro" onclick="trocarPagina()">Cadastrar Termos +</button>
 
@@ -32,26 +30,18 @@
 
     <section class="conteudo">
       <div class="conteudo-main">
-        <h2>Revisar Termos</h2>
-        <label for="termos">Total de termos: 0</label>
-        
-        <div class="divBusca">
-          <input type="text" id="txtBusca" placeholder="Pesquisar">
+        <h2>Usuários cadastrados</h2>
+
+        <div class="users">
+          <h3>Nome</h3>
+
+          <h3>Tipo de usuário</h3>
+
+          <h3>E-mail</h3>
+
+          <h3>Ações</h3>
+          
         </div>
-
-          <div class= "total-termos">
-
-            <div class="termos">
-              <div class="termo-especifico">
-                <p>Termo</p>
-              </div>
-              <i class="fas fa-trash"></i>
-            </div>
-            
-          </div>
-
-
-        </div>        
       </div>
     </section>
 

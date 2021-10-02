@@ -7,7 +7,7 @@
   list-style: none;
 }
 root{
-  --bg-admin: #186EEF;
+  --bg-admin: #314C85;
   --bg-prof:  #430D64;
   --bg-others: #0D4F3F;
 }
@@ -20,11 +20,18 @@ body{
 }
 
 .cabecalho{
-  background-color: #186EEF;
+  background-color: #314C85;
   color: #FFF;
   padding: 20px;
+  display: flex;
+}
+.cabecalho img{
+  margin-right: 10px;
+  border-radius:100%;
+  width: 5vw;
 }
 .cabecalho h2{
+  margin-top: 15px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -64,20 +71,20 @@ i{
   margin-right: 20px;
 }
 #admin{
-  background-color: #186EEF;
-  padding-right: 30px;
+  background-color: #314C85;
+  padding-right: 35px;
 }
-#prof{
+#pesquisador{
+  background-color: #0D4F3F;
+  padding-right: 55px;
+}
+#especialista{
   background-color: #430D64;
   padding-right: 55px;
 }
-#others{
-  background-color: #0D4F3F;
-  padding-right: 95px;
-}
 
 .rodape{
-  background-color: #186EEF;
+  background-color: #314C85;
   flex-shrink: 0;
   color: #FFF;
   padding: 20px;

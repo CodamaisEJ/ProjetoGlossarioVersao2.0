@@ -1,15 +1,15 @@
 function trocaPaginaAdmin(){
-  var getInput = 1;
-  localStorage.setItem("StorageName",getInput);
+  var value = 1;
+  localStorage.setItem("StorageName",value);
   location.href= "tela-login.html";
 }
-function trocaPaginaProf(){
-    var getInput = 2;
-    localStorage.setItem("StorageName",getInput);
+function trocaPaginaPesquisador(){
+    var value = 2;
+    localStorage.setItem("StorageName",value);
     location.href= "tela-login.html";
 }
-function trocaPaginaOthers(){
-    var getInput = 3;
-    localStorage.setItem("StorageName",getInput);
+function trocaPaginaEspecialista(){
+    var value = 3;
+    localStorage.setItem("StorageName",value);
     location.href = "tela-login.html";
 }

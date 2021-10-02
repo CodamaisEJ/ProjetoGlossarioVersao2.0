@@ -12,68 +12,181 @@
 </head>
 <body>
   <script src="script-ficha.js"></script>
-   <header class="cabecalho" id="header">
-        <h2>Glossário COVID-19</h2>
+   <header class="cabecalho" id="header">   
+    <img src="img/Lexic.jpg" alt="Logo Lexic">
+
+          <h2>Ficha terminológica</h2>
+
+          <button id="btn-notificacao"><i class="far fa-bell"></i></button>
+        
+          <button id="btn-users"><i class="fas fa-users"></i></button>
+
       </header>
 
       <section class="conteudo">
         <div class="conteudo-main">
-          <h2>Analisar</h2>
+
+          <h2>Cadastrar</h2>
 
           <div class="ficha">
-            <label for="entrada">Entrada:</label>
-            <input type="text" id="entrada" placeholder="Entrada">
 
-            <label for="categoria">Categoria Morfológica:</label>
-            <input type="radio" id="cateroria" value="Nome">
-            <input type="radio" id="cateroria" value="Verbo">
+            <label for="entrada">Entrada: <br>
+              <input type="text" id="entrada">
+            </label>
 
-            <label for="genero">Gênero:</label>
-            <input type="radio" id="genero" value="Masculino">
-            <input type="radio" id="genero" value="Feminino">
-            <input type="radio" id="genero" value="Dois gêneros">
+            <label for="cat-morfo">Catergoria Morfológica: <br>
+              <input type="radio" id="cat-morfo">
+            </label>
 
-            <label for="numero">Número:</label>
-            <input type="radio" id="numero" value="Singular">
-            <input type="radio" id="numero" value="Plural">
+            <label for="genero">Genêro: <br>
+              <input type="radio" id="genero">
+            </label>
 
-            <label for="variante">Variante:</label>
-            <input type="text" id="variante" value="Variante" placeholder="Selecione uma opção">
+            <label for="num">Número: <br>
+              <input type="radio" id="num">
+            </label>
+ 
+            <label for="variante">Variante: <br>
+              <input type="text" id="variante">
+            </label>
 
-            <label for="area">Área</label>
-            <input type="text" id="area" value="area" placeholder="Área">
+            <div class="variante">
 
-            <h2>Definição:</h2>
+              <label for="">Ortográfica: <br>
+                <input type="text">
+              </label>
+              
+              <label for="">Geográfica: <br>
+                <input type="text">
+              </label>
+              
+              <label for="">Sinonímica: <br>
+                <input type="text">
+              </label>
+              
+              <label for="">Siglas: <br>
+                <input type="text">
+              </label>
+              
+              <label for="">Acrônimos: <br>
+                <input type="text">
+              </label>
 
-            <label for="dicionario-comum">Dicionário Língua Comum:</label>
-            <input type="text" id="dicionario-comum" value="dicionario-comum" placeholder="Definição">
+            </div>
 
-            <label for="dicionario-especializado">Dicionário Especializado 1</label>
-            <input type="text" id="dicionario-especializado" value="dicionario-especializado" 
-            placeholder="Definição">
+            <label for="area">Área: <br>
+              <input type="text" id="area">
+            </label>
+ 
+            <label for="definicao">Definição: <br>
+              <input type="text" id="definicao">
+            </label>
 
-            <label for="dicionario-especializado1">Dicionário Especializado 2</label>
-            <input type="text" id="dicionario-especializado1" value="dicionario-especializado" 
-            placeholder="Definição">
+            <div class="definicao">
 
-            <label for="proposta-definicao">Proposta de Definição</label>
-            <input type="text" id="proposta-definicao" value="proposta-definicao" placeholder="Definição">
+              <label for="dicionario-comum">Dicionário Língua Comum: <br>
+                <input type="text" id="dicionario-comum">
+              </label>
 
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-            <label for=""></label>
+            </div>
+
+            <label for="fonte-definicao">Fonte da definição: <br>
+              <input type="text" id="fonte-definicao">
+            </label>
+
+            <div class="fonte-definicao">
+              
+              <label for="dicionario">Fonte - Dicionário Língua Comum: <br>
+                <input type="text">
+              </label>
+              
+            </div>
+            
+            <label for="contexto">Contexto de Uso: <br>
+              <input type="text">
+            </label>
+
+            <div class="contexto">
+
+              <label for="">Fonte - Contexto  <br>
+                <input type="text">
+              </label>
+              
+            </div>
+                   
+            <label for="">Fonte Contexto de Uso: <br>
+              <input type="text">
+            </label>
+            
+            <div class="fonte-contexto">
+
+              <label for="">Fonte - Contexto <br>
+                <input type="text">
+              </label>
+
+            </div>
+
+            <label for="">Remissivas: <br>
+              <input type="text">
+            </label>
+
+            <div class="remissiva">
+
+              <label for="">Remissiva <br>
+                <input type="text">
+              </label>
+              
+            </div>
+
+            <label for="">Nota: <br>
+              <input type="text">
+            </label>
+
+            <label for="">Autor: <br>
+              <input type="text">
+            </label>
+
+            <label for="">Redator: <br>
+              <input type="text">
+            </label>
+
+            <label for="">Data de registro: <br>
+              <input type="date">
+            </label>
+
+            <label for="">Revisão Especialista: <br>
+              <input type="text">
+            </label>
+
+            <label for="">Revisão Línguistica: <br>
+              <input type="text">
+            </label>
+
+            <label for="">Data da última revisão: <br>
+              <input type="date">
+            </label>
+
+            <label for="">Idiomas: <br>
+              <input type="text">
+            </label>
+
+            <div class="idiomas">
+
+              <label for="">Inglês: <br> 
+                <input type="text">
+              </label>
+
+            </div>
+
+            <label for="">Frequência do termo no corpus:
+              <input type="text">
+            </label>
+
           </div>
+            <div class="btn">
+              <button id="btn-verificar">Verificar</button>
+              <button id="btn-salvar">Salvar</button>
+            </div>
         </div>
         
       </section>

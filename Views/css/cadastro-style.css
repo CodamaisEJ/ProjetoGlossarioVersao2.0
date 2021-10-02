@@ -15,19 +15,28 @@ body{
 }
 
 .cabecalho{
-  background-color: #186EEF;
+  background-color: #314C85;
   color: #FFF;
   padding: 20px;
   display: flex;
 }
-.cabecalho a{
-  margin-left: auto;
+.cabecalho h2{
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+}
+.cabecalho img{
+  margin-right: 10px;
+  border-radius:100%;
+  width: 5vw;
 }
 .cabecalho button{
   width: 15vw;
   height: 5vh;
   background: #FFFFFF;
-  border:1px solid #3485FF;
+  border:1px solid #314C85;
   box-sizing: border-box;
   border-radius: 8px;
   font-family: 'Poppins', sans-serif;
@@ -35,11 +44,31 @@ body{
   font-weight: bold;
   font-size: 18px;
 }
-.cabecalho h2{
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: bold;
+#btn-gerenciamento{
+  margin-left: auto;
+  margin-top: 15px;
+}
+#btn-cadastro{
+  margin-left: 10px;
+  margin-top: 15px;
+}
+#btn-notificacao{
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 60px;
+  height: 50px;
+  border-radius: 100%;
   font-size: 30px;
+  text-align: center;
+}
+#btn-users{
+  margin-top: 10px;
+  width: 60px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 100%;
+  font-size: 30px;
+  text-align: center;
 }
 
 .conteudo{
@@ -67,11 +96,6 @@ body{
   text-align: center;
   justify-content: center;
   align-items: center;
-}
-.conteudo-main a{
-  text-decoration: none;
-  color: #000;
-  font-size: 30px;
 }
 .divBusca{
   margin-right: 50px;
@@ -135,7 +159,7 @@ body{
 
 .rodape{
   flex-shrink: 0;
-  background-color: #186EEF;
+  background-color: #314C85;
   color: #FFF;
   padding: 20px;
   text-align: center;
