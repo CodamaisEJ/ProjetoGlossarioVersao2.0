@@ -2,29 +2,29 @@ const database = require('../models')
 
 class UserController {
 
-    static async criaUser(req,res){
-        const novoUser = req.body
+    static async createUser(req, res){
+        const newUser = req.body
         try {
-            const novoUserCriada = await database.Users.create(novoUser)
-            return res.status(200).json(novoUserCriada)
+            const newUserCreate = await database.Users.create(newUser)
+            return res.status(200).json(newUserCreate)
         } catch (error) {
             return res.status(500).json(error.message)
         }
     }
 
-    static async atualizaUser(req, res){
+    static async updateUser(req, res){
         const { id } = req.params
-        const novosDados = req.body
+        const newData = req.body
         try {
-            await database.Users.update(novosDados, { where: { id: Number(id) }})
-            const UserAtualizado = await database.Users.findOne({ where: { id: Number(id) }})
-            return res.status(200).json(UserAtualizado)
+            await database.Users.update(newData, { where: { id: Number(id) }})
+            const updateUser = await database.Users.findOne({ where: { id: Number(id) }})
+            return res.status(200).json(updateUser)
         } catch (error) {
             return res.status(500).json(error.message)
         }
     }
 
-    static async deletaUser(req, res){
+    static async deleteUser(req, res){
         const { id } = req.params
         try {
             await database.Users.destroy({ where: { id: Number(id) }})
@@ -34,10 +34,10 @@ class UserController {
         }
     }
     
-    static async listaUsers(req, res){
+    static async listUsers(req, res){
         try {
-          const todosUsers = await database.Users.findAll()
-          return res.status(200).json(todosUsers)  
+          const listUsers = await database.Users.findAll()
+          return res.status(200).json(listUsers)  
         } catch (error) {
           return res.status(500).json(error.message)
         }
