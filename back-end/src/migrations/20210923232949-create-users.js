@@ -18,8 +18,9 @@ module.exports = {
       senha: {
         type: Sequelize.STRING
       },
-      type_user: {
-        type: Sequelize.STRING
+      tipo_de_usuario: {
+        type: Sequelize.ENUM,
+        values: ['administrador','especialista','pesquisador','pendente']
       },
       createdAt: {
         allowNull: false,

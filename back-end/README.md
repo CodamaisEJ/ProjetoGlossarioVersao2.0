@@ -23,7 +23,8 @@ Para startar rode:
     npm run dev
 
 ## Atenção 💣
-
+ #### Se houver informado alguma modificação no banco de dados rodem o comando abaixo antes das alterações ou antes de fazerem um pull dessa branch, nunca depois de fazer ou receberem as alterações.
+       npx sequelize-cli db:migrate:undo:all
  ### Criem outro terminal para executar os comandos abaixo, pois no terminal anterior tem que está rodando o server com nodemon!
 
 Para criar a database:
@@ -125,5 +126,16 @@ Para criar as migrations no bd:
     nome
     email
     senha
-    type_user
+    tipo_de_usuario
+
+### Para criar um token utilize a rota abaixo exemplo:
+    
+    localhost:3000/token/create
+
+    {
+      "email": "Email registrado no banco igual",
+      "senha": "Senha igual a registrada no banco"
+    }
+
+    /token/create
    
