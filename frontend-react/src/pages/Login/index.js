@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import Header from "../../components/Header";
-import api from "../../services/api";
+// import api from "../../services/api";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -10,7 +10,7 @@ export default function Login() {
   async function handleLogin() {
     alert(username + " " + password);
     try {
-      const response = await api.get("/");
+      //   const response = await api.get("/");
     } catch (error) {}
   }
 
