@@ -129,13 +129,13 @@ Para criar as migrations no bd:
     tipo_de_usuario
 
 ### Para criar um token utilize a rota abaixo exemplo:
-    
     localhost:3000/token/create
-
+    
+### Dentro do insomnia acessando a rota acima, no corpo da requisição coloque o json como exemplo abaixo, substitua: Email registrado no banco igual e Senha igual a registrada no banco, pelas credenciais que foi criado o usuário no seu banco, lembrando tem que ter criado o usuário na rota de criar usuário:
     {
       "email": "Email registrado no banco igual",
       "senha": "Senha igual a registrada no banco"
     }
-
+### Parâmetros da rota criar token:
     /token/create
    
