@@ -1,4 +1,4 @@
-# ProjetoGlossarioVersao2.0
+# Projeto Ficha Terminológica Lexic
 Atualização de um sistema já existente.
 
 Olá, seguem esses passos abaixo para startar o prototipo do sistemas: 

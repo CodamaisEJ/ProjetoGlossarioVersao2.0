@@ -6,39 +6,34 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/index-style.css">
+      <link rel="stylesheet" href="css/login-style.css">
 
-      <title>Index</title>
+      <title>Login</title>
+
     </head>
-
-    <body>
-      <script src="js/script.js"></script>
+    <body onload="mudaCor()"> 
+      <script src="js/script-login.js"></script>
 
       <header class="cabecalho" id="header">
-
         <img src="img/Lexic.jpg" alt="Logo Lexic">
 
-          <h2>Ficha terminológica</h2>
+            <h2>Ficha terminológica</h2>
 
       </header>
 
       <section class="conteudo">
         <div class="conteudo-main">
-          <h2>Para acessar a ficha selecione o tipo de usuário:</h2>
+          <h2>Para acessar a ficha preencha os campos abaixo:</h2>
           <div class="login">
-
-              <button id="admin" onclick="trocaPaginaAdmin()"><i class="fas fa-user-friends"></i>Administrador</button>
-
-          </div>
-          <div class="login">
-
-              <button id="pesquisador" onclick="trocaPaginaPesquisador()"><i class="fas fa-user-friends"></i>Pesquisador</button>
-
-          </div>
-          <div class="login">
-
-              <button id="especialista" onclick="trocaPaginaEspecialista()"><i class="fas fa-user-friends"></i>Especialista</button>
-
+            <div class="login-input">
+              <label for="user">Usuário:</label><br>
+              <input type="text" id="user" placeholder="Usuário">
+            </div>
+            <div class="login-input">
+              <label for="password">Senha: </label><br>
+                <input type="password" id="password" placeholder="********">
+            </div>
+              <button id="acesso" onclick="validador()"><i class="fas fa-user-friends"></i>Acessar</button>
           </div>
         </div>
       </section>
@@ -46,6 +41,5 @@
       <footer class="rodape" id="footer">
         <h2>Desenvolvido por Codamais @ 2021</h2>
       </footer>
-
     </body>
 </html>
