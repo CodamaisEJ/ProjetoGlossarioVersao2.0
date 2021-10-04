@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Criar uma ficha terminológica completa para o glossário covid19",
   "main": "index.js",
+  "engines": {
+    "node": "14.15.4"
+  },
   "scripts": {
     "dev": "nodemon ./src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start" : "node src/server.js"
   },
   "keywords": [],
