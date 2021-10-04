@@ -35,6 +35,8 @@ Para criar a database:
 
 Para criar as migrations no bd:
 
+    cd back-end/
+
     npx sequelize-cli db:migrate
     
 ### Para acessar as rotas utilize o insominia, com o insominita aberto coloque o localhost:3000/ depois do / é a rota que deseja acessar, abaixo a um exemplo das rotas de:
