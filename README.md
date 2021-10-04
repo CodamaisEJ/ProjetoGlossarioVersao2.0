@@ -1,4 +1,4 @@
-# ProjetoGlossarioVersao2.0
+# Projeto Ficha Terminológica Lexic
 Atualização de um sistema já existente.
 
 ## 🚀 Passos para executar o projeto
