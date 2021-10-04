@@ -1,0 +1,17 @@
+.rodape {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  flex-shrink: 0;
+  background-color: #314c85;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.rodape h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+}
