@@ -1,91 +1,92 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
 }
-html, body{
+html,
+body {
   height: 100%;
 }
-body{
+body {
   display: flex;
   flex-direction: column;
 }
 
-.cabecalho{
-  background-color: #186EEF;
-  color: #FFF;
+.cabecalho {
+  background-color: #186eef;
+  color: #fff;
   padding: 20px;
 }
-.cabecalho h2{
-  font-family: 'Poppins', sans-serif;
+.cabecalho h2 {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
 }
 
-.conteudo{
-  flex:1 0 auto;
+.conteudo {
+  flex: 1 0 auto;
 }
-.conteudo-main{
+.conteudo-main {
   margin-top: 80px;
 }
-.conteudo-main h2{
-  font-family: 'Poppins', sans-serif;
+.conteudo-main h2 {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
   color: #101564;
   text-align: center;
 }
-.login{
+.login {
   margin-top: 30px;
   text-align: center;
 }
-.login button{
-  background-color: #186EEF;
+.login button {
+  background-color: #186eef;
   margin-top: 10px;
   width: 20vw;
   height: 5vh;
   border: 0;
   border-radius: 8px;
-  color: #FFF;
+  color: #fff;
 }
-i{
+i {
   margin-right: 5px;
 }
-.login-input{
+.login-input {
   margin-top: 20px;
 }
-.login-input label{
-  font-family: 'Poppins', sans-serif;
+.login-input label {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  color: #4D5E77;
+  color: #4d5e77;
   text-align: left;
 }
-.login-input input{
+.login-input input {
   padding-left: 10px;
   width: 20vw;
   height: 5vh;
-  background-color: #FFFFFF;
-  border: 1px solid #A1B2CD;
+  background-color: #ffffff;
+  border: 1px solid #a1b2cd;
   box-sizing: border-box;
   border-radius: 8px;
 }
 
-.rodape{
+.rodape {
   flex-shrink: 0;
-  background-color: #186EEF;
-  color: #FFF;
+  background-color: #186eef;
+  color: #fff;
   padding: 20px;
   text-align: center;
 }
-.rodape h2{
-  font-family: 'Poppins', sans-serif;
+.rodape h2 {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 25px;

@@ -16,3 +16,9 @@ function mudaCor(){
     document.getElementById("footer").style.backgroundColor = backgroundColor;
   }
 }
+function trocarPagina(){
+  location.href= "ficha.html";
+}
+function trocarPagina1(){
+  location.href= "usuario.html";
+}

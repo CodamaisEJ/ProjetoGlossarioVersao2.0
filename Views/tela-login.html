@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/login-style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/login-style.css" />
 
-      <title>Login</title>
+    <title>Login</title>
+  </head>
+  <body onload="mudaCor()">
+    <script src="js/script-login.js"></script>
 
-    </head>
-    <body onload="mudaCor()"> 
-      <script src="js/script-login.js"></script>
+    <header class="cabecalho" id="header">
+      <h2>Glossário COVID-19</h2>
+    </header>
 
-      <header class="cabecalho" id="header">
-          <h2>Glossário COVID-19</h2>
-      </header>
-
-      <section class="conteudo">
-        <div class="conteudo-main">
-          <h2>Para acessar a ficha preencha os campos abaixo:</h2>
-          <div class="login">
-            <div class="login-input">
-              <label for="user">Usuário:</label><br>
-              <input type="text" id="user" placeholder="Usuário">
-            </div>
-            <div class="login-input">
-              <label for="password">Senha: </label><br>
-                <input type="password" id="password" placeholder="********">
-            </div>
-              <button id="acesso" onclick="validador()"><i class="fas fa-user-friends"></i>Acessar</button>
+    <section class="conteudo">
+      g
+      <div class="conteudo-main">
+        <h2>Para acessar a ficha preencha os campos abaixo:</h2>
+        <div class="login">
+          <div class="login-input">
+            <label for="user">Usuário:</label><br />
+            <input type="text" id="user" placeholder="Usuário" />
           </div>
+          <div class="login-input">
+            <label for="password">Senha: </label><br />
+            <input type="password" id="password" placeholder="********" />
+          </div>
+          <button id="acesso" onclick="validador()">
+            <i class="fas fa-user-friends"></i>Acessar
+          </button>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <footer class="rodape" id="footer">
-        <h2>Desenvolvido por Codamais @ 2021</h2>
-      </footer>
-    </body>
+    <footer class="rodape" id="footer">
+      <h2>Desenvolvido por Codamais @ 2021</h2>
+    </footer>
+  </body>
 </html>
