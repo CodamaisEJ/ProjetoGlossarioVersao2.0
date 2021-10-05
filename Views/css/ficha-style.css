@@ -84,6 +84,7 @@ body{
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
+  margin-bottom: 10px;
 }
 .ficha input{
   width: 626px;
@@ -91,6 +92,13 @@ body{
   border: 1px solid #7B8CA7;
   box-sizing: border-box;
   border-radius: 8px;
+}
+.ficha input::placeholder{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #7B8CA7;
 }
 .variante{
   display: none;
@@ -101,7 +109,7 @@ body{
 .idiomas{
   display: none;
 }
-.fonte-contexto{
+.fonte-contexto-uso{
   display: none;
 }
 .contexto{
@@ -112,6 +120,11 @@ body{
 }
 .remissiva{
   display: none;
+}
+.txt{
+  width: 626px;
+  height: 48px;
+  padding-left: 10px;
 }
 .btn{
   text-align: center;
