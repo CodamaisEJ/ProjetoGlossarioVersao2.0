@@ -1,17 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import "./styles.css";
 import Header from "../../components/Header";
-// import api from "../../services/api";
+import api from "../../services/api";
 
 export default function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const history = useHistory();
 
-  async function handleLogin() {
-    alert(username + " " + password);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {}, []);
+
+  async function handleLogin(event) {
+    event.preventDefault();
+
+    const data = {
+      email: email,
+      senha: password,
+    };
+
     try {
-      //   const response = await api.get("/");
-    } catch (error) {}
+      const response = await api.post("/token/create", data);
+      console.log(response.data);
+      history.push("/termos");
+    } catch (error) {
+      alert("credenciais inválidas");
+      console.log(error.error);
+    }
   }
 
   return (
@@ -29,7 +46,7 @@ export default function Login() {
                 type="text"
                 id="user"
                 placeholder="Usuário"
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div class="login-input">
@@ -42,7 +59,7 @@ export default function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button id="acesso" onClick={handleLogin}>
+            <button type="submit" id="acesso" onClick={handleLogin}>
               <i class="fas fa-user-friends"></i>Acessar
             </button>
           </div>
