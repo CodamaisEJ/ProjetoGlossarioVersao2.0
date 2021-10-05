@@ -11,7 +11,7 @@ class TokenController {
             const userEmail = await database.Users.findOne({ where: { email } })
 
             if(!userEmail){
-                return res.status(401).json({error: "Login não encontrado!"})
+                return res.status(401).json({error: "E-mail não encontrado!"})
             }
 
             const userSenha = await database.Users.findOne({ where: { senha } })
@@ -20,10 +20,10 @@ class TokenController {
                 return res.status(401).json({error: "Senha não encontrada!"})
             }
 
-            const { id, nome } = userSenha
+            const { id, nome, tipo_de_usuario } = userSenha
 
             return await res.json({ 
-                user: { id, nome, email },
+                user: { id, nome, email, tipo_de_usuario },
                 token: jwt.sign({ id }, authConfig.secret, {
                     expiresIn: authConfig.expiresIn
                 }
