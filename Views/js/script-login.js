@@ -23,8 +23,8 @@ function mudaCor(){
 function validador(){
   var z = localStorage.getItem("StorageName");
   if(z == 1){
-    var usuario = 'Admin';
-    var senha = '123';
+    var usuario = '';
+    var senha = '';
   
     var x = document.querySelector("#user");
     var y = document.querySelector("#password");
@@ -42,8 +42,8 @@ function validador(){
     }
   }
   if(z == 2){
-    var usuario = 'Pesquisador';
-    var senha = '123';
+    var usuario = '';
+    var senha = '';
   
     var x = document.querySelector("#user");
     var y = document.querySelector("#password");
@@ -61,8 +61,8 @@ function validador(){
     }
   }
   if(z == 3){
-    var usuario = 'Especialista';
-    var senha = '123';
+    var usuario = '';
+    var senha = '';
   
     var x = document.querySelector("#user");
     var y = document.querySelector("#password");
