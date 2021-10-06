@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import "./styles.css";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import api from "../../services/api";
 
 export default function Login() {
@@ -9,7 +10,6 @@ export default function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {}, []);
 
@@ -66,9 +66,7 @@ export default function Login() {
         </div>
       </section>
 
-      <footer class="rodape" id="footer">
-        <h2>Desenvolvido por Codamais @ 2021</h2>
-      </footer>
+      <Footer />
     </div>
   );
 }

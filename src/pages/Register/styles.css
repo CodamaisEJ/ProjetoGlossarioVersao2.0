@@ -1,0 +1,54 @@
+.conteudo {
+  flex: 1 0 auto;
+}
+.conteudo-main {
+  text-align: center;
+}
+.conteudo-main button {
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+  border-style: none;
+  width: 117px;
+  height: 35px;
+  background-color: #314c85;
+  color: #fff;
+  border-radius: 8px;
+}
+.conteudo-main h2 {
+  text-align: center;
+  color: #101564;
+  font-family: "Popins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.cadastro {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.cadastro label {
+  font-family: "Popins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #234f90;
+}
+.cadastro input {
+  padding-left: 20px;
+  width: 626px;
+  background-color: #ffffff;
+  border: 1px solid #7b8ac7;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+#btn-voltar {
+  opacity: 50%;
+  transition-duration: 1s;
+}
+#btn-voltar:hover {
+  opacity: 100%;
+}

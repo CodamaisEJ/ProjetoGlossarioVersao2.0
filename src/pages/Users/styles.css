@@ -1,0 +1,93 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo {
+  flex: 1 0 auto;
+}
+.conteudo-main {
+  text-align: right;
+}
+.conteudo-main h2 {
+  text-align: center;
+  color: #101564;
+  font-family: "Popins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.conteudo-main button {
+  padding: 5px;
+  background-color: #234f90;
+  border-style: none;
+  border-radius: 8px;
+}
+.users {
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  margin-bottom: 30px;
+}
+.users h3 {
+  margin-left: 100px;
+  font-family: "Popins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  color: #234f90;
+}
+.users p {
+  font-family: "Popins", sans-serif;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  margin-left: 105px;
+  color: #0d114f;
+}
+.users i {
+  cursor: pointer;
+  font-size: 20px;
+  color: #0d114f;
+}
+#lixeira {
+  margin-left: 25px;
+}
+#btn-criar-user {
+  font-family: "Popins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;
+  margin-right: 50px;
+}
+
+.rodape {
+  flex-shrink: 0;
+  background-color: #314c85;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.rodape h2 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+}

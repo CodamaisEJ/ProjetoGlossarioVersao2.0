@@ -1,17 +1,20 @@
-.rodape {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  flex-shrink: 0;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+.cabecalho {
   background-color: #314c85;
   color: #fff;
   padding: 20px;
-  text-align: center;
+  display: flex;
 }
-.rodape h2 {
+.cabecalho img {
+  margin-right: 10px;
+  border-radius: 100%;
+  width: 5vw;
+}
+.cabecalho h2 {
+  margin-top: 15px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
+  font-weight: bold;
+  font-size: 30px;
 }

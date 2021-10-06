@@ -1,14 +1,18 @@
 import React from "react";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Login from "./pages/Login";
-import Termos from "./pages/Termos";
+import Register from "./pages/Register";
+import Users from "./pages/Users";
+import Terms from "./pages/Terms";
 
 function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/login" exact={true} component={Login} />
-        <Route path="/termos" exact={true} component={Termos} />
+        <Route path="/" exact={true} component={Login} />
+        <Route path="/cadastrar" exact={true} component={Register} />
+        <Route path="/usuarios" exact={true} component={Users} />
+        <Route path="/termos" exact={true} component={Terms} />
       </Switch>
     </BrowserRouter>
   );
