@@ -6,16 +6,13 @@ entre na pasta da aplicação com o seguinte comando:
 
 ### `cd frontend-react/`
 
-depois execute a aplicação como seguinte comando:
+depois execute a aplicação com seguinte comando:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Abra [http://localhost:3000](http://localhost:3000) para visualizar a aplicação.
 
-A página irá regarregar automaticamente ao serem feitas edições.
-
-
+A página irá recarregar automaticamente ao serem feitas edições.
 
 Para gerar os arquivos de produção rode o seguinte comando:
 
