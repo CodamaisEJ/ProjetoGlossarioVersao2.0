@@ -66,63 +66,131 @@ body{
   font-size: 30px;
   text-align: center;
 }
-
+/*-------------------------------------------------------------------- Body page*/
 .conteudo{
   flex:1 0 auto;
 }
-.conteudo-main{
- text-align: center;
+#create_user{
+   height: 100%;
+   display: flex;
+   justify-content: center;
+
 }
-.conteudo-main button{
-  margin-top: 30px;
-  margin-right: 30px;
-  margin-left: 30px;
-  border-style: none;
-  width: 117px;
-  height: 35px;
-  background-color: #314C85;
-  color: #FFF;
-  border-radius: 8px;
+#create_user fieldset{
+  min-width: 626px;
+  padding-top: 4rem;
 }
-.conteudo-main h2{
+#create_user fieldset legend{
   text-align: center;
   color: #101564;
-  font-family: 'Popins', sans-serif;
+  font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  font-size: 26px;
+  line-height: 39px;
 }
-.cadastro{
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-}
-.cadastro label{
-  font-family: 'Popins', sans-serif;
+.input-block label{
+  font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
+  line-height: 27px;
+  color: #234F90;
+  margin-bottom: 3px;
+}
+.input-block input{
+  width: 100%;
+  background: #FFFFFF;
+  border: 2px solid #7B8CA7;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 3px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #7B8CA7;
+  padding-left: 10px;
+}
+.input-block input::-webkit-input-placeholder{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #7B8CA7;
+}
+#password-block{
+  display: flex;
+  flex-direction: column;
+}
+#password-block input{
+  width: 50%;
+}
+.radio-block p {
+  margin-bottom: 3px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
   color: #234F90;
 }
-.cadastro input{
-  padding-left: 20px;
-  width: 626px;
-  background-color: #FFFFFF;
-  border: 1px solid #7B8AC7;
-  box-sizing:border-box;
+.radio-block input{
+  margin-left: 10px;
+}
+.radio-block label{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  align-items: center;
+  color: #7B8CA7;
+}
+.button-block{
+  display: flex;
+  height: 32%;
+  justify-content: center;
+  align-items: center;
+}
+.button-block button{
+  width: 117px;
+  height: 35px;
   border-radius: 8px;
+  cursor: pointer;
+  margin: 0.5rem;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FAFAFA;
+  border-color: rgba(255, 255, 255, 0);
+  }
+#return{
+  background-color: #A1B2CD;
 }
-#btn-voltar{
-  opacity: 50%;
-  transition-duration:1s;
+#save{
+  background-color:#314C85;
 }
-#btn-voltar:hover{
-  opacity: 100%;
+@media only screen and (max-width: 660px) {
+  #create_user fieldset{
+    min-width: 400px;
+    padding-top: 4rem;
+  }
 }
-
-
+@media only screen and (max-width: 400px) {
+  #create_user fieldset{
+    padding-top: 2rem;
+    padding-left: 1rem;
+  }
+  .input-block input{
+    width: 90%;
+  }
+}
+/*--------------------------------------------------------------------  Footer Page*/
 .rodape{
   flex-shrink: 0;
   background-color: #314C85;
