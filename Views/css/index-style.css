@@ -19,23 +19,38 @@ body{
   flex-direction: column;
 }
 
-.cabecalho{
+header{
+  width: 100%;
+  height: 12vh;
   background-color: #314C85;
   color: #FFF;
   padding: 20px;
   display: flex;
 }
-.cabecalho img{
+.container{
+  padding: 70px 0;
+}
+
+
+#nav-container{
+  background-color: #314C85;
+  color: #FFF;
+  padding: 20px;
+  display: flex;
+}
+#nav-container img{
   margin-right: 10px;
   border-radius:100%;
   width: 5vw;
+  margin-left: 20px;
 }
-.cabecalho h2{
-  margin-top: 15px;
+#nav-container h1{
+  margin-top: 4px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 40px;
+  margin-right: 1266px;
 }
 
 .conteudo{
@@ -95,4 +110,90 @@ i{
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 980px) {
+  .container{
+    position: fixed;
+  }
+  header{
+    width: 100%;
+    height: 12vh;
+    background-color: #314C85;
+    color: #FFF;
+    padding: 20px;
+    display: flex;
+  }
+  .container{
+    padding: 70px 0;
+  }
+  
+  
+  #nav-container{
+    background-color: #314C85;
+    color: #FFF;
+    padding: 20px;
+    display: flex;
+  }
+  #nav-container img{
+    margin-right: 10px;
+    border-radius:100%;
+    width: 12vw;
+    margin-left: 20px;
+    height: 10vh;
+  }
+  #nav-container h1{
+    margin-top: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    margin-right: 116px;
+  }
+
+  .conteudo{
+    flex:1 0 auto;
+  }
+  .conteudo-main{
+    margin-top: 100px;
+  }
+  .conteudo-main h2{
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    color: #101564;
+  }
+  .login{
+    margin-top: 40px;
+    text-align: center;
+  }
+  .login button{
+    width: 45vw;
+    height: 7vh;
+    border-radius: 10px;
+    color: #FFF;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 250;
+    font-size: 18px;
+  }
+  i{
+    margin-right: 20px;
+  }
+  #admin{
+    background-color: #314C85;
+    padding-right: 35px;
+  }
+  #pesquisador{
+    background-color: #0D4F3F;
+    padding-right: 55px;
+  }
+  #especialista{
+    background-color: #430D64;
+    padding-right: 55px;
+  }
 }
