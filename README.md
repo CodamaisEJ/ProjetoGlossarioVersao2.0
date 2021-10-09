@@ -137,3 +137,11 @@ Para criar as migrations no bd:
     localhost:3000/user/:id/updatemydata
 
 ** No corpo da requisição o <code>passwordCurrentBody</code> é a senha atual ** 
+
+### Para listar 1 usuario e seus os dados lembrando substitua o :id pelo id do usuário cadastrado no banco
+
+    localhost:3000/user/:id/list
+
+### Para listar 1 termo e seus os dados lembrando substitua o :id pelo id do termo cadastrado no banco
+
+    localhost:3000/user/:id/list
