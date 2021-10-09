@@ -97,3 +97,42 @@ i{
   font-weight: 500;
   font-size: 25px;
 }
+
+@media screen and (max-width: 980px) {
+  .container{
+    position: fixed;
+    padding: 70px 0;
+  }
+  
+  .cabecalho{
+    background-color: #314C85;
+    color: #FFF;
+    padding: 20px;
+    display: flex;
+  }
+  .cabecalho img{
+    margin-right: 10px;
+    border-radius:100%;
+    width: 12vw;
+    margin-left: 20px;
+    height: 10vh;
+  }
+  .cabecalho h2{
+    margin-top: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    margin-right: 11z6px;
+  }
+
+  #password{
+    width: 250px;
+  }
+  #user{
+    width: 250px;
+  }
+  #acesso{
+    width: 250px;
+  }
+}

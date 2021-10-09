@@ -40,7 +40,7 @@ body{
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .conteudo{
@@ -108,7 +108,6 @@ i{
     position: fixed;
     padding: 70px 0;
   }
-  
   
   .cabecalho{
     background-color: #314C85;
