@@ -70,6 +70,7 @@ body {
   margin-left: 25px;
 }
 #btn-criar-user {
+  width: fit-content;
   font-family: "Popins", sans-serif;
   font-style: normal;
   font-weight: bold;

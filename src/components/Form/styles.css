@@ -1,0 +1,132 @@
+.conteudo {
+  flex: 1 0 auto;
+  margin-top: 88px;
+}
+#create_user {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+#create_user fieldset {
+  border: none;
+  min-width: 626px;
+  padding-top: 4rem;
+}
+#create_user fieldset legend {
+  text-align: center;
+  color: #101564;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 39px;
+}
+.input-block {
+  height: 6rem;
+}
+.radio-block {
+  height: 5rem;
+}
+.input-block label {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #234f90;
+  margin-bottom: 3px;
+}
+.input-block input {
+  width: 100%;
+  height: 48px;
+  background: #ffffff;
+  border: 2px solid #7b8ca7;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 3px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #7b8ca7;
+  padding-left: 10px;
+}
+.input-block input::-webkit-input-placeholder {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #7b8ca7;
+}
+#password-block {
+  display: flex;
+  flex-direction: column;
+}
+#password-block input {
+  width: 50%;
+}
+.radio-block p {
+  margin-bottom: 3px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #234f90;
+}
+.radio-block input {
+  margin-left: 10px;
+}
+.radio-block label {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  align-items: center;
+  color: #7b8ca7;
+}
+.button-block {
+  display: flex;
+  height: 111px;
+  justify-content: center;
+  align-items: center;
+}
+.button-block button {
+  width: 117px;
+  height: 35px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0.5rem;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #fafafa;
+  border-color: rgba(255, 255, 255, 0);
+}
+#return {
+  background-color: #a1b2cd;
+}
+#save {
+  background-color: #314c85;
+}
+
+@media only screen and (max-width: 660px) {
+  #create_user fieldset {
+    min-width: 400px;
+    padding-top: 4rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #create_user fieldset {
+    padding-top: 2rem;
+    padding-left: 1rem;
+  }
+  .input-block input {
+    width: 90%;
+  }
+}

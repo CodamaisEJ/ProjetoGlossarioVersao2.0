@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import HeaderWithButtons from "../../components/HeaderWithButtons";
 import Footer from "../../components/Footer";
 import "./styles.css";
 import api from "../../services/api";
 
-const UserItem = ({ name, type, email }) => (
+const UserItem = ({ name, type, email, handleEditUser, handleDeleteUser }) => (
   <>
     <p>{name}</p>
     <p>{type}</p>
     <p>{email}</p>
     <p>
-      <i class="fas fa-pencil-alt" id="lapis"></i>
-      <i class="fas fa-trash-alt" id="lixeira"></i>
+      <i class="fas fa-pencil-alt" id="lapis" onClick={handleEditUser}></i>
+      <i class="fas fa-trash-alt" id="lixeira" onClick={handleDeleteUser}></i>
     </p>
   </>
 );
 
 export default function Users() {
+  const history = useHistory();
+
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -28,6 +31,18 @@ export default function Users() {
 
     handleListUsers();
   }, []);
+
+  function handleClickCreateUser() {
+    history.push("/cadastrar");
+  }
+
+  function handleEditUser(user) {
+    history.push("/usuarios/editar", { user });
+  }
+
+  function handleDeleteUser() {
+    alert("ok");
+  }
 
   return (
     <>
@@ -51,22 +66,15 @@ export default function Users() {
                 name={user.nome}
                 type={user.tipo_de_usuario}
                 email={user.email}
+                handleEditUser={() => handleEditUser(user)}
+                handleDeleteUser={handleDeleteUser}
               />
             ))}
-
-            {/* <p>Isabella</p>
-
-            <p>Pesquisador</p>
-
-            <p>fulano@fulano.com.br</p>
-
-            <p>
-              <i class="fas fa-pencil-alt" id="lapis"></i>
-              <i class="fas fa-trash-alt" id="lixeira"></i>
-            </p> */}
           </div>
 
-          <button id="btn-criar-user">Criar Usuário</button>
+          <button id="btn-criar-user" onClick={handleClickCreateUser}>
+            Criar Usuário
+          </button>
         </div>
       </section>
       <Footer />
