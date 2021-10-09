@@ -128,14 +128,14 @@ i{
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
-    margin-right: 11z6px;
+    margin-right: 116px;
   }
 
   .conteudo{
     flex:1 0 auto;
   }
   .conteudo-main{
-    margin-top: 100px;
+    margin-top: 80px;
   }
   .conteudo-main h2{
     text-align: center;
