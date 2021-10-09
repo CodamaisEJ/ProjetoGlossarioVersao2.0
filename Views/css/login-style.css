@@ -25,7 +25,7 @@ body{
   border-radius:100%;
   width: 5vw;
 }
-.cabecalho h2{
+.cabecalho h1{
   margin-top: 15px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -134,8 +134,8 @@ i{
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
-    margin-right: 116px;
-    margin-left: 5px;
+    font-size: 28px;
+    margin-right: 240px;
   }
 
   .conteudo-main h2{

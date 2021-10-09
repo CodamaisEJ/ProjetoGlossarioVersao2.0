@@ -32,19 +32,19 @@ header{
 }
 
 
-#nav-container{
+.cabecalho{
   background-color: #314C85;
   color: #FFF;
   padding: 20px;
   display: flex;
 }
-#nav-container img{
+.cabecalho img{
   margin-right: 10px;
   border-radius:100%;
   width: 5vw;
   margin-left: 20px;
 }
-#nav-container h1{
+.cabecalho h1{
   margin-top: 4px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -127,29 +127,30 @@ i{
   }
   .container{
     padding: 70px 0;
+     display: flex;
   }
   
   
-  #nav-container{
-    background-color: #314C85;
+  .cabecalho{
+    background-color: .314C85;
     color: #FFF;
     padding: 20px;
     display: flex;
   }
-  #nav-container img{
+  .cabecalho img{
     margin-right: 10px;
     border-radius:100%;
     width: 12vw;
     margin-left: 20px;
     height: 10vh;
   }
-  #nav-container h1{
+  .cabecalho h1{
     margin-top: 4px;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 40px;
-    margin-right: 116px;
+    font-size: 28px;
+    margin-right: 240px;
   }
 
   .conteudo{
