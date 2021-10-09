@@ -1,0 +1,201 @@
+
+.conteudo{
+    height: 100%;
+}
+
+#Cadastrar_termos{
+    display: flex;
+}
+#Cadastrar_termos fieldset{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+
+      
+}
+#Cadastrar_termos fieldset legend{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-left: 1rem;
+    padding-top: 1.5rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 42px;
+    color: #101564;
+
+}
+.radio-block{
+    padding: 1rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #234F90; 
+}
+.radio-block input{
+    background: #FFFFFF;
+    border: 15px solid #7B8CA7;
+    box-sizing: border-box
+}
+.radio-block label{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7B8CA7;
+}
+.radio-block p{
+    margin-top: -1rem;
+}
+.input-block{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #234F90; 
+}
+.input-block input{
+    width: 626px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 2px solid #7B8CA7;
+    box-sizing: border-box;
+    border-radius: 8px;font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7B8CA7;
+    padding-left: 1rem;
+    
+}
+
+.input-block label{
+    margin-top: -1rem;
+}
+.input-block select{
+    width: 626px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 2px solid #7B8CA7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7B8CA7;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    background-image: url('../img/Polygon\ 6.png');
+    background-repeat: no-repeat;
+    background-position: center right 20px;
+    padding-left: 1rem;
+    
+
+}
+#verbo{
+    margin-left: 4rem;
+}
+#feminino, #dois-generos{
+    margin-left: 2rem;
+}
+#plural{
+    margin-left: 3rem;
+}
+.verificar_button{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 25rem;
+}
+.verificar_button button{
+    width: 117px;
+    height: 35px;
+    color: white;
+    background: #314C85;
+    border-radius: 8px;
+    border-color: rgba(255, 255, 255, 0.0);
+}
+.salvar{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 25rem;
+}
+.salvar button{
+    width: 117px;
+    height: 35px;
+    background: #9D1C33;
+    border-radius: 8px;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.0);
+}
+.input-block input::-webkit-input-placeholder{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7B8CA7;
+}
+#frequencia_termo_corpus::-webkit-input-placeholder{
+    text-align: end;
+}
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button{
+    display: none;
+}
+
+.rodape{  
+    background-color: #314C85;
+    color: #FFF;
+    padding: 20px;
+    text-align: center;
+  }
+  .rodape h2{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+@media only screen and (max-width: 800px) {
+    .conteudo{
+        display: flex;
+        width: 100%;
+    }
+    #Cadastrar_termos{
+        width: 100%;
+    }
+    #Cadastrar_termos fieldset{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .input-block input{
+        width: 100%;
+    }
+    .input-block select{
+        width: 100%;
+    }
+    .verificar_button , .salvar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        padding: 0px;
+    }
+}
