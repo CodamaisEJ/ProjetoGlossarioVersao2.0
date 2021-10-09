@@ -12,6 +12,7 @@ router.get('/terms/list', TermController.listTerms)
 //exemplo de rota pedindo autenticação 
 router.post('/term/create', middlewareAuth, TermController.createTerm)
 
+router.get('/term/:id/list', TermController.listOneTerm)
 router.put('/term/:id/update', TermController.updateTerm)
 router.delete('/term/:id/delete', TermController.deleteTerm)
 

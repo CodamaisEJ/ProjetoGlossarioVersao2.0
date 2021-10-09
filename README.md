@@ -132,3 +132,8 @@ Para criar as migrations no bd:
 ### Parâmetros da rota criar token:
     /token/create
    
+### Para alterar os dados do usuário informe a senha atual no caso do tipo de usuario não ser admin lembrando substitua o :id pelo id do usuário cadastrado no banco
+
+    localhost:3000/user/:id/updatemydata
+
+** No corpo da requisição o <code>passwordCurrentBody</code> é a senha atual ** 

@@ -6,7 +6,7 @@ class TermController {
         const newTerm = req.body
         try {
             const newTermCreate = await database.Terms.create(newTerm)
-            return res.status(200).json(newTermCreate)
+            return res.status(201).json(newTermCreate)
         } catch (error) {
             return res.status(500).json(error.message)
         }
@@ -38,6 +38,16 @@ class TermController {
         try {
           const listTerms = await database.Terms.findAll()
           return res.status(200).json(listTerms)  
+        } catch (error) {
+          return res.status(500).json(error.message)
+        }
+      }
+
+      static async listOneTerm(req, res) {
+        const { id } = req.params
+        try {
+          const oneTerm = await database.Terms.findOne( { where: { id: Number(id) }})
+          return res.status(200).json(oneTerm)
         } catch (error) {
           return res.status(500).json(error.message)
         }

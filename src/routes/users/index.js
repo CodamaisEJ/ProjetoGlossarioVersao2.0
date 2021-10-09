@@ -14,7 +14,12 @@ router.get('/login', function(req, res) {
 router.get('/users/list', UserController.listUsers)
 router.post('/user/create', UserController.createUser)
 router.post('/token/create', TokenController.createToken)
+router.put('/user/:id/list', UserController.listOneUser)
 router.put('/user/:id/update', UserController.updateUser)
+
+//atualizar seu proprio perfil
+router.put('/user/:id/updatemydata', UserController.updateUserMydata)
+
 router.delete('/user/:id/delete', UserController.deleteUser)
 
 module.exports = router
