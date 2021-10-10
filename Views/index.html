@@ -6,46 +6,30 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/index-style.css">
+      <link rel="stylesheet" href="css/index_style.css">
+      <link rel="stylesheet" href="css/header.css">
+
 
       <title>Index</title>
     </head>
     <body>
-      <script src="js/script.js"></script>
+      <script src="js/index_script.js"></script>
 
-      <header class="cabecalho" id="header">
-        <img src="img/Lexic.jpg" alt="Logo Lexic">
+      <main class="conteudo">
+        <div class="index">
 
-            <h2>Ficha terminológica</h2>
-
-      </header>
-
-    
-
-      <section class="conteudo">
-        <div class="conteudo-main">
-          <h2>Para acessar a ficha selecione o tipo de usuário:</h2>
+          <legend>Para acessar a ficha selecione o tipo de usuário</legend>
+          
           <div class="login">
-
-              <button id="admin" onclick="trocaPaginaAdmin()"><i class="fas fa-user-friends"></i>Administrador</button>
-
-          </div>
-          <div class="login">
-
-              <button id="pesquisador" onclick="trocaPaginaPesquisador()"><i class="fas fa-user-friends"></i>Pesquisador</button>
-
-          </div>
-          <div class="login">
-
-              <button id="especialista" onclick="trocaPaginaEspecialista()"><i class="fas fa-user-friends"></i>Especialista</button>
-
+            <button id="admin" onclick="trocarPagina1()" type="button"><i class="fas fa-user-friends"></i>Administrador</button>
+            
+            <button id="pesquisador" onclick="trocarPagina2()" type="button"><i class="fas fa-user-friends"></i>Pesquisador</button>
+            
+            <button id="especialista" onclick="trocarPagina3()" type="button"><i class="fas fa-user-friends"></i>Especialista</button>
           </div>
         </div>
-      </section>
-
-      <footer class="rodape" id="footer">
-        <h2>Desenvolvido por Codamais @ 2021</h2>
-      </footer>
+                
+      </main>
 
     </body>
 </html>

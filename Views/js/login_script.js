@@ -1,27 +1,25 @@
 function mudaCor(){
-  var x = localStorage.getItem("StorageName");
+  var x = localStorage.getItem("tipoUsuario");
+  console.log(x)
   if(x == 1){
     var backgroundColor = "#314C85";
-    document.getElementById("header").style.backgroundColor = backgroundColor;
     document.getElementById("acesso").style.backgroundColor = backgroundColor;
     document.getElementById("footer").style.backgroundColor = backgroundColor;
   }
   if(x == 2){
     var backgroundColor = "#0D4F3F";
-    document.getElementById("header").style.backgroundColor = backgroundColor;
     document.getElementById("acesso").style.backgroundColor = backgroundColor;
     document.getElementById("footer").style.backgroundColor = backgroundColor;
   }
   if(x == 3){
     var backgroundColor = "#430D64";
-    document.getElementById("header").style.backgroundColor = backgroundColor;
     document.getElementById("acesso").style.backgroundColor = backgroundColor;
     document.getElementById("footer").style.backgroundColor = backgroundColor;
   }
 }
 
 function validador(){
-  var z = localStorage.getItem("StorageName");
+  var z = localStorage.getItem("tipoUsuario");
   if(z == 1){
     var usuario = '';
     var senha = '';
@@ -33,9 +31,9 @@ function validador(){
     var password = y.value;
   
     if(user === usuario && password === senha){
-      location.href = "tela-cadastro.html"
+      location.href = "tela_termos.html";
       var value = 1;
-      localStorage.setItem("StorageName",value);
+      localStorage.setItem("tipoUsuario",value);
     }
     else{
       window.alert("Usuário ou senha incorretos!")
@@ -52,9 +50,9 @@ function validador(){
     var password = y.value;
   
     if(user === usuario && password === senha){
-      location.href = "tela-cadastro.html"
+      location.href = "tela_termos.html"
       var value = 2;
-      localStorage.setItem("StorageName",value);
+      localStorage.setItem("tipoUsuario",value);
     }
     else{
       window.alert("Usuário ou senha incorretos!")
@@ -71,9 +69,9 @@ function validador(){
     var password = y.value;
   
     if(user === usuario && password === senha){
-      location.href = "tela-cadastro.html"
+      location.href = "tela_termos.html";
       var value = 3;
-      localStorage.setItem("StorageName",value);
+      localStorage.setItem("tipoUsuario",value);
     }
     else{
       window.alert("Usuário ou senha incorretos!")
