@@ -1,10 +1,16 @@
 import React from "react";
 
-export default function RegisterForm({ onSubmit }) {
+export default function RegisterForm({
+  onNameChange,
+  onEmailChange,
+  onUserTypeChange,
+  generatedPassword,
+  onSubmit,
+}) {
   return (
     <>
       <main className="conteudo">
-        <form id="create_user" action="">
+        <form id="create_user" onSubmit={onSubmit}>
           <fieldset>
             <legend>Cadastrar Usuário</legend>
             <div className="input-block">
@@ -14,6 +20,7 @@ export default function RegisterForm({ onSubmit }) {
                 name="complete_name"
                 id="complete_name"
                 type="text"
+                onChange={onNameChange}
                 required
               />
             </div>
@@ -24,6 +31,7 @@ export default function RegisterForm({ onSubmit }) {
                 name="email"
                 id="email"
                 type="email"
+                onChange={onEmailChange}
                 required
               />
             </div>
@@ -33,31 +41,36 @@ export default function RegisterForm({ onSubmit }) {
                 type="radio"
                 id="administrator"
                 name="type_user_group"
-                value="administrator"
+                value="administrador"
+                onChange={onUserTypeChange}
               />
               <label htmlFor="administrator">Administrador</label>
               <input
                 type="radio"
                 id="researcher"
                 name="type_user_group"
-                value="researcher"
+                value="pesquisador"
+                onChange={onUserTypeChange}
               />
               <label htmlFor="researcher">Pesquisador</label>
               <input
                 type="radio"
                 id="specialist"
                 name="type_user_group"
-                value="specialist"
+                value="especialista"
+                onChange={onUserTypeChange}
               />
               <label htmlFor="specialist">Especialista</label>
             </div>
             <div className="input-block" id="password-block">
-              <label htmlFor="password">Senha Atual</label>
+              <label htmlFor="password">Senha Gerada</label>
               <input
-                placeholder="********"
+                // placeholder="********"
                 name="password"
                 id="password"
-                type="password"
+                type="text"
+                value={generatedPassword}
+                readOnly={true}
                 required
               />
             </div>
