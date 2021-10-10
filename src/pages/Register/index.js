@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 
-import Header from "../../components/Header";
+import HeaderWithButtons from "../../components/HeaderWithButtons";
 import Footer from "../../components/Footer";
 import { RegisterForm } from "../../components/Form";
 import api from "../../services/api";
@@ -47,13 +47,13 @@ export default function Register() {
       alert("Usuário cadastrado com sucesso.");
       history.push("/usuarios");
     } catch (error) {
-      alert("Ocorreu um erro: " + error.message);
+      alert("Erro ao cadastrar. Usuário já cadastrado?");
     }
   }
 
   return (
     <div>
-      <Header />
+      <HeaderWithButtons />
       <RegisterForm
         onNameChange={handleNameChange}
         onEmailChange={handleEmailChange}

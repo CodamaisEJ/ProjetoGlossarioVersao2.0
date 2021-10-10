@@ -7,17 +7,17 @@
   padding: 20px;
   display: flex;
 }
-.cabecalho img {
-  margin-right: 10px;
-  border-radius: 100%;
-  width: 5vw;
-}
 .cabecalho h2 {
   margin-top: 15px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
+}
+.cabecalho img {
+  margin-right: 10px;
+  border-radius: 100%;
+  width: 5vw;
 }
 .cabecalho button {
   width: 15vw;
@@ -31,24 +31,33 @@
   font-weight: bold;
   font-size: 18px;
 }
-#btn-cadastro {
-  width: fit-content;
-  padding: 5px;
+#btn-gerenciamento {
   margin-left: auto;
   margin-top: 15px;
 }
-#btn-notificacao,
-#btn-users {
-  margin: 0;
-  padding: 0;
+#btn-cadastro {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+#btn-notificacao {
   margin-left: 10px;
   margin-top: 10px;
   width: 60px;
-  height: 60px;
-  border-radius: 60px;
+  height: 50px;
+  border-radius: 100%;
   font-size: 30px;
   text-align: center;
 }
+#btn-users {
+  margin-top: 10px;
+  width: 60px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+
 #btn-notificacao i,
 #btn-users i {
   padding: 0;

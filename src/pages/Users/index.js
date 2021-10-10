@@ -40,8 +40,14 @@ export default function Users() {
     history.push("/usuarios/editar", { user });
   }
 
-  function handleDeleteUser() {
-    alert("ok");
+  async function handleDeleteUser(user_id) {
+    try {
+      await api.post(`/user/${user_id}/delete`);
+      alert("Usuário deletado com sucesso.");
+    } catch (error) {
+      alert("Erro ao deletar usuário.");
+      console.log(`error.message: `, error.message);
+    }
   }
 
   return (
