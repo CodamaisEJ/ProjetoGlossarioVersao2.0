@@ -14,10 +14,6 @@ root{
 html, body{
   height: 100%;
 }
-body{
-  display: flex;
-  flex-direction: column;
-}
 .cabecalho{
   background-color: #314C85;
   color: #FFF;
@@ -151,17 +147,23 @@ body{
   margin-right: 30px;
 }
 
-
-.rodape{
-  background-color: #314C85;
-  flex-shrink: 0;
-  color: #FFF;
-  padding: 20px;
-  text-align: center;
+/*--------------------------------------------------------------------  Footer Page*/
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#314C85;
+  width: 100%;
+  height: 86px;
 }
-.rodape h2{
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
+footer h2{
+  Font-family: Poppins;
+  Font-style: Medium;
+  Font-size: 26px;
+  Line-height: 39px;
+  Line-height: 100%;
+  text-Align: Left;
+  Vertical-align: Top;
+  Fill: Solid;
+  color:#FFFFFF; 
 }

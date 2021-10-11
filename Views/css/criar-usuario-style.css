@@ -1,16 +1,20 @@
 /*-------------------------------------------------------------------- Body page*/
-.conteudo{
-  flex:1 0 auto;
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 73.8%;
 }
 #create_user{
-   height: 100%;
    display: flex;
    justify-content: center;
+   align-items: center;
 
 }
 #create_user fieldset{
   min-width: 626px;
   padding-top: 4rem;
+  border-color: rgba(255, 255, 255, 0);
 }
 #create_user fieldset legend{
   text-align: center;
@@ -107,32 +111,25 @@
 #save{
   background-color:#314C85;
 }
-@media only screen and (max-width: 660px) {
-  #create_user fieldset{
-    min-width: 400px;
-    padding-top: 4rem;
-  }
-}
-@media only screen and (max-width: 400px) {
-  #create_user fieldset{
-    padding-top: 2rem;
-    padding-left: 1rem;
-  }
-  .input-block input{
-    width: 90%;
-  }
-}
+
 /*--------------------------------------------------------------------  Footer Page*/
-.rodape{
-  flex-shrink: 0;
-  background-color: #314C85;
-  color: #FFF;
-  padding: 20px;
-  text-align: center;
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#314C85;
+  width: 100%;
+  height: 86px;
 }
-.rodape h2{
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
+footer h2{
+  Font-family: Poppins;
+  Font-style: Medium;
+  Font-size: 26px;
+  Line-height: 39px;
+  Line-height: 100%;
+  text-Align: Left;
+  Vertical-align: Top;
+  Fill: Solid;
+  color:#FFFFFF;
+  
 }

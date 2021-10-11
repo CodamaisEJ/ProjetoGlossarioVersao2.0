@@ -12,6 +12,7 @@ html, body{
 body{
   display: flex;
   flex-direction: column;
+  min-width: 1024px !important; /* força largura minima de 1024px*/
 }
 
 .cabecalho{
@@ -97,3 +98,7 @@ i{
   font-weight: 500;
   font-size: 25px;
 }
+
+
+
+
