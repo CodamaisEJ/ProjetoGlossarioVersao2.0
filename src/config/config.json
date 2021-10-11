@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "dicglo36_uteste",
-    "password": "gloss@90",
-    "database": "dicglo36_fichaterminologica",
-    "host": "dicgloss.com",
+    "username": "adminft",
+    "password": "3KMGwuKPRPp@iMP",
+    "database": "fichaterm",
+    "host": "db4free.net",
     "dialect": "mysql"
   }
 }
