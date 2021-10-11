@@ -158,19 +158,6 @@ input[type="date"]::-webkit-inner-spin-button{
   display: none;
 }
 
-.rodape{  
-  background-color: #314C85;
-  color: #FFF;
-  padding: 20px;
-  text-align: center;
-}
-.rodape h2{
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
-}
-
 @media only screen and (max-width: 800px) {
   .conteudo{
       display: flex;

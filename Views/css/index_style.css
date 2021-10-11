@@ -41,17 +41,3 @@ i{
   background-color: #430D64;
   padding-right: 55px;
 }
-
-.rodape{
-  background-color: #314C85;
-  flex-shrink: 0;
-  color: #FFF;
-  padding: 20px;
-  text-align: center;
-}
-.rodape h2{
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
-}
