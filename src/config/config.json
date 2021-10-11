@@ -1,10 +1,10 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "12345",
-    "database": "fichaterminologica",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "username": "adminft",
+    "password": "3KMGwuKPRPp@iMP",
+    "database": "fichaterm",
+    "host": "db4free.net",
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "dicglo36_uteste",
+    "password": "gloss@90",
+    "database": "dicglo36_fichaterminologica",
+    "host": "dicgloss.com",
     "dialect": "mysql"
   }
 }
