@@ -1,0 +1,43 @@
+.index legend{
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  color: #101564;
+}
+.login{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  text-align: center;
+}
+.login button{
+  margin-top: 20px;
+  width: 25vw;
+  height: 7vh;
+  border-radius: 10px;
+  color: #FFF;
+  border: 0;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 250;
+  font-size: 18px;
+}
+i{
+  color:#FFFFFF;
+  margin-right: 20px;
+}
+#admin{
+  background-color: #314C85;
+  padding-right: 35px;
+}
+#pesquisador{
+  background-color: #0D4F3F;
+  padding-right: 55px;
+}
+#especialista{
+  background-color: #430D64;
+  padding-right: 55px;
+}

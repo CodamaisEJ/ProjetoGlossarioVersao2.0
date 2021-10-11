@@ -1,0 +1,112 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+html, body {
+  height: 100%;
+  min-width: 1024px !important; /* força largura minima de 1024px*/
+}
+/* Header --------------------------------------------------*/
+#header{
+  height: 86px;
+  Top :-2px;
+  display: flex;  
+  background-color:#234F90;
+  justify-content: space-between;
+}
+.logo{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo img{
+  height: 65px;
+  width: 65px;
+  left: 25px;
+  top: 9px;
+  border-radius: 500px;
+  margin-left: 20px;
+
+}
+.logo h1{
+  margin-left: 20px;
+  Font-family: Poppins;
+  Font-style: Bold;
+  Font-size: 40px;
+  Line-height: 60px;
+  Line-height: 100%;
+  text-align: Left;
+  Vertical-align: Top;
+  color:white;
+}
+.links ul{
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+.links ul li{
+  margin-right: 20px;
+}
+#cadastrar_termos{
+  height: 37px;
+  width: 203px;
+  left: 1040px;
+  top: 21px;
+  border-radius: 8px;
+  background-color: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+#cadastrar_termos a{
+  Font-family: Poppins;
+  Font-style: Bold;
+  Font-size: 18px;
+  Line-height: 27px;
+  Line-height: 100%;
+  text-Align: Left;
+  Vertical-align: Top;
+  Fill: Solid;
+  color:#000000;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+ 
+
+}
+#logo_user, #logo_notificacao{
+  background-color: #FAFAFA;
+  height: 54.999996185302734px;
+  width: 55px;
+  border-radius: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer ------------------------------------------------ */
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#314C85;
+  width: 100%;
+  height: 86px;
+}
+footer h2{
+  Font-family: Poppins;
+  Font-style: Medium;
+  Font-size: 26px;
+  Line-height: 39px;
+  Line-height: 100%;
+  text-Align: Left;
+  Vertical-align: Top;
+  Fill: Solid;
+  color:#FFFFFF;
+  
+}

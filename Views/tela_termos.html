@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/termos_style.css">
+    <link rel="stylesheet" href="css/header-footer.css">
+
+    <title>Cadastro</title>
+
+  </head>
+
+  <body onload="mudaCor()">
+    <script src="js/cadastro_script.js"></script>
+
+    <header id="header" class="header">
+      <div class="logo">
+          <img src="./img/Lexic.jpg" alt="">
+          <h1>Ficha Terminológica</h1>
+      </div>
+      <div id="button-block" class="links">
+          <ul>
+              <li id="criar_usuario"><a href="tela_usuarios.html">Criar Usuario</a></li>
+              <li id="cadastrar_termos"><a href="">Cadastrar Termos +</a></li>
+              <li id="logo_notificacao"><a href=""><img src="./img/sino-de-notificacao 1.png" alt=""></a></li>
+              <li id="logo_user"><a href=""><img src="./img/Group.png" alt=""></a></li>
+          </ul>
+      </div>
+  </header>
+
+      <main class="conteudo">     
+        <div class="tela_termos">
+            
+            <legend>Editar e Deletar</legend>
+            <h3>Total de termos:</h3>
+            
+            <div class="Busca">
+              <input placeholder="Pesquisar" type="search" name="pesquisa" id="pesquisa">
+            </div>
+
+            <div class="termos">
+
+              <div class="borda-termo">
+                <div class="termo">
+                  <p onclick="trocarPagina()">Termo</p>
+                </div>
+                <i class="fas fa-trash"></i>
+              </div> 
+
+            </div>
+
+          </div>
+      </main>
+
+      <footer id="footer">
+        <h2>Desenvolvido por Codamais @ 2021</h2>
+    </footer>
+      
+  </body>
+  </html>

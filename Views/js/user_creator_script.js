@@ -1,5 +1,5 @@
 function mudaCor(){
-  var x = localStorage.getItem("StorageName");
+  var x = localStorage.getItem("tipoUsuario");
   if(x == 1){
     var backgroundColor = "#314C85";
     document.getElementById("header").style.backgroundColor = backgroundColor;
@@ -15,4 +15,7 @@ function mudaCor(){
     document.getElementById("header").style.backgroundColor = backgroundColor;
     document.getElementById("footer").style.backgroundColor = backgroundColor;
   }
+}
+function trocarPagina(){
+  location.href= "tela_usuarios.html";
 }

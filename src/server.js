@@ -7,7 +7,7 @@ const routes = require('./routes')
 routes(app)
 
 //app.listen(port, () => {
-  //  console.log(`Servidor em execução na porta ${port}`)
+   // console.log(`Servidor em execução na porta ${port}`)
 //})
 
 app.listen(process.env.PORT || 3000)

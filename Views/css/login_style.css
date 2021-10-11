@@ -1,0 +1,46 @@
+#tela_login{
+  display: flex;
+}
+#tela_login{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1;
+  text-align: center;
+}
+
+#tela_login legend{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  color: #101564;
+  text-align: center;
+}
+.input-block label{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #4D5E77;
+}
+.input-block input{
+  padding-left: 10px;
+  width: 20vw;
+  height: 5vh;
+  background-color: #FFFFFF;
+  border: 2px solid #A1B2CD;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+#tela_login button{
+  background-color: #314C85;
+  margin-top: 10px;
+  width: 20vw;
+  height: 5vh;
+  border: 0;
+  border-radius: 8px;
+  color: #FFF;
+}
+i{
+  margin-right: 5px;
+}

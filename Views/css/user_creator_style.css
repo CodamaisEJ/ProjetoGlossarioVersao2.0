@@ -1,12 +1,8 @@
 /*-------------------------------------------------------------------- Body page*/
-.conteudo{
-  flex:1 0 auto;
-}
 #create_user{
    height: 100%;
    display: flex;
    justify-content: center;
-
 }
 #create_user fieldset{
   min-width: 626px;
