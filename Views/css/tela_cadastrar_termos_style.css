@@ -1,17 +1,10 @@
-
-.conteudo{
-    height: 100%;
-}
-
 #Cadastrar_termos{
     display: flex;
 }
 #Cadastrar_termos fieldset{
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto;
-
-      
+    grid-template-columns: auto auto; 
 }
 #Cadastrar_termos fieldset legend{
     grid-column-start: 1;
@@ -171,31 +164,3 @@ input[type="date"]::-webkit-inner-spin-button{
     font-weight: 500;
     font-size: 25px;
   }
-
-@media only screen and (max-width: 800px) {
-    .conteudo{
-        display: flex;
-        width: 100%;
-    }
-    #Cadastrar_termos{
-        width: 100%;
-    }
-    #Cadastrar_termos fieldset{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .input-block input{
-        width: 100%;
-    }
-    .input-block select{
-        width: 100%;
-    }
-    .verificar_button , .salvar{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0px;
-        padding: 0px;
-    }
-}

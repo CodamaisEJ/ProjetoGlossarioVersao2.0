@@ -103,21 +103,6 @@
 #save{
   background-color:#314C85;
 }
-@media only screen and (max-width: 660px) {
-  #create_user fieldset{
-    min-width: 400px;
-    padding-top: 4rem;
-  }
-}
-@media only screen and (max-width: 400px) {
-  #create_user fieldset{
-    padding-top: 2rem;
-    padding-left: 1rem;
-  }
-  .input-block input{
-    width: 90%;
-  }
-}
 /*--------------------------------------------------------------------  Footer Page*/
 .rodape{
   flex-shrink: 0;

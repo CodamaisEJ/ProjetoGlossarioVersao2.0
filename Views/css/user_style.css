@@ -43,13 +43,15 @@
   color: #0D114F;
 }
 #lixeira{
-  margin-left: 25px;
+  margin-left: 45px;
 }
 .btn{
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 #btn_criar_user{
+  margin:auto;
   grid-column-start: 4;
   border: none;
   width: 151px;
