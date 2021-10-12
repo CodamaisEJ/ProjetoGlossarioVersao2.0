@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sequelize db:create --env production && sequelize db:migrate --env production && node ./src/server.js",
+    "build": "sequelize db:create --env production && sequelize db:migrate --env production",
     "start": "node ./src/server.js"
   },
   "keywords": [],
