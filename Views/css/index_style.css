@@ -3,12 +3,17 @@
 }
 .index legend{
   text-align: center;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 30px;
   color: #101564;
 }
+
+#aqui{
+  margin-bottom: 25px;
+}
+
 .login{
   display: grid;
   justify-content: center;
@@ -17,8 +22,8 @@
   text-align: center;
 }
 .login button{
-  margin-top: 20px;
-  width: 25vw;
+  margin-top: 50px;
+  width: 20vw;
   height: 7vh;
   border-radius: 10px;
   color: #FFF;
