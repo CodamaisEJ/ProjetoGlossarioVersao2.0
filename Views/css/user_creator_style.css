@@ -1,14 +1,14 @@
 /*-------------------------------------------------------------------- Body page*/
-#create_user{
-   height: 100%;
-   display: flex;
-   justify-content: center;
+#create_user {
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
-#create_user fieldset{
+#create_user fieldset {
   min-width: 626px;
   padding-top: 4rem;
 }
-#create_user fieldset legend{
+#create_user fieldset legend {
   text-align: center;
   color: #101564;
   font-family: Poppins;
@@ -17,19 +17,20 @@
   font-size: 26px;
   line-height: 39px;
 }
-.input-block label{
+.input-block label {
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  color: #234F90;
+  color: #234f90;
   margin-bottom: 3px;
 }
-.input-block input{
+.input-block input {
+  height: 48px;
   width: 100%;
-  background: #FFFFFF;
-  border: 2px solid #7B8CA7;
+  background: #ffffff;
+  border: 2px solid #7b8ca7;
   box-sizing: border-box;
   border-radius: 8px;
   margin-bottom: 3px;
@@ -38,22 +39,22 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #7B8CA7;
+  color: #7b8ca7;
   padding-left: 10px;
 }
-.input-block input::-webkit-input-placeholder{
+.input-block input::-webkit-input-placeholder {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #7B8CA7;
+  color: #7b8ca7;
 }
-#password-block{
+#password-block {
   display: flex;
   flex-direction: column;
 }
-#password-block input{
+#password-block input {
   width: 50%;
 }
 .radio-block p {
@@ -63,27 +64,27 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  color: #234F90;
+  color: #234f90;
 }
-.radio-block input{
+.radio-block input {
   margin-left: 10px;
 }
-.radio-block label{
+.radio-block label {
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 22px;
   align-items: center;
-  color: #7B8CA7;
+  color: #7b8ca7;
 }
-.button-block{
+.button-block {
   display: flex;
   height: 32%;
   justify-content: center;
   align-items: center;
 }
-.button-block button{
+.button-block button {
   width: 117px;
   height: 35px;
   border-radius: 8px;
@@ -94,25 +95,25 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  color: #FAFAFA;
+  color: #fafafa;
   border-color: rgba(255, 255, 255, 0);
-  }
-#return{
-  background-color: #A1B2CD;
 }
-#save{
-  background-color:#314C85;
+#return {
+  background-color: #a1b2cd;
+}
+#save {
+  background-color: #314c85;
 }
 /*--------------------------------------------------------------------  Footer Page*/
-.rodape{
+.rodape {
   flex-shrink: 0;
-  background-color: #314C85;
-  color: #FFF;
+  background-color: #314c85;
+  color: #fff;
   padding: 20px;
   text-align: center;
 }
-.rodape h2{
-  font-family: 'Poppins', sans-serif;
+.rodape h2 {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
