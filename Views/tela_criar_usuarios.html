@@ -1,69 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/header-footer.css">
-    <link rel="stylesheet" href="./css/user_creator_style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/header-footer.css" />
+    <link rel="stylesheet" href="./css/user_creator_style.css" />
 
     <title>Cadastro</title>
-
   </head>
   <body onload="mudaCor()">
     <script src="js/user_creator_script.js"></script>
 
     <header id="header" class="header">
       <div class="logo">
-          <img src="./img/Lexic.jpg" alt="">
-          <h1>Ficha Terminológica</h1>
+        <img src="./img/Lexic.jpg" alt="" />
+        <h1>Ficha Terminológica</h1>
       </div>
       <div id="button-block" class="links">
-          <ul>
-              <li id="cadastrar_termos"><a href="tela_cadastrar_termos.html">Cadastrar Termos +</a></li>
-              <li id="logo_notificacao"><a href=""><img src="./img/sino-de-notificacao 1.png" alt=""></a></li>
-              <li id="logo_user"><a href=""><img src="./img/Group.png" alt=""></a></li>
-          </ul>
+        <ul>
+          <li id="cadastrar_termos">
+            <a href="tela_cadastrar_termos.html">Cadastrar Termos +</a>
+          </li>
+          <li id="logo_notificacao">
+            <a href=""><img src="./img/sino-de-notificacao 1.png" alt="" /></a>
+          </li>
+          <li id="logo_user">
+            <a href=""><img src="./img/Group.png" alt="" /></a>
+          </li>
+        </ul>
       </div>
-  </header>
+    </header>
 
     <main class="conteudo">
-        <form id="create_user" action="">
-            <fieldset>
-              <legend>Cadastrar Usuário</legend>
-              <div class="input-block">
-                  <label for="complete_name">Nome Completo</label>
-                  <input placeholder="Seu nome" name="complete_name" id="complete_name" type="text" required>
-              </div>
-              <div class="input-block">
-                  <label for="email">E-mail</label>
-                  <input placeholder="Seu e-mail" name="email" id="email" type="email" required>
-              </div>
-              <div class="radio-block">
-                  <p>Tipo de Usuário</p>
-                  <input type="radio" id="administrator" name="type_user_group" value="administrator" >
-                  <label for="administrator">Administrador</label>
-                  <input type="radio" id="researcher" name="type_user_group" value="researcher" >
-                  <label for="researcher">Pesquisador</label>
-                  <input type="radio" id="specialist" name="type_user_group" value="specialist" >
-                  <label for="specialist">Especialista</label>
-              </div>
-              <div class="input-block" id="password-block">
-                <label for="password">Senha Atual</label>
-                <input placeholder="********" name="password" id="password" type="password" required>
-              </div>
-              <div class="button-block"> 
-                <button id="return">Voltar</button>
-                <button id="save" type="submit">Salvar</button>
-              </div>
-            </fieldset>
-        </form>
-      </main>
+      <form id="create_user" action="">
+        <fieldset>
+          <legend>Cadastrar Usuário</legend>
+          <div class="input-block">
+            <label for="complete_name">Nome Completo</label>
+            <input
+              placeholder="Seu nome"
+              name="complete_name"
+              id="complete_name"
+              type="text"
+              required
+            />
+          </div>
+          <div class="input-block">
+            <label for="email">E-mail</label>
+            <input
+              placeholder="Seu e-mail"
+              name="email"
+              id="email"
+              type="email"
+              required
+            />
+          </div>
+          <div class="radio-block">
+            <p>Tipo de Usuário</p>
+            <input
+              type="radio"
+              id="administrator"
+              name="type_user_group"
+              value="administrator"
+            />
+            <label for="administrator">Administrador</label>
+            <input
+              type="radio"
+              id="researcher"
+              name="type_user_group"
+              value="researcher"
+            />
+            <label for="researcher">Pesquisador</label>
+            <input
+              type="radio"
+              id="specialist"
+              name="type_user_group"
+              value="specialist"
+            />
+            <label for="specialist">Especialista</label>
+          </div>
+          <div class="input-block" id="password-block">
+            <label for="password">Senha Atual</label>
+            <input
+              placeholder="********"
+              name="password"
+              id="password"
+              type="password"
+              required
+            />
+          </div>
+          <div class="button-block">
+            <button id="return" onclick="history.go(-1)">Voltar</button>
+            <button id="save" type="submit">Salvar</button>
+          </div>
+        </fieldset>
+      </form>
+    </main>
 
-      <footer id="footer">
-        <h2>Desenvolvido por Codamais @ 2021</h2>
+    <footer id="footer">
+      <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
-    
   </body>
 </html>
