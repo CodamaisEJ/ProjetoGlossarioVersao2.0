@@ -1,4 +1,7 @@
 /*-------------------------------------------------------------------- Body page*/
+.conteudo{
+  height: 550px;
+}
 #create_user {
   height: 100%;
   display: flex;
