@@ -15,7 +15,7 @@
 
     <title>Cadastro</title>
   </head>
-  <body onload="mudaCor(),gerarSenhaAleatoriaParaUsuario()">
+  <body onload="mudaCor()">
     <script src="js/user_creator_script.js"></script>
 
     <header id="header" class="header">
@@ -39,9 +39,9 @@
     </header>
 
     <main class="conteudo">
-      <form id="create_user">
+      <form id="create_user" action="">
         <fieldset>
-          <legend>Cadastrar Usuário</legend>
+          <legend>Editar Usuário</legend>
           <div class="input-block">
             <label for="complete_name">Nome Completo</label>
             <input
@@ -68,28 +68,28 @@
               type="radio"
               id="administrator"
               name="type_user_group"
-              value="administrador"
+              value="administrator"
             />
             <label for="administrator">Administrador</label>
             <input
               type="radio"
               id="researcher"
               name="type_user_group"
-              value="pesquisador"
+              value="researcher"
             />
             <label for="researcher">Pesquisador</label>
             <input
               type="radio"
               id="specialist"
               name="type_user_group"
-              value="especialista"
+              value="specialist"
             />
             <label for="specialist">Especialista</label>
           </div>
           <div class="input-block" id="password-block">
-            <label for="password">Senha Gerada</label>
+            <label for="password">Senha Atual</label>
             <input
-              placeholder=""
+              placeholder="********"
               name="password"
               id="password"
               type="password"
@@ -98,9 +98,7 @@
           </div>
           <div class="button-block">
             <button id="return" onclick="history.go(-1)">Voltar</button>
-            <button id="save" type="submit" onclick="cadastrarUsuario(event)">
-              Salvar
-            </button>
+            <button id="save" type="submit">Salvar</button>
           </div>
         </fieldset>
       </form>
