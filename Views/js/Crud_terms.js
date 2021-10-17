@@ -20,7 +20,7 @@ function ListTerms(Termos) {
     <div class="termos">
     <div class="borda-termo">
       <div class="termo">
-        <p onclick="trocarPagina()">${Termo.entrada}</p>
+        <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>
       </div>
       <i class="fas fa-trash" onclick="DeletandoTerms()"></i>
     </div> 
@@ -104,7 +104,7 @@ async function editarTermo(event) {
 
     if (result.ok) {
       alert("Termo editado com sucesso.");
-      location.href = "tela_usuarios.html";
+      location.href = "tela_termos.html";
     } else {
       alert("Termo já existe.");
     }
@@ -128,4 +128,27 @@ function pegarInputsDoForm(form_name) {
   // }
 
   return { entrada, cat_morfo, genero_grupo, variante };
+}
+
+async function carregarDadosTermo() {
+  const term_id = history.state;
+
+  try {
+    const result = await fetch(
+      `https://ficha-terminologica-backend.herokuapp.com/term/${term_id}/list`
+    );
+
+    const json = await result.json();
+
+    const form = document.forms["edit_term"];
+
+    form["entrada"].value = json.entrada;
+    form["cat_morfo"].value = json.categoria_gramatical;
+    form["genero_grupo"].value = json.genero;
+    form["variantes"].value = json.variantes;
+
+    console.log(`dados do termo carregados`);
+  } catch (error) {
+    console.log(`Erro ao carregar dados do termo`, error);
+  }
 }

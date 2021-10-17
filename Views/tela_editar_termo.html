@@ -15,7 +15,7 @@
 
     <title>Cadastro</title>
   </head>
-  <body onload="mudaCor()">
+  <body onload="mudaCor(),carregarDadosTermo()">
     <script src="js/ficha_script.js"></script>
     <script src="js/Crud_terms.js"></script>
 
@@ -39,7 +39,7 @@
     </header>
 
     <main class="conteudo">
-      <form id="Cadastrar_termos" name="create_term">
+      <form id="Cadastrar_termos" name="edit_term">
         <fieldset>
           <legend>Cadastrar</legend>
           <div class="input-block">
@@ -216,9 +216,7 @@
             <button>Verificar</button>
           </div>
           <div class="salvar">
-            <button type="submit" onclick="cadastrarTermo(event)">
-              Salvar
-            </button>
+            <button type="submit" onclick="editarTermo(event)">Salvar</button>
           </div>
         </fieldset>
       </form>
