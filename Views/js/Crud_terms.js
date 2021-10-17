@@ -1,67 +1,47 @@
-const Userslist = document.querySelector("#termos");
+const Termoslist = document.querySelector("#tela_termos");
 
-async function consultaUsers() {
+async function consultaTerms() {
   const retorno = await fetch(
-    "https://ficha-terminologica-backend.herokuapp.com/users/list"
+    "https://ficha-terminologica-backend.herokuapp.com/terms/list"
   );
-  const Users = await retorno.json();
-  ListUsers(Users);
+  const Terms = await retorno.json();
+  ListTerms(Terms);
 }
 
 let UserHTML;
 
-function ListUsers(Users) {
-  Users.forEach((User) => {
-    UserHTML = `
-      <style> 
-      .users{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        text-align: center;
-        margin-bottom: 30px; 
-      }
-    </style> 
-          </style> 
-      <div class="users" id="users">                  
-           <p>${User.nome}</p>
-           <p>${User.tipo_de_usuario}</p>
-           <p>${User.email}</p>
-           <p>
-            <i 
-              class="fas fa-pencil-alt" 
-              id="lapis" 
-              onclick="irParaTelaEditarUsuario(${User.id})"
-            >
-            </i>
-            <i 
-              class="fas fa-trash-alt"
-              id="lixeira"
-              onclick="DeletandoUser(${User.id})">
-            </i>          
-           </p>          
+function ListTerms(Termos) {
+  Termos.forEach((Termo) => {
+    TermoHTML = `
+    
+    <div class="termos">
+    <div class="borda-termo">
+      <div class="termo">
+        <p onclick="trocarPagina()">${Termo.entrada}</p>
       </div>
+      <i class="fas fa-trash" onclick="DeletandoTerms()"></i>
+    </div> 
       `;
-
-    Userslist.innerHTML = Userslist.innerHTML + UserHTML;
+    Termoslist.innerHTML = Termoslist.innerHTML + TermoHTML;
   });
 }
 
-async function DeletandoUser(user_id) {
+async function DeletandoTerms() {
   const retorno = await fetch(
-    `https://ficha-terminologica-backend.herokuapp.com/user/${user_id}/delete`,
+    `https://ficha-terminologica-backend.herokuapp.com/term/2/delete`,
     { method: "delete" }
   );
   const json = await retorno.json();
   alert("" + json.message);
   console.log(json);
-  DeleteUsers();
+  DeleteTerms();
 }
 
-function DeleteUsers() {
-  Userslist.innerHTML = "";
+function DeleteTerms() {
+  Termoslist.innerHTML = "";
 }
 
-consultaUsers();
+consultaTerms();
 
 async function cadastrarUsuario(event) {
   event.preventDefault();
