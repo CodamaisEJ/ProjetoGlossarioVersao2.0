@@ -1,5 +1,4 @@
 'use strict';
-const { text } = require('express');
 const {
   Model
 } = require('sequelize');
@@ -12,9 +11,29 @@ module.exports = (sequelize, DataTypes) => {
   };
   Users.init({
     nome: DataTypes.STRING,
-    email: DataTypes.STRING,
+    email: {
+      type: DataTypes.STRING,
+      validate: {
+        isEmail: true
+      },
+      unique: {
+        args: true,
+        msg: {
+          error: 'Email já está sendo utilizado por outro usuário. Utilize outro!'
+        }
+      }
+    },
     senha: DataTypes.STRING,
-    tipo_de_usuario: DataTypes.ENUM('administrador','especialista','pesquisador','pendente')
+    tipo_de_usuario: {
+      type: DataTypes.ENUM,
+      values: ['administrador','especialista','pesquisador','pendente'],
+      notIn: {
+        args: [['administrador','especialista','pesquisador','pendente']],
+        msg: {
+          error: "Informe um dos 4 tipos de usuário corretamente!"
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Users',
