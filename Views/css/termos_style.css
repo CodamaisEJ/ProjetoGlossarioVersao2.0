@@ -1,6 +1,10 @@
 *{
   text-decoration: none;
 }
+
+.links{
+  margin-right: 0rem;
+}
 .tela_termos{
   margin-top: 1.5rem;
   width: 100%;
