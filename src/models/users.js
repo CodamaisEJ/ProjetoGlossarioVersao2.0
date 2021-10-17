@@ -24,16 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     senha: DataTypes.STRING,
-    tipo_de_usuario: {
-      type: DataTypes.ENUM,
-      values: ['administrador','especialista','pesquisador','pendente'],
-      notIn: {
-        args: [['administrador','especialista','pesquisador','pendente']],
-        msg: {
-          error: "Informe um dos 4 tipos de usuário corretamente!"
-        }
-      }
-    }
+    tipo_de_usuario: DataTypes.ENUM('administrador','especialista','pesquisador','pendente')
   }, {
     sequelize,
     modelName: 'Users',
