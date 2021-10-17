@@ -1,3 +1,6 @@
+const TOKEN =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjYsImlhdCI6MTYzNDQ4MDk0OSwiZXhwIjoxNjM0NTY3MzQ5fQ.xGPRFl9iCQ8RG6JOHQJHobDEhNkrEvk7pgoYMZwgoVo";
+
 const Termoslist = document.querySelector("#tela_termos");
 
 async function consultaTerms() {
@@ -43,101 +46,86 @@ function DeleteTerms() {
 
 consultaTerms();
 
-async function cadastrarUsuario(event) {
+async function cadastrarTermo(event) {
   event.preventDefault();
-  const form = document.forms["create_user"];
 
-  const nome = form["complete_name"].value;
-  const email = form["email"].value;
-  const tipo_de_usuario = form["type_user_group"].value;
-  const senha = form["password"].value;
-
-  if (nome === "" || email === "" || tipo_de_usuario === "") {
-    alert("Por favor preencha os campos.");
-    return;
-  }
-
-  const data = {
-    nome,
-    email,
-    tipo_de_usuario,
-    senha,
-  };
+  const data = pegarInputsDoForm("create_term");
 
   try {
     const result = await fetch(
-      "https://ficha-terminologica-backend.herokuapp.com/user/create",
+      "https://ficha-terminologica-backend.herokuapp.com/term/create",
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "token " + TOKEN,
+        },
         body: JSON.stringify(data),
       }
     );
 
-    if (result.ok) {
-      alert("Usuário cadastrado com sucesso.");
-      location.href = "tela_usuarios.html";
-    } else {
-      alert("Usuário já existe.");
+    if (result.status === 201) {
+      alert("Termo cadastrado com sucesso.");
+      location.href = "tela_termos.html";
+    } else if (result.status === 401) {
+      alert("Ocorreu um erro: Não autorizado.");
     }
   } catch (error) {
-    alert("Erro ao cadastrar usuário");
+    alert("Erro ao cadastrar termo");
     console.log(`error.message`, error.message);
   }
 }
 
-function irParaTelaEditarUsuario(user_id) {
-  history.pushState(user_id, "", "tela_editar_usuario.html");
-  window.location.href = "tela_editar_usuario.html";
+function irParaTelaEditarTermo(term_id) {
+  history.pushState(term_id, "", "tela_editar_termo.html");
+  window.location.href = "tela_editar_termo.html";
 }
 
-async function editarUsuario(event) {
-  const user_id = history.state;
+async function editarTermo(event) {
+  const term_id = history.state;
 
   event.preventDefault();
 
-  const form = document.forms["edit_user"];
-
-  const nome = form["complete_name"].value;
-  const email = form["email"].value;
-  const tipo_de_usuario = form["type_user_group"].value;
-  const senha = form["password"].value;
-
-  if (nome === "" || email === "" || tipo_de_usuario === "") {
-    alert("Por favor preencha os campos.");
-    return;
-  }
-
-  const data = {
-    nome,
-    email,
-    tipo_de_usuario,
-    senha,
-  };
+  const data = pegarInputsDoForm("edit_term");
 
   try {
     const result = await fetch(
-      `https://ficha-terminologica-backend.herokuapp.com/user/${user_id}/update`,
+      `https://ficha-terminologica-backend.herokuapp.com/term/${term_id}/update`,
       {
         method: "PUT",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "token " + TOKEN,
+        },
+
         body: JSON.stringify(data),
       }
     );
 
     if (result.ok) {
-      alert("Usuário editado com sucesso.");
+      alert("Termo editado com sucesso.");
       location.href = "tela_usuarios.html";
     } else {
-      alert("Usuário já existe.");
+      alert("Termo já existe.");
     }
   } catch (error) {
-    alert("Erro ao cadastrar usuário");
+    alert("Erro ao cadastrar termo");
     console.log(`error.message`, error.message);
   }
 }
 
-function gerarSenhaAleatoriaParaUsuario() {
-  const input_password = document.forms["create_user"]["password"];
-  input_password.value = Math.random().toString(36).substr(2, 8).toUpperCase();
+function pegarInputsDoForm(form_name) {
+  const form = document.forms[form_name];
+
+  const entrada = form["entrada"].value;
+  const cat_morfo = form["cat_morfo"].value;
+  const genero_grupo = form["genero_grupo"].value;
+  const variante = form["variante"].value;
+
+  // if (entrada === "" || cat_morfo === "" || genero_grupo === "") {
+  //   alert("Por favor preencha os campos.");
+  //   return;
+  // }
+
+  return { entrada, cat_morfo, genero_grupo, variante };
 }
