@@ -30,7 +30,7 @@
   </header>
 
     <main class="conteudo">
-      <div class="tela_usuarios">
+      <div class="tela_usuarios" id="users">
          <legend>Usuários cadastrados</legend>
             <div class="info">
               <h3>Nome</h3>
@@ -38,19 +38,22 @@
               <h3>E-mail</h3>
               <h3>Ações</h3>
             </div>
-            <div class="users">
+           <!--
+              <div class="User">
               <p>Isabella</p>
               <p>Pesquisador</p>
               <p>fulano@gmail.com</p>
               <p><i class="fas fa-pencil-alt" id="lapis"></i><i class="fas fa-trash-alt" id="lixeira"></i></p>
-            </div>
+              </div>
+           --> 
             
-            <div class="btn">
-              <button type="button" onclick="trocarPagina1()" id="btn_criar_user">Criar Usuário</button>
-            </div>
+      </div>
+      <div class="btn">
+        <button type="button" onclick="trocarPagina1()" id="btn_criar_user">Criar Usuário</button>
       </div>
     </main>
-
+    
+    <script src="js/get_users.js"></script>
     <footer class="rodape" id="footer">
       <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
