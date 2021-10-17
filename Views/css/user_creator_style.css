@@ -1,120 +1,139 @@
 /*-------------------------------------------------------------------- Body page*/
+
 #create_user {
-  height: 100%;
-  display: flex;
-  justify-content: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
+
 #create_user fieldset {
-  min-width: 626px;
-  padding-top: 2rem;
+    min-width: 626px;
+    padding-top: 2rem;
 }
+
 #create_user fieldset legend {
-  text-align: center;
-  color: #101564;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 39px;
+    text-align: center;
+    color: #101564;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 39px;
 }
+
 .input-block label {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  color: #234f90;
-  margin-bottom: 3px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #234f90;
+    margin-bottom: 3px;
 }
+
 .input-block input {
-  height: 48px;
-  width: 100%;
-  background: #ffffff;
-  border: 2px solid #7b8ca7;
-  box-sizing: border-box;
-  border-radius: 8px;
-  margin-bottom: 3px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
-  color: #7b8ca7;
-  padding-left: 10px;
+    height: 48px;
+    width: 100%;
+    background: #ffffff;
+    border: 2px solid #7b8ca7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-bottom: 3px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7b8ca7;
+    padding-left: 10px;
 }
+
 .input-block input::-webkit-input-placeholder {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
-  color: #7b8ca7;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7b8ca7;
 }
+
 #password-block {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 #password-block input {
-  width: 50%;
+    width: 50%;
 }
+
 .radio-block p {
-  margin-bottom: 3px;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  color: #234f90;
+    margin-bottom: 3px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #234f90;
 }
+
 .radio-block input {
-  margin-left: 10px;
+    margin-left: 10px;
 }
+
 .radio-block label {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 22px;
-  align-items: center;
-  color: #7b8ca7;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    align-items: center;
+    color: #7b8ca7;
 }
+
 .button-block {
-  display: flex;
-  height: 32%;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    height: 32%;
+    justify-content: center;
+    align-items: center;
 }
+
 .button-block button {
-  width: 117px;
-  height: 35px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin: 0.5rem;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  color: #fafafa;
-  border-color: rgba(255, 255, 255, 0);
+    width: 117px;
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0.5rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #fafafa;
+    border-color: rgba(255, 255, 255, 0);
 }
+
 #return {
-  background-color: #a1b2cd;
+    background-color: #a1b2cd;
 }
+
 #save {
-  background-color: #314c85;
+    background-color: #314c85;
 }
+
+
 /*--------------------------------------------------------------------  Footer Page*/
+
 .rodape {
-  flex-shrink: 0;
-  background-color: #314c85;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+    flex-shrink: 0;
+    background-color: #314c85;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
+
 .rodape h2 {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
 }
