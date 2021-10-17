@@ -20,8 +20,7 @@ function ListUsers(Users) {
         text-align: center;
         margin-bottom: 30px; 
       }
-    </style> 
-          </style> 
+      </style> 
       <div class="users" id="users">                  
            <p>${User.nome}</p>
            <p>${User.tipo_de_usuario}</p>

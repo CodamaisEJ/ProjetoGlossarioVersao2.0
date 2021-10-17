@@ -33,26 +33,15 @@
                 <li id="logo_notificacao">
                     <a href="./tela_notificacoes.html"><img src="./img/sino-de-notificacao 1.png" alt=""></a>
                 </li>
-                <div id="dropdown" class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn"></button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <p id="nome_usuario">Flavia Maia</p>
-                        <p id="status_user">Administrador</p>
-                        <p id="alt">Alternar Perfis:</p>
-                        <div class="a-block">
-                            <a href="tela_termos.html" onclick="mudaUsuario()">Administrador</a>
-                            <a href="tela_termos.html" onclick="mudaUsuario()">Especialista</a>
-                            <a href="tela_termos.html" onclick="mudaUsuario()">Pesquisador</a>
-                        </div>
-                        <button>Logout</button>
-                    </div>
-                </div>
+                <li id="logo_user">
+                    <a href=""><img src="./img/Group.png" alt=""></a>
+                </li>
             </ul>
         </div>
     </header>
 
     <main class="conteudo">
-        <div class="tela_termos">
+        <div class="tela_termos" id="tela_termos">
 
             <legend>Editar e Deletar</legend>
             <h3>Total de termos:</h3>
@@ -61,16 +50,16 @@
                 <input placeholder="Pesquisar" type="search" name="pesquisa" id="pesquisa">
             </div>
 
-            <div class="termos" id="termos">
-
-                <div class="borda-termo">
-                    <div class="termo">
-                        <p onclick="trocarPagina()">Termo</p>
-                    </div>
-                    <i class="fas fa-trash"></i>
+            <!-- 
+             <div class="termos">
+              <div class="borda-termo">
+                <div class="termo">
+                  <p onclick="trocarPagina()">Termo</p>
                 </div>
-
-            </div>
+                <i class="fas fa-trash"></i>
+              </div> 
+           -->
+        </div>
 
         </div>
     </main>
