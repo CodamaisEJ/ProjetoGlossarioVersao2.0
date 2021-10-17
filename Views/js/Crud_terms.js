@@ -1,4 +1,4 @@
-const Userslist = document.querySelector("#users");
+const Userslist = document.querySelector("#termos");
 
 async function consultaUsers() {
   const retorno = await fetch(
