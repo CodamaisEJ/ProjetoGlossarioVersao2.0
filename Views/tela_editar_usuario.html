@@ -12,14 +12,14 @@
     />
     <link rel="stylesheet" href="./css/header-footer.css" />
     <link rel="stylesheet" href="./css/user_creator_style.css" />
-    <link rel="stylesheet" href="./css/dropdown_user_icon.css">
+    <link rel="stylesheet" href="./css/dropdown_user_icon.css" />
     <title>Cadastro</title>
   </head>
-  <body onload="mudaCor()">
+  <body onload="mudaCor(), carregarDadosUsuario()">
     <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer src="js/user_creator_script.js"></script>
+    <script defer src="js/user_edit_script.js"></script>
+    <script src="js/Crud_users.js"></script>
     <script defer src="./js/menu_dropdown.js"></script>
-
 
     <header id="header" class="header">
       <div class="logo">
@@ -39,21 +39,23 @@
       <div id="dropdown" class="dropdown">
         <button onclick="myFunction()" class="dropbtn"></button>
         <div id="myDropdown" class="dropdown-content">
-            <p id="nome_usuario">Flavia Maia</p>
-            <p id="status_user">Administrador</p>
-            <p id="alt">Alternar Perfis:</p>
-            <div class="a-block">
-              <a href="">Administrador</a>
-              <a href="">Especialista</a>
-              <a href="">Pesquisador</a>
-            </div>
-            <button>Logout</button>
+          <p id="nome_usuario">Flavia Maia</p>
+          <p id="status_user">Administrador</p>
+          <p id="alt">Alternar Perfis:</p>
+          <div class="a-block">
+            <a href="">Administrador</a>
+            <a href="">Especialista</a>
+            <a href="">Pesquisador</a>
+          </div>
+          <button>Logout</button>
         </div>
       </div>
     </header>
 
+    <div id="elementID"></div>
+
     <main class="conteudo">
-      <form id="create_user" action="">
+      <form id="create_user" name="edit_user" action="">
         <fieldset>
           <legend>Editar Usuário</legend>
           <div class="input-block">
@@ -82,21 +84,21 @@
               type="radio"
               id="administrator"
               name="type_user_group"
-              value="administrator"
+              value="administrador"
             />
             <label for="administrator">Administrador</label>
             <input
               type="radio"
               id="researcher"
               name="type_user_group"
-              value="researcher"
+              value="pesquisador"
             />
             <label for="researcher">Pesquisador</label>
             <input
               type="radio"
               id="specialist"
               name="type_user_group"
-              value="specialist"
+              value="especialista"
             />
             <label for="specialist">Especialista</label>
           </div>
@@ -112,7 +114,9 @@
           </div>
           <div class="button-block">
             <button id="return" onclick="history.go(-1)">Voltar</button>
-            <button id="save" type="submit">Salvar</button>
+            <button id="save" type="submit" onclick="editarUsuario(event)">
+              Salvar
+            </button>
           </div>
         </fieldset>
       </form>
