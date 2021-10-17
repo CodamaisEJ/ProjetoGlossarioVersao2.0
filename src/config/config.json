@@ -1,10 +1,10 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "12345",
-    "database": "fichaterminologica",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "mysql",
+    "host": "dicgloss.com",
+    "username": "dicglo36_uglossd",
+    "password": "gloss@90",
+    "database": "dicglo36_fichaterminologica"
   },
   "test": {
     "username": "root",
