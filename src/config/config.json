@@ -1,0 +1,23 @@
+{
+  "development": {
+    "dialect": "mysql",
+    "host": "dicgloss.com",
+    "username": "dicglo36_uglossd",
+    "password": "gloss@90",
+    "database": "dicglo36_fichaterminologica"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "dialect": "mysql",
+    "host": "dicgloss.com",
+    "username": "dicglo36_uglossd",
+    "password": "gloss@90",
+    "database": "dicglo36_fichaterminologica"
+  }
+}
