@@ -14,20 +14,13 @@ function ListUsers(Users) {
   Users.forEach((User) => {
     UserHTML = `
       <style> 
-          #users{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            margin-top: 250px;
-            font-family: 'Popins', sans-serif;
-            font-style: normal;
-            margin-bottom: 30px;
-            align-content: space-around;
-            font-size: 20px;
-            color: #234F90;
-          } 
-          i{
-            cursor:"pointer";
-          }
+      .users{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+        margin-bottom: 30px; 
+      }
+    </style> 
           </style> 
       <div class="users" id="users">                  
            <p>${User.nome}</p>
