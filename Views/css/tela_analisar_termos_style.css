@@ -1,12 +1,14 @@
-Cadastrar_termos{
+Cadastrar_termos {
     display: flex;
 }
-#Cadastrar_termos fieldset{
+
+#Cadastrar_termos fieldset {
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto; 
+    grid-template-columns: auto auto;
 }
-#Cadastrar_termos fieldset legend{
+
+#Cadastrar_termos fieldset legend {
     grid-column-start: 1;
     grid-column-end: 3;
     padding-left: 1rem;
@@ -17,23 +19,25 @@ Cadastrar_termos{
     font-size: 28px;
     line-height: 42px;
     color: #101564;
-
 }
-.radio-block{
+
+.radio-block {
     padding: 1rem;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
-    color: #234F90; 
+    color: #234F90;
 }
-.radio-block input{
+
+.radio-block input {
     background: #FFFFFF;
     border: 15px solid #7B8CA7;
     box-sizing: border-box
 }
-.radio-block label{
+
+.radio-block label {
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
@@ -41,10 +45,12 @@ Cadastrar_termos{
     line-height: 22px;
     color: #7B8CA7;
 }
-.radio-block p{
+
+.radio-block p {
     margin-top: -1rem;
 }
-.input-block{
+
+.input-block {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -53,28 +59,10 @@ Cadastrar_termos{
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
-    color: #234F90; 
-}
-.input-block input{
-    width: 626px;
-    height: 48px;
-    background: #FFFFFF;
-    border: 2px solid #7B8CA7;
-    box-sizing: border-box;
-    border-radius: 8px;font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: #7B8CA7;
-    padding-left: 1rem;
-    
+    color: #234F90;
 }
 
-.input-block label{
-    margin-top: -1rem;
-}
-.input-block select{
+.input-block input {
     width: 626px;
     height: 48px;
     background: #FFFFFF;
@@ -87,26 +75,51 @@ Cadastrar_termos{
     font-size: 16px;
     line-height: 22px;
     color: #7B8CA7;
-    -moz-appearance:none; /* Firefox */
-    -webkit-appearance:none; /* Safari and Chrome */
-    appearance:none;
+    padding-left: 1rem;
+}
+
+.input-block label {
+    margin-top: -1rem;
+}
+
+.input-block select {
+    width: 626px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 2px solid #7B8CA7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7B8CA7;
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
     background-image: url('../img/Polygon\ 6.png');
     background-repeat: no-repeat;
     background-position: center right 20px;
     padding-left: 1rem;
-    
-
 }
-#verbo{
+
+#verbo {
     margin-left: 4rem;
 }
-#feminino, #dois-generos{
+
+#feminino,
+#dois-generos {
     margin-left: 2rem;
 }
-#plural{
+
+#plural {
     margin-left: 3rem;
 }
-.salvar{
+
+.salvar {
     grid-column-start: 1;
     grid-column-end: 3;
     height: 100px;
@@ -114,15 +127,17 @@ Cadastrar_termos{
     justify-content: center;
     align-items: center;
 }
-.salvar button{
+
+.salvar button {
     width: 117px;
     height: 35px;
-    background:#314C85;
+    background: #314C85;
     border-radius: 8px;
     color: white;
     border-color: rgba(255, 255, 255, 0.0);
 }
-.input-block input::-webkit-input-placeholder{
+
+.input-block input::-webkit-input-placeholder {
     font-family: Open Sans;
     font-style: normal;
     font-weight: 600;
@@ -130,23 +145,26 @@ Cadastrar_termos{
     line-height: 22px;
     color: #7B8CA7;
 }
-#frequencia_termo_corpus::-webkit-input-placeholder{
+
+#frequencia_termo_corpus::-webkit-input-placeholder {
     text-align: end;
 }
+
 input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="date"]::-webkit-inner-spin-button{
+input[type="date"]::-webkit-inner-spin-button {
     display: none;
 }
 
-.rodape{  
+.rodape {
     background-color: #314C85;
     color: #FFF;
     padding: 20px;
     text-align: center;
-  }
-  .rodape h2{
+}
+
+.rodape h2 {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
-  }
+}
