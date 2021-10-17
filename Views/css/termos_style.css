@@ -2,13 +2,8 @@
     text-decoration: none;
 }
 
-.links {
-    margin-right: 0rem;
-}
-
 .tela_termos {
     margin-top: 1.5rem;
-    width: 100%;
     margin-left: 20px;
 }
 
@@ -20,7 +15,7 @@
     color: #101564;
 }
 
-.tela_termos h3 {
+.tela_termos p {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;

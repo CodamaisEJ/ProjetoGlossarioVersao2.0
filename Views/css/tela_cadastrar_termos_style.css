@@ -119,6 +119,11 @@
     margin-left: 3rem;
 }
 
+#validado_com_adaptacoes,
+#rejeitado {
+    margin-left: 2rem;
+}
+
 .verificar_button {
     height: 100px;
     display: flex;
@@ -131,7 +136,7 @@
     width: 117px;
     height: 35px;
     color: white;
-    background: #314C85;
+    background: #0D4F3F;
     border-radius: 8px;
     border-color: rgba(255, 255, 255, 0.0);
 }
@@ -160,6 +165,12 @@
     font-size: 16px;
     line-height: 22px;
     color: #7B8CA7;
+}
+
+.close {
+    border-style: none;
+    font-size: 25px;
+    background-color: #FFFFFF;
 }
 
 #frequencia_termo_corpus::-webkit-input-placeholder {

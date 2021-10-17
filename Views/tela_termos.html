@@ -33,8 +33,19 @@
                 <li id="logo_notificacao">
                     <a href="./tela_notificacoes.html"><img src="./img/sino-de-notificacao 1.png" alt=""></a>
                 </li>
-                <li id="logo_user">
-                    <a href=""><img src="./img/Group.png" alt=""></a>
+                <li id="dropdown" class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <p id="nome_usuario">Flavia Maia</p>
+                        <p id="status_user">Administrador</p>
+                        <p id="alt" id="text">Alternar Perfis:</p>
+                        <div class="a-block" id="block">
+                            <a href="">Administrador</a>
+                            <a href="">Especialista</a>
+                            <a href="">Pesquisador</a>
+                        </div>
+                        <button onclick="deslogar()">Logout</button>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -43,8 +54,8 @@
     <main class="conteudo">
         <div class="tela_termos" id="tela_termos">
 
-            <legend>Editar e Deletar</legend>
-            <h3>Total de termos:</h3>
+            <legend id="titulo">Editar e Deletar</legend>
+            <p id="sub_titulo">Total de termos:</p>
 
             <div class="Busca">
                 <input placeholder="Pesquisar" type="search" name="pesquisa" id="pesquisa">
