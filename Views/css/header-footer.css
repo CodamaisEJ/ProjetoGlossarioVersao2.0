@@ -15,15 +15,14 @@ body{
   flex-direction: column;
 }
 /* Header --------------------------------------------------*/
-#header{
-  height: 90px;
-  Top :-2px;
+.header{
+  height: 87px;
+  align-items: center;
   display: flex;  
   background-color:#234F90;
   justify-content: space-between;
 }
 .logo{
-  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -47,9 +46,12 @@ body{
   Vertical-align: Top;
   color:white;
 }
+.links{
+  margin-right: -27rem;
+}
 .links ul{
+  margin-bottom: 0px;
   align-items: center;
-  height: 100%;
   display: flex;
 }
 .links ul li{
@@ -122,6 +124,9 @@ body{
   align-items: center;
   justify-content: center;
 }
+/*#logo_notificacao{
+  display: none;
+}*/
 /* body --------------------------------------------------- */
 .conteudo{
   flex: 1 0 auto;

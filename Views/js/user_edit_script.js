@@ -21,3 +21,26 @@ function mudaCor() {
 function trocarPagina() {
   location.href = "tela_usuarios.html";
 }
+
+async function carregarDadosUsuario() {
+  const user_id = history.state;
+
+  try {
+    const result = await fetch(
+      `https://ficha-terminologica-backend.herokuapp.com/user/${user_id}/list`
+    );
+
+    const json = await result.json();
+
+    const form = document.forms["edit_user"];
+
+    form["complete_name"].value = json.nome;
+    form["email"].value = json.email;
+    form["type_user_group"].value = json.tipo_de_usuario;
+    form["password"].value = json.senha;
+
+    console.log(`dados do usuário carregados`);
+  } catch (error) {
+    console.log(`Erro ao carregar dados do usuário`, error);
+  }
+}
