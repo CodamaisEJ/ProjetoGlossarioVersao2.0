@@ -1,95 +1,102 @@
 * {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.links {
+  margin-right: 0rem;
 }
 
 .tela_termos {
-    margin-top: 1.5rem;
-    margin-left: 20px;
+  margin-top: 1.5rem;
+  width: 100%;
+  margin-left: 20px;
+
 }
 
 .tela_termos legend {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    color: #101564;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  color: #101564;
 }
 
-.tela_termos p {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    color: #4D5E77;
+.tela_termos h3 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #4d5e77;
+
 }
 
 .Busca {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .Busca input {
-    grid-column-start: 4;
-    width: 293px;
-    height: 60px;
-    padding-left: 10px;
-    background: #FFFFFF;
-    border: 2px solid #A1B2CD;
-    box-sizing: border-box;
-    border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
+  grid-column-start: 4;
+  width: 293px;
+  height: 60px;
+  padding-left: 10px;
+  background: #ffffff;
+  border: 2px solid #a1b2cd;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 input:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0;
+  outline: 0;
+  box-shadow: 0 0 0 0;
 }
 
 .termos {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 2em;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 2em;
 }
 
 .borda-termo {
-    height: 60px;
-    width: 293px;
-    background: #FFFFFF;
-    border: 2px solid #A1B2CD;
-    box-sizing: border-box;
-    border-radius: 8px;
-    display: flex;
+  /* height: 60px; */
+  width: 293px;
+  background: #ffffff;
+  border: 2px solid #a1b2cd;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
 }
 
 .borda-termo i {
-    margin: auto;
-    color: #E83F5B;
-    cursor: pointer;
+  margin: auto;
+  color: #e83f5b;
+  cursor: pointer;
 }
 
 .termo {
-    margin: auto;
-    margin-top: 15px;
-    width: 193px;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: #47D9B6;
-    border: 1px solid #47D9B6;
-    box-sizing: border-box;
-    border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 193px;
+  text-align: center;
+  background: #47d9b6;
+  border: 1px solid #47d9b6;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
 
-.termo p {
-    margin-top: 2px;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    cursor: pointer;
+.termo span {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  cursor: pointer;
 }
