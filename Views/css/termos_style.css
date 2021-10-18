@@ -64,6 +64,19 @@ input:focus{
   border-radius: 8px;  
   display: flex;
 }
+#sub_titulo{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  color: #7B8CA7;
+  font-size: 18px;
+  font-weight: bold;
+}
+#revisar{
+  color: black;
+  margin: auto;
+  cursor: pointer;
+  vertical-align: middle;
+}
 .borda-termo i{
   margin: auto;
   color: #E83F5B;
