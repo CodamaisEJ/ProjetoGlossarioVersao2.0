@@ -1,5 +1,6 @@
 #nome_usuario {
     Font-family: Poppins;
+    margin-top: 10px;
     Font-size: 14px;
     Line-height: 21px;
     Line-height: 100%;
@@ -36,12 +37,21 @@
 }
 
 #myDropdown {
-    border-radius: 20px;
-    margin-top: -0.2rem;
+    margin-top: -0.8rem;
+    border-radius: 5px;
 }
 
 #myDropdown p {
     margin-bottom: 0.5rem;
+}
+
+#alt {
+    white-space: nowrap;
+    font-family: 'Popins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
 }
 
 #myDropdown a {
@@ -60,7 +70,7 @@
 }
 
 #myDropdown button {
-    margin-top: 0.3rem;
+    margin-top: 1rem;
     background-color: #C4C4C4;
     height: 16.051162719726562px;
     width: 68px;
@@ -73,8 +83,7 @@
     Line-height: 100%;
     text-Align: Left;
     Vertical-align: Top;
-    color: #FAFAFA;
-    height: 11.330230712890625px;
+    color: #ffffff;
     font-style: normal;
     font-weight: 500;
     letter-spacing: 0em;
@@ -88,10 +97,11 @@
 
 .dropdown {
     display: flex;
-    margin-right: 60px;
+    margin-right: 1rem;
 }
 
 .dropbtn {
+    margin-top: 5px;
     background-image: url(../img/Group.png);
     background-repeat: no-repeat;
     background-color: #FAFAFA;
@@ -117,6 +127,7 @@
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
+    min-height: 110px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     left: 50%;

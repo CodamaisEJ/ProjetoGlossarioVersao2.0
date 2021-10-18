@@ -119,7 +119,13 @@
   margin-left: 3rem;
 }
 
-.verificar_button {
+#validado_com_adaptacoes,
+#rejeitado {
+    margin-left: 2rem;
+}
+
+.verificar_button 
+
   height: 100px;
   display: flex;
   justify-content: center;
@@ -142,6 +148,7 @@
   background: #314c85;
   border-radius: 8px;
   border-color: rgba(255, 255, 255, 0);
+
 }
 
 .salvar {
@@ -168,6 +175,12 @@
   font-size: 16px;
   line-height: 22px;
   color: #7b8ca7;
+}
+
+.close {
+    border-style: none;
+    font-size: 25px;
+    background-color: #FFFFFF;
 }
 
 #frequencia_termo_corpus::-webkit-input-placeholder {

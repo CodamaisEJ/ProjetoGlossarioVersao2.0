@@ -33,20 +33,20 @@
                 <li id="logo_notificacao">
                     <a href="./tela_notificacoes.html"><img src="./img/sino-de-notificacao 1.png" alt=""></a>
                 </li>
-                <div id="dropdown" class="dropdown">
+                <li id="dropdown" class="dropdown">
                     <button onclick="myFunction()" class="dropbtn"></button>
                     <div id="myDropdown" class="dropdown-content">
                         <p id="nome_usuario">Flavia Maia</p>
                         <p id="status_user">Administrador</p>
-                        <p id="alt">Alternar Perfis:</p>
-                        <div class="a-block">
-                            <a href="tela_termos.html" onclick="mudaUsuario()">Administrador</a>
-                            <a href="tela_termos.html" onclick="mudaUsuario()">Especialista</a>
-                            <a href="tela_termos.html" onclick="mudaUsuario()">Pesquisador</a>
+                        <p id="alt" onclick="trocaPagina()">Alternar Perfis:</p>
+                        <div class="a-block" id="block">
+                            <a href="">Administrador</a>
+                            <a href="">Especialista</a>
+                            <a href="">Pesquisador</a>
                         </div>
-                        <button>Logout</button>
+                        <button onclick="deslogar()">Logout</button>
                     </div>
-                </div>
+                </li>
             </ul>
         </div>
     </header>
@@ -56,41 +56,41 @@
             <fieldset>
                 <legend>Cadastrar</legend>
                 <div class="input-block">
-                    <label for="entrada">Entrada</label>
+                    <label for="entrada" id="nome-entrada">Entrada:</label>
                     <input placeholder="Entrada" type="text" name="entrada" id="entrada">
                 </div>
                 <div class="radio-block">
-                    <p>Categoria Morfológica:</p>
+                    <p id="categoria">Categoria Morfológica:</p>
                     <input type="radio" id="nome" name="cat_morfo" value="nome">
-                    <label for="nome">Nome</label>
+                    <label for="nome" id="nome-cat">Nome</label>
                     <input type="radio" id="verbo" name="cat_morfo" value="verbo">
-                    <label for="verbo">Verbo</label>
+                    <label for="verbo" id="nome-cat1">Verbo</label>
                 </div>
                 <div class="radio-block">
-                    <p>Gênero:</p>
+                    <p id="genero">Gênero:</p>
                     <input type="radio" id="masculino" name="genero_grupo" value="masculino">
-                    <label for="masculino">Masculino</label>
+                    <label for="masculino" id="nome-gen">Masculino</label>
                     <input type="radio" id="feminino" name="genero_grupo" value="feminino">
-                    <label for="feminino">Feminino</label>
+                    <label for="feminino" id="nome-gen1">Feminino</label>
                     <input type="radio" id="dois-generos" name="genero_grupo" value="dois-generos">
-                    <label for="dois-generos">Dois Gêneros</label>
+                    <label for="dois-generos" id="nome-gen2">Dois Gêneros</label>
                 </div>
                 <div class="radio-block">
-                    <p>Número:</p>
+                    <p id="numero">Número:</p>
                     <input type="radio" id="singular" name="num_grupo" value="singular">
-                    <label for="singular">Singular</label>
+                    <label for="singular" id="nome-num">Singular</label>
                     <input type="radio" id="plural" name="num_grupo" value="plural">
-                    <label for="plural">Plural</label>
+                    <label for="plural" id="nome-num1">Plural</label>
                 </div>
                 <div class="input-block">
-                    <label for="variante">Variante:</label>
+                    <label for="variante" id="nome-variante">Variante:</label>
                     <select id="variante" name="variante">
                         <option value="">Selecione para preencher as variantes</option>
                         <option value="variante1">variante1</option>
                     </select>
                 </div>
                 <div class="input-block">
-                    <label for="area">Área:</label>
+                    <label for="area" id="nome-area">Área:</label>
                     <input type="text" name="area" id="area">
                 </div>
                 <div class="input-block">
@@ -118,25 +118,25 @@
                     </select>
                 </div>
                 <div class="input-block">
-                    <label for="remissivas">Remissivas:</label>
+                    <label for="remissivas" id="remissiva">Remissivas:</label>
                     <select id="remissivas" name="remissivas">
                         <option value="">Selecione para preencher a correlação com o termo</option>
                     </select>
                 </div>
                 <div class="input-block">
-                    <label for="nota">Nota:</label>
+                    <label for="nota" id="nome-nota">Nota:</label>
                     <input type="text" name="nota" id="nota">
                 </div>
                 <div class="input-block">
-                    <label for="autor">Autor:</label>
+                    <label for="autor" id="nome-autor">Autor:</label>
                     <input type="text" name="autor" id="autor">
                 </div>
                 <div class="input-block">
-                    <label for="redador">Redador:</label>
+                    <label for="redador" id="nome-redador">Redador:</label>
                     <input type="text" name="redador" id="redador">
                 </div>
                 <div class="input-block">
-                    <label for="data_registro">Data de Registro:</label>
+                    <label for="data_registro" id="data1">Data de Registro:</label>
                     <input type="date" name="data_registro" id="data_registro">
                 </div>
                 <div class="input-block">
@@ -148,7 +148,7 @@
                     <input type="text" name="revisao_linguistica" id="revisao_linguistica">
                 </div>
                 <div class="input-block">
-                    <label for="data_ultima_revisao">Data da ultima revisão:</label>
+                    <label for="data_ultima_revisao" id="data2">Data da ultima revisão:</label>
                     <input type="date" name="data_ultima_revisao" id="data_ultima_revisao">
                 </div>
                 <div class="input-block">
@@ -158,9 +158,19 @@
                     </select>
                 </div>
                 <div class="input-block">
-                    <label for="frequencia_termo_corpus">Frequência do termo no corpus:</label>
+                    <label for="frequencia_termo_corpus" id="frequencia">Frequência do termo no corpus:</label>
                     <input placeholder="100000000" type="number" name="frequencia_termo_corpus" id="frequencia_termo_corpus">
                 </div>
+                <div class="radio-block" id="status">
+                    <p>Status</p>
+                    <input type="radio" id="validado" name="status_group" value="validado">
+                    <label for="validado">Validado</label>
+                    <input type="radio" id="validado_com_adaptacoes" name="status_group" value="validado_com_adaptacoes">
+                    <label for="validado_com_adaptacoes">Validado com adaptações</label>
+                    <input type="radio" id="rejeitado" name="status_group" value="rejeitado">
+                    <label for="rejeitado">Rejeitado</label>
+                </div>
+                <div class="radio-block" id="espaco"></div>
                 <div class="verificar_button">
                     <button>Verificar</button>
                 </div>
@@ -195,10 +205,6 @@
     <footer id="footer">
         <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
-</body>
-
-</html>
-=======
 </body>
 
 </html>
