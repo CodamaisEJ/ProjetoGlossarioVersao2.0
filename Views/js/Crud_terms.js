@@ -9,7 +9,7 @@ async function consultaTerms() {
   );
   let Terms = await retorno.json();
   ListTerms(Terms);
-  console.log(Terms)
+  //console.log(Terms)
 }
 
 let UserHTML;
@@ -22,7 +22,7 @@ function ListTerms(Termos) {
     </style>
     
 
-    <div class="termos">
+    <div class="termos" id="termo">
       <div class="borda-termo">
         <div class="termo">
           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>
@@ -44,10 +44,12 @@ async function DeletandoTerms() {
   alert("" + json.message);
   console.log(json);
   DeleteTerms();
+  
 }
-
 function DeleteTerms() {
   Termoslist.innerHTML = "";
+  window.location.reload()
+  consultaTerms();
 }
 
 consultaTerms();
