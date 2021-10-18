@@ -53,7 +53,7 @@ function validador(){
     var password = y.value;
   
     if(user === usuario && password === senha){
-      location.href = "tela_termos.html"
+      location.href = "termo.html"
       var value = 2;
       localStorage.setItem("tipoUsuario",value);
     }
