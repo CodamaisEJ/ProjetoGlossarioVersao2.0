@@ -1,7 +1,8 @@
-.conteudo{
+.conteudo {
     text-align: center;
 }
-#fechar{
+
+#fechar {
     margin-right: 1rem;
     margin-top: 7.5rem;
     position: fixed;
@@ -9,9 +10,9 @@
     top: 0;
     height: 62px;
     width: 54px;
-   
 }
-.conteudo h2{
+
+.conteudo h2 {
     margin-top: 2rem;
     Font-family: Poppins;
     Font-style: Bold;
@@ -20,21 +21,22 @@
     Line-height: 100%;
     vertical-align: center;
     Fill: Solid;
-    color:#101564;
+    color: #101564;
     height: 46px;
     border-radius: nullpx;
-
 }
-.tabela-block{
+
+.tabela-block {
     margin-top: 2rem;
     display: flex;
     justify-content: center;
 }
-#tabela{
-    min-width: 980px;
 
+#tabela {
+    min-width: 980px;
 }
-#tabela tr th{
+
+#tabela tr th {
     Font-family: Poppins;
     Font-size: 26px;
     Line-height: 39px;
@@ -46,11 +48,9 @@
     font-weight: 500;
     letter-spacing: 0em;
     text-align: left;
-
-
 }
 
-#tabela tr td{
+#tabela tr td {
     Font-family: Open Sans;
     Font-size: 16px;
     Line-height: 22px;
@@ -67,14 +67,15 @@
     text-align: left;
     padding-left: 2.5rem;
     padding-top: 1rem;
-
 }
-#values{
+
+#values {
     height: 4.5rem;
     border-bottom: solid 1px;
     border-color: #000000;
 }
-#tabela tr th img{
+
+#tabela tr th img {
     margin-right: 0.5rem;
     height: 100%;
 }
