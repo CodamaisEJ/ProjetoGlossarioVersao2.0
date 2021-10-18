@@ -1,77 +1,68 @@
-.tela_usuarios legend {
-    text-align: center;
-    color: #101564;
-    font-family: 'Popins', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 25px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+.tela_usuarios legend{
+  text-align: center;
+  color: #101564;
+  font-family: 'Popins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.tela_usuarios button{
+  justify-content: center;
+  align-items: center;
+}
+.info{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  margin-bottom: 40px;
+}
+.info h3{
+  font-family: 'Popins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  color: #234F90;
+}
+.Users{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+.User p{
+  font-family: 'Popins', sans-serif;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #0D114F;
+}
+.User i{
+  cursor: pointer;
+  font-size: 20px;
+  color: #0D114F;
+}
+#lixeira{
+  margin-left: 45px;
+  cursor: pointer;
+}
+#lapis{
+  cursor: pointer;
 }
 
-.tela_usuarios button {
-    justify-content: center;
-    align-items: center;
+.btn{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
-
-.info {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.info h3 {
-    font-family: 'Popins', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    color: #234F90;
-}
-
-.Users {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-}
-
-.User p {
-    font-family: 'Popins', sans-serif;
-    margin-bottom: 15px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    color: #0D114F;
-}
-
-.User i {
-    cursor: pointer;
-    font-size: 20px;
-    color: #0D114F;
-}
-
-#lixeira {
-    margin-left: 45px;
-    cursor: pointer;
-}
-
-#lapis {
-    cursor: pointer;
-}
-
-.btn {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-#btn_criar_user {
-    margin: auto;
-    grid-column-start: 4;
-    border: none;
-    width: 151px;
-    height: 37px;
-    background-color: #234F90;
-    border-radius: 8px;
-    color: #FFFFFF;
+#btn_criar_user{
+  margin:auto;
+  grid-column-start: 4;
+  border: none;
+  width: 151px;
+  height: 37px;
+  background-color: #234F90;
+  border-radius: 8px;
+  color: #FFFFFF;
 }

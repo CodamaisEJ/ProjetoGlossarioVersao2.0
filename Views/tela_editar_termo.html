@@ -4,32 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./css/header-footer.css" />
-    <link rel="stylesheet" href="./css/tela_cadastrar_termos_style.css" />     -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/dropdown_user_icon.css" />
     <link rel="stylesheet" href="./css/header-footer.css" />
     <link rel="stylesheet" href="./css/tela_cadastrar_termos_style.css" />
+
     <title>Cadastro</title>
   </head>
-
   <body onload="mudaCor(),carregarDadosTermo()">
     <script src="js/ficha_script.js"></script>
     <script src="js/Crud_terms.js"></script>
 
     <header id="header" class="header">
-
       <div class="logo">
         <img src="./img/Lexic.jpg" alt="" />
         <h1>Ficha Terminológica</h1>
@@ -46,13 +36,12 @@
           </li>
         </ul>
       </div>
-
     </header>
 
     <main class="conteudo">
       <form id="Cadastrar_termos" name="edit_term">
         <fieldset>
-          <legend>Editar Termo</legend>
+          <legend>Cadastrar</legend>
           <div class="input-block">
             <label for="entrada">Entrada</label>
             <input
@@ -65,13 +54,7 @@
           </div>
           <div class="radio-block">
             <p>Categoria Morfológica:</p>
-            <input
-              type="radio"
-              id="nome"
-              name="cat_morfo"
-              value="nome"
-              checked
-            />
+            <input type="radio" id="nome" name="cat_morfo" value="nome" />
             <label for="nome">Nome</label>
             <input type="radio" id="verbo" name="cat_morfo" value="verbo" />
             <label for="verbo">Verbo</label>
@@ -83,7 +66,6 @@
               id="masculino"
               name="genero_grupo"
               value="masculino"
-              checked
             />
             <label for="masculino">Masculino</label>
             <input
@@ -108,7 +90,6 @@
               id="singular"
               name="num_grupo"
               value="singular"
-              checked
             />
             <label for="singular">Singular</label>
             <input type="radio" id="plural" name="num_grupo" value="plural" />
@@ -231,15 +212,11 @@
               required
             />
           </div>
-          <div class="voltar_button">
-            <button onclick="window.location.href='tela_termos.html'">
-              Cancelar
-            </button>
+          <div class="verificar_button">
+            <button>Verificar</button>
           </div>
           <div class="salvar">
-            <button type="submit" id="btn" onclick="editarTermo(event)">
-              Salvar
-            </button>
+            <button type="submit" onclick="editarTermo(event)">Salvar</button>
           </div>
         </fieldset>
       </form>

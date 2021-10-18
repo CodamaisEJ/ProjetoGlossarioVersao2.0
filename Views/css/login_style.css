@@ -1,61 +1,56 @@
-#tela_login {
-    display: flex;
+#tela_login{
+  display: flex;
+}
+#tela_login{
+  margin-top: 100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1;
+  text-align: center;
+  height: 318px;
 }
 
-#tela_login {
-    margin-top: 100px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1;
-    text-align: center;
-    height: 318px;
+#aqui{
+  margin-bottom: 23px;
 }
 
-#aqui {
-    margin-bottom: 23px;
+#tela_login legend{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  color: #101564;
+  text-align: center;
+  margin-bottom: 40px;
 }
-
-#tela_login legend {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    color: #101564;
-    text-align: center;
-    margin-bottom: 40px;
+.input-block label{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #4D5E77;
+  margin-left: -300px;
+  margin-bottom: 10px;
 }
-
-.input-block label {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    color: #4D5E77;
-    margin-left: -300px;
-    margin-bottom: 10px;
+.input-block input{
+  padding-left: 10px;
+  width: 20vw;
+  height: 5vh;
+  background-color: #FFFFFF;
+  border: 2px solid #A1B2CD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 25px
 }
-
-.input-block input {
-    padding-left: 10px;
-    width: 20vw;
-    height: 5vh;
-    background-color: #FFFFFF;
-    border: 2px solid #A1B2CD;
-    box-sizing: border-box;
-    border-radius: 8px;
-    margin-bottom: 25px
+#tela_login button{
+  background-color: #314C85;
+  margin-top: 10px;
+  width: 20vw;
+  height: 7vh;
+  border: 0;
+  border-radius: 8px;
+  color: #FFF;
 }
-
-#tela_login button {
-    background-color: #314C85;
-    margin-top: 10px;
-    width: 20vw;
-    height: 7vh;
-    border: 0;
-    border-radius: 8px;
-    color: #FFF;
-}
-
-i {
-    margin-right: 5px;
+i{
+  margin-right: 5px;
 }

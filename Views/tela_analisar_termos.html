@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/dropdown_user_icon.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/header-footer.css">
     <link rel="stylesheet" href="./css/tela_analisar_termos_style.css">
 
     <title>Cadastro</title>
 
-</head>
-
-<body onload="mudaCor()">
+  </head>
+  <body onload="mudaCor()">
     <script src="js/ficha_script.js"></script>
-    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/menu_dropdown.js"></script>
 
     <header id="header" class="header">
         <div class="logo">
@@ -26,23 +21,8 @@
         </div>
         <div id="button-block" class="links">
             <ul>
-                <li id="logo_notificacao">
-                    <a href="./tela_notificacoes.html"><img src="./img/sino-de-notificacao 1.png" alt=""></a>
-                </li>
-                <li id="dropdown" class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn"></button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <p id="nome_usuario">Flavia Maia</p>
-                        <p id="status_user">Administrador</p>
-                        <p id="alt">Alternar Perfis:</p>
-                        <div class="a-block">
-                            <a href="">Administrador</a>
-                            <a href="">Especialista</a>
-                            <a href="">Pesquisador</a>
-                        </div>
-                        <button>Logout</button>
-                    </div>
-                </li>
+                <li id="logo_notificacao"><a href="./tela_notificacoes.html"><img src="./img/sino-de-notificacao 1.png" alt=""></a></li>
+                <li id="logo_user"><a href=""><img src="./img/Group.png" alt=""></a></li>
             </ul>
         </div>
     </header>
@@ -53,29 +33,29 @@
                 <legend>Cadastrar</legend>
                 <div class="input-block">
                     <label for="entrada">Entrada</label>
-                    <input placeholder="Entrada" type="text" name="entrada" id="entrada" required>
+                    <input placeholder="Entrada"  type="text" name="entrada" id="entrada" required>
                 </div>
                 <div class="radio-block">
                     <p>Categoria Morfológica:</p>
-                    <input type="radio" id="nome" name="cat_morfo" value="nome">
+                    <input type="radio" id="nome" name="cat_morfo" value="nome" >
                     <label for="nome">Nome</label>
-                    <input type="radio" id="verbo" name="cat_morfo" value="verbo">
+                    <input type="radio" id="verbo" name="cat_morfo" value="verbo" >
                     <label for="verbo">Verbo</label>
                 </div>
                 <div class="radio-block">
                     <p>Gênero:</p>
-                    <input type="radio" id="masculino" name="genero_grupo" value="masculino">
+                    <input type="radio" id="masculino" name="genero_grupo" value="masculino" >
                     <label for="masculino">Masculino</label>
-                    <input type="radio" id="feminino" name="genero_grupo" value="feminino">
+                    <input type="radio" id="feminino" name="genero_grupo" value="feminino" >
                     <label for="feminino">Feminino</label>
-                    <input type="radio" id="dois-generos" name="genero_grupo" value="dois-generos">
+                    <input type="radio" id="dois-generos" name="genero_grupo" value="dois-generos" >
                     <label for="dois-generos">Dois Gêneros</label>
                 </div>
                 <div class="radio-block">
                     <p>Número:</p>
-                    <input type="radio" id="singular" name="num_grupo" value="singular">
+                    <input type="radio" id="singular" name="num_grupo" value="singular" >
                     <label for="singular">Singular</label>
-                    <input type="radio" id="plural" name="num_grupo" value="plural">
+                    <input type="radio" id="plural" name="num_grupo" value="plural" >
                     <label for="plural">Plural</label>
                 </div>
                 <div class="input-block">
@@ -163,10 +143,9 @@
             </fieldset>
         </form>
     </main>
-
+    
     <footer id="footer">
         <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
-</body>
-
+  </body>
 </html>

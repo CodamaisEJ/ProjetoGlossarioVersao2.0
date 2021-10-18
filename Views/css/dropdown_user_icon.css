@@ -1,6 +1,5 @@
-#nome_usuario {
+#nome_usuario{
     Font-family: Poppins;
-    margin-top: 10px;
     Font-size: 14px;
     Line-height: 21px;
     Line-height: 100%;
@@ -10,9 +9,9 @@
     font-weight: 500;
     letter-spacing: 0em;
     text-align: center;
-}
 
-#status_user {
+}
+#status_user{
     Font-family: Poppins;
     Font-style: Medium;
     Font-size: 10px;
@@ -22,8 +21,7 @@
     Vertical-align: top;
     color: #C4C4C4;
 }
-
-#alt {
+#alt{
     Font-family: Poppins;
     Font-size: 10px;
     Line-height: 15px;
@@ -35,26 +33,13 @@
     font-weight: 500;
     letter-spacing: 0em;
 }
-
-#myDropdown {
-    margin-top: -0.8rem;
-    border-radius: 5px;
+#myDropdown{
+    margin-top: -0.6rem;
 }
-
-#myDropdown p {
+#myDropdown p{
     margin-bottom: 0.5rem;
 }
-
-#alt {
-    white-space: nowrap;
-    font-family: 'Popins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 15px;
-}
-
-#myDropdown a {
+#myDropdown a{
     padding: 0.3rem;
     Font-family: Poppins;
     Font-size: 10px;
@@ -68,9 +53,8 @@
     font-weight: 500;
     letter-spacing: 0em;
 }
-
-#myDropdown button {
-    margin-top: 1rem;
+#myDropdown button{
+    margin-top: 0.3rem;
     background-color: #C4C4C4;
     height: 16.051162719726562px;
     width: 68px;
@@ -83,25 +67,26 @@
     Line-height: 100%;
     text-Align: Left;
     Vertical-align: Top;
-    color: #ffffff;
+    color: #FAFAFA;
+    height: 11.330230712890625px;
     font-style: normal;
     font-weight: 500;
     letter-spacing: 0em;
     text-align: center;
-    border-color: rgba(0, 0, 0, 0.0);
-}
+    border-color: rgba(0,0,0,0.0);
 
-.a-block {
+
+}
+.a-block{
     margin-top: -1.5rem;
 }
-
-.dropdown {
+.dropdown{
+    
     display: flex;
-    margin-right: 1rem;
+    margin-right: 1rem; 
+    
 }
-
-.dropbtn {
-    margin-top: 5px;
+.dropbtn{
     background-image: url(../img/Group.png);
     background-repeat: no-repeat;
     background-color: #FAFAFA;
@@ -113,42 +98,31 @@
     cursor: pointer;
 }
 
-.dropdown {
+  .dropdown {
     position: relative;
     display: inline-block;
-}
-
-
-/* Dropdown Content (Hidden by Default) */
-
-.dropdown-content {
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
     text-align: center;
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    min-height: 110px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    left: 50%;
-    /* instead of left: 0; */
-    transform: translateX(-50%);
-    /* add this one */
-}
-
-
-/* Links inside the dropdown */
-
-.dropdown-content a {
+    left: 50%; /* instead of left: 0; */
+    transform: translateX(-50%); /* add this one */
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
-
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-
-.show {
-    display: block;
-}
+  }
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}

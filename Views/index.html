@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/index_style.css">
+      <link rel="stylesheet" href="css/header-footer.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index_style.css">
-    <link rel="stylesheet" href="css/header-footer.css">
+      <title>Index</title>
+    </head>
+    <body>
+      <script src="js/index_script.js"></script>
 
-
-    <title>Index</title>
-</head>
-
-<body>
-    <script src="js/index_script.js"></script>
-
-    <header id="header" class="header">
+      <header id="header" class="header">
         <div class="logo">
             <img src="./img/Lexic.jpg" alt="">
             <h1>Ficha Terminológica</h1>
         </div>
     </header>
 
-    <main class="conteudo">
+      <main class="conteudo">
         <div class="index">
 
-            <legend id="aqui">Para acessar a ficha selecione o tipo de usuário</legend>
-
-            <div class="login">
-                <button id="admin" onclick="trocarPagina1()" type="button"><i
-            class="fas fa-user-friends"></i>Administrador</button>
-
-                <button id="pesquisador" onclick="trocarPagina2()" type="button"><i
-            class="fas fa-user-friends"></i>Pesquisador</button>
-
-                <button id="especialista" onclick="trocarPagina3()" type="button"><i
-            class="fas fa-user-friends"></i>Especialista</button>
-            </div>
+          <legend id="aqui">Para acessar a ficha selecione o tipo de usuário</legend>
+          
+          <div class="login">
+            <button id="admin" onclick="trocarPagina1()" type="button"><i class="fas fa-user-friends"></i>Administrador</button>
+            
+            <button id="pesquisador" onclick="trocarPagina2()" type="button"><i class="fas fa-user-friends"></i>Pesquisador</button>
+            
+            <button id="especialista" onclick="trocarPagina3()" type="button"><i class="fas fa-user-friends"></i>Especialista</button>
+          </div>
         </div>
+                
+      </main>
 
-    </main>
-
-    <footer id="footer">
+      <footer id="footer">
         <h2>Desenvolvido por Codamais @ 2021</h2>
-    </footer>
+      </footer>
 
-</body>
-
+    </body>
 </html>

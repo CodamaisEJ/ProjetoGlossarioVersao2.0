@@ -23,6 +23,6 @@
     "pg-hstore": "^2.3.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.12"
   }
 }

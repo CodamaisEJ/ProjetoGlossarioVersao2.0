@@ -1,100 +1,87 @@
-* {
+*{
   text-decoration: none;
 }
 
-.links {
+.links{
   margin-right: 0rem;
 }
-
-.tela_termos {
+.tela_termos{
   margin-top: 1.5rem;
   width: 100%;
   margin-left: 20px;
-
 }
-
-.tela_termos legend {
-  font-family: "Poppins", sans-serif;
+.tela_termos legend{
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
   color: #101564;
 }
-
-.tela_termos h3 {
-  font-family: "Poppins", sans-serif;
+.tela_termos h3{
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  color: #4d5e77;
-
+  color: #4D5E77;
 }
-
-.Busca {
+.Busca{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-
-.Busca input {
+.Busca input{
   grid-column-start: 4;
   width: 293px;
   height: 60px;
   padding-left: 10px;
-  background: #ffffff;
-  border: 2px solid #a1b2cd;
+  background: #FFFFFF;
+  border: 2px solid #A1B2CD;
   box-sizing: border-box;
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
 }
-
-input:focus {
+input:focus{
   outline: 0;
   box-shadow: 0 0 0 0;
 }
-
-.termos {
+.termos{
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-row-gap: 2em;
 }
-
-.borda-termo {
-  /* height: 60px; */
+.borda-termo{
+  height: 60px;
   width: 293px;
-  background: #ffffff;
-  border: 2px solid #a1b2cd;
+  background: #FFFFFF;
+  border: 2px solid #A1B2CD;
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: 8px;  
   display: flex;
 }
-
-.borda-termo i {
+.borda-termo i{
   margin: auto;
-  color: #e83f5b;
+  color: #E83F5B;
   cursor: pointer;
 }
-
-.termo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.termo{
   margin: auto;
   margin-top: 15px;
-  margin-bottom: 15px;
   width: 193px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background: #47d9b6;
-  border: 1px solid #47d9b6;
+  background: #47D9B6;
+  border: 1px solid #47D9B6;
   box-sizing: border-box;
   border-radius: 8px;
 }
-
-.termo span {
-  font-family: "Poppins", sans-serif;
+.termo p{
+  margin-top: 2px;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

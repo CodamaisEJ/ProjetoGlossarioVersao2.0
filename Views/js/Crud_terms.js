@@ -1,41 +1,47 @@
-let Termslist = document.querySelector("#termos-lista");
+const TOKEN =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjYsImlhdCI6MTYzNDQ4MDk0OSwiZXhwIjoxNjM0NTY3MzQ5fQ.xGPRFl9iCQ8RG6JOHQJHobDEhNkrEvk7pgoYMZwgoVo";
+
+const Termoslist = document.querySelector("#tela_termos");
 
 async function consultaTerms() {
   const retorno = await fetch(
-    "http://ficha-terminologica-backend.herokuapp.com/terms/list"
+    "https://ficha-terminologica-backend.herokuapp.com/terms/list"
   );
   const Terms = await retorno.json();
   ListTerms(Terms);
 }
 
+let UserHTML;
+
 function ListTerms(Termos) {
   Termos.forEach((Termo) => {
-    TermoHTML = `     
-    <div class="borda-termo" id='termo${Termo.id}''>
+    TermoHTML = `
+    
+    <div class="termos">
+    <div class="borda-termo">
       <div class="termo">
-        <span onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</span>
+        <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>
       </div>
-      <i class="fas fa-trash" onclick="DeletandoTerms(${Termo.id})"></i>
+      <i class="fas fa-trash" onclick="DeletandoTerms()"></i>
     </div> 
       `;
-    Termslist.innerHTML += TermoHTML;
+    Termoslist.innerHTML = Termoslist.innerHTML + TermoHTML;
   });
 }
 
-async function DeletandoTerms(termo_id) {
+async function DeletandoTerms() {
   const retorno = await fetch(
-    `https://ficha-terminologica-backend.herokuapp.com/term/${termo_id}/delete`,
+    `https://ficha-terminologica-backend.herokuapp.com/term/2/delete`,
     { method: "delete" }
   );
   const json = await retorno.json();
   alert("" + json.message);
   console.log(json);
-  DeleteTerms(termo_id);
+  DeleteTerms();
 }
 
-function DeleteTerms(termo_id) {
-  const elemento_termo = document.querySelector(`#termo${termo_id}`);
-  Termslist.removeChild(elemento_termo);
+function DeleteTerms() {
+  Termoslist.innerHTML = "";
 }
 
 consultaTerms();
@@ -89,6 +95,7 @@ async function editarTermo(event) {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
+          Authorization: "token " + TOKEN,
         },
 
         body: JSON.stringify(data),
@@ -102,7 +109,7 @@ async function editarTermo(event) {
       alert("Termo já existe.");
     }
   } catch (error) {
-    alert("Erro ao editar termo");
+    alert("Erro ao cadastrar termo");
     console.log(`error.message`, error.message);
   }
 }
@@ -125,25 +132,20 @@ function pegarInputsDoForm(form_name) {
 
 async function carregarDadosTermo() {
   const term_id = history.state;
+
   try {
     const result = await fetch(
       `https://ficha-terminologica-backend.herokuapp.com/term/${term_id}/list`
     );
 
     const json = await result.json();
-    console.log(
-      `json: `,
-      json.entrada,
-      json.categoria_gramatical,
-      json.genero,
-      json.variantes
-    );
+
     const form = document.forms["edit_term"];
 
     form["entrada"].value = json.entrada;
     form["cat_morfo"].value = json.categoria_gramatical;
     form["genero_grupo"].value = json.genero;
-    form["variante"].value = json.variantes;
+    form["variantes"].value = json.variantes;
 
     console.log(`dados do termo carregados`);
   } catch (error) {

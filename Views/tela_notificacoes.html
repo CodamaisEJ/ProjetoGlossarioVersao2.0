@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/dropdown_user_icon.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/header-footer.css">
     <link rel="stylesheet" href="./css/tela_notificacao_style.css">
 
     <title>Notificação</title>
 
-</head>
-
-<body onload="mudaCor()">
+  </head>
+  <body onload="mudaCor()">
     <script src="js/ficha_script.js"></script>
 
     <header id="header" class="header">
@@ -24,76 +21,60 @@
         </div>
         <div id="button-block" class="links">
             <ul>
-                <li id="logo_notificacao">
-                    <a href=""><img src="./img/sino-de-notificacao 1.png" alt=""></a>
-                </li>
-                <li id="dropdown" class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn"></button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <p id="nome_usuario">Flavia Maia</p>
-                        <p id="status_user">Administrador</p>
-                        <p id="alt">Alternar Perfis:</p>
-                        <div class="a-block">
-                            <a href="">Administrador</a>
-                            <a href="">Especialista</a>
-                            <a href="">Pesquisador</a>
-                        </div>
-                        <button>Logout</button>
-                    </div>
-                </li>
+                <li id="logo_notificacao"><a href=""><img src="./img/sino-de-notificacao 1.png" alt=""></a></li>
+                <li id="logo_user"><a href=""><img src="./img/Group.png" alt=""></a></li>
             </ul>
         </div>
     </header>
 
     <main class="conteudo">
-        <h2>Notificações</h2>
-        <div id="fechar">
-            <a href="#">
-                <img src="./img/X.png" alt="">
-            </a>
-        </div>
-        <div class="tabela-block">
-            <table id="tabela">
-                <tr>
-                    <th><img src="./img/termos 1.png" alt=""> Termo</th>
-                    <th><img src="./img/trabalho-em-progresso 1.png" alt=""> Status</th>
-                    <th><img src="./img/user_table.png" alt=""> Usuário</th>
-                    <th><img src="./img/data-limite 1.png" alt=""> Data</th>
+            <h2>Notificações</h2>
+            <div id="fechar">
+                <a href="#">
+                    <img src="./img/X.png" alt="">
+                </a>
+            </div>
+            <div class="tabela-block">
+                <table id="tabela" >
+                    <tr>
+                        <th><img src="./img/termos 1.png" alt=""> Termo</th>
+                        <th><img src="./img/trabalho-em-progresso 1.png" alt=""> Status</th>
+                        <th><img src="./img/user_table.png" alt=""> Usuário</th>
+                        <th><img src="./img/data-limite 1.png" alt=""> Data</th>
+                    </tr>
+                    <tr id="values">
+                        <td >Variante</td>
+                        <td>Inserido</td>
+                        <td >Isabella</td>
+                        <td >29/11/2021</td>
+                    </tr>
+                    <tr id="values">
+                        <td >Variante</td>
+                        <td >Inserido</td>
+                        <td >Joana Pereira Vladvostok da Silva</td>
+                        <td >29/11/2021</td>
+                    </tr>
+                     </tr>
+                    <tr id="values">
+                        <td >Variante</td>
+                        <td>Inserido</td>
+                        <td >Isabella</td>
+                        <td >29/11/2021</td>
+                    </tr>
+                    </tr>
+                    <tr id="values">
+                        <td >Variante</td>
+                        <td>Inserido</td>
+                        <td >Isabella</td>
+                        <td >29/11/2021</td>
+                    </tr>
                 </tr>
-                <tr id="values">
-                    <td>Variante</td>
-                    <td>Inserido</td>
-                    <td>Isabella</td>
-                    <td>29/11/2021</td>
-                </tr>
-                <tr id="values">
-                    <td>Variante</td>
-                    <td>Inserido</td>
-                    <td>Joana Pereira Vladvostok da Silva</td>
-                    <td>29/11/2021</td>
-                </tr>
-                </tr>
-                <tr id="values">
-                    <td>Variante</td>
-                    <td>Inserido</td>
-                    <td>Isabella</td>
-                    <td>29/11/2021</td>
-                </tr>
-                </tr>
-                <tr id="values">
-                    <td>Variante</td>
-                    <td>Inserido</td>
-                    <td>Isabella</td>
-                    <td>29/11/2021</td>
-                </tr>
-                </tr>
-            </table>
-        </div>
+                </table>
+            </div>
     </main>
-
+    
     <footer id="footer">
         <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
-</body>
-
+  </body>
 </html>
