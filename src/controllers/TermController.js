@@ -19,22 +19,23 @@ class TermController {
         }
 
         // variaveis a seguir que é recebido do banco: 
-        const id_termo = findTermCreate.id
+        // const id_termo = findTermCreate.id
         // variavel de satus do termo
-        const { situacao_termo } = findTermCreate
+        // const { situacao_termo } = findTermCreate
         // variavel de nome do usuario
-        const { autor } = findTermCreate
+        // const { autor } = findTermCreate
         // variavel data atual da notificação
-        const data = findTermCreate.data_de_registro
+        // const data = findTermCreate.data_de_registro
         //criar notificaçao quando cria o termo logo em seguida
-        const newNotification= await database.Notifications.create({
-            situacao_termo,
-            data,
-            fk_id_termo: id_termo
-        })
 
-        return res.status(201).json(newNotification)
-        // return res.status(201).json(newTermCreate)
+        // const newNotification= await database.Notifications.create({
+        //     situacao_termo,
+        //     data,
+        //     fk_id_termo: id_termo
+        // })
+
+        // return res.status(201).json(newNotification)
+        return res.status(201).json(newTermCreate)
       } catch (error) {
         // console.error(error)
         return res.status(500).json(error.message.error)

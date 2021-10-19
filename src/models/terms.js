@@ -11,30 +11,12 @@ module.exports = (sequelize, DataTypes) => {
   };
   Terms.init({
     area: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notNull: {
-          args:true,
-          msg: {
-            error: 'Informe a area do termo!'
-          }
-        }
-      }
+      type: DataTypes.STRING
     },
     categoria_gramatical: DataTypes.STRING,
     data_de_registro: {
       type: DataTypes.DATEONLY,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-      validate: {
-        notNull: {
-          args:true,
-          msg: { 
-            error: 'Informe a data de registro do termo!'
-        }
-        }
-      }      
+      defaultValue: DataTypes.NOW,     
     },
     entrada: DataTypes.STRING,
     genero: DataTypes.STRING,
@@ -55,16 +37,7 @@ module.exports = (sequelize, DataTypes) => {
     data_da_ultima_revisao: DataTypes.DATEONLY,
     freq_no_termo_corpus: DataTypes.STRING,
     autor: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notNull: {
-          args:true,
-          msg: {
-            error: 'Informe o nome de usuário!'
-          }
-        }
-      }      
+      type: DataTypes.STRING     
     },
     revisao_linguistica: DataTypes.STRING,
     proposta_de_revisao: DataTypes.STRING,
@@ -94,16 +67,7 @@ module.exports = (sequelize, DataTypes) => {
     siglas: DataTypes.STRING,
     acronimos: DataTypes.STRING,
     situacao_termo: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notNull: {
-          args:true,
-          msg: {
-            error: 'Informe a situação do termo!'
-          }
-        }
-      }      
+      type: DataTypes.STRING,   
     }
   }, {
     sequelize,
