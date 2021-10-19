@@ -16,9 +16,9 @@
 
     <title>Cadastro</title>
   </head>
-  <body>   
+  <body>
     <script src="js/ficha_script.js"></script>
-    <script src="js/Crud_terms.js"></script> 
+    <script src="js/Crud_terms.js"></script>
 
     <header id="header" class="header">
       <div class="logo">
@@ -43,325 +43,530 @@
         <fieldset>
           <legend>Cadastrar</legend>
           <div class="page-block">
-              <div class="list-block">
-                <div class="input-block">
-                  <label for="entrada">Entrada</label>
-                  <input
-                    placeholder="Entrada"
-                    type="text"
-                    name="entrada"
-                    id="entrada"
-                  />
-                </div>
-                <div class="radio-block">
-                  <p>Gênero:</p>
-                  <input
-                    type="radio"
-                    id="masculino"
-                    name="genero_grupo"
-                    value="masculino"
-                  />
-                  <label for="masculino">Masculino</label>
-                  <input
-                    type="radio"
-                    id="feminino"
-                    name="genero_grupo"
-                    value="feminino"
-                  />
-                  <label for="feminino">Feminino</label>
-                  <input
-                    type="radio"
-                    id="dois-generos"
-                    name="genero_grupo"
-                    value="dois-generos"
-                  />
-                  <label for="dois-generos">Dois Gêneros</label>
-                </div>
-                <div class="input-block">
-                  <label for="variante">Variante:</label>
-                  <input onclick="butaoVariante()" type="button" id="variante" name="variante" value="Selecione para preencher as variantes">
-                </div>
-                <div id="ortografia-block" class="input-block">
-                  <label for="ortografia">Ortográfica:</label>
-                  <input type="text" name="ortografia" id="ortografia"  />
-                </div>
-                <div id="geografica-block" class="input-block">
-                  <label for="geografica">Geográfica:</label>
-                  <input type="text" name="geografica" id="geografica"  />
-                </div>
-                <div id="sinonimica-block" class="input-block">
-                  <label for="sinonimica">Sinonímica:</label>
-                  <input type="text" name="sinonimica" id="sinonimica"  />
-                </div>
-                <div id="siglas-block" class="input-block">
-                  <label for="siglas">Siglas:</label>
-                  <input placeholder="cepa;linhagem." type="text" name="siglas" id="siglas"  />
-                </div>
-                <div id="acronimos-block" class="input-block">
-                  <label for="acronimos">Acrônimos:</label>
-                  <input type="text" name="acronimos" id="acronimos"  />
-                </div>
-
-
-                <div class="input-block">
-                  <label for="definicao">Definicão:</label>
-                  <input onclick="butaoDefinicao()" type="button" id="definicao" name="definicao" value="Selecione para preencher as definições">
-                </div>
-                <div id="dicio-lingua-comu-def-block" class="input-block">
-                  <label for="dicio-lingua-comu-def">Dicionário Língua comum:</label>
-                  <textarea name="dicio-lingua-comu-def" id="dicio-lingua-comu-def" ></textarea>
-                  <div id="button_mais-block"> 
-                      <button type="button" onclick="butaoMais('dicio-espe-def-block');" class="butao_status">(+)</button>
-                  </div>
-                </div>
-                <div id="dicio-espe-def-block" class="input-block">
-                  <label for="dicio-espe-def">Dicionário Especializado:</label>
-                  <textarea name="dicio-espe-def" id="dicio-espe-def" ></textarea>
-                  <div id="button_mais-block"> 
-                      <button type="button" onclick="butaoMenos('dicio-espe-def-block',true,['dicio-espe2-def-block','prop_defini-block'])" class="butao_status" >(-)</button>
-                      <button type="button"  onclick="butaoMais('dicio-espe2-def-block')" id="butao_menos_dicio_espe_def" class="butao_status" >(+)</button>
-                  </div>
-                </div>
-                <div id="dicio-espe2-def-block" class="input-block">
-                  <label for="dicio-espe2-def">Dicionário Especializado 2:</label>
-                  <textarea name="dicio-espe2-def" id="dicio-espe2-def" ></textarea>
-                  <div id="button_mais-block"> 
-                    <button type="button" onclick="butaoMenos('dicio-espe2-def-block',true,['prop_defini-block'])" class="butao_status" >(-)</button>
-                    <button type="button"  onclick="butaoMais('prop_defini-block')" id="butao_menos_dicio_espe_def" class="butao_status" >(+)</button>
-                  </div>
-                </div>
-                <div id="prop_defini-block" class="input-block">
-                  <label for="prop_defini">Proposta de definição:</label>
-                  <textarea name="prop_defini" id="prop_defini" ></textarea>
-                  <div id="button_mais-block"> 
-                    <button type="button" onclick="butaoMenos('prop_defini-block',true,[])" class="butao_status" >(-)</button>
-                  </div>
-                </div>  
-    
-                <div class="input-block">
-                  <label for="context_uso">Contexto de uso:</label>
-                  <input onclick="butaoContextoUso()" type="button" id="context_uso" name="context_uso" value="Selecione para preencher os contexto de usos">
-                </div>
-                <div id="context_uso_1_block" class="input-block">
-                  <label for="context_uso_1">Contexto de uso 1:</label>
-                  <textarea name="context_uso_1" id="context_uso_1"></textarea>
-                  <div id="button_mais-block"> 
-                    <button type="button" onclick="butaoMais('context_uso_2_block')" class="butao_status" >(+)</button>
-                  </div>
-                </div>
-                <div id="context_uso_2_block" class="input-block">
-                  <label for="context_uso_2">Contexto de uso 2:</label>
-                  <textarea name="context_uso_2" id="context_uso_2"></textarea>
-                  <div id="button_mais-block"> 
-                    <button type="button" onclick="butaoMenos('context_uso_2_block',true,['context_uso_3-block'])" class="butao_status" >(-)</button>
-                    <button type="button" onclick="butaoMais('context_uso_3-block')" class="butao_status" >(+)</button>
-                  </div>
-                </div>
-                <div id="context_uso_3-block" class="input-block">
-                  <label for="context_uso_3">Contexto de uso 3:</label>
-                  <textarea name="context_uso_3" id="context_uso_3"></textarea>
-                  <div id="button_mais-block"> 
-                    <button type="button" onclick="butaoMenos('context_uso_3-block',false,[])" class="butao_status" >(-)</button>
-                  </div>
-                </div>
-                
-
-                <div class="input-block">
-                  <label for="remissivas">Remissivas::</label>
-                  <input onclick="butaoRemissivas()" type="button" id="remissivas" name="remissivas" value="Selecione para preencher a correlação com o termo">
-                </div>
-                <div id="hiperonimo-block" class="input-block">
-                  <label for="hiperonimo">Hiperônimo:</label>
-                  <input type="text" name="hiperonimo" id="hiperonimos"  />
-                </div>
-                <div id="hiponimo-block" class="input-block">
-                  <label for="hiponimo">Hipônimo:</label>
-                  <input type="text" name="hiponimo" id="hiponimo"/>
-                </div>
-                <div id="co-hiponimo-block" class="input-block">
-                  <label for="co-hiponimo">CO-Hipônimo:</label>
-                  <input type="text" name="co-hiponimo" id="co-hiponimo"/>
-                </div>
-
-                <div class="input-block">
-                  <label for="autor">Autor:</label>
-                  <input type="text" name="autor" id="autor"  />
-                </div>
-                <div class="input-block">
-                  <label for="data_registro">Data de Registro:</label>
-                  <input
-                    type="date"
-                    name="data_registro"
-                    id="data_registro"
-                    
-                  />
-                </div>
-                <div class="input-block">
-                  <label for="revisao_linguistica">Revisão Linguistica:</label>
-                  <input
-                    type="text"
-                    name="revisao_linguistica"
-                    id="revisao_linguistica"
-                    
-                  />
-                </div>
-
-
-                <div class="input-block">
-                  <label for="remissivas">Idiomas:</label>
-                  <input onclick="butaoIdiomas()" type="button" id="idiomas" name="idiomas" value="Selecione para preencher a correlação com o termo">
-                </div>
-                <div id="termo-ingles-block" class="input-block">
-                  <label for="termo-ingles">Termo em Inglês:</label>
-                  <input type="text" name="termo-ingles" id="termo-ingles"  />
-                </div>
-                <div id="termo-italiano-block" class="input-block">
-                  <label for="termo-Italiano">Termo em Italiano:</label>
-                  <input type="text" name="termo-Italiano" id="termo-Italiano"  />
-                </div>
-                <div id="termo-frances-block" class="input-block">
-                  <label for="termo-frances">Termo em Francês:</label>
-                  <input type="text" name="termo-frances" id="termo-frances"  />
-                </div>
-                <div id="termo-Espanhol-block" class="input-block">
-                  <label for="termo-frances">Termo em Espanhol:</label>
-                  <input type="text" name="termo-Espanhol" id="termo-Espanhol"  />
-                </div>
-                
+            <div class="list-block">
+              <div class="input-block">
+                <label for="entrada">Entrada</label>
+                <input
+                  placeholder="Entrada"
+                  type="text"
+                  name="entrada"
+                  id="entrada"
+                />
+              </div>
+              <div class="radio-block">
+                <p>Gênero:</p>
+                <input
+                  type="radio"
+                  id="masculino"
+                  name="genero_grupo"
+                  value="masculino"
+                />
+                <label for="masculino">Masculino</label>
+                <input
+                  type="radio"
+                  id="feminino"
+                  name="genero_grupo"
+                  value="feminino"
+                />
+                <label for="feminino">Feminino</label>
+                <input
+                  type="radio"
+                  id="dois-generos"
+                  name="genero_grupo"
+                  value="dois-generos"
+                />
+                <label for="dois-generos">Dois Gêneros</label>
+              </div>
+              <div class="input-block">
+                <label for="variante">Variante:</label>
+                <input
+                  onclick="butaoVariante()"
+                  type="button"
+                  id="variante"
+                  name="variante"
+                  value="Selecione para preencher as variantes"
+                />
+              </div>
+              <div id="ortografia-block" class="input-block">
+                <label for="ortografia">Ortográfica:</label>
+                <input type="text" name="ortografia" id="ortografia" />
+              </div>
+              <div id="geografica-block" class="input-block">
+                <label for="geografica">Geográfica:</label>
+                <input type="text" name="geografica" id="geografica" />
+              </div>
+              <div id="sinonimica-block" class="input-block">
+                <label for="sinonimica">Sinonímica:</label>
+                <input type="text" name="sinonimica" id="sinonimica" />
+              </div>
+              <div id="siglas-block" class="input-block">
+                <label for="siglas">Siglas:</label>
+                <input
+                  placeholder="cepa;linhagem."
+                  type="text"
+                  name="siglas"
+                  id="siglas"
+                />
+              </div>
+              <div id="acronimos-block" class="input-block">
+                <label for="acronimos">Acrônimos:</label>
+                <input type="text" name="acronimos" id="acronimos" />
               </div>
 
-              <div class="list-block">
-                <div class="radio-block">
-                  <p>Categoria Morfológica:</p>
-                  <input type="radio" id="nome" name="cat_morfo" value="nome" />
-                  <label for="nome">Nome</label>
-                  <input type="radio" id="verbo" name="cat_morfo" value="verbo" />
-                  <label for="verbo">Verbo</label>
+              <div class="input-block">
+                <label for="definicao">Definicão:</label>
+                <input
+                  onclick="butaoDefinicao()"
+                  type="button"
+                  id="definicao"
+                  name="definicao"
+                  value="Selecione para preencher as definições"
+                />
+              </div>
+              <div id="dicio-lingua-comu-def-block" class="input-block">
+                <label for="dicio-lingua-comu-def"
+                  >Dicionário Língua comum:</label
+                >
+                <textarea
+                  name="dicio-lingua-comu-def"
+                  id="dicio-lingua-comu-def"
+                ></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMais('dicio-espe-def-block');"
+                    class="butao_status"
+                  >
+                    (+)
+                  </button>
                 </div>
-                <div class="radio-block">
-                  <p>Número:</p>
-                  <input
-                    type="radio"
-                    id="singular"
-                    name="num_grupo"
-                    value="singular"
-                  />
-                  <label for="singular">Singular</label>
-                  <input type="radio" id="plural" name="num_grupo" value="plural" />
-                  <label for="plural">Plural</label>
+              </div>
+              <div id="dicio-espe-def-block" class="input-block">
+                <label for="dicio-espe-def">Dicionário Especializado:</label>
+                <textarea name="dicio-espe-def" id="dicio-espe-def"></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMenos('dicio-espe-def-block',true,['dicio-espe2-def-block','prop_defini-block'])"
+                    class="butao_status"
+                  >
+                    (-)
+                  </button>
+                  <button
+                    type="button"
+                    onclick="butaoMais('dicio-espe2-def-block')"
+                    id="butao_menos_dicio_espe_def"
+                    class="butao_status"
+                  >
+                    (+)
+                  </button>
                 </div>
-                <div class="input-block">
-                  <label for="area">Área:</label>
-                  <input type="text" name="area" id="area"  />
+              </div>
+              <div id="dicio-espe2-def-block" class="input-block">
+                <label for="dicio-espe2-def">Dicionário Especializado 2:</label>
+                <textarea
+                  name="dicio-espe2-def"
+                  id="dicio-espe2-def"
+                ></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMenos('dicio-espe2-def-block',true,['prop_defini-block'])"
+                    class="butao_status"
+                  >
+                    (-)
+                  </button>
+                  <button
+                    type="button"
+                    onclick="butaoMais('prop_defini-block')"
+                    id="butao_menos_dicio_espe_def"
+                    class="butao_status"
+                  >
+                    (+)
+                  </button>
                 </div>
+              </div>
+              <div id="prop_defini-block" class="input-block">
+                <label for="prop_defini">Proposta de definição:</label>
+                <textarea name="prop_defini" id="prop_defini"></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMenos('prop_defini-block',true,[])"
+                    class="butao_status"
+                  >
+                    (-)
+                  </button>
+                </div>
+              </div>
 
-                <div  class="input-block">
-                  <label for="fonte_definicao">Fonte da definição:</label>
-                  <input onclick="butaoFonteDefinicao()" type="button" id="fonte_definicao" name="fonte_definicao" value="Selecione para preencher as fontes das definições">
+              <div class="input-block">
+                <label for="context_uso">Contexto de uso:</label>
+                <input
+                  onclick="butaoContextoUso()"
+                  type="button"
+                  id="context_uso"
+                  name="context_uso"
+                  value="Selecione para preencher os contexto de usos"
+                />
+              </div>
+              <div id="context_uso_1_block" class="input-block">
+                <label for="context_uso_1">Contexto de uso 1:</label>
+                <textarea name="context_uso_1" id="context_uso_1"></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMais('context_uso_2_block')"
+                    class="butao_status"
+                  >
+                    (+)
+                  </button>
                 </div>
-                <div id="font-dici-lingua-comum_block" class="input-block">
-                  <label for="font-dici-lingua-comum">Fonte - Dicionário Língua Comum:</label>
-                  <textarea name="font-dici-lingua-comum" id="font-dici-lingua-comum"></textarea>
-                  <div id="button_mais-block"> 
-                    <button type="button" onclick="butaoMais('font-dici-especi-1_block')" class="butao_status" >(+)</button>
-                  </div>
+              </div>
+              <div id="context_uso_2_block" class="input-block">
+                <label for="context_uso_2">Contexto de uso 2:</label>
+                <textarea name="context_uso_2" id="context_uso_2"></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMenos('context_uso_2_block',true,['context_uso_3-block'])"
+                    class="butao_status"
+                  >
+                    (-)
+                  </button>
+                  <button
+                    type="button"
+                    onclick="butaoMais('context_uso_3-block')"
+                    class="butao_status"
+                  >
+                    (+)
+                  </button>
                 </div>
-                <div id="font-dici-especi-1_block" class="input-block">
-                  <label for="font-dici-especi-1">Fonte - Dicionário Especializado 1:</label>
-                  <textarea name="font-dici-especi-1" id="font-dici-especi-1"></textarea>
-                  <div id="button_mais-block"> 
-                    <button type="button" onclick="butaoMenos('font-dici-especi-1_block',true,['font-dici-especi-2_block','font-prop-defi_block'])" class="butao_status" >(-)</button>
-                    <button type="button"  onclick="butaoMais('font-dici-especi-2_block')" id="butao_menos_dicio_espe_def" class="butao_status" >(+)</button>
-                  </div>
+              </div>
+              <div id="context_uso_3-block" class="input-block">
+                <label for="context_uso_3">Contexto de uso 3:</label>
+                <textarea name="context_uso_3" id="context_uso_3"></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMenos('context_uso_3-block',false,[])"
+                    class="butao_status"
+                  >
+                    (-)
+                  </button>
                 </div>
-                <div id="font-dici-especi-2_block" class="input-block">
-                  <label for="font-dici-especi-2">Fonte - Dicionário Especializado 2:</label>
-                  <textarea name="font-dici-especi-2" id="font-dici-especi-2"></textarea>
-                  <div id="button_mais-block"> 
-                    <button type="button" onclick="butaoMenos('font-dici-especi-2_block',true,['font-prop-defi_block'])" class="butao_status" >(-)</button>
-                    <button type="button"  onclick="butaoMais('font-prop-defi_block')" id="butao_menos_dicio_espe_def" class="butao_status" >(+)</button>
-                  </div>
-                </div>
-                <div id="font-prop-defi_block" class="input-block">
-                  <label for="font-prop-defi">Fonte - Proposta Definição:</label>
-                  <textarea name="font-prop-defi" id="font-prop-defi"></textarea>
-                  <div id="button_mais-block"> 
-                    <button type="button" onclick="butaoMenos('font-prop-defi_block',false,[])" class="butao_status" >(-)</button>
-                  </div>
-                </div>
-        
-                <div  class="input-block">
-                  <label for="font_contexto_uso">Fonte de contexto de uso:</label>
-                  <input onclick="butaoFontContextoUso()" type="button" id="font_contexto_uso" name="font_contexto_uso" value="Selecione para preencher as fontes do contexto de uso">
-                </div>
-                <div id="font_contexto_uso_1_block" class="input-block">
-                  <label for="font_contexto_uso_1">Fonte - Contexto de Uso 1:</label>
-                  <textarea name="font_contexto_uso_1" id="font_contexto_uso_1"></textarea>
-                  <div id="button_mais-block"> 
-                    <button type="button" onclick="butaoMais('font_contexto_uso_2_block')" class="butao_status" >(+)</button>
-                  </div>
-                </div>
-                <div id="font_contexto_uso_2_block" class="input-block">
-                  <label for="font_contexto_uso_2">Fonte - Contexto de Uso 2:</label>
-                  <textarea name="font_contexto_uso_2" id="font_contexto_uso_2"></textarea>
-                  <div id="button_mais-block"> 
-                    <button type="button" onclick="butaoMenos('font_contexto_uso_2_block',true,['font_contexto_uso_3_block'])" class="butao_status" >(-)</button>
-                    <button type="button"  onclick="butaoMais('font_contexto_uso_3_block')" id="butao_menos_dicio_espe_def" class="butao_status" >(+)</button>
-                  </div>
-                </div>
-                <div id="font_contexto_uso_3_block" class="input-block">
-                  <label for="font_contexto_uso_3">Fonte - Contexto de Uso 3:</label>
-                  <textarea name="font_contexto_uso_3" id="font_contexto_uso_3"></textarea>
-                  <div id="button_mais-block"> 
-                    <button type="button" onclick="butaoMenos('font_contexto_uso_3_block',false,[])" class="butao_status" >(-)</button>
-                  </div>
-                </div>
+              </div>
 
-                <div class="input-block">
-                  <label for="nota">Nota:</label>
-                  <input type="text" name="nota" id="nota"  />
+              <div class="input-block">
+                <label for="remissivas">Remissivas::</label>
+                <input
+                  onclick="butaoRemissivas()"
+                  type="button"
+                  id="remissivas"
+                  name="remissivas"
+                  value="Selecione para preencher a correlação com o termo"
+                />
+              </div>
+              <div id="hiperonimo-block" class="input-block">
+                <label for="hiperonimo">Hiperônimo:</label>
+                <input type="text" name="hiperonimo" id="hiperonimos" />
+              </div>
+              <div id="hiponimo-block" class="input-block">
+                <label for="hiponimo">Hipônimo:</label>
+                <input type="text" name="hiponimo" id="hiponimo" />
+              </div>
+              <div id="co-hiponimo-block" class="input-block">
+                <label for="co-hiponimo">CO-Hipônimo:</label>
+                <input type="text" name="co-hiponimo" id="co-hiponimo" />
+              </div>
+
+              <div class="input-block">
+                <label for="autor">Autor:</label>
+                <input type="text" name="autor" id="autor" />
+              </div>
+              <div class="input-block">
+                <label for="data_registro">Data de Registro:</label>
+                <input type="date" name="data_registro" id="data_registro" />
+              </div>
+              <div class="input-block">
+                <label for="revisao_linguistica">Revisão Linguistica:</label>
+                <input
+                  type="text"
+                  name="revisao_linguistica"
+                  id="revisao_linguistica"
+                />
+              </div>
+
+              <div class="input-block">
+                <label for="remissivas">Idiomas:</label>
+                <input
+                  onclick="butaoIdiomas()"
+                  type="button"
+                  id="idiomas"
+                  name="idiomas"
+                  value="Selecione para preencher a correlação com o termo"
+                />
+              </div>
+              <div id="termo-ingles-block" class="input-block">
+                <label for="termo-ingles">Termo em Inglês:</label>
+                <input type="text" name="termo-ingles" id="termo-ingles" />
+              </div>
+              <div id="termo-italiano-block" class="input-block">
+                <label for="termo-Italiano">Termo em Italiano:</label>
+                <input type="text" name="termo-Italiano" id="termo-Italiano" />
+              </div>
+              <div id="termo-frances-block" class="input-block">
+                <label for="termo-frances">Termo em Francês:</label>
+                <input type="text" name="termo-frances" id="termo-frances" />
+              </div>
+              <div id="termo-Espanhol-block" class="input-block">
+                <label for="termo-Espanhol">Termo em Espanhol:</label>
+                <input type="text" name="termo-Espanhol" id="termo-Espanhol" />
+              </div>
+            </div>
+
+            <div class="list-block">
+              <div class="radio-block">
+                <p>Categoria Morfológica:</p>
+                <input type="radio" id="nome" name="cat_morfo" value="nome" />
+                <label for="nome">Nome</label>
+                <input type="radio" id="verbo" name="cat_morfo" value="verbo" />
+                <label for="verbo">Verbo</label>
+              </div>
+              <div class="radio-block">
+                <p>Número:</p>
+                <input
+                  type="radio"
+                  id="singular"
+                  name="num_grupo"
+                  value="singular"
+                />
+                <label for="singular">Singular</label>
+                <input
+                  type="radio"
+                  id="plural"
+                  name="num_grupo"
+                  value="plural"
+                />
+                <label for="plural">Plural</label>
+              </div>
+              <div class="input-block">
+                <label for="area">Área:</label>
+                <input type="text" name="area" id="area" />
+              </div>
+
+              <div class="input-block">
+                <label for="fonte_definicao">Fonte da definição:</label>
+                <input
+                  onclick="butaoFonteDefinicao()"
+                  type="button"
+                  id="fonte_definicao"
+                  name="fonte_definicao"
+                  value="Selecione para preencher as fontes das definições"
+                />
+              </div>
+              <div id="font-dici-lingua-comum_block" class="input-block">
+                <label for="font-dici-lingua-comum"
+                  >Fonte - Dicionário Língua Comum:</label
+                >
+                <textarea
+                  name="font-dici-lingua-comum"
+                  id="font-dici-lingua-comum"
+                ></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMais('font-dici-especi-1_block')"
+                    class="butao_status"
+                  >
+                    (+)
+                  </button>
                 </div>
-               
-                <div class="input-block">
-                  <label for="redador">Redador:</label>
-                  <input type="text" name="redador" id="redador"  />
+              </div>
+              <div id="font-dici-especi-1_block" class="input-block">
+                <label for="font-dici-especi-1"
+                  >Fonte - Dicionário Especializado 1:</label
+                >
+                <textarea
+                  name="font-dici-especi-1"
+                  id="font-dici-especi-1"
+                ></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMenos('font-dici-especi-1_block',true,['font-dici-especi-2_block','font-prop-defi_block'])"
+                    class="butao_status"
+                  >
+                    (-)
+                  </button>
+                  <button
+                    type="button"
+                    onclick="butaoMais('font-dici-especi-2_block')"
+                    id="butao_menos_dicio_espe_def"
+                    class="butao_status"
+                  >
+                    (+)
+                  </button>
                 </div>
-              
-                <div class="input-block">
-                  <label for="revisao_especialista">Revisão de especialista:</label>
-                  <input
-                    type="text"
-                    name="revisao_especialista"
-                    id="revisao_especialista"
-                    
-                  />
+              </div>
+              <div id="font-dici-especi-2_block" class="input-block">
+                <label for="font-dici-especi-2"
+                  >Fonte - Dicionário Especializado 2:</label
+                >
+                <textarea
+                  name="font-dici-especi-2"
+                  id="font-dici-especi-2"
+                ></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMenos('font-dici-especi-2_block',true,['font-prop-defi_block'])"
+                    class="butao_status"
+                  >
+                    (-)
+                  </button>
+                  <button
+                    type="button"
+                    onclick="butaoMais('font-prop-defi_block')"
+                    id="butao_menos_dicio_espe_def"
+                    class="butao_status"
+                  >
+                    (+)
+                  </button>
                 </div>
-                
-                <div class="input-block">
-                  <label for="data_ultima_revisao">Data da ultima revisão:</label>
-                  <input
-                    type="date"
-                    name="data_ultima_revisao"
-                    id="data_ultima_revisao"
-                    
-                  />
+              </div>
+              <div id="font-prop-defi_block" class="input-block">
+                <label for="font-prop-defi">Fonte - Proposta Definição:</label>
+                <textarea name="font-prop-defi" id="font-prop-defi"></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMenos('font-prop-defi_block',false,[])"
+                    class="butao_status"
+                  >
+                    (-)
+                  </button>
                 </div>
-              
-                <div class="input-block">
-                  <label for="frequencia_termo_corpus"
-                    >Frequência do termo no corpus:</label> 
-                  <input
-                    placeholder="100000000"
-                    type="number"
-                    name="frequencia_termo_corpus"
-                    id="frequencia_termo_corpus"
-                    
-                  />
+              </div>
+
+              <div class="input-block">
+                <label for="font_contexto_uso">Fonte de contexto de uso:</label>
+                <input
+                  onclick="butaoFontContextoUso()"
+                  type="button"
+                  id="font_contexto_uso"
+                  name="font_contexto_uso"
+                  value="Selecione para preencher as fontes do contexto de uso"
+                />
+              </div>
+              <div id="font_contexto_uso_1_block" class="input-block">
+                <label for="font_contexto_uso_1"
+                  >Fonte - Contexto de Uso 1:</label
+                >
+                <textarea
+                  name="font_contexto_uso_1"
+                  id="font_contexto_uso_1"
+                ></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMais('font_contexto_uso_2_block')"
+                    class="butao_status"
+                  >
+                    (+)
+                  </button>
                 </div>
-              </div>       
+              </div>
+              <div id="font_contexto_uso_2_block" class="input-block">
+                <label for="font_contexto_uso_2"
+                  >Fonte - Contexto de Uso 2:</label
+                >
+                <textarea
+                  name="font_contexto_uso_2"
+                  id="font_contexto_uso_2"
+                ></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMenos('font_contexto_uso_2_block',true,['font_contexto_uso_3_block'])"
+                    class="butao_status"
+                  >
+                    (-)
+                  </button>
+                  <button
+                    type="button"
+                    onclick="butaoMais('font_contexto_uso_3_block')"
+                    id="butao_menos_dicio_espe_def"
+                    class="butao_status"
+                  >
+                    (+)
+                  </button>
+                </div>
+              </div>
+              <div id="font_contexto_uso_3_block" class="input-block">
+                <label for="font_contexto_uso_3"
+                  >Fonte - Contexto de Uso 3:</label
+                >
+                <textarea
+                  name="font_contexto_uso_3"
+                  id="font_contexto_uso_3"
+                ></textarea>
+                <div id="button_mais-block">
+                  <button
+                    type="button"
+                    onclick="butaoMenos('font_contexto_uso_3_block',false,[])"
+                    class="butao_status"
+                  >
+                    (-)
+                  </button>
+                </div>
+              </div>
+
+              <div class="input-block">
+                <label for="nota">Nota:</label>
+                <input type="text" name="nota" id="nota" />
+              </div>
+
+              <div class="input-block">
+                <label for="redador">Redador:</label>
+                <input type="text" name="redador" id="redador" />
+              </div>
+
+              <div class="input-block">
+                <label for="revisao_especialista"
+                  >Revisão de especialista:</label
+                >
+                <input
+                  type="text"
+                  name="revisao_especialista"
+                  id="revisao_especialista"
+                />
+              </div>
+
+              <div class="input-block">
+                <label for="data_ultima_revisao">Data da ultima revisão:</label>
+                <input
+                  type="date"
+                  name="data_ultima_revisao"
+                  id="data_ultima_revisao"
+                />
+              </div>
+
+              <div class="input-block">
+                <label for="frequencia_termo_corpus"
+                  >Frequência do termo no corpus:</label
+                >
+                <input
+                  placeholder="100000000"
+                  type="number"
+                  name="frequencia_termo_corpus"
+                  id="frequencia_termo_corpus"
+                />
+              </div>
+            </div>
           </div>
 
-         <div class="button-block" >
+          <div class="button-block">
             <div class="verificar_button">
               <button>Verificar</button>
             </div>
@@ -370,7 +575,7 @@
                 Salvar
               </button>
             </div>
-         </div>
+          </div>
         </fieldset>
       </form>
     </main>

@@ -21,7 +21,7 @@ function ListUsers(Users) {
         margin-bottom: 30px; 
       }
       </style> 
-      <div class="users" id="users">                  
+      <div class="users" id="users${User.id}">                  
            <p>${User.nome}</p>
            <p>${User.tipo_de_usuario}</p>
            <p>${User.email}</p>
@@ -53,11 +53,12 @@ async function DeletandoUser(user_id) {
   const json = await retorno.json();
   alert("" + json.message);
   console.log(json);
-  DeleteUsers();
+  DeleteUsers(user_id);
 }
 
-function DeleteUsers() {
-  Userslist.innerHTML = "";
+function DeleteUsers(user_id) {
+  const el_user = document.querySelector(`#users${user_id}`);
+  Userslist.removeChild(el_user);
 }
 
 consultaUsers();
