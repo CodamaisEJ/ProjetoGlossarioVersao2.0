@@ -74,7 +74,7 @@ async function cadastrarTermo(event) {
 
     if (result.status === 201) {
       alert("Termo cadastrado com sucesso.");
-      location.href = "tela_termos.html";
+      location.href = "termo.html";
     } else if (result.status === 401) {
       alert("Ocorreu um erro: Não autorizado.");
     }
@@ -112,7 +112,7 @@ async function editarTermo(event) {
 
     if (result.ok) {
       alert("Termo editado com sucesso.");
-      location.href = "tela_termos.html";
+      location.href = "termo.html";
     } else {
       alert("Termo já existe.");
     }
