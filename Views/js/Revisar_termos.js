@@ -18,13 +18,18 @@ let UserHTML;
 function ListTerms(Termos) {
     Termos.forEach((Termo) => {
         TermoHTML = `
-    
+    <style>
+    #revisar{
+      width: 44px;
+      height: 45px;
+    }
+    </style>
     <div class="termos">
     <div class="borda-termo">
       <div class="termo">
         <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>
       </div>
-      <i id="revisar" class="far fa-square fa-3x" onclick="Check()"></i>
+      <img id="revisar" src="./img/square.png" onclick="Check()">
     </div> 
       `;
         Termoslist.innerHTML = Termoslist.innerHTML + TermoHTML;
@@ -34,7 +39,7 @@ function ListTerms(Termos) {
 consultaTerms();
 
 function Check(){
-
+  document.getElementById('revisar').setAttribute('src', './img/ok.png');
 }
 
 function irParaTelaEditarTermo(term_id) {
