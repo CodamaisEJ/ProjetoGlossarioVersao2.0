@@ -3,12 +3,10 @@
 }
 #Cadastrar_termos fieldset{
     width: 100%;
-    display: grid;
-    grid-template-columns: auto auto; 
+    display: flex;
+    flex-direction: column;
 }
 #Cadastrar_termos fieldset legend{
-    grid-column-start: 1;
-    grid-column-end: 3;
     padding-left: 1rem;
     padding-top: 1.5rem;
     font-family: Poppins;
@@ -19,6 +17,17 @@
     color: #101564;
 
 }
+
+.page-block{
+    display: flex;
+    width: 100%;
+}
+.list-block{
+    width: 50%;
+    margin: 0px;
+}
+    
+
 .radio-block{
     padding: 1rem;
     font-family: Poppins;
@@ -47,7 +56,7 @@
 .input-block{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0.8rem;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
@@ -67,14 +76,32 @@
     font-size: 16px;
     line-height: 22px;
     color: #7B8CA7;
-    padding-left: 1rem;
+    padding-left: 1rem;  
+}
+.input-block textarea{
+    background: #FFFFFF;
+    border: 2px solid #7B8CA7;
+    box-sizing: border-box;
+    border-radius: 8px;font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7B8CA7;
+    padding-left: 1rem;  
+    height: 107px;
+    width: 626px;
+    border-radius: 8px;
     
 }
 
 .input-block label{
     margin-top: -1rem;
 }
-.input-block select{
+#variante,#definicao,#context_uso,#remissivas,#idiomas,#fonte_definicao,#font_contexto_uso{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    text-align: left;
     width: 626px;
     height: 48px;
     background: #FFFFFF;
@@ -87,8 +114,6 @@
     font-size: 16px;
     line-height: 22px;
     color: #7B8CA7;
-    -moz-appearance:none; /* Firefox */
-    -webkit-appearance:none; /* Safari and Chrome */
     appearance:none;
     background-image: url('../img/Polygon\ 6.png');
     background-repeat: no-repeat;
@@ -106,7 +131,11 @@
 #plural{
     margin-left: 3rem;
 }
+.button-block{
+    display: flex;
+}
 .verificar_button{
+    width: 50%;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -122,6 +151,7 @@
     border-color: rgba(255, 255, 255, 0.0);
 }
 .salvar{
+    width: 50%;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -164,3 +194,30 @@ input[type="date"]::-webkit-inner-spin-button{
     font-weight: 500;
     font-size: 25px;
   }
+
+
+  #ortografia-block,#geografica-block,#sinonimica-block,#siglas-block,#acronimos-block
+  ,#dicio-lingua-comu-def-block,#dicio-espe-def-block,#dicio-espe2-def-block,#prop_defini-block
+  ,#context_uso_1_block,#context_uso_2_block,#context_uso_3-block,#hiperonimo-block
+  ,#hiponimo-block,#co-hiponimo-block,#termo-ingles-block,#termo-italiano-block,#termo-Espanhol-block
+  ,#termo-frances-block,#font-dici-lingua-comum_block,#font-dici-especi-1_block,#font-dici-especi-2_block
+  ,#font-prop-defi_block,#font_contexto_uso_1_block,#font_contexto_uso_2_block,#font_contexto_uso_3_block{
+      display: none;
+  }
+
+  #button_mais-block,#button_menos-block{
+      width: 100%;
+      text-align: center;
+  }
+  .butao_status{
+      background-color: white;
+      width: 2rem;
+      border-color: rgba(255, 255, 255, 0.0);
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1rem;
+      line-height: 42px;
+      color: #101564;
+  }
+  
