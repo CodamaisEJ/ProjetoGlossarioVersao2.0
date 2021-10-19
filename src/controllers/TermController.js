@@ -6,9 +6,38 @@ class TermController {
       const newTerm = req.body
       try {
         const newTermCreate = await database.Terms.create(newTerm)
-        return res.status(201).json(newTermCreate)
+        if(newTermCreate === 0){
+          return res.json({ error: "Deu problema ao criar um termo!" })
+        }
+        
+
+        //criar uma notificação ao criar um termo
+        const findTermCreate = await database.Terms.findByPk(newTermCreate.id)
+        console.log(findTermCreate.id)
+        if (findTermCreate === 0) {
+            return res.status(400).json({ error: 'Termo não encontrado!'})
+        }
+
+        // variaveis a seguir que é recebido do banco: 
+        const id_termo = findTermCreate.id
+        // variavel de satus do termo
+        const { situacao_termo } = findTermCreate
+        // variavel de nome do usuario
+        const { autor } = findTermCreate
+        // variavel data atual da notificação
+        const data = findTermCreate.data_de_registro
+        //criar notificaçao quando cria o termo logo em seguida
+        const newNotification= await database.Notifications.create({
+            situacao_termo,
+            data,
+            fk_id_termo: id_termo
+        })
+
+        return res.status(201).json(newNotification)
+        // return res.status(201).json(newTermCreate)
       } catch (error) {
-        return res.status(500).json(error.message)
+        // console.error(error)
+        return res.status(500).json(error.message.error)
       }
     }
 

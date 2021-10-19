@@ -2,6 +2,7 @@ const { Router } = require('express')
 
 const UserController = require('../../controllers/UserController')
 const TokenController = require('../../controllers/TokenController')
+const middlewareAuth = require('../../middleware/auth')
 
 const router = Router()
 

@@ -24,7 +24,10 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     senha: DataTypes.STRING,
-    tipo_de_usuario: DataTypes.ENUM('administrador','especialista','pesquisador','pendente')
+    tipo_de_usuario: {
+      type: DataTypes.ENUM,
+      values: ['administrador','especialista','pesquisador','pendente']
+    },
   }, {
     sequelize,
     modelName: 'Users',

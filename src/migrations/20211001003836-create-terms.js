@@ -9,13 +9,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       area: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       categoria_gramatical: {
         type: Sequelize.STRING
       },
       data_de_registro: {
-        type: Sequelize.DATEONLY
+        type: Sequelize.DATEONLY,
+        defaultValue: Sequelize.NOW,
+        allowNull: false
       },
       entrada: {
         type: Sequelize.STRING
@@ -66,13 +69,14 @@ module.exports = {
         type: Sequelize.STRING
       },
       data_da_ultima_revisao: {
-        type: Sequelize.STRING
+        type: Sequelize.DATEONLY
       },
       freq_no_termo_corpus: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       autor: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       revisao_linguistica: {
         type: Sequelize.STRING
@@ -156,7 +160,8 @@ module.exports = {
         type: Sequelize.STRING
       },
       situacao_termo: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,

@@ -4,19 +4,38 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Terms extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+
     static associate(models) {
-      // define association here
+      Terms.hasMany(models.Notifications, { as: 'TermoeNotificacao', foreignKey: 'fk_id_termo' })
     }
   };
   Terms.init({
-    area: DataTypes.STRING,
+    area: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          args:true,
+          msg: {
+            error: 'Informe a area do termo!'
+          }
+        }
+      }
+    },
     categoria_gramatical: DataTypes.STRING,
-    data_de_registro: DataTypes.DATEONLY,
+    data_de_registro: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+      validate: {
+        notNull: {
+          args:true,
+          msg: { 
+            error: 'Informe a data de registro do termo!'
+        }
+        }
+      }      
+    },
     entrada: DataTypes.STRING,
     genero: DataTypes.STRING,
     nota: DataTypes.STRING,
@@ -33,9 +52,20 @@ module.exports = (sequelize, DataTypes) => {
     termo_alemao: DataTypes.STRING,
     numero: DataTypes.STRING,
     revisao_especialista: DataTypes.STRING,
-    data_da_ultima_revisao: DataTypes.STRING,
-    freq_no_termo_corpus: DataTypes.INTEGER,
-    autor: DataTypes.STRING,
+    data_da_ultima_revisao: DataTypes.DATEONLY,
+    freq_no_termo_corpus: DataTypes.STRING,
+    autor: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          args:true,
+          msg: {
+            error: 'Informe o nome de usuário!'
+          }
+        }
+      }      
+    },
     revisao_linguistica: DataTypes.STRING,
     proposta_de_revisao: DataTypes.STRING,
     fonte_da_definicao: DataTypes.STRING,
@@ -63,10 +93,22 @@ module.exports = (sequelize, DataTypes) => {
     sinomica: DataTypes.STRING,
     siglas: DataTypes.STRING,
     acronimos: DataTypes.STRING,
-    situacao_termo: DataTypes.STRING
+    situacao_termo: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: {
+          args:true,
+          msg: {
+            error: 'Informe a situação do termo!'
+          }
+        }
+      }      
+    }
   }, {
     sequelize,
     modelName: 'Terms',
+    tableName: 'Terms'
   });
   return Terms;
 };
