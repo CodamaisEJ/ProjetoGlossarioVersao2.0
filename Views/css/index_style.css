@@ -1,51 +1,51 @@
-.index{
-  margin-top:100px;
+.index {
+  margin-top: 100px;
 }
-.index legend{
+.index legend {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 30px;
   color: #101564;
 }
 
-#aqui{
+#aqui {
   margin-bottom: 25px;
 }
 
-.login{
+.login {
   display: grid;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
   text-align: center;
 }
-.login button{
+.login button {
   margin-top: 50px;
   width: 20vw;
   height: 7vh;
   border-radius: 10px;
-  color: #FFF;
+  color: #fff;
   border: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 250;
   font-size: 18px;
 }
-i{
-  color:#FFFFFF;
+i {
+  color: #ffffff;
   margin-right: 20px;
 }
-#admin{
-  background-color: #314C85;
+#admin {
+  background-color: #314c85;
   padding-right: 35px;
 }
-#pesquisador{
-  background-color: #0D4F3F;
+#pesquisador {
+  background-color: #0d4f3f;
   padding-right: 55px;
 }
-#especialista{
-  background-color: #430D64;
+#especialista {
+  background-color: #430d64;
   padding-right: 55px;
 }

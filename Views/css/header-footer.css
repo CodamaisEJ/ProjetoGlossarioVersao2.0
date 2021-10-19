@@ -124,8 +124,8 @@ body {
 }*/
 /* body --------------------------------------------------- */
 .conteudo {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   flex: 1 0 auto;
 }
 
