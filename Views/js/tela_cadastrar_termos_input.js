@@ -87,7 +87,7 @@ function butaoFonteDefinicao(){
         FonteDefinicaoStatus  = false;
     }
 }
-function butaoContextoUso(){
+function butaoFontContextoUso(){
     if(FonteContextoUsoStatus == false){
         bckgroundImgPolygonRotacion(true,"font_contexto_uso");
         displayOnIds(['font_contexto_uso_1_block']);
