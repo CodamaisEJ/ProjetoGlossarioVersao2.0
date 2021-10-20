@@ -29,7 +29,7 @@ function ListTerms(Termos) {
       <div class="termo">
         <p onclick="irParaTelaEditarTermoEspecialista(${Termo.id})">${Termo.entrada}</p>
       </div>
-      <img id="revisar" src="./img/square.png" onclick="Check()">
+      <img id="revisar" src="./img/square.png" onclick="Check(${Termo.id})">
     </div> 
       `;
     Termoslist.innerHTML = Termoslist.innerHTML + TermoHTML;
@@ -37,9 +37,17 @@ function ListTerms(Termos) {
 }
 
 consultaTerms();
-
+//Botão Check 
 function Check() {
-  document.getElementById("revisar").setAttribute("src", "./img/ok.png");
+  const demoClasses = document.querySelectorAll('#revisar');
+
+// Change the text of multiple elements with a loop
+demoClasses.forEach(element => {
+  element.setAttribute("src", "./img/ok.png");
+});
+
+// Access the first element in the NodeList
+demoClasses[0];
 }
 
 function irParaTelaEditarTermoEspecialista(term_id) {
