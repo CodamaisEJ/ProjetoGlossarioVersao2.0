@@ -16,6 +16,9 @@ body {
   flex-direction: column;
 }
 /* Header --------------------------------------------------*/
+#header-especialista {
+  background-color: #430d64;
+}
 .header {
   height: 87px;
   align-items: center;
@@ -130,6 +133,9 @@ body {
 }
 
 /* Footer ------------------------------------------------ */
+#footer-especialista {
+  background-color: #430d64;
+}
 footer {
   background-color: #314c85;
   flex-shrink: 0;

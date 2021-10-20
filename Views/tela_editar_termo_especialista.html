@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="./css/tela_cadastrar_termos_style.css" />
     <script defer src="./js/tela_cadastrar_termos_input.js"></script>
 
-    <title>Edição</title>
+    <title>Revisão</title>
   </head>
   <body onload="carregarDadosTermo()">
     <script src="js/ficha_script.js"></script>
     <script src="js/Crud_terms.js"></script>
 
-    <header id="header" class="header">
+    <header id="header-especialista" class="header">
       <div class="logo">
         <img src="./img/Lexic.jpg" alt="" />
         <h1>Ficha Terminológica</h1>
@@ -41,21 +41,23 @@
     <main class="conteudo">
       <form id="Cadastrar_termos" name="edit_term">
         <fieldset>
-          <legend>Edição</legend>
+          <legend>Revisão</legend>
           <div class="page-block">
             <div class="list-block">
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="entrada">Entrada</label>
                 <input
+                  disabled
                   placeholder="Entrada"
                   type="text"
                   name="entrada"
                   id="entrada"
                 />
               </div>
-              <div class="radio-block">
+              <div class="radio-block disabled">
                 <p>Gênero:</p>
                 <input
+                  disabled
                   type="radio"
                   id="masculino"
                   name="genero_grupo"
@@ -63,6 +65,7 @@
                 />
                 <label for="masculino">Masculino</label>
                 <input
+                  disabled
                   type="radio"
                   id="feminino"
                   name="genero_grupo"
@@ -70,6 +73,7 @@
                 />
                 <label for="feminino">Feminino</label>
                 <input
+                  disabled
                   type="radio"
                   id="dois-generos"
                   name="genero_grupo"
@@ -77,9 +81,10 @@
                 />
                 <label for="dois-generos">Dois Gêneros</label>
               </div>
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="variante">Variante:</label>
                 <input
+                  disabled
                   onclick="butaoVariante()"
                   type="button"
                   id="variante"
@@ -89,7 +94,12 @@
               </div>
               <div id="ortografia-block" class="input-block">
                 <label for="ortografia">Ortográfica:</label>
-                <input type="text" name="ortografia" id="ortografia" />
+                <input
+                  class="disabled"
+                  type="text"
+                  name="ortografia"
+                  id="ortografia"
+                />
               </div>
               <div id="geografica-block" class="input-block">
                 <label for="geografica">Geográfica:</label>
@@ -257,8 +267,8 @@
                 </div>
               </div>
 
-              <div class="input-block">
-                <label for="remissivas">Remissivas::</label>
+              <div class="input-block disabled">
+                <label for="remissivas">Remissivas:</label>
                 <input
                   onclick="butaoRemissivas()"
                   type="button"
@@ -280,11 +290,11 @@
                 <input type="text" name="co-hiponimo" id="co-hiponimo" />
               </div>
 
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="autor">Autor:</label>
                 <input type="text" name="autor" id="autor" />
               </div>
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="data_registro">Data de Registro:</label>
                 <input type="date" name="data_registro" id="data_registro" />
               </div>
@@ -307,6 +317,7 @@
                   value="Selecione para preencher a correlação com o termo"
                 />
               </div>
+
               <div id="termo-ingles-block" class="input-block">
                 <label for="termo-ingles">Termo em Inglês:</label>
                 <input type="text" name="termo-ingles" id="termo-ingles" />
@@ -326,16 +337,29 @@
             </div>
 
             <div class="list-block">
-              <div class="radio-block">
+              <div class="radio-block disabled">
                 <p>Categoria Morfológica:</p>
-                <input type="radio" id="nome" name="cat_morfo" value="nome" />
+                <input
+                  disabled
+                  type="radio"
+                  id="nome"
+                  name="cat_morfo"
+                  value="nome"
+                />
                 <label for="nome">Nome</label>
-                <input type="radio" id="verbo" name="cat_morfo" value="verbo" />
+                <input
+                  disabled
+                  type="radio"
+                  id="verbo"
+                  name="cat_morfo"
+                  value="verbo"
+                />
                 <label for="verbo">Verbo</label>
               </div>
-              <div class="radio-block">
+              <div class="radio-block disabled">
                 <p>Número:</p>
                 <input
+                  disabled
                   type="radio"
                   id="singular"
                   name="num_grupo"
@@ -343,6 +367,7 @@
                 />
                 <label for="singular">Singular</label>
                 <input
+                  disabled
                   type="radio"
                   id="plural"
                   name="num_grupo"
@@ -350,7 +375,7 @@
                 />
                 <label for="plural">Plural</label>
               </div>
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="area">Área:</label>
                 <input type="text" name="area" id="area" />
               </div>
@@ -521,12 +546,12 @@
                 </div>
               </div>
 
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="nota">Nota:</label>
                 <input type="text" name="nota" id="nota" />
               </div>
 
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="redador">Redador:</label>
                 <input type="text" name="redador" id="redador" />
               </div>
@@ -542,7 +567,7 @@
                 />
               </div>
 
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="data_ultima_revisao">Data da ultima revisão:</label>
                 <input
                   type="date"
@@ -551,7 +576,7 @@
                 />
               </div>
 
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="frequencia_termo_corpus"
                   >Frequência do termo no corpus:</label
                 >
@@ -562,21 +587,54 @@
                   id="frequencia_termo_corpus"
                 />
               </div>
+
+              <div class="radio-block">
+                <p>Status:</p>
+                <input
+                  type="radio"
+                  id="validado"
+                  name="status"
+                  value="validado"
+                />
+                <label for="validado">Validado</label>
+                <input
+                  type="radio"
+                  id="validado_com_adaptacoes"
+                  name="status"
+                  value="Validado com adaptações"
+                />
+                <label for="validado_com_adaptacoes"
+                  >Validado com adaptações</label
+                >
+                <input
+                  type="radio"
+                  id="rejeitado"
+                  name="status"
+                  value="rejeitado"
+                />
+                <label for="rejeitado">Rejeitado</label>
+              </div>
             </div>
           </div>
 
           <div class="button-block">
-            <div class="verificar_button">
-              <button>Verificar</button>
-            </div>
+            <!-- <div class="verificar_button">
+              <button id="verificar-button-especialista"></button>
+            </div> -->
             <div class="salvar">
-              <button type="submit" onclick="editarTermo(event)">Salvar</button>
+              <button
+                id="verificar-button-especialista"
+                type="submit"
+                onclick="editarTermo(event)"
+              >
+                Salvar
+              </button>
             </div>
           </div>
         </fieldset>
       </form>
     </main>
-    <footer id="footer">
+    <footer id="footer-especialista">
       <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
   </body>

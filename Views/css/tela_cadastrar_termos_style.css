@@ -153,6 +153,9 @@
   align-items: center;
   padding-left: 25rem;
 }
+#verificar-button-especialista {
+  background: #430d64;
+}
 .verificar_button button {
   width: 117px;
   height: 35px;
@@ -250,4 +253,13 @@ input[type="date"]::-webkit-inner-spin-button {
   font-size: 1rem;
   line-height: 42px;
   color: #101564;
+}
+
+.disabled > * {
+  color: #cbd3df !important;
+  /* border: 2px solid #cbd3df !important; */
+}
+.disabled > input {
+  color: #cbd3df !important;
+  border: 2px solid #cbd3df !important;
 }
