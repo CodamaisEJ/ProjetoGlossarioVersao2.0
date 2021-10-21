@@ -2,14 +2,17 @@ const TOKEN =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjYsImlhdCI6MTYzNDQ4MDk0OSwiZXhwIjoxNjM0NTY3MzQ5fQ.xGPRFl9iCQ8RG6JOHQJHobDEhNkrEvk7pgoYMZwgoVo";
 
 const Termoslist = document.querySelector("#tela_termos");
-
 let Terms;
+let TermoHTML;
+
 async function consultaTerms() {
   const retorno = await fetch(
     "https://ficha-terminologica-backend.herokuapp.com/terms/list"
   );
   let Terms = await retorno.json();
   ListTerms(Terms);
+  //console.log(Terms)
+  mostrarTotalDeTermos(Terms.length);
   //console.log(Terms)
 }
 
