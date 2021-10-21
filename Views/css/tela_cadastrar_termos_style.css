@@ -139,11 +139,14 @@
 #dois-generos {
   margin-left: 2rem;
 }
-#plural {
+#plural,
+#validado-com-adaptacoes,
+#rejeitado {
   margin-left: 3rem;
 }
 .button-block {
   display: flex;
+  justify-content: center;
 }
 .verificar_button {
   width: 50%;
@@ -170,7 +173,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 25rem;
+  /* padding-right: 25rem; */
 }
 .salvar button {
   width: 117px;

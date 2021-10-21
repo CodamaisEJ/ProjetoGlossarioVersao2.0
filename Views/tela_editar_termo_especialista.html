@@ -38,7 +38,7 @@
         </ul>
       </div>
     </header>
-    <main class="conteudo">
+    <main class="conteudo container">
       <form id="Cadastrar_termos" name="edit_term">
         <fieldset>
           <legend>Revisão</legend>
@@ -334,6 +334,35 @@
                 <label for="termo-Espanhol">Termo em Espanhol:</label>
                 <input type="text" name="termo-Espanhol" id="termo-Espanhol" />
               </div>
+
+              <!-- STATUS -->
+
+              <div class="radio-block">
+                <p>Status:</p>
+                <input
+                  type="radio"
+                  id="validado"
+                  name="status"
+                  value="validado"
+                />
+                <label for="validado">Validado</label>
+                <input
+                  type="radio"
+                  id="validado-com-adaptacoes"
+                  name="status"
+                  value="Validado com adaptações"
+                />
+                <label for="validado_com_adaptacoes"
+                  >Validado com adaptações</label
+                >
+                <input
+                  type="radio"
+                  id="rejeitado"
+                  name="status"
+                  value="rejeitado"
+                />
+                <label for="rejeitado">Rejeitado</label>
+              </div>
             </div>
 
             <div class="list-block">
@@ -586,33 +615,6 @@
                   name="frequencia_termo_corpus"
                   id="frequencia_termo_corpus"
                 />
-              </div>
-
-              <div class="radio-block">
-                <p>Status:</p>
-                <input
-                  type="radio"
-                  id="validado"
-                  name="status"
-                  value="validado"
-                />
-                <label for="validado">Validado</label>
-                <input
-                  type="radio"
-                  id="validado_com_adaptacoes"
-                  name="status"
-                  value="Validado com adaptações"
-                />
-                <label for="validado_com_adaptacoes"
-                  >Validado com adaptações</label
-                >
-                <input
-                  type="radio"
-                  id="rejeitado"
-                  name="status"
-                  value="rejeitado"
-                />
-                <label for="rejeitado">Rejeitado</label>
               </div>
             </div>
           </div>
