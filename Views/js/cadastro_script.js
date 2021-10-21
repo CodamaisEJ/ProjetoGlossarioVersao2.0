@@ -35,9 +35,9 @@ function mudaCor() {
       document.getElementById("alt").style.cursor = "pointer";
       document.getElementById("alt").style.marginBottom = "-10px";
       var text = document.querySelector("#alt");
-      text.innerHTML = "Revisar Termos";
+      
       var titulo = document.querySelector("#titulo");
-      titulo.innerHTML = "Revisar Termos"
+    
       document.getElementById("criar_usuario").style.display = "none";
       document.getElementById("block").style.display = "none";
       var sub_titulo = document.querySelector("#sub_titulo");

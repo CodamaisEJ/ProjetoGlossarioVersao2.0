@@ -17,9 +17,7 @@
 </head>
 
 <body onload="mudaCor()">
-    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/cadastro_script.js"></script>
-    <script src="js/menu_dropdown.js"></script>
 
     <header id="header" class="header">
         <div class="logo">
@@ -54,8 +52,8 @@
     <main class="conteudo">
         <div class="tela_termos" id="tela_termos">
 
-            <legend id="titulo">Editar e Deletar</legend>
-            <p id="sub_titulo">Total de termos:</p>
+            <legend id="titu">Revisar Termos</legend>
+            <h3 id="a">Termos cadastrados: <span id="total-de-termos"></span></h3>
             
             <div class="Busca">
                 <input placeholder="Pesquisar" type="search" name="pesquisa" id="pesquisa">
@@ -84,6 +82,17 @@
       <footer  id="footer">
         <h2>Desenvolvido por Codamais @ 2021</h2>
       </footer>
+      <script>
+        $(document).ready(function () {
+          $("#pesquisa").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            console.log(`value`, value);
+            $("#lista-de-termos *").filter(function () {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+            });
+          });
+        });
+      </script>
       
   </body>
   </html>

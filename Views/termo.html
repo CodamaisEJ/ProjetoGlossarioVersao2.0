@@ -44,7 +44,7 @@
         <div class="tela_termos" id="tela_termos">
             
             <legend>Termos</legend>
-               <h3>Últimos termos cadastrados:</h3>
+               <h3>Últimos termos cadastrados: <span id="total-de-termos"></span></h3>
 
            <!-- 
              <div class="termos">
@@ -63,6 +63,16 @@
       <footer id="footer">
         <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
-      
+    <script>
+      $(document).ready(function () {
+        $("#pesquisa").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          console.log(`value`, value);
+          $("#lista-de-termos *").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+    </script>
   </body>
   </html>
