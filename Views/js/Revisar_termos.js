@@ -40,25 +40,25 @@ function ListTerms(Termos) {
 }
 
 consultaTerms();
-//Botão Check 
+//Botão Check
 function Check() {
-  const demoClasses = document.querySelectorAll('#revisar');
+  const demoClasses = document.querySelectorAll("#revisar");
 
-// Change the text of multiple elements with a loop
-demoClasses.forEach(element => {
-  element.setAttribute("src", "./img/ok.png");
-});
+  // Change the text of multiple elements with a loop
+  demoClasses.forEach((element) => {
+    element.setAttribute("src", "./img/ok.png");
+  });
 
-// Access the first element in the NodeList
-demoClasses[0];
+  // Access the first element in the NodeList
+  demoClasses[0];
 }
 
 function irParaTelaEditarTermoEspecialista(term_id) {
-  history.pushState(term_id, "", "tela_editar_termo_especialista.html");
-  window.location.href = "tela_editar_termo_especialista.html";
+  history.pushState(term_id, "", "tela_revisar_termo.html");
+  window.location.href = "tela_revisar_termo.html";
 }
 
-async function editarTermo(event) {
+async function revisarTermo(event) {
   const term_id = history.state;
 
   event.preventDefault();
@@ -80,13 +80,11 @@ async function editarTermo(event) {
     );
 
     if (result.ok) {
-      alert("Termo editado com sucesso.");
-      location.href = "tela_revisar_termos.html";
-    } else {
-      alert("Termo já existe.");
+      alert("Termo revisado com sucesso.");
+      location.href = "tela_termos_especialista.html";
     }
   } catch (error) {
-    alert("Erro ao cadastrar termo");
+    alert("Erro ao revisar termo");
     console.log(`error.message`, error.message);
   }
 }
@@ -142,6 +140,7 @@ function pegarInputsDoForm(form_name) {
   const revisao_especialista = form["revisao_especialista"].value;
   // const data_ultima_revisao = form["data_ultima_revisao"].value;
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
+  const situacao_termo = form["situacao_termo"].value;
 
   // if (entrada === "" || cat_morfo === "" || genero_grupo === "") {
   //   alert("Por favor preencha os campos.");
@@ -197,6 +196,7 @@ function pegarInputsDoForm(form_name) {
     sinomica,
     siglas,
     acronimos,
+    situacao_termo,
   };
 }
 
@@ -256,6 +256,7 @@ async function carregarDadosTermo() {
     form["revisao_especialista"].value = json.revisao_linguistica;
     // form["data_ultima_revisao"].value = json.;
     form["frequencia_termo_corpus"].value = json.frequencia_termo_corpus;
+    form["situacao_termo"].value = json.situacao_termo;
 
     console.log(`dados do termo carregados`);
   } catch (error) {

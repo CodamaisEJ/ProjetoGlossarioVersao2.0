@@ -70,7 +70,7 @@ function validador() {
     var password = y.value;
 
     if (user === usuario && password === senha) {
-      location.href = "tela_revisar_termos.html";
+      location.href = "tela_termos_especialista.html";
       var value = 3;
       localStorage.setItem("tipoUsuario", value);
     } else {
