@@ -17,6 +17,22 @@
     <title>Revisão</title>
   </head>
   <body onload="carregarDadosTermo()">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/ficha_script.js"></script>
     <script src="js/Revisar_termos.js"></script>
 
@@ -625,9 +641,10 @@
             </div> -->
             <div class="salvar">
               <button
+                type="button"
+                data-toggle="modal"
+                data-target="#meuModal"
                 id="verificar-button-especialista"
-                type="submit"
-                onclick="revisarTermo(event)"
               >
                 Salvar
               </button>
@@ -636,6 +653,36 @@
         </fieldset>
       </form>
     </main>
+
+    <!-- MODAL -->
+
+    <div id="meuModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <h4 class="modal-title">Confirmação</h4>
+          <p>Tem certeza de que quer salvar?</p>
+          <div>
+            <button
+              type="button"
+              class="btn btn-cancel"
+              data-dismiss="modal"
+              id="fechar"
+            >
+              Fechar
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="salvar"
+              onclick="revisarTermo(event)"
+            >
+              Salvar Alterações
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer id="footer-especialista">
       <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
