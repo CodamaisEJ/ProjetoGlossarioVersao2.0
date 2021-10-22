@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="css/termos_style.css">
     <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/dropdown_user_icon.css">
+   
     <style>
       legend{
        
@@ -19,13 +21,24 @@
         margin-left: 50px;
         margin-bottom: 40px;
       }
+      #criar_usuario{
+        display: none;
+      }
+      #cadastrar_termos{
+        display: none;
+      }
+      #logo_notificacao{
+        display: none;
+      }
     </style>
     <title>Cadastro</title>
 
 </head>
 
 <body onload="mudaCor()">
-    <script src="js/cadastro_script.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/cadastro_script.js"></script>
+  <script src="js/menu_dropdown.js"></script>
 
     <header id="header" class="header">
         <div class="logo">
@@ -33,9 +46,27 @@
             <h1>Ficha Terminológica</h1>
         </div>
         <div id="button-block" class="links">
-            <ul>
-              <li id="logo_user"><a href=""><img src="./img/Group.png" alt=""></a></li>
-            </ul>
+          <ul>
+            <li id="criar_usuario" ><a href="tela_usuarios.html">Criar Usuario</a></li>
+            <li id="cadastrar_termos"><a href="Cadastrar_termos.html">Cadastrar Termos +</a></li>
+            <li id="logo_notificacao">
+                <a href="./tela_notificacoes.html"><img src="./img/sino-de-notificacao 1.png" alt=""></a>
+            </li>
+            <li id="dropdown" class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <p id="nome_usuario">Flavia Maia</p>
+                    <p id="status_user">Administrador</p>
+                    <p id="alt" id="text">Alternar Perfis:</p>
+                    <div class="a-block" id="block">
+                        <a href="">Administrador</a>
+                        <a href="">Especialista</a>
+                        <a href="">Pesquisador</a>
+                    </div>
+                    <button onclick="deslogar()">Logout</button>
+                </div>
+            </li>
+        </ul>
         </div>
     </header>
 
