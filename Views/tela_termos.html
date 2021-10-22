@@ -14,7 +14,16 @@
     <link rel="stylesheet" href="css/termos_style.css" />
     <link rel="stylesheet" href="css/header-footer.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <style>
+      legend{
+        margin-left: 50px;
+        margin-bottom: 40px;
+      }
+      h3{
+        margin-left: 50px;
+        margin-bottom: 40px;
+      }
+    </style>
     <title>Cadastro</title>
   </head>
 
@@ -48,41 +57,31 @@
 
     <main class="conteudo">
       <div class="tela_termos" id="tela_termos">
+
         <legend>Editar e Deletar</legend>
-        <h3>Total de termos: <span id="total-de-termos"></span></h3>
+        <h3>Termos cadastrados: <span id="total-de-termos"></span></h3>
+          
+          <div class="Busca">
+              <input placeholder="Pesquisar" type="search" name="pesquisa" id="pesquisa">
+          </div>
 
-        <div class="Busca">
-          <input
-            placeholder="Pesquisar"
-            type="search"
-            name="pesquisa"
-            id="pesquisa"
-          />
-        </div>
-
-        <div class="termos" id="lista-de-termos">
-          <!-- <div class="borda-termo">
-            <div class="termo">
-              <p onclick="trocarPagina()">Termo</p>
-            </div>
-            <i class="fas fa-trash"></i>
-          </div> -->
-        </div>
+            <!-- 
+            <div class="termos">
+              <div class="borda-termo">
+                <div class="termo">
+                  <p onclick="trocarPagina()">Termo</p>
+                </div>
+                <i class="fas fa-trash"></i>
+              </div> 
+         -->
       </div>
     </main>
-    <footer id="footer">
-      <h2>Desenvolvido por Codamais @ 2021</h2>
-    </footer>
+
     <script src="js/Crud_terms.js"></script>
 
-    <!-- <div class="termos" id="termo${Termo.id}">
-      <div class="borda-termo">
-        <div class="termo">
-          <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>
-        </div>
-        <i class="fas fa-trash" onclick="DeletandoTerms(${Termo.id})"></i>
-      </div>
-    </div> -->
+    <footer  id="footer">
+      <h2>Desenvolvido por Codamais @ 2021</h2>
+    </footer>
     <script>
       $(document).ready(function () {
         $("#pesquisa").on("keyup", function () {
@@ -94,5 +93,6 @@
         });
       });
     </script>
-  </body>
+    
+</body>
 </html>
