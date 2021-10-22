@@ -80,7 +80,9 @@ async function revisarTermo(event) {
     );
 
     if (result.ok) {
-      alert("Termo revisado com sucesso.");
+      // alert("Termo revisado com sucesso.");
+      document.querySelector("#alert-revisar-termo").style.display = "block";
+      // mostrar tela de carregamento
       location.href = "tela_termos_especialista.html";
     }
   } catch (error) {

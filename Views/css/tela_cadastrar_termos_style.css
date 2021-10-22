@@ -160,9 +160,9 @@
   background: #430d64;
 }
 .btn-cancel {
-  color: #fff;
-  background: #430d64;
-  border: 1px solid #430d64;
+  color: #fff !important;
+  background: #430d64 !important;
+  border: 1px solid #430d64 !important;
 }
 .btn-cancel:hover {
   color: #fff;
