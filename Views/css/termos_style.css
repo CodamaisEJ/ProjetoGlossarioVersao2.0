@@ -6,8 +6,7 @@
   margin-right: 0rem;
 }
 .tela_termos{
-  margin-top: 1.5rem;
-  width: 100%;
+  margin-top: 1.5rem; 
   margin-left: 20px;
 }
 .tela_termos legend{
@@ -16,6 +15,7 @@
   font-weight: bold;
   font-size: 28px;
   color: #101564;
+  padding-left: 50px;
 }
 .tela_termos h3{
   font-family: 'Poppins', sans-serif;
@@ -36,7 +36,7 @@
   padding-left: 10px;
   background: #FFFFFF;
   border: 2px solid #A1B2CD;
-  box-sizing: border-box;
+
   border-radius: 8px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
