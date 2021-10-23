@@ -10,7 +10,7 @@ const router = Router()
 router.get('/notifications/list', NotificationController.listNotifications)
 
 // //exemplo de rota pedindo autenticação 
-// router.post('/notification/create', TermController.createTerm)
+router.post('/notification/create', NotificationController.createNotification)
 
 router.get('/notification/:id/list', NotificationController.listOneNotification)
 

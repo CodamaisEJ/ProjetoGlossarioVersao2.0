@@ -2,12 +2,16 @@
 const {
   Model
 } = require('sequelize');
+
+const bcrypt = require('bcryptjs')
+
 module.exports = (sequelize, DataTypes) => {
   class Users extends Model {
 
     static associate(models) {
       
     }
+
   };
   Users.init({
     nome: DataTypes.STRING,
@@ -33,5 +37,6 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Users',
     tableName: 'Users'
   });
+
   return Users;
 };

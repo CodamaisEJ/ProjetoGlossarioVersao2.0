@@ -14,7 +14,27 @@ class NotificationController {
             return res.status(500).json(error.message)
         }
     }
-    
+
+
+    static async createNotification(req, res){
+      const newUser = req.body
+      const {situacao_termo} = req.body
+      const {data} = req.body
+      const {id_termo} = req.body
+
+      try {
+        const newNotification= await database.Notifications.create({
+            situacao_termo,
+            data,
+            fk_id_termo: id_termo
+        })
+
+        return res.status(201).json(newNotification)
+      } catch (error) {
+          return res.status(500).json(error.message)
+      }
+    }
+
     static async listOneNotification(req, res, next){
         const { id } = req.params
         try {
