@@ -2,7 +2,7 @@ const TOKEN =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjYsImlhdCI6MTYzNDQ4MDk0OSwiZXhwIjoxNjM0NTY3MzQ5fQ.xGPRFl9iCQ8RG6JOHQJHobDEhNkrEvk7pgoYMZwgoVo";
 
 
-const notificationslist = document.getElementById("#tabela");
+const notificationslist = document.querySelector("#tabela");
 let Notifications;
 let NotificacaoHTML;
 
@@ -23,8 +23,9 @@ function ListNotications(Notificacaos) {
   Notificacaos.forEach((Notificacao) => {
     NotificacaoHTML = `
         
-         <td>${Notificacao[0].NotificacaoTermo.situacao_termo}</td>
-            
+         <td>${Notificacao.situacao_termo}</td>
+         <td>${Notificacao.fk_id_termo}</td>
+         <td>${Notificacao.updatedAt}</td>      
       `;
     
       notificationslist.innerHTML += NotificacaoHTML   

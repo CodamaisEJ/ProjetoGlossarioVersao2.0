@@ -7,7 +7,7 @@ let TermoHTML;
 
 async function consultaTerms() {
   const retorno = await fetch(
-    "https://ficha-terminologica-backend.herokuapp.com/terms/list/0"
+    "https://ficha-terminologica-backend.herokuapp.com/terms/list/"
   );
   let Terms = await retorno.json();
   console.log(Terms)
