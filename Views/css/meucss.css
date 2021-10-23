@@ -1,0 +1,156 @@
+
+/* LETREIRO */
+#desktop-alfabeto {
+  display: block;
+  max-width: 1100px;
+}
+
+#mobile {
+  display: none;
+}
+
+#hideshow {
+  display: none;
+  bottom: 15px;
+  margin-right: -10px;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  #navlogo {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    bottom: 40px;
+    width: 45px;
+    height: 45px;
+    border-radius: 60px;
+  }
+
+  #titulo {
+    margin-left: 20px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  #desktop-alfabeto {
+    display: none;
+  }
+
+  #mobile {
+    display: block;
+    width: auto;
+    float: none;
+    list-style-type: none;
+    margin: 30px auto 0;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  #mobile li {
+    padding: 5px;
+    border-right: 1px solid darkgrey;
+    font-size: 18px;
+    -moz-box-sizing: border-box;
+    color: black;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #hideshow {
+    display: inline-block;
+  }
+
+  /*#logos, #Logos2 {
+    display: none;
+  }*/
+
+  #logos, #logos2 {
+    display: block; width: auto;
+    float: none;
+    list-style-type: none;
+    margin: 30px auto 0;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+  }
+}
+
+#desktop-alfabeto {
+  list-style-type: none;
+  margin: 30px auto 0;
+  padding: 0;
+  cursor: pointer;
+  width: 80%;
+  text-align: center;
+}
+
+#desktop-alfabeto li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid darkgrey;
+  font-size: 18px;
+  -moz-box-sizing: border-box;
+  color: black;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 3.84%;
+}
+
+.alphabet li:last-child {
+  border-right: none;
+}
+
+.alphabet li:hover {
+  color: green;
+  background-color: lightgrey;
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #0c9;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+#home {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 100px;
+  right: 40px;
+  background-color: #0c9;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+/* FIM DA DIREITA */
+
+/* FOOTER */
+#fim {
+  padding-top: 10px;
+  text-align: center;
+  background-color: dodgerblue;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+
+#foto {
+  max-width: 800px;
+  max-height: 500px;
+}

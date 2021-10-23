@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="./css/header-footer.css" />
     <link rel="stylesheet" href="./css/tela_cadastrar_termos_style.css" />
+    <link rel="stylesheet" href="css/dropdown_user_icon.css">
     <script defer src="./js/tela_cadastrar_termos_input.js"></script>
 
     <title>Cadastro</title>
@@ -19,6 +20,7 @@
   <body>
     <script src="js/ficha_script.js"></script>
     <script src="js/Crud_terms.js"></script>
+    <script src="js/menu_dropdown.js"></script>
 
     <header id="header" class="header">
       <div class="logo">
@@ -28,14 +30,23 @@
       <div id="button-block" class="links">
         <ul>
           <li id="logo_notificacao">
-            <a href="./tela_notificacoes.html"
-              ><img src="./img/sino-de-notificacao 1.png" alt=""
-            /></a>
+              <a href="./tela_notificacoes.html"><img src="./img/sino-de-notificacao 1.png" alt=""></a>
           </li>
-          <li id="logo_user">
-            <a href=""><img src="./img/Group.png" alt="" /></a>
+          <li id="dropdown" class="dropdown">
+              <button onclick="myFunction()" class="dropbtn"></button>
+              <div id="myDropdown" class="dropdown-content">
+                <p id="nome_usuario">Flavia Maia</p>
+                <p id="status_user">Administrador</p>
+                <p id="alt" id="text">Alternar Perfis:</p>
+                <div class="a-block" id="block">
+                    <a href="">Administrador</a>
+                    <a href="">Especialista</a>
+                    <a href="">Pesquisador</a>
+                  
+                  <button onclick="deslogar()">Logout</button>
+              </div>
           </li>
-        </ul>
+      </ul>
       </div>
     </header>
     <main class="conteudo container">

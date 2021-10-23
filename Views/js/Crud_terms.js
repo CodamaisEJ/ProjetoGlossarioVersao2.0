@@ -7,14 +7,15 @@ let TermoHTML;
 
 async function consultaTerms() {
   const retorno = await fetch(
-    "https://ficha-terminologica-backend.herokuapp.com/terms/list"
+    "https://ficha-terminologica-backend.herokuapp.com/terms/list/0"
   );
   let Terms = await retorno.json();
-
+  console.log(Terms)
   ListTerms(Terms);
 
   mostrarTotalDeTermos(Terms.length);
   //console.log(Terms)
+  
 }
 
 function ListTerms(Termos) {
@@ -29,8 +30,10 @@ function ListTerms(Termos) {
       </div>
     </div> 
       `;
-    Termoslist.innerHTML += TermoHTML;
+    
+    Termoslist.innerHTML += TermoHTML   
   });
+  
 }
 
 async function DeletandoTerms(termo_id) {
@@ -121,6 +124,7 @@ async function editarTermo(event) {
 function mostrarTotalDeTermos(total_termos) {
   document.querySelector("#total-de-termos").innerHTML = total_termos;
 }
+
 
 function pegarInputsDoForm(form_name) {
   const form = document.forms[form_name];

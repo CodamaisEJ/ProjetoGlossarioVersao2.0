@@ -5,9 +5,6 @@ function mudaCor() {
     document.getElementById("header").style.backgroundColor = backgroundColor;
     document.getElementById("footer").style.backgroundColor = backgroundColor;
     document.getElementById("fechar").style.backgroundColor = backgroundColor;
-    document.getElementById("salvar").style.backgroundColor = "#9D1C33";
-    document.getElementById("status").style.display = "none";
-    document.getElementById("espaco").style.display = "none";
   }
   if (x == 2) {
     var backgroundColor = "#0D4F3F";

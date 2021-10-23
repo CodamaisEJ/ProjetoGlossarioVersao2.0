@@ -9,6 +9,10 @@
   margin-top: 1.5rem; 
   margin-left: 20px;
 }
+#grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .tela_termos legend{
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -23,25 +27,31 @@
   font-weight: 500;
   font-size: 18px;
   color: #4D5E77;
+  margin-bottom: 15px;
 }
 .Busca{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 25px;
+  margin-left: 550px;
+  
+}
+
+#pesquisa{
+  text-align: start;
+  margin-right: 20px;
 }
 .Busca input{
   grid-column-start: 4;
-  width: 293px;
+  width: 393px;
   height: 60px;
   padding-left: 10px;
   background: #FFFFFF;
   border: 2px solid #A1B2CD;
-
+  justify-items: flex-end;
   border-radius: 8px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
+  margin-left: -80px;
 }
 input:focus{
   outline: 0;
@@ -90,8 +100,6 @@ input:focus{
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #47D9B6;
-  border: 1px solid #47D9B6;
   box-sizing: border-box;
   border-radius: 8px;
 }
