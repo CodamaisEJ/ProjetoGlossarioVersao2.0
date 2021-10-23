@@ -26,7 +26,7 @@ class NotificationController {
         const newNotification= await database.Notifications.create({
             situacao_termo,
             data,
-            fk_id_termo: id_termo
+            fk_id_termo: Number(id_termo)
         })
 
         return res.status(201).json(newNotification)
