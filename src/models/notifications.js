@@ -6,21 +6,29 @@ module.exports = (sequelize, DataTypes) => {
   class Notifications extends Model {
 
     static associate(models) {
-      Notifications.belongsTo(models.Terms, { as: 'NotificacaodoTermo', foreignKey: 'fk_id_termo'})
+      
     }
   };
   Notifications.init({
-    situacao_termo: DataTypes.STRING,
+    status: DataTypes.STRING,
     data: {
       type: DataTypes.DATEONLY,
       defaultValue: DataTypes.NOW 
     },
-    fk_id_termo: {
+    usuario: {
+      type: DataTypes.STRING,
+    },
+    termo: {
+      type: DataTypes.STRING,
+    },
+    id_termo: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         notNull: {
-          msg: 'PK requerida para FK (Termo)!!'
+          msg: {
+            error:'PK requerida para FK (Termo)!!'
+          }
         }
       }
     }

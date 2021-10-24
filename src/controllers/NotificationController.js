@@ -4,11 +4,7 @@ class NotificationController {
 
     static async listNotifications(req, res, next){
         try {
-            const listNotifications = await database.Notifications.findAll({
-              include: {
-                association: 'NotificacaodoTermo'
-              }
-            })
+            const listNotifications = await database.Notifications.findAll()
             return res.status(200).json(listNotifications)  
         } catch (error) {
             return res.status(500).json(error.message)
@@ -17,19 +13,15 @@ class NotificationController {
 
 
     static async createNotification(req, res){
-      const newUser = req.body
-      const {situacao_termo} = req.body
-      const {data} = req.body
-      const {id_termo} = req.body
-
+      const { id_termo } = req.body
+      const newNotification = { ...req.body, id_termo: Number(id_termo) }
       try {
-        const newNotification= await database.Notifications.create({
-            situacao_termo,
-            data,
-            fk_id_termo: Number(id_termo)
-        })
+        if(isNaN(id_termo)){
+          return res.json({ error: "id_termo não informado ou inválido!" })
+        }
+        const NewNotification = await database.Notifications.create(newNotification)
 
-        return res.status(201).json(newNotification)
+        return res.status(201).json(NewNotification)
       } catch (error) {
           return res.status(500).json(error.message)
       }

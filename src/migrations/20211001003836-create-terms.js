@@ -11,7 +11,7 @@ module.exports = {
       area: {
         type: Sequelize.STRING
       },
-      categoria_gramatical: {
+      categoria_morfologica: {
         type: Sequelize.STRING
       },
       data_de_registro: {
@@ -27,13 +27,10 @@ module.exports = {
       nota: {
         type: Sequelize.STRING
       },
-      nota2: {
-        type: Sequelize.STRING
-      },
       redator: {
         type: Sequelize.STRING
       },
-      remissiva: {
+      remissivas: {
         type: Sequelize.STRING
       },
       hiponimo:{
@@ -57,9 +54,6 @@ module.exports = {
       termo_frances: {
         type: Sequelize.STRING
       },
-      termo_alemao: {
-        type: Sequelize.STRING
-      },
       numero: {
         type: Sequelize.STRING
       },
@@ -78,10 +72,7 @@ module.exports = {
       revisao_linguistica: {
         type: Sequelize.STRING
       },
-      proposta_de_revisao: {
-        type: Sequelize.STRING
-      },
-      fonte_da_definicao: {
+      proposta_de_definicao: {
         type: Sequelize.STRING
       },
       fonte_dicionario_especializado1: {
@@ -96,9 +87,6 @@ module.exports = {
       fonte_proposta_de_definicao: {
         type: Sequelize.STRING
       },
-      fonte_do_contexto_de_uso: {
-        type: Sequelize.STRING
-      },
       fonte_do_contexto_de_uso1: {
         type: Sequelize.STRING
       },
@@ -106,9 +94,6 @@ module.exports = {
         type: Sequelize.STRING
       },
       fonte_do_contexto_de_uso3: {
-        type: Sequelize.STRING
-      },
-      contexto_de_uso: {
         type: Sequelize.STRING
       },
       contexto_de_uso1: {
@@ -122,9 +107,6 @@ module.exports = {
       },
       proposta: {
         type: Sequelize.STRING
-      },
-      definicao: {
-        type: Sequelize.TEXT
       },
       dicionario_especializado1: {
         type: Sequelize.STRING
@@ -147,7 +129,7 @@ module.exports = {
       geografica: {
         type: Sequelize.STRING
       },
-      sinomica: {
+      sinonimica: {
         type: Sequelize.STRING
       },
       siglas: {
@@ -156,7 +138,7 @@ module.exports = {
       acronimos: {
         type: Sequelize.STRING
       },
-      situacao_termo: {
+      status: {
         type: Sequelize.STRING
       },
       createdAt: {

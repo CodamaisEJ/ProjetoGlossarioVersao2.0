@@ -1,0 +1,20 @@
+Conteudo modificado nas pastas - Models - Migrations - Controllers.
+
+Modificado de = para:
+
+    situacao_termo = status
+
+    categoria_gramatical = categoria_morfologica
+
+    remissiva = remissivas
+
+    sinomica = sinonimica
+
+    proposta_de_revisao = proposta_de_definicao
+
+    fk_id_termo = id_termo
+
+Remoção das asssociações
+
+Remoção dos atributos da tabela termo termo_alemao, nota2, definicao, fonte_da_definicao, contexto_de_uso, fonte_do_contexto_de_uso
+

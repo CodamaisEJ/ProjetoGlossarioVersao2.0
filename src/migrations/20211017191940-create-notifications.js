@@ -8,21 +8,22 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      situacao_termo: {
+      status: {
         type: Sequelize.STRING
+      },
+      usuario: {
+        type: Sequelize.STRING,
+      },
+      termo: {
+        type: Sequelize.STRING,
       },
       data: {
         type: Sequelize.DATEONLY,
         defaultValue: Sequelize.NOW
       },
-      fk_id_termo: {
+      id_termo: {
         allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Terms', key: 'id'
-        },
-        onUpdate: 'CASCADE',
-        onDelete: 'CASCADE',
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

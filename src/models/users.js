@@ -9,7 +9,6 @@ module.exports = (sequelize, DataTypes) => {
   class Users extends Model {
 
     static associate(models) {
-      
     }
 
   };
@@ -37,6 +36,6 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Users',
     tableName: 'Users'
   });
-
+  
   return Users;
 };
