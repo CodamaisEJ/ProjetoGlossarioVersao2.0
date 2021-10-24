@@ -1,80 +1,78 @@
-.conteudo{
-    text-align: center;
+.conteudo {
+  text-align: center;
 }
-#fechar{
-    margin-right: 1rem;
-    margin-top: 7.5rem;
-    position: fixed;
-    right: 0;
-    top: 0;
-    height: 62px;
-    width: 54px;
-   
+#fechar {
+  margin-right: 1rem;
+  margin-top: 7.5rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 62px;
+  width: 54px;
 }
-.conteudo h2{
-    margin-top: 2rem;
-    Font-family: Poppins;
-    Font-style: Bold;
-    Font-size: 28px;
-    Line-height: 42px;
-    Line-height: 100%;
-    vertical-align: center;
-    Fill: Solid;
-    color:#101564;
-    height: 46px;
-    border-radius: nullpx;
-
+.conteudo h2 {
+  margin-top: 2rem;
+  font-family: Poppins;
+  font-style: Bold;
+  font-size: 28px;
+  line-height: 42px;
+  line-height: 100%;
+  vertical-align: center;
+  fill: Solid;
+  color: #101564;
+  height: 46px;
+  border-radius: nullpx;
 }
-.tabela-block{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
+.tabela-block {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
-#tabela{
-    min-width: 980px;
-
+#tabela {
+  min-width: 980px;
 }
-#tabela tr th{
-    Font-family: Poppins;
-    Font-size: 26px;
-    Line-height: 39px;
-    Line-height: 100%;
-    text-Align: Left;
-    Vertical-align: middle;
-    color: #234F90;
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 0em;
-    text-align: left;
-
-
+#tabela tr th {
+  font-family: Poppins;
+  font-size: 26px;
+  line-height: 39px;
+  line-height: 100%;
+  text-align: Left;
+  vertical-align: middle;
+  color: #234f90;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
-#tabela tr td{
-    Font-family: Open Sans;
-    Font-size: 16px;
-    Line-height: 22px;
-    Line-height: 100%;
-    text-Align: Left;
-    vertical-align: top;
-    Fill: Solid;
-    color: #0D114F;
-    margin-left: 3rem;
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0em;
-    text-align: left;
-    padding-left: 2.5rem;
-    padding-top: 1rem;
+#tabela tr {
+  border: 1px solid #000;
+}
 
+#tabela tr td {
+  font-family: Open Sans;
+  font-size: 16px;
+  line-height: 22px;
+  line-height: 100%;
+  text-align: Left;
+  vertical-align: top;
+  fill: Solid;
+  color: #0d114f;
+  margin-left: 3rem;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 2.5rem;
+  padding-top: 1rem;
 }
-#values{
-    height: 4.5rem;
-    border-bottom: solid 1px;
-    border-color: #000000;
+#values {
+  height: 4.5rem;
+  border-bottom: solid 1px;
+  border-color: #000000;
 }
-#tabela tr th img{
-    margin-right: 0.5rem;
-    height: 100%;
+#tabela tr th img {
+  margin-right: 0.5rem;
+  height: 100%;
 }

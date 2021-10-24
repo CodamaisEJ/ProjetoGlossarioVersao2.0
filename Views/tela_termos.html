@@ -13,18 +13,16 @@
     />
     <link rel="stylesheet" href="css/termos_style.css" />
     <link rel="stylesheet" href="css/header-footer.css" />
-    <link rel="stylesheet" href="css/dropdown_user_icon.css">
+    <link rel="stylesheet" href="css/dropdown_user_icon.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="./css/meucss.css" />
     <style>
-      legend{
-        
+      legend {
         margin-bottom: 40px;
-       
       }
-      h3{
+      h3 {
         margin-left: 50px;
         margin-bottom: 40px;
       }
@@ -39,112 +37,120 @@
 
     <header id="header" class="header">
       <div class="logo">
-          <img src="./img/Lexic.jpg" alt="">
-          <h1>Ficha Terminológica</h1>
+        <img src="./img/Lexic.jpg" alt="" />
+        <h1>Ficha Terminológica</h1>
       </div>
       <div id="button-block" class="links">
-          <ul>
-              <li id="criar_usuario"><a href="tela_usuarios.html">Gerenciar Usuários</a></li>
-              <li id="cadastrar_termos"><a href="tela_cadastrar_termos.html">Cadastrar Termos +</a></li>
-              <li id="logo_notificacao">
-                  <a href="./tela_notificacoes.html"><img src="./img/sino-de-notificacao 1.png" alt=""></a>
-              </li>
-              <li id="dropdown" class="dropdown">
-                  <button onclick="myFunction()" class="dropbtn"></button>
-                  <div id="myDropdown" class="dropdown-content">
-                      <p id="nome_usuario">Flavia Maia</p>
-                      <p id="status_user">Administrador</p>
-                      <p id="alt" id="text">Alternar Perfis:</p>
-                      <div class="a-block" id="block">
-                          <a href="">Administrador</a>
-                          <a href="">Especialista</a>
-                          <a href="">Pesquisador</a>
-                      </div>
-                      <button onclick="deslogar()">Logout</button>
-                  </div>
-              </li>
-          </ul>
+        <ul>
+          <li id="criar_usuario">
+            <a href="tela_usuarios.html">Gerenciar Usuários</a>
+          </li>
+          <li id="cadastrar_termos">
+            <a href="tela_cadastrar_termos.html">Cadastrar Termos +</a>
+          </li>
+          <li id="logo_notificacao">
+            <a href="./tela_notificacoes.html"
+              ><img src="./img/sino-de-notificacao 1.png" alt=""
+            /></a>
+          </li>
+          <li id="dropdown" class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"></button>
+            <div id="myDropdown" class="dropdown-content">
+              <p id="nome_usuario">Flavia Maia</p>
+              <p id="status_user">Administrador</p>
+              <p id="alt" id="text">Alternar Perfis:</p>
+              <div class="a-block" id="block">
+                <a href="">Administrador</a>
+                <a href="">Especialista</a>
+                <a href="">Pesquisador</a>
+              </div>
+              <button onclick="deslogar()">Logout</button>
+            </div>
+          </li>
+        </ul>
       </div>
     </header>
 
     <main class="conteudo">
       <div class="tela_termos" id="tela_termos">
         <div id="grid">
-            <legend>Editar e Deletar:</legend>             
-              <div class="Busca">
-                  <input  placeholder="Pesquisar" type="search" name="pesquisa" id="pesquisa">
-              </div>
+          <legend>Editar e Deletar:</legend>
+          <div class="Busca">
+            <input
+              placeholder="Pesquisar"
+              type="search"
+              name="pesquisa"
+              id="pesquisa"
+            />
+          </div>
         </div>
-          <h3>Termos cadastrados: <span id="total-de-termos"></span></h3>
+        <h3>Termos cadastrados: <span id="total-de-termos"></span></h3>
 
-          <div id="direita" class="">
-            
-             <!-- ALFABETO DESKTOP -- não aparece no mobile -->
-             <ul id="desktop-alfabeto" class="alphabet">
-               <li><a href="index.php?letra=A">A</a></li>
-               <li><a href="index.php?letra=B">B</a></li>
-               <li><a href="index.php?letra=C">C</a></li>
-               <li><a href="index.php?letra=D">D</a></li>
-               <li><a href="index.php?letra=E">E</a></li>
-               <li><a href="index.php?letra=F">F</a></li>
-               <li><a href="index.php?letra=G">G</a></li>
-               <li><a href="index.php?letra=H">H</a></li>
-               <li><a href="index.php?letra=I">I</a></li>
-               <li><a href="index.php?letra=J">J</a></li>
-               <li><a href="index.php?letra=K">K</a></li>
-               <li><a href="index.php?letra=L">L</a></li>
-               <li><a href="index.php?letra=M">M</a></li>
-               <li><a href="index.php?letra=N">N</a></li>
-               <li><a href="index.php?letra=O">O</a></li>
-               <li><a href="index.php?letra=P">P</a></li>
-               <li><a href="index.php?letra=Q">Q</a></li>
-               <li><a href="index.php?letra=R">R</a></li>
-               <li><a href="index.php?letra=S">S</a></li>
-               <li><a href="index.php?letra=T">T</a></li>
-               <li><a href="index.php?letra=U">U</a></li>
-               <li><a href="index.php?letra=V">V</a></li>
-               <li><a href="index.php?letra=W">W</a></li>
-               <li><a href="index.php?letra=X">X</a></li>
-               <li><a href="index.php?letra=Y">Y</a></li>
-               <li><a href="index.php?letra=Z">Z</a></li>
-             </ul>
-             <!-- ALFABETO MOBILE -- não aparece no desktop -->
-             <ul id="mobile" class="alphabet"  onclick="foco()">
-               <li><a href="index.php?letra=A">A</a></li>
-               <li><a href="index.php?letra=B">B</a></li>
-               <li><a href="index.php?letra=C">C</a></li>
-               <li><a href="index.php?letra=D">D</a></li>
-               <li><a href="index.php?letra=E">E</a></li>
-               <li><a href="index.php?letra=F">F</a></li>
-               <li><a href="index.php?letra=G">G</a></li>
-               <li><a href="index.php?letra=H">H</a></li>
-               <li><a href="index.php?letra=I">I</a></li>
-               <li><a href="index.php?letra=J">J</a></li>
-               <li><a href="index.php?letra=K">K</a></li>
-               <li><a href="index.php?letra=L">L</a></li>
-               <li><a href="index.php?letra=M">M</a></li>
-             </ul>
-             <br />
-             <ul id="mobile" class="alphabet" onclick="foco()">
-               <li><a href="index.php?letra=N">N</a></li>
-               <li><a href="index.php?letra=O">O</a></li>
-               <li><a href="index.php?letra=P">P</a></li>
-               <li><a href="index.php?letra=Q">Q</a></li>
-               <li><a href="index.php?letra=R">R</a></li>
-               <li><a href="index.php?letra=S">S</a></li>
-               <li><a href="index.php?letra=T">T</a></li>
-               <li><a href="index.php?letra=U">U</a></li>
-               <li><a href="index.php?letra=V">V</a></li>
-               <li><a href="index.php?letra=W">W</a></li>
-               <li><a href="index.php?letra=X">X</a></li>
-               <li><a href="index.php?letra=Y">Y</a></li>
-               <li><a href="index.php?letra=Z">Z</a></li>
-             </ul>
-             <br /><br /><br />
- 
-             
-           </div>
-            <!-- 
+        <div id="direita" class="">
+          <!-- ALFABETO DESKTOP -- não aparece no mobile -->
+          <ul id="desktop-alfabeto" class="alphabet">
+            <li><a href="index.php?letra=A">A</a></li>
+            <li><a href="index.php?letra=B">B</a></li>
+            <li><a href="index.php?letra=C">C</a></li>
+            <li><a href="index.php?letra=D">D</a></li>
+            <li><a href="index.php?letra=E">E</a></li>
+            <li><a href="index.php?letra=F">F</a></li>
+            <li><a href="index.php?letra=G">G</a></li>
+            <li><a href="index.php?letra=H">H</a></li>
+            <li><a href="index.php?letra=I">I</a></li>
+            <li><a href="index.php?letra=J">J</a></li>
+            <li><a href="index.php?letra=K">K</a></li>
+            <li><a href="index.php?letra=L">L</a></li>
+            <li><a href="index.php?letra=M">M</a></li>
+            <li><a href="index.php?letra=N">N</a></li>
+            <li><a href="index.php?letra=O">O</a></li>
+            <li><a href="index.php?letra=P">P</a></li>
+            <li><a href="index.php?letra=Q">Q</a></li>
+            <li><a href="index.php?letra=R">R</a></li>
+            <li><a href="index.php?letra=S">S</a></li>
+            <li><a href="index.php?letra=T">T</a></li>
+            <li><a href="index.php?letra=U">U</a></li>
+            <li><a href="index.php?letra=V">V</a></li>
+            <li><a href="index.php?letra=W">W</a></li>
+            <li><a href="index.php?letra=X">X</a></li>
+            <li><a href="index.php?letra=Y">Y</a></li>
+            <li><a href="index.php?letra=Z">Z</a></li>
+          </ul>
+          <!-- ALFABETO MOBILE -- não aparece no desktop -->
+          <ul id="mobile" class="alphabet" onclick="foco()">
+            <li><a href="index.php?letra=A">A</a></li>
+            <li><a href="index.php?letra=B">B</a></li>
+            <li><a href="index.php?letra=C">C</a></li>
+            <li><a href="index.php?letra=D">D</a></li>
+            <li><a href="index.php?letra=E">E</a></li>
+            <li><a href="index.php?letra=F">F</a></li>
+            <li><a href="index.php?letra=G">G</a></li>
+            <li><a href="index.php?letra=H">H</a></li>
+            <li><a href="index.php?letra=I">I</a></li>
+            <li><a href="index.php?letra=J">J</a></li>
+            <li><a href="index.php?letra=K">K</a></li>
+            <li><a href="index.php?letra=L">L</a></li>
+            <li><a href="index.php?letra=M">M</a></li>
+          </ul>
+          <br />
+          <ul id="mobile" class="alphabet" onclick="foco()">
+            <li><a href="index.php?letra=N">N</a></li>
+            <li><a href="index.php?letra=O">O</a></li>
+            <li><a href="index.php?letra=P">P</a></li>
+            <li><a href="index.php?letra=Q">Q</a></li>
+            <li><a href="index.php?letra=R">R</a></li>
+            <li><a href="index.php?letra=S">S</a></li>
+            <li><a href="index.php?letra=T">T</a></li>
+            <li><a href="index.php?letra=U">U</a></li>
+            <li><a href="index.php?letra=V">V</a></li>
+            <li><a href="index.php?letra=W">W</a></li>
+            <li><a href="index.php?letra=X">X</a></li>
+            <li><a href="index.php?letra=Y">Y</a></li>
+            <li><a href="index.php?letra=Z">Z</a></li>
+          </ul>
+          <br /><br /><br />
+        </div>
+        <!-- 
             <div class="termos">
               <div class="borda-termo">
                 <div class="termo">
@@ -156,11 +162,9 @@
       </div>
     </main>
 
-    <script src="js/Crud_terms.js">
-     
-    </script>
+    <script src="js/Crud_terms.js"></script>
 
-    <footer  id="footer">
+    <footer id="footer">
       <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
     <script>
@@ -174,6 +178,5 @@
         });
       });
     </script>
-    
-</body>
+  </body>
 </html>
