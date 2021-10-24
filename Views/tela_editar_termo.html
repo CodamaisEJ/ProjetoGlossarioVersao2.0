@@ -78,7 +78,7 @@
                 <label for="dois-generos">Dois Gêneros</label>
               </div>
               <div class="input-block">
-                <label for="variante">Variante:</label>
+                <label for="variantes">Variante:</label>
                 <input
                   onclick="butaoVariante()"
                   type="button"
@@ -361,6 +361,7 @@
                   onclick="butaoFonteDefinicao()"
                   type="button"
                   id="fonte_definicao"
+                  name="fonte_definicao"
                   value="Selecione para preencher as fontes das definições"
                 />
               </div>
@@ -527,8 +528,8 @@
               </div>
 
               <div class="input-block">
-                <label for="redador">Redador:</label>
-                <input type="text" name="redador" id="redador" />
+                <label for="redator">Redador:</label>
+                <input type="text" name="redator" id="redator" />
               </div>
 
               <div class="input-block">
@@ -556,7 +557,7 @@
                   >Frequência do termo no corpus:</label
                 >
                 <input
-                  placeholder="100000000"
+                  placeholder="0"
                   type="number"
                   name="frequencia_termo_corpus"
                   id="frequencia_termo_corpus"
