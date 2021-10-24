@@ -70,7 +70,13 @@ class UserController {
     
     static async listUsers(req, res){
       try {
-        const listUsers = await database.Users.findAll()
+        const listUsers = await database.Users.findAll(
+          {
+            order: [
+              ['id', 'DESC']
+            ],
+          }
+        )
         return res.status(200).json(listUsers)  
       } catch (error) {
         return res.status(500).json(error.message)

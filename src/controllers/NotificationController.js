@@ -4,7 +4,13 @@ class NotificationController {
 
     static async listNotifications(req, res, next){
         try {
-            const listNotifications = await database.Notifications.findAll()
+            const listNotifications = await database.Notifications.findAll(
+              {
+                order: [
+                  ['id', 'DESC']
+                ],
+              }
+            )
             return res.status(200).json(listNotifications)  
         } catch (error) {
             return res.status(500).json(error.message)

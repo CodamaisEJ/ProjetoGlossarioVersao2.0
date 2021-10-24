@@ -57,7 +57,13 @@ class TermController {
     
     static async listTerms(req, res){
       try {
-        const listTerms = await database.Terms.findAll()
+        const listTerms = await database.Terms.findAll(
+          {
+            order: [
+              ['id', 'DESC']
+            ],
+          }
+        )
         return res.status(200).json(listTerms)  
       } catch (error) {
         return res.status(500).json(error.message)
