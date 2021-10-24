@@ -107,7 +107,7 @@ async function editarTermo(event) {
   const data = pegarInputsDoForm("edit_term");
 
   try {
-    const result = await fetch(`${URL}/term/${term_i}/update`, {
+    const result = await fetch(`${URL}/term/${term_id}/update`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -245,7 +245,7 @@ async function carregarDadosTermo() {
   const term_id = history.state;
 
   try {
-    const result = await fetch(`${URL}/term/${term_i}/list`);
+    const result = await fetch(`${URL}/term/${term_id}/list`);
 
     const json = await result.json();
     console.log(`json`, json);
@@ -262,7 +262,7 @@ async function carregarDadosTermo() {
     form["sinonimica"].value = json.sinonimica;
     form["siglas"].value = json.siglas;
     form["acronimos"].value = json.acronimos;
-    form["definicao"].value = json.definicao;
+    // form["definicao"].value = json.definicao;
     form["dicio-lingua-comu-def"].value = json.dicionario_lingua_comum;
     form["dicio-espe-def"].value = json.dicionario_especializado1;
     form["dicio-espe2-def"].value = json.dicionario_especializado2;
@@ -281,7 +281,7 @@ async function carregarDadosTermo() {
     form["termo-frances"].value = json.termo_frances;
     form["termo-Espanhol"].value = json.termo_espanhol;
     form["verbo"].value = json.verbo;
-    form["fonte_definicao"].value = json.fonte_da_definicao;
+    // form["fonte_definicao"].value = json.fonte_da_definicao;
     form["font-dici-lingua-comum"].value = json.fonte_dicionario_lingua_comum;
     form["font-dici-especi-1"].value = json.fonte_dicionario_especializado1;
     form["font-dici-especi-2"].value = json.fonte_dicionario_especializado2;
