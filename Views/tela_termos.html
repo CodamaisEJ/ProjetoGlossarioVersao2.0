@@ -18,21 +18,9 @@
 
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="./css/meucss.css" />
-    <style>
-      legend {
-        margin-bottom: 40px;
-      }
-      h3 {
-        margin-left: 50px;
-        margin-bottom: 40px;
-      }
-    </style>
-    <title>Cadastro</title>
-  </head>
-
   <body onload="mudaCor()">
     <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/cadastro_script.js"></script>
+   <!-- <script src="js/cadastro_script.js"></script> -->
     <script src="js/menu_dropdown.js"></script>
 
     <header id="header" class="header">
@@ -72,7 +60,7 @@
     </header>
 
     <main class="conteudo">
-      <div class="tela_termos" id="tela_termos">
+     <!-- <div class="tela_termos" id="tela_termos">
         <div id="grid">
           <legend>Editar e Deletar:</legend>
           <div class="Busca">
@@ -84,91 +72,127 @@
             />
           </div>
         </div>
-        <h3>Termos cadastrados: <span id="total-de-termos"></span></h3>
-
-        <div id="direita" class="">
-          <!-- ALFABETO DESKTOP -- não aparece no mobile -->
-          <ul id="desktop-alfabeto" class="alphabet">
-            <li><a href="index.php?letra=A">A</a></li>
-            <li><a href="index.php?letra=B">B</a></li>
-            <li><a href="index.php?letra=C">C</a></li>
-            <li><a href="index.php?letra=D">D</a></li>
-            <li><a href="index.php?letra=E">E</a></li>
-            <li><a href="index.php?letra=F">F</a></li>
-            <li><a href="index.php?letra=G">G</a></li>
-            <li><a href="index.php?letra=H">H</a></li>
-            <li><a href="index.php?letra=I">I</a></li>
-            <li><a href="index.php?letra=J">J</a></li>
-            <li><a href="index.php?letra=K">K</a></li>
-            <li><a href="index.php?letra=L">L</a></li>
-            <li><a href="index.php?letra=M">M</a></li>
-            <li><a href="index.php?letra=N">N</a></li>
-            <li><a href="index.php?letra=O">O</a></li>
-            <li><a href="index.php?letra=P">P</a></li>
-            <li><a href="index.php?letra=Q">Q</a></li>
-            <li><a href="index.php?letra=R">R</a></li>
-            <li><a href="index.php?letra=S">S</a></li>
-            <li><a href="index.php?letra=T">T</a></li>
-            <li><a href="index.php?letra=U">U</a></li>
-            <li><a href="index.php?letra=V">V</a></li>
-            <li><a href="index.php?letra=W">W</a></li>
-            <li><a href="index.php?letra=X">X</a></li>
-            <li><a href="index.php?letra=Y">Y</a></li>
-            <li><a href="index.php?letra=Z">Z</a></li>
-          </ul>
-          <!-- ALFABETO MOBILE -- não aparece no desktop -->
-          <ul id="mobile" class="alphabet" onclick="foco()">
-            <li><a href="index.php?letra=A">A</a></li>
-            <li><a href="index.php?letra=B">B</a></li>
-            <li><a href="index.php?letra=C">C</a></li>
-            <li><a href="index.php?letra=D">D</a></li>
-            <li><a href="index.php?letra=E">E</a></li>
-            <li><a href="index.php?letra=F">F</a></li>
-            <li><a href="index.php?letra=G">G</a></li>
-            <li><a href="index.php?letra=H">H</a></li>
-            <li><a href="index.php?letra=I">I</a></li>
-            <li><a href="index.php?letra=J">J</a></li>
-            <li><a href="index.php?letra=K">K</a></li>
-            <li><a href="index.php?letra=L">L</a></li>
-            <li><a href="index.php?letra=M">M</a></li>
-          </ul>
-          <br />
-          <ul id="mobile" class="alphabet" onclick="foco()">
-            <li><a href="index.php?letra=N">N</a></li>
-            <li><a href="index.php?letra=O">O</a></li>
-            <li><a href="index.php?letra=P">P</a></li>
-            <li><a href="index.php?letra=Q">Q</a></li>
-            <li><a href="index.php?letra=R">R</a></li>
-            <li><a href="index.php?letra=S">S</a></li>
-            <li><a href="index.php?letra=T">T</a></li>
-            <li><a href="index.php?letra=U">U</a></li>
-            <li><a href="index.php?letra=V">V</a></li>
-            <li><a href="index.php?letra=W">W</a></li>
-            <li><a href="index.php?letra=X">X</a></li>
-            <li><a href="index.php?letra=Y">Y</a></li>
-            <li><a href="index.php?letra=Z">Z</a></li>
-          </ul>
-          <br /><br /><br />
+          <h3>Termos cadastrados: <span id="total-de-termos"></span></h3>
+      -->
+      
+      <div class="header_block">
+          <div class="title-block">
+              <h2>Editar e Deletar</h2>
+              <p>Total de termos: <span id="quantidade de termos">40</span></p>
+          </div>
+          <div class="search-block">
+              <input placeholder="Pesquisar" type="text">
+          </div>
+      </div>
+      <div class="alphabet-block">
+        <p>A-Z</p>
+        <span>|<a onclick="" href=""> A</a></span>
+        <span>|<a href=""> B</a></span>
+        <span>|<a href=""> C</a></span>
+        <span>|<a href=""> D</a></span>
+        <span>|<a href=""> E</a></span>
+        <span>|<a href=""> F</a></span>
+        <span>|<a href=""> G</a></span>
+        <span>|<a href=""> H</a></span>
+        <span>|<a href=""> I</a></span>
+        <span>|<a href=""> J</a></span>
+        <span>|<a href=""> K</a></span>
+        <span>|<a href=""> L</a></span>
+        <span>|<a href=""> M</a></span>
+        <span>|<a href=""> N</a></span>
+        <span>|<a href=""> O</a></span>
+        <span>|<a href=""> P</a></span>
+        <span>|<a href=""> Q</a></span>
+        <span>|<a href=""> R</a></span>
+        <span>|<a href=""> S</a></span>
+        <span>|<a href=""> T</a></span>
+        <span>|<a href=""> U</a></span>
+        <span>|<a href=""> V</a></span>
+        <span>|<a href=""> W</a></span>
+        <span>|<a href=""> X</a></span>
+        <span>|<a href=""> Y</a></span>
+        <span>|<a href=""> Z</a></span>
+      </div>
+      <div class="block_List">
+        <div class="termos_block">
+          <div class="termo_block">
+              <p>Vacina da Johnson & Jonhson contra COVID-19</p>
+              <a href="">
+                <img src="./img/icon_lixo.png" alt="">
+              </a>
+          </div>
+          <div class="termo_block">
+            <p>Cloroquina</p>
+            <a href="">
+              <img src="./img/icon_lixo.png" alt="">
+            </a>
+          </div>
+          <div class="termo_block">
+            <p>Cloroquina</p>
+            <a href="">
+              <img src="./img/icon_lixo.png" alt="">
+            </a>
+          </div>
+          <div class="termo_block">
+            <p>Cloroquina</p>
+            <a href="">
+              <img src="./img/icon_lixo.png" alt="">
+            </a>
+          </div>
+          <div class="termo_block">
+            <p>Cloroquina</p>
+            <a href="">
+              <img src="./img/icon_lixo.png" alt="">
+            </a>
+          </div>
+          <div class="termo_block">
+            <p>Cloroquina</p>
+            <a href="">
+              <img src="./img/icon_lixo.png" alt="">
+            </a>
+          </div>
+          <div class="termo_block">
+            <p>Cloroquina</p>
+            <a href="">
+              <img src="./img/icon_lixo.png" alt="">
+            </a>
+          </div>
+          <div class="termo_block">
+            <p>Cloroquina</p>
+            <a href="">
+              <img src="./img/icon_lixo.png" alt="">
+            </a>
+          </div>
+          <div class="termo_block">
+            <p>Cloroquina</p>
+            <a href="">
+              <img src="./img/icon_lixo.png" alt="">
+            </a>
+          </div>
+          <div class="termo_block">
+            <p>Cloroquina</p>
+            <a href="">
+              <img src="./img/icon_lixo.png" alt="">
+            </a>
+          </div>
         </div>
-        <!-- 
-            <div class="termos">
-              <div class="borda-termo">
-                <div class="termo">
-                  <p onclick="trocarPagina()">Termo</p>
-                </div>
-                <i class="fas fa-trash"></i>
-              </div> 
-         -->
       </div>
     </main>
 
-    <script src="js/Crud_terms.js"></script>
+    
+
+    
+      
+
+
+
+
 
     <footer id="footer">
       <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
     <script>
-      $(document).ready(function () {
+      /*$(document).ready(function () {
         $("#pesquisa").on("keyup", function () {
           var value = $(this).val().toLowerCase();
           console.log(`value`, value);
@@ -176,7 +200,7 @@
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
           });
         });
-      });
+      });*/
     </script>
   </body>
 </html>
