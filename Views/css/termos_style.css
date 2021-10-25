@@ -4,7 +4,7 @@
 p{
   margin: 0px;
 }
-block-main{
+.block-main{
   display: flex;
   justify-content: center;
   width: 100%;
@@ -79,6 +79,7 @@ block-main{
   height: 5rem;
   column-gap: 9rem;
   row-gap: 2rem;
+  cursor: pointer;
   
 }
 .termo_block{
@@ -91,6 +92,7 @@ block-main{
   border: 2px solid #7B8CA7;
   height: 60px;
   border-radius: 8px;
+  cursor: pointer;
 }
 .title-block h2{
   Font-style: Bold;

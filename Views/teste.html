@@ -1,0 +1,241 @@
+
+                        (function ($) {
+                          'use strict';
+                       
+                          var config = {
+                            max: 7,
+                            error: [
+                              'Houve um erro ao tentar carregar as notificações.',
+                              'Caso o problema continue, contate o suporte técnico.'
+                            ].join('\n')
+                          };
+                       
+                          $(window).on('load', function () {
+                         
+                              var $logout = $('ul.navlinks li a#logout');
+                         
+                              if (!$logout.length) {
+                                return;
+                              }
+                       
+                            var $faNotifyTrigger = $('<li>')
+                                .html([
+                                    '<a href="javascript:void(0)" class="mainmenu fa fa-bell" id="fa-custom-notification-trigger">',
+                                    ' <span class="pmlist-qtt">0</span>',
+                                    '</a>'
+                              ].join('\n'))
+                                .insertAfter('ul.navlinks a[href="/privmsg?folder=inbox"]').parent()
+                                .on('click', function (event) {
+                                  event.stopPropagation();
+                                  $faNotifyContent.toggleClass('hidden');
+                                })
+                            ;
+                       
+                            $(document).on('click', function () {
+                              if ($('.fa-notify-wrapper').is('.hidden')) {
+                                return;
+                              }
+                       
+                              $('.fa-notify-wrapper').toggleClass('hidden');
+                            });
+                       
+                            var $faNotifyContent = $([
+                              '<div class="fa-notify-wrapper hidden">',
+                              '  <header class="fa-notify-header">',
+                              '    <h4>Notificações</h4>',
+                              '    <a href="/profile?mode=editprofile&page_profil=notifications">Ver mais e configurações</a>',
+                              '  </header>',
+                              '  <div class="fa-notify-inner">',
+                              '    <div class="fa-notify-list">',
+                              '      <span class="fa-notify-loading">Carregando...</span>',
+                              '    </div>',
+                              '    <div class="fa-notify-date">',
+                              '    </div>',
+                              '  </div>',
+                              '</div>',
+                            ].join('\n'))
+                              .appendTo('#fa-custom-notification-trigger')
+                                .on('click', function (event) {
+                                  event.stopPropagation();
+                                })
+                            ;
+                       
+                            var cookiedPmlistCount = my_getcookie('fa_mplist_count');
+                            if (cookiedPmlistCount) {
+                              $faNotifyTrigger
+                                .find('span')
+                                  .text(cookiedPmlistCount)
+                              ;
+                            }
+                       
+                            $.get('/profile', {
+                              mode: 'editprofile',
+                              page_profil: 'notifications'
+                            })
+                              .done(function (context) {
+                       
+                                var $wrap = $('[name="notif_list"]', context);
+                                var $item = $wrap.find('table tr td:first-child');
+                       
+                                $item.each(function () {
+                       
+                                  var $this = $(this);
+                                  var $row = $(this).parent('tr');
+                       
+                                  var text = $this.html();
+                       
+                                  $('.fa-notify-loading').hide();
+                       
+                                  if ($row.index() < config.max) {
+                                    $faNotifyContent
+                                      .find('.fa-notify-list')
+                                        .append([
+                                          '<div class="notify-item">',
+                                          '  ' + text,
+                                          '</div>'
+                                        ].join('\n'))
+                                    ;
+                                  }
+                       
+                                  var notifyCount = $faNotifyContent
+                                    .find('.fa-notify-list .notify-item')
+                                      .length
+                                  ;
+                       
+                                  my_setcookie('fa_mplist_count', notifyCount);
+                                  var cookiedPmlistCount = my_getcookie('fa_mplist_count');
+                       
+                                  $faNotifyTrigger
+                                    .find('span')
+                                      .text(cookiedPmlistCount)
+                                  ;
+                       
+                                });
+                       
+                              })
+                              .fail(function () {
+                                console.warn(config.error);
+                              })
+                            ;
+                       
+                            var styles = [
+                              '@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);',
+                              '',
+                              '.fa-notify-wrapper.hidden,',
+                              'html body div #fa_notifications {',                     
+                              '  pointer-events: none!important;',
+                              '  opacity: 0 !important;',
+                              '}',
+                              '',
+                              'div#fa_toolbar {',
+                              '  display: none;',
+                              '}',
+                              '',
+                              'a#fa-custom-notification-trigger {',
+                              ' color: #e93023 !important;',
+                             
+                          ' top: -4px;',
+                              '  font-size: 28px;',
+                              '  border-radius: 3px;',
+                              '  position: relative;',
+                              '}',
+                              '',
+                      'a#fa-custom-notification-trigger span {',
+                      '  position: absolute;',
+       
+                      '  color: #000;',
+                      '  font-size: 12px;',
+                      '  font-family: Rajdhani, sans-serif;',
+                      '  padding: 1px 3.5px;',
+                      '  line-height: 11px;',
+                      '  border-radius: 50%;',
+          'right: 16px;',
+ 'background: white;',
+ 'height: 16px;',
+ 'width: 16px;',
+ 'line-height: 16px;',
+ 'top: 3px;',
+                                 
+                              '}',
+                              '',
+                              '.fa-notify-wrapper {',
+                              '  background: #FFF;',
+                              '  border-radius: 2px;',
+                              '  border: solid 1px #ddd;',
+                              '  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);',
+                              '  margin-top: 20px;',
+                              '  padding: 20px 13px;',
+                              '  left: 0!important;',
+                              '  top: 14px !important;',
+                              '  width: 255px;',
+                              '  z-index: 999;',
+                              '  position: absolute;',
+                              '  display: block;',
+                              '  font-family: Rajdhani, sans-serif;',
+                              '  font-size: 13px;',
+                              '}',
+                              '',
+                              '.fa-notify-wrapper,',
+                              '.fa-notify-wrapper * {',
+                              '  box-sizing: border-box;',
+                              '}',
+                              '',
+                              '.fa-notify-wrapper header h4 {',
+                              '  color: #666;',
+                              '  font-weight: 600;',
+                              '  font-size: 21px;',
+                              '  margin-top: 0px;',
+                              '  margin-bottom: 5px;',
+                              '  display: table;',
+                              '}',
+                              '',
+                              '.fa-notify-wrapper header a {',
+                              '  display: block;',
+                              '  padding-bottom: 15px;',
+                              '  text-align: left!important;',
+                              '}',
+                              '',
+                              '.fa-notify-wrapper a { ',
+                              '  color: black!important',
+                              '}',
+                              '',
+                              '.fa-notify-wrapper a, ',
+                              '.fa-notify-wrapper a:hover {',
+                              '  background-color: transparent!important;',
+                              '  color: grey!important;',
+                              '  box-shadow: none!important;',
+                              '  float: none!important;',
+                              '}',
+                              '',
+                              '.fa-notify-wrapper header {',
+                              '  display: block;',
+                              '  position: relative;',
+                              '  border-bottom: solid 1px #ddd;',
+                              '  margin-bottom: 15px;',
+                              '}',
+                              '',
+                              '.fa-notify-list {',
+                              '  counter-reset: section;',
+                              '}',
+                              '',
+                              '.notify-item {',
+                              '  text-align: left!important;',
+                              '  margin-bottom: 15px;',
+                              '  line-height: 1.2rem;',
+                              '}',
+                              '',
+                              '.notify-item::before {',
+                              '  counter-increment: section;',
+                              '  content: counter(section);',
+                              '  background-color: #ddd;',
+                              '  border-radius: 10px;',
+                              '  padding: 1.5px 7px;',
+                              '  color: #666666;',
+                              '  margin-right: 4px;',
+                              '}'
+                            ].join('\n');
+                       
+                            $(['<style type="text/css">', styles, '</style>'].join('\n')).appendTo('head');
+                       
+                          });
+                        }(jQuery));
