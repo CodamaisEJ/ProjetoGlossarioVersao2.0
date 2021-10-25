@@ -4,6 +4,11 @@
 p{
   margin: 0px;
 }
+block-main{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .conteudo{
   width:1365px;
   padding: 2rem;
