@@ -19,9 +19,7 @@
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="./css/meucss.css" />
   <body onload="mudaCor()">
-    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <!-- <script src="js/cadastro_script.js"></script> -->
-    <script src="js/menu_dropdown.js"></script>
+    
 
     <header id="header" class="header">
       <div class="logo">
@@ -78,7 +76,7 @@
       <div class="header_block">
           <div class="title-block">
               <h2>Editar e Deletar</h2>
-              <p>Total de termos: <span id="quantidade de termos">40</span></p>
+              <p>Total de termos: <span id="total-de-termos"></span></p>
           </div>
           <div class="search-block">
               <input placeholder="Pesquisar" type="text">
@@ -114,79 +112,11 @@
         <span>|<a href=""> Z</a></span>
       </div>
       <div class="block_List">
-        <div class="termos_block">
-          <div class="termo_block">
-              <p>Vacina da Johnson & Jonhson contra COVID-19</p>
-              <a href="">
-                <img src="./img/icon_lixo.png" alt="">
-              </a>
-          </div>
-          <div class="termo_block">
-            <p>Cloroquina</p>
-            <a href="">
-              <img src="./img/icon_lixo.png" alt="">
-            </a>
-          </div>
-          <div class="termo_block">
-            <p>Cloroquina</p>
-            <a href="">
-              <img src="./img/icon_lixo.png" alt="">
-            </a>
-          </div>
-          <div class="termo_block">
-            <p>Cloroquina</p>
-            <a href="">
-              <img src="./img/icon_lixo.png" alt="">
-            </a>
-          </div>
-          <div class="termo_block">
-            <p>Cloroquina</p>
-            <a href="">
-              <img src="./img/icon_lixo.png" alt="">
-            </a>
-          </div>
-          <div class="termo_block">
-            <p>Cloroquina</p>
-            <a href="">
-              <img src="./img/icon_lixo.png" alt="">
-            </a>
-          </div>
-          <div class="termo_block">
-            <p>Cloroquina</p>
-            <a href="">
-              <img src="./img/icon_lixo.png" alt="">
-            </a>
-          </div>
-          <div class="termo_block">
-            <p>Cloroquina</p>
-            <a href="">
-              <img src="./img/icon_lixo.png" alt="">
-            </a>
-          </div>
-          <div class="termo_block">
-            <p>Cloroquina</p>
-            <a href="">
-              <img src="./img/icon_lixo.png" alt="">
-            </a>
-          </div>
-          <div class="termo_block">
-            <p>Cloroquina</p>
-            <a href="">
-              <img src="./img/icon_lixo.png" alt="">
-            </a>
-          </div>
+        <div class="termos_block" id="termos_block">
+          
         </div>
       </div>
     </main>
-
-    
-
-    
-      
-
-
-
-
 
     <footer id="footer">
       <h2>Desenvolvido por Codamais @ 2021</h2>
@@ -202,5 +132,9 @@
         });
       });*/
     </script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="js/cadastro_script.js"></script> -->
+     <script src="js/menu_dropdown.js"></script>
+     <script src="js/Crud_terms.js"></script>
   </body>
 </html>

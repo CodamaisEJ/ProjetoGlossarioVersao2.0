@@ -3,7 +3,7 @@ const URL = "https://ficha-terminologica-backend.herokuapp.com";
 const TOKEN =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjYsImlhdCI6MTYzNDQ4MDk0OSwiZXhwIjoxNjM0NTY3MzQ5fQ.xGPRFl9iCQ8RG6JOHQJHobDEhNkrEvk7pgoYMZwgoVo";
 
-const Termoslist = document.querySelector("#tela_termos");
+const Termoslist = document.querySelector("#termos_block");
 let Terms;
 let TermoHTML;
 
@@ -19,14 +19,11 @@ async function consultaTerms() {
 function ListTerms(Termos) {
   Termos.forEach((Termo) => {
     TermoHTML = `
-    <div class="termos" id='termo${Termo.id}'>
-      <div class="borda-termo">
-        <div class="termo">
-          <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>
-        </div>
-        <i class="fas fa-trash" onclick="DeletandoTerms(${Termo.id})"></i>
-      </div>
-    </div> 
+    <div class="termo_block" id="termo_block${Termo.id}">
+           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
+           <img src="./img/icon_lixo.png" onclick="DeletandoTerms(${Termo.id})">       
+    </div>
+          
       `;
 
     Termoslist.innerHTML += TermoHTML;
