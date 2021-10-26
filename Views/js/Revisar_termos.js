@@ -1,7 +1,7 @@
 const TOKEN =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjYsImlhdCI6MTYzNDQ4MDk0OSwiZXhwIjoxNjM0NTY3MzQ5fQ.xGPRFl9iCQ8RG6JOHQJHobDEhNkrEvk7pgoYMZwgoVo";
 
-const Termoslist = document.querySelector("#tela_termos");
+const Termoslist = document.querySelector("#termos_block");
 let Terms;
 let TermoHTML;
 
@@ -21,19 +21,11 @@ let UserHTML;
 function ListTerms(Termos) {
   Termos.forEach((Termo) => {
     TermoHTML = `
-    <style>
-    #revisar{
-      width: 44px;
-      height: 45px;
-    }
-    </style>
-    <div class="termos">
-    <div class="borda-termo">
-      <div class="termo">
-        <p onclick="irParaTelaEditarTermoEspecialista(${Termo.id})">${Termo.entrada}</p>
-      </div>
-      <img id="revisar" src="./img/square.png" onclick="Check(${Termo.id})">
-    </div> 
+    <div class="termo_block" id="termo_block${Termo.id}">
+           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
+           <img src="./img/Input -senha.png" onclick="Check()">       
+    </div>
+    
       `;
     Termoslist.innerHTML = Termoslist.innerHTML + TermoHTML;
   });

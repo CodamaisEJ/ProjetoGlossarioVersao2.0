@@ -17,12 +17,18 @@ async function consultaNotifications() {
 function ListNotications(Notificacaos) {
   Notificacaos.forEach((Notificacao) => {
     NotificacaoHTML = ` 
-          <tr>      
-         <td>${Notificacao.termo}</td>
-         <td>${Notificacao.status}</td>
-         <td>${Notificacao.usuario}</td>      
-         <td>${Notificacao.data}</td>    
-         </tr>  
+         <tr class="bg">      
+            <td>${Notificacao.termo}</td>
+            <td>${Notificacao.status}</td>
+            <td>${Notificacao.usuario}</td>      
+            <td>${Notificacao.data}</td>    
+         </tr>
+         <tr>
+            <td>${Notificacao.termo}</td>
+            <td>${Notificacao.status}</td>
+            <td>${Notificacao.usuario}</td>      
+            <td>${Notificacao.data}</td>    
+          </tr>   
       `;
     notificationslist.innerHTML += NotificacaoHTML;
   });

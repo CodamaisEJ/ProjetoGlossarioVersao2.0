@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/user_style.css">
     <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="./css/tela_notificacao_style.css" />
     <link rel="stylesheet" href="css/dropdown_user_icon.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -51,23 +52,23 @@
     </header>
 
     <main class="conteudo">
-      <div class="tela_usuarios" id="users">
-         <legend>Usuários cadastrados</legend>
-            <div class="info">
-              <h3>Nome</h3>
-              <h3>Tipo de usuário</h3>
-              <h3>E-mail</h3>
-              <h3>Ações</h3>
-            </div>
-           <!--
-              <div class="User">
-              <p>Isabella</p>
-              <p>Pesquisador</p>
-              <p>fulano@gmail.com</p>
-              <p><i class="fas fa-pencil-alt" id="lapis"></i><i class="fas fa-trash-alt" id="lixeira"></i></p>
-              </div>
-           --> 
-            
+      
+      <h2>Usuários cadastrados</h2>
+      <!--<div id="fechar" >
+        <a href="termo.html">
+          <img src="./img/X.png" alt="" />
+        </a>
+      </div> -->
+      <div class="tabela-block" id="tal">
+        <table id="tabela">
+          <tr>
+            <th><h3>Nome</h3></th>
+            <th><h3>Tipo de usuário</h3></th>
+            <th><h3>E-mail</h3></th>
+            <th> <h3>Ações</h3></th>
+          </tr>
+
+        </table>
       </div>
       <div class="btn">
         <button type="button" onclick="trocarPagina1()" id="btn_criar_user">Criar Usuário</button>

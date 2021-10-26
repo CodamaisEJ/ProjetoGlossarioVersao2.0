@@ -1,4 +1,4 @@
-const Userslist = document.querySelector("#users");
+const Userslist = document.querySelector("#tabela");
 
 async function consultaUsers() {
   const retorno = await fetch(
@@ -13,19 +13,13 @@ let UserHTML;
 function ListUsers(Users) {
   Users.forEach((User) => {
     UserHTML = `
-      <style> 
-      .users{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        text-align: center;
-        margin-bottom: 30px; 
-      }
-      </style> 
-      <div class="users" id="users${User.id}">                  
-           <p>${User.nome}</p>
-           <p>${User.tipo_de_usuario}</p>
-           <p>${User.email}</p>
-           <p>
+      
+      <div class="bg"" id="users${User.id}">  
+
+           <td>${User.nome}</td>
+           <td>${User.tipo_de_usuario}</td>
+           <td>${User.email}</td>
+           <td>
             <i 
               class="fas fa-pencil-alt" 
               id="lapis" 
@@ -37,8 +31,10 @@ function ListUsers(Users) {
               id="lixeira"
               onclick="DeletandoUser(${User.id})">
             </i>          
-           </p>          
+           </td>          
       </div>
+      
+      
       `;
 
     Userslist.innerHTML = Userslist.innerHTML + UserHTML;

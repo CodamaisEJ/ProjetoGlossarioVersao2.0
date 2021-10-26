@@ -144,10 +144,30 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
+  margin: re;
 }
 footer h2 {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
+}
+
+@media (min-width: 1240px)
+{
+  footer {
+    background-color: #314c85;
+    flex-shrink: 0;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: re;
+    margin-top: 90px;
+  }
+  footer h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+  }
 }
