@@ -21,8 +21,7 @@ function ListTerms(Termos) {
   Termos.forEach((Termo) => {
     TermoHTML = `
     <div class="termo_block" id="termo_block${Termo.id}">
-           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
-           <img src="./img/icon_lixo.png" onclick="DeletandoTerms(${Termo.id})">       
+           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>          
     </div>
       `;
     Termoslist.innerHTML += TermoHTML;

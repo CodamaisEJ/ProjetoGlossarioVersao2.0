@@ -22,7 +22,7 @@ function ListTerms(Termos) {
   Termos.forEach((Termo) => {
     TermoHTML = `
     <div class="termo_block" id="termo_block${Termo.id}">
-           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
+           <p onclick="irParaTelaEditarTermoEspecialista(${Termo.id})">${Termo.entrada}</p>      
            <img src="./img/Input -senha.png" onclick="Check()">       
     </div>
     
