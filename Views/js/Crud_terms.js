@@ -4,31 +4,82 @@ const TOKEN =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjYsImlhdCI6MTYzNDQ4MDk0OSwiZXhwIjoxNjM0NTY3MzQ5fQ.xGPRFl9iCQ8RG6JOHQJHobDEhNkrEvk7pgoYMZwgoVo";
 
 const Termoslist = document.querySelector("#termos_block");
-let Terms;
-let TermoHTML;
+const searchBar = document.getElementById('searchBar');
+let STerms 
+let Terms = [];
 
-async function consultaTerms() {
+
+searchBar.addEventListener('keyup', (e) =>{
+    const searchString = e.target.value.toLowerCase();
+
+    const filteredTermos =  Terms.filter((Termo) =>{
+      return(
+        Termo.entrada.toLowerCase().includes(searchString)  
+      );
+    });
+    SearchTerms(filteredTermos);
+});
+
+
+const consultaTermos = async() =>{
+
+  try{
   const retorno = await fetch(`${URL}/terms/list`);
-  let Terms = await retorno.json();
-  console.log(Terms);
-  ListTerms(Terms);
+  STerms = await retorno.json();
+  
+  ListTerms(STerms);
+  } catch (err) {
+      console.error(err);
+  }
+  
+}
+const consultaTerms = async() =>{
 
+  try{
+  const retorno = await fetch(`${URL}/terms/list`);
+  Terms = await retorno.json();
+  
   mostrarTotalDeTermos(Terms.length);
+
+  
+  } catch (err) {
+      console.error(err);
+  }
+  
 }
 
-function ListTerms(Termos) {
-  Termos.forEach((Termo) => {
+function SearchTerms(Termos) {
+
+  Termos.map((Termo) => {
     TermoHTML = `
     <div class="termo_block" id="termo_block${Termo.id}">
            <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
            <img src="./img/icon_lixo.png" onclick="DeletandoTerms(${Termo.id})">       
     </div>
-          
       `;
+      
+    }).join('');
 
-    Termoslist.innerHTML += TermoHTML;
-  });
+    Termoslist.innerHTML =  TermoHTML;
 }
+
+function ListTerms(Termos) {
+
+  Termos.map((Termo) => {
+    TermoHTML = `
+    <div class="termo_block" id="termo_block${Termo.id}">
+           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
+           <img src="./img/icon_lixo.png" onclick="DeletandoTerms(${Termo.id})">       
+    </div>
+      `;
+      Termoslist.innerHTML += TermoHTML;
+    });
+ 
+}
+
+consultaTerms();
+consultaTermos();
+
 
 async function DeletandoTerms(termo_id) {
   const termo = await verTermoEspecifico(termo_id);
@@ -45,8 +96,9 @@ async function DeletandoTerms(termo_id) {
 
       criarNotificacao(null, id, entrada, autor, "DELETE");
 
-      alert("" + json.message);
+      alert("" + json.message );
       DeleteTerms(termo_id);
+      
     } else if (result.status === 404) {
       console.log(`não encontrado`);
     }
