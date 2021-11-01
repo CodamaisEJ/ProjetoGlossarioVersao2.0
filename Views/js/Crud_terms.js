@@ -5,7 +5,7 @@ const TOKEN =
 
 const Termoslist = document.querySelector("#termos_block");
 const searchBar = document.getElementById('searchBar');
-let STerms 
+let STerms = [];
 let Terms = [];
 
 

@@ -1,32 +1,84 @@
+const URL = "https://ficha-terminologica-backend.herokuapp.com";
+
 const TOKEN =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjYsImlhdCI6MTYzNDQ4MDk0OSwiZXhwIjoxNjM0NTY3MzQ5fQ.xGPRFl9iCQ8RG6JOHQJHobDEhNkrEvk7pgoYMZwgoVo";
 
 const Termoslist = document.querySelector("#termos_block");
-let Terms;
-let TermoHTML;
+const searchBar = document.getElementById('searchBar');
+let STerms = [];
+let Terms = [];
 
-async function consultaTerms() {
-  const retorno = await fetch(
-    "https://ficha-terminologica-backend.herokuapp.com/terms/list"
-  );
-  let Terms = await retorno.json();
 
-  ListTerms(Terms);
+searchBar.addEventListener('keyup', (e) =>{
+    const searchString = e.target.value.toLowerCase();
 
+    const filteredTermos =  Terms.filter((Termo) =>{
+      return(
+        Termo.entrada.toLowerCase().includes(searchString)  
+      );
+    });
+    SearchTerms(filteredTermos);
+});
+
+
+const consultaTermos = async() =>{
+
+  try{
+  const retorno = await fetch(`${URL}/terms/list`);
+  STerms = await retorno.json();
+  
+  ListTerms(STerms);
+  } catch (err) {
+      console.error(err);
+  }
+  
+}
+const consultaTerms = async() =>{
+
+  try{
+  const retorno = await fetch(`${URL}/terms/list`);
+  Terms = await retorno.json();
+  
   mostrarTotalDeTermos(Terms.length);
-  //console.log(Terms)
+
+  
+  } catch (err) {
+      console.error(err);
+  }
+  
+}
+
+function SearchTerms(Termos) {
+
+  Termos.map((Termo) => {
+    TermoHTML = `
+    <div class="termo_block" id="termo_block${Termo.id}">
+           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>            
+    </div>
+      `;
+      
+    }).join('');
+
+    Termoslist.innerHTML =  TermoHTML;
 }
 
 function ListTerms(Termos) {
-  Termos.forEach((Termo) => {
+
+  Termos.map((Termo) => {
     TermoHTML = `
     <div class="termo_block" id="termo_block${Termo.id}">
-           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>          
+           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
+                  
     </div>
       `;
-    Termoslist.innerHTML += TermoHTML;
-  });
+      Termoslist.innerHTML += TermoHTML;
+    });
+ 
 }
+
+consultaTerms();
+consultaTermos();
+
 
 async function DeletandoTerms(termo_id) {
   const retorno = await fetch(
@@ -43,7 +95,6 @@ function DeleteTerms(termo_id) {
   Termoslist.removeChild(el_termo);
 }
 
-consultaTerms();
 
 async function cadastrarTermo(event) {
   event.preventDefault();
