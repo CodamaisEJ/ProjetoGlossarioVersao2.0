@@ -26,7 +26,7 @@ try{
 const retorno = await fetch(`${URL}/terms/list`);
 STerms = await retorno.json();
 
-ListTerms(STerms);
+
 } catch (err) {
     console.error(err);
 }
@@ -50,11 +50,15 @@ const SearchTerms = (Termos) => {
   const htmlString = Termos
   .map((Termo) => {
     return`
+    
+    
     <div class="termo_block" id="termo_block${Termo.id}">
-           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>  
+           <p onclick="irParaTelaEditarTermoEspecialista(${Termo.id})">${Termo.entrada}</p>  
            <img id="revisar" src="./img/Input -senha.png" onclick="Check()">           
     </div>
     `; 
+    }).sort(function(a, b) {
+      return a.localeCompare(b);
     }).join('');
 
     Termoslist.innerHTML =  htmlString;
@@ -168,9 +172,9 @@ function pegarInputsDoForm(form_name) {
   // const data_ultima_revisao = form["data_ultima_revisao"].value;
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
   const situacao_termo = form["situacao_termo"].value;
- // if(situacao_termo == ""){
-  //  document.getElementById("termo_block").style.backgroundColor = "red";
- //}
+  if(situacao_termo.value === ""){
+    document.getElementById("termo_block").backgroundColor = "#9D1C33";
+  }
 
   // if (entrada === "" || cat_morfo === "" || genero_grupo === "") {
   //   alert("Por favor preencha os campos.");

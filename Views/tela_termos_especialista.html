@@ -133,19 +133,17 @@
         <h2>Desenvolvido por Codamais @ 2021</h2>
       </footer>
       <script>
-        function pegarInputsDoForm(form_name) {
-        const form = document.forms[form_name];
-        const situacao_termo = form["situacao_termo"].value;
-
-        if(situacao_termo == ""){
-          //document.getElementById("termo_block").style.backgroundcolor = "red";
-         document.body.style.backgroundColor = "red";
-        }
-        return {
-          situacao_termo
-         };
-        }  
-
+        
+    function pegarInputsDoForm(form_name) {
+      const form = document.forms[form_name];
+      const situacao_termo = form["situacao_termo"].value;
+      if(situacao_termo.value === ""){
+        document.getElementById("termo_block").backgroundColor = "#9D1C33";
+      }
+    }
+    pegarInputsDoForm(  );  
+    
+   
        // $(document).ready(function () {
         //  $("#pesquisa").on("keyup", function () {
         //    var value = $(this).val().toLowerCase();

@@ -57,6 +57,8 @@ const SearchTerms = (Termos) => {
                  
     </div>
     `; 
+    }).sort(function(a, b) {
+      return a.localeCompare(b);
     }).join('');
 
     Termoslist.innerHTML =  htmlString;
@@ -410,3 +412,5 @@ async function verTermoEspecifico(termo_id) {
     console.log(`Erro ao ver informações do termo`, error.message);
   }
 }
+
+

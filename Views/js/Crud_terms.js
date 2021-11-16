@@ -28,8 +28,9 @@ const consultaTermos = async() =>{
   try{
   const retorno = await fetch(`${URL}/terms/list`);
   STerms = await retorno.json();
+
   
-  ListTerms(STerms);
+
   } catch (err) {
       console.error(err);
   }
@@ -40,6 +41,7 @@ const consultaTerms = async() =>{
   try{
   const retorno = await fetch(`${URL}/terms/list`);
   Terms = await retorno.json();
+  
   SearchTerms(Terms);
   mostrarTotalDeTermos(Terms.length);
 
@@ -59,25 +61,12 @@ const SearchTerms = (Termos) => {
            <img src="./img/icon_lixo.png" onclick="DeletandoTerms(${Termo.id})">       
     </div>
     `; 
+    }).sort(function(a, b) {
+      return a.localeCompare(b);
     }).join('');
-
-    Termoslist.innerHTML =  htmlString;
+    
+    Termoslist.innerHTML =  htmlString;   
 }
-
-function ListTerms(Termos) {
-
-  Termos.map((Termo) => {
-    TermoHTML = `
-    <div class="termo_block" id="termo_block${Termo.id}">
-           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
-           <img src="./img/icon_lixo.png" onclick="DeletandoTerms(${Termo.id})">       
-    </div>
-      `;
-      Termoslist.innerHTML += TermoHTML;
-    });
- 
-}
-
 
 consultaTermos();
 
