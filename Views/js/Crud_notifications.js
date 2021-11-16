@@ -21,14 +21,9 @@ function ListNotications(Notificacaos) {
             <td>${Notificacao.termo}</td>
             <td>${Notificacao.status}</td>
             <td>${Notificacao.usuario}</td>      
-            <td>${Notificacao.data}</td>    
-         </tr>
-         <tr>
-            <td>${Notificacao.termo}</td>
-            <td>${Notificacao.status}</td>
-            <td>${Notificacao.usuario}</td>      
-            <td>${Notificacao.data}</td>    
-          </tr>   
+            <td>${Notificacao.data}</td> 
+            <br>  
+         </tr>     
       `;
     notificationslist.innerHTML += NotificacaoHTML;
   });

@@ -4,7 +4,6 @@ function mudaCor() {
     var backgroundColor = "#314C85";
     document.getElementById("header").style.backgroundColor = backgroundColor;
     document.getElementById("footer").style.backgroundColor = backgroundColor;
-    document.getElementById("fechar").style.backgroundColor = backgroundColor;
   }
   if (x == 2) {
     var backgroundColor = "#0D4F3F";

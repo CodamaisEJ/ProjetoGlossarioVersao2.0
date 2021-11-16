@@ -12,13 +12,13 @@
     />
     <link rel="stylesheet" href="./css/header-footer.css" />
     <link rel="stylesheet" href="./css/tela_cadastrar_termos_style.css" />
-    <script defer src="./js/tela_cadastrar_termos_input.js"></script>
+    <link rel="stylesheet" href="css/dropdown_user_icon.css">
+    
 
     <title>Edição</title>
   </head>
   <body onload="carregarDadosTermo()">
-    <script src="js/ficha_script.js"></script>
-    <script src="js/Crud_terms.js"></script>
+    
 
     <header id="header" class="header">
       <div class="logo">
@@ -28,17 +28,26 @@
       <div id="button-block" class="links">
         <ul>
           <li id="logo_notificacao">
-            <a href="./tela_notificacoes.html"
-              ><img src="./img/sino-de-notificacao 1.png" alt=""
-            /></a>
+              <a href="./tela_notificacoes.html"><img src="./img/sino-de-notificacao 1.png" alt=""></a>
           </li>
-          <li id="logo_user">
-            <a href=""><img src="./img/Group.png" alt="" /></a>
+          <li id="dropdown" class="dropdown">
+              <button onclick="myFunction()" class="dropbtn"></button>
+              <div id="myDropdown" class="dropdown-content">
+                <p id="nome_usuario">Flavia Maia</p>
+                <p id="status_user">Administrador</p>
+                <p id="alt" id="text">Alternar Perfis:</p>
+                <div class="a-block" id="block">
+                    <a href="">Administrador</a>
+                    <a href="">Especialista</a>
+                    <a href="">Pesquisador</a>
+                  
+                  <button onclick="deslogar()">Logout</button>
+              </div>
           </li>
-        </ul>
+      </ul>
       </div>
     </header>
-    <main class="conteudo">
+    <main class="conteudo container">
       <form id="Cadastrar_termos" name="edit_term">
         <fieldset>
           <legend>Edição</legend>
@@ -286,7 +295,7 @@
               </div>
               <div class="input-block">
                 <label for="data_registro">Data de Registro:</label>
-                <input type="date" name="data_registro" id="data_registro" />
+                <input type="date"  name="data_registro" id="data_registro" />
               </div>
               <div class="input-block">
                 <label for="revisao_linguistica">Revisão Linguistica:</label>
@@ -568,17 +577,27 @@
 
           <div class="button-block">
             <div class="verificar_button">
-              <button>Verificar</button>
+              <button type="button">Verificar</button>
             </div>
             <div class="salvar">
-              <button type="submit" onclick="editarTermo(event)">Salvar</button>
+              <button type="submit" onclick="editarTermo(event)">
+                Salvar
+              </button>
             </div>
           </div>
         </fieldset>
       </form>
     </main>
+
+    
+
     <footer id="footer">
       <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
+
+    <script src="js/ficha_script.js"></script>
+    <script src="js/Crud_terms.js"></script>
+    <script src="js/menu_dropdown.js"></script>
+    <script defer src="./js/tela_cadastrar_termos_input.js"></script>
   </body>
 </html>

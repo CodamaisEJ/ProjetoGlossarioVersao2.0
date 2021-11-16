@@ -124,6 +124,16 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+#sin {
+  background-color: #fafafa;
+  height: 54.999996185302734px;
+  width: 55px;
+  border-radius: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /*#logo_notificacao{
   display: none;
 }*/

@@ -92,34 +92,34 @@
              </div>
          </div>
          <div class="alphabet-block">
-           <p>A-Z</p>
-           <span>|<a onclick="" href=""> A</a></span>
-           <span>|<a href=""> B</a></span>
-           <span>|<a href=""> C</a></span>
-           <span>|<a href=""> D</a></span>
-           <span>|<a href=""> E</a></span>
-           <span>|<a href=""> F</a></span>
-           <span>|<a href=""> G</a></span>
-           <span>|<a href=""> H</a></span>
-           <span>|<a href=""> I</a></span>
-           <span>|<a href=""> J</a></span>
-           <span>|<a href=""> K</a></span>
-           <span>|<a href=""> L</a></span>
-           <span>|<a href=""> M</a></span>
-           <span>|<a href=""> N</a></span>
-           <span>|<a href=""> O</a></span>
-           <span>|<a href=""> P</a></span>
-           <span>|<a href=""> Q</a></span>
-           <span>|<a href=""> R</a></span>
-           <span>|<a href=""> S</a></span>
-           <span>|<a href=""> T</a></span>
-           <span>|<a href=""> U</a></span>
-           <span>|<a href=""> V</a></span>
-           <span>|<a href=""> W</a></span>
-           <span>|<a href=""> X</a></span>
-           <span>|<a href=""> Y</a></span>
-           <span>|<a href=""> Z</a></span>
-         </div>
+          <p>A-Z</p>
+          <span>|<a onclick="" href=""> A</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> B</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> C</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> D</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> E</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> F</a></span>
+          <span>|<a href=""onclick="destrocaImg()"> G</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> H</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> I</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> J</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> K</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> L</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> M</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> N</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> O</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> P</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> Q</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> R</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> S</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> T</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> U</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> V</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> W</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> X</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> Y</a></span>
+          <span>|<a href="" onclick="destrocaImg()"> Z</a></span>
+        </div>
          <div class="block_List">
            <div class="termos_block" id="termos_block">
             
@@ -133,15 +133,28 @@
         <h2>Desenvolvido por Codamais @ 2021</h2>
       </footer>
       <script>
-        $(document).ready(function () {
-          $("#pesquisa").on("keyup", function () {
-            var value = $(this).val().toLowerCase();
-            console.log(`value`, value);
-            $("#lista-de-termos *").filter(function () {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-            });
-          });
-        });
+        function pegarInputsDoForm(form_name) {
+        const form = document.forms[form_name];
+        const situacao_termo = form["situacao_termo"].value;
+
+        if(situacao_termo == ""){
+          //document.getElementById("termo_block").style.backgroundcolor = "red";
+         document.body.style.backgroundColor = "red";
+        }
+        return {
+          situacao_termo
+         };
+        }  
+
+       // $(document).ready(function () {
+        //  $("#pesquisa").on("keyup", function () {
+        //    var value = $(this).val().toLowerCase();
+        //    console.log(`value`, value);
+       //     $("#lista-de-termos *").filter(function () {
+       //       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+       //     });
+      ////    });
+     //   });
       </script>
       
       <script src="js/Revisar_termos.js"></script>

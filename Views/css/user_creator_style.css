@@ -7,6 +7,7 @@
 #create_user fieldset {
   min-width: 626px;
   padding-top: 2rem;
+  margin-left: 400px;
 }
 #create_user fieldset legend {
   text-align: center;

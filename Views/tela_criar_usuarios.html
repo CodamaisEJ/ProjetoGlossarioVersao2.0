@@ -11,13 +11,17 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/header-footer.css" />
+    <link rel="stylesheet" href="css/termos_style.css" />
     <link rel="stylesheet" href="./css/user_creator_style.css" />
+    <link rel="stylesheet" href="css/dropdown_user_icon.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <!-- CSS Personalizado -->
+     <link rel="stylesheet" href="./css/meucss.css" />
 
     <title>Cadastro</title>
   </head>
   <body onload="mudaCor(),gerarSenhaAleatoriaParaUsuario()">
-    <script src="js/user_creator_script.js"></script>
-    <script src="js/Crud_users.js"></script>
+    
 
     <header id="header" class="header">
       <div class="logo">
@@ -30,10 +34,23 @@
             <a href="tela_cadastrar_termos.html">Cadastrar Termos +</a>
           </li>
           <li id="logo_notificacao">
-            <a href=""><img src="./img/sino-de-notificacao 1.png" alt="" /></a>
+            <a href="./tela_notificacoes.html"
+              ><img src="./img/sino-de-notificacao 1.png" alt=""
+            /></a>
           </li>
-          <li id="logo_user">
-            <a href=""><img src="./img/Group.png" alt="" /></a>
+          <li id="dropdown" class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"></button>
+            <div id="myDropdown" class="dropdown-content">
+              <p id="nome_usuario">Flavia Maia</p>
+              <p id="status_user">Administrador</p>
+              <p id="alt" id="text">Alternar Perfis:</p>
+              <div class="a-block" id="block">
+                <a href="">Administrador</a>
+                <a href="">Especialista</a>
+                <a href="">Pesquisador</a>
+              </div>
+              <button onclick="deslogar()">Logout</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -98,7 +115,7 @@
             />
           </div>
           <div class="button-block">
-            <button id="return" onclick="history.go(-1)">Voltar</button>
+            <button id="return" onclick="trocarPagina()" >Voltar</button>
             <button id="save" type="submit" onclick="cadastrarUsuario(event)">
               Salvar
             </button>
@@ -110,5 +127,10 @@
     <footer id="footer">
       <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
+
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/user_creator_script.js"></script>
+    <script src="js/menu_dropdown.js"></script>
+    <script src="js/Crud_users.js"></script>
   </body>
 </html>

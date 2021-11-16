@@ -21,7 +21,10 @@ function mudaCor() {
   }
 }
 
+
 function validador() {
+
+  
   var z = localStorage.getItem("tipoUsuario");
   if (z == 1) {
     var usuario = "";
@@ -78,3 +81,5 @@ function validador() {
     }
   }
 }
+
+

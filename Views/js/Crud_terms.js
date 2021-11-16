@@ -5,6 +5,7 @@ const TOKEN =
 
 const Termoslist = document.querySelector("#termos_block");
 const searchBar = document.getElementById('searchBar');
+
 let STerms = [];
 let Terms = [];
 
@@ -18,6 +19,7 @@ searchBar.addEventListener('keyup', (e) =>{
       );
     });
     SearchTerms(filteredTermos);
+    
 });
 
 
@@ -34,11 +36,11 @@ const consultaTermos = async() =>{
   
 }
 const consultaTerms = async() =>{
-
+  
   try{
   const retorno = await fetch(`${URL}/terms/list`);
   Terms = await retorno.json();
-  
+  SearchTerms(Terms);
   mostrarTotalDeTermos(Terms.length);
 
   
@@ -48,19 +50,18 @@ const consultaTerms = async() =>{
   
 }
 
-function SearchTerms(Termos) {
-
-  Termos.map((Termo) => {
-    TermoHTML = `
+const SearchTerms = (Termos) => {
+  const htmlString = Termos
+  .map((Termo) => {
+    return`
     <div class="termo_block" id="termo_block${Termo.id}">
            <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
            <img src="./img/icon_lixo.png" onclick="DeletandoTerms(${Termo.id})">       
     </div>
-      `;
-      
+    `; 
     }).join('');
 
-    Termoslist.innerHTML =  TermoHTML;
+    Termoslist.innerHTML =  htmlString;
 }
 
 function ListTerms(Termos) {
@@ -77,7 +78,7 @@ function ListTerms(Termos) {
  
 }
 
-consultaTerms();
+
 consultaTermos();
 
 
@@ -96,16 +97,21 @@ async function DeletandoTerms(termo_id) {
 
       criarNotificacao(null, id, entrada, autor, "DELETE");
 
-      alert("" + json.message );
+      alert("Termo Deletado com Sucesso!");
       DeleteTerms(termo_id);
+      
       
     } else if (result.status === 404) {
       console.log(`não encontrado`);
     }
+    
   } catch (error) {
     console.log(`Erro ao deletar termo`, error.message);
   }
+  location.reload();
+  trocaImg();
 }
+
 
 function DeleteTerms(termo_id) {
   const el_termo = document.querySelector(`#termo${termo_id}`);
@@ -128,12 +134,16 @@ async function cadastrarTermo(event) {
     });
 
     if (result.status === 201) {
+      
       const { id, entrada, autor } = await result.json();
 
       criarNotificacao(event, id, entrada, autor, "POST");
 
       alert("Termo cadastrado com sucesso.");
+     
       location.href = "tela_termos.html";
+      
+      
     } else if (result.status === 401) {
       alert("Ocorreu um erro: Não autorizado.");
     }
@@ -141,6 +151,16 @@ async function cadastrarTermo(event) {
     alert("Erro ao cadastrar termo");
     console.log(`error.message`, error.message);
   }
+  
+}
+
+function trocaImg(){
+  const img = document.getElementById("sin");
+  img.src="./img/icone-sino-da-notificação.jpg"; 
+}
+function destrocaImg(){
+  const img = document.getElementById("sin");
+  img.src="./img/sino-de-notificacao 1.png"; 
 }
 
 function irParaTelaEditarTermo(term_id) {
@@ -181,6 +201,7 @@ async function editarTermo(event) {
     alert("Erro ao cadastrar termo");
     console.log(`error.message`, error.message);
   }
+  trocaImg();
 }
 
 function mostrarTotalDeTermos(total_termos) {
@@ -193,6 +214,10 @@ function pegarInputsDoForm(form_name) {
   const area = form["area"].value;
   const categoria_gramatical = form["cat_morfo"].value;
   const entrada = form["entrada"].value;
+  if(entrada == ""){
+    alert("Preencha todos os campos")
+    entrada.attr('required', true);
+  }
   const autor = form["autor"].value;
   const genero = form["genero_grupo"].value;
   const numero = form["num_grupo"].value;
@@ -303,6 +328,7 @@ async function carregarDadosTermo() {
     form["entrada"].value = json.entrada;
     form["cat_morfo"].value = json.categoria_gramatical;
     form["genero_grupo"].value = json.genero;
+    form["num_grupo"].value = json.numero;
     form["variante"].value = json.variantes;
     form["area"].value = json.area;
     form["autor"].value = json.autor;
@@ -361,6 +387,7 @@ async function criarNotificacao(event, id, entrada, autor, situacao_termo) {
   switch (situacao_termo) {
     case "POST":
       situacao = "Cadastrado";
+      
       break;
 
     case "PUT":
@@ -396,6 +423,7 @@ async function criarNotificacao(event, id, entrada, autor, situacao_termo) {
 
     if (result.status === 201) {
       console.log(`Notificação criada com suesso.`);
+     
     } else if (result.status === 401) {
       console.log("Ocorreu um erro: Não autorizado.");
     }
