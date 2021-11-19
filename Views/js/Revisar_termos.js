@@ -50,20 +50,37 @@ const SearchTerms = (Termos) => {
   const htmlString = Termos
   .map((Termo) => {
     return`
-    
-    
+    <style>
+    #sta{
+      font-weight: bold;
+    }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+    <script src="meusjavascripts/jquery-2.1.3.min.js" type="text/javascript"></script>
+
     <div class="termo_block" id="termo_block${Termo.id}">
            <p onclick="irParaTelaEditarTermoEspecialista(${Termo.id})">${Termo.entrada}</p>  
-           <img id="revisar" src="./img/Input -senha.png" onclick="Check()">           
+            <p id="sta">${Termo.status} </p>        
     </div>
+
+    <script>
+    var it = ${Termo.status}
+    if (it == "validado"){
+      const demoClasses = document.querySelectorAll("#revisar");
+      demoClasses.setAttribute("src", "./img/ok.png");
+      <img id="revisar" onclick='Check()' src="./img/Input -senha.png" >
+    }
+    </script>
+
     `; 
     }).sort(function(a, b) {
       return a.localeCompare(b);
     }).join('');
+   
 
     Termoslist.innerHTML =  htmlString;
 }
-
 
 
 consultaTermos();
@@ -72,6 +89,7 @@ function Check() {
   const demoClasses = document.querySelectorAll("#revisar");
 
   // Change the text of multiple elements with a loop
+  
   demoClasses.forEach((element) => {
     element.setAttribute("src", "./img/ok.png");
   });
@@ -79,6 +97,8 @@ function Check() {
   // Access the first element in the NodeList
   demoClasses[0];
 }
+  
+
 
 function irParaTelaEditarTermoEspecialista(term_id) {
   history.pushState(term_id, "", "tela_revisar_termo.html");
@@ -105,11 +125,12 @@ async function revisarTermo(event) {
 
     if (result.ok) {
       // Criando notificação
-      const { id, entrada, autor } = await result.json();
+      const { id, entrada, autor, status } = await result.json();
 
       criarNotificacao(event, id, entrada, autor, "PUT");
 
       alert("Termo revisado com sucesso.");
+      
       location.href = "tela_termos_especialista.html";
     } else {
       alert("Termo já existe.");
@@ -118,6 +139,7 @@ async function revisarTermo(event) {
     alert("Erro ao cadastrar termo");
     console.log(`error.message`, error.message);
   }
+  
 }
 
 function mostrarTotalDeTermos(total_termos) {
@@ -171,11 +193,13 @@ function pegarInputsDoForm(form_name) {
   const revisao_especialista = form["revisao_especialista"].value;
   // const data_ultima_revisao = form["data_ultima_revisao"].value;
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
-  const situacao_termo = form["situacao_termo"].value;
-  if(situacao_termo.value === ""){
-    document.getElementById("termo_block").backgroundColor = "#9D1C33";
-  }
+  const status = form["status"].value;
 
+  
+
+  //if (situacao_termo == ""){
+   // alert("Por favor preencha os campos.");
+ // }
   // if (entrada === "" || cat_morfo === "" || genero_grupo === "") {
   //   alert("Por favor preencha os campos.");
   //   return;
@@ -230,7 +254,7 @@ function pegarInputsDoForm(form_name) {
     sinomica,
     siglas,
     acronimos,
-    situacao_termo,
+    status,
   };
 }
 
@@ -289,7 +313,11 @@ async function carregarDadosTermo() {
     form["revisao_especialista"].value = json.revisao_linguistica;
     form["data_ultima_revisao"].value = json.data_da_ultima_revisao;
     form["frequencia_termo_corpus"].value = json.frequencia_termo_corpus;
-
+    form["status"].value = json.status;
+    
+    if(form["status"].value === "validado"){
+      alert("Por favor preencha os campos.");
+    }
     console.log(`dados do termo carregados`);
   } catch (error) {
     console.log(`Erro ao carregar dados do termo`, error);
@@ -297,13 +325,13 @@ async function carregarDadosTermo() {
 }
 
 // NOTIFICAÇÃO
-async function criarNotificacao(event, id, entrada, autor, situacao_termo) {
+async function criarNotificacao(event, id, entrada, autor, status) {
   if (event !== null) {
     event.preventDefault();
   }
 
   let situacao;
-  switch (situacao_termo) {
+  switch (status) {
     case "POST":
       situacao = "Cadastrado";
       break;
@@ -364,4 +392,27 @@ async function verTermoEspecifico(termo_id) {
   } catch (error) {
     console.log(`Erro ao ver informações do termo`, error.message);
   }
+}
+
+  
+
+async function carregar() {
+
+  try {
+    const result = await fetch(`${URL}/terms/list`);
+
+    const json = await result.json();
+    console.log(`json`, json);
+    const form = document.forms["edit_term"];
+
+    form["status"].value = json.status;
+    
+    if(form["status"].value === "validado"){
+      alert("Por favor preencha os campos.");
+    }
+    console.log(`dados do termo carregados`);
+  } catch (error) {
+    console.log(`Erro ao carregar dados do termo`, error);
+  }
+
 }

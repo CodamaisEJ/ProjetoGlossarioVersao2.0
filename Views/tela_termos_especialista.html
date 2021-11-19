@@ -7,10 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
-
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/termos_style.css">
     <link rel="stylesheet" href="css/header-footer.css">
     <link rel="stylesheet" href="css/dropdown_user_icon.css">
+    <script>
+      var currentImgIndex=1;
+      var ImgSrcArray = [ 
+      './img/Input -senha.png',
+      './img/ok.png'
+      ];
+      
+      function trocar(myvalue){
+        if(currentImgIndex == ImgSrcArray.length) 
+        {
+          currentImgIndex=0;
+        }
+        document.getElementById("revisar").src=ImgSrcArray[currentImgIndex]; 
+          currentImgIndex++;    
+      }    
+        
+      </script>   
    
     <style>
       legend{
@@ -84,7 +101,7 @@
            
            <div class="header_block">
              <div class="title-block">
-                 <h2>Editar e Deletar</h2>
+                 <h2>Revisar</h2>
                  <p>Total de termos: <span id="total-de-termos"></span></p>
              </div>
              <div class="search-block">
@@ -134,16 +151,8 @@
       </footer>
       <script>
         
-    function pegarInputsDoForm(form_name) {
-      const form = document.forms[form_name];
-      const situacao_termo = form["situacao_termo"].value;
-      if(situacao_termo.value === ""){
-        document.getElementById("termo_block").backgroundColor = "#9D1C33";
-      }
-    }
-    pegarInputsDoForm(  );  
-    
-   
+           
+           
        // $(document).ready(function () {
         //  $("#pesquisa").on("keyup", function () {
         //    var value = $(this).val().toLowerCase();
@@ -156,7 +165,6 @@
       </script>
       
       <script src="js/Revisar_termos.js"></script>
-      <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="js/cadastro_script.js"></script>
       <script src="js/menu_dropdown.js"></script>
   </body>
