@@ -177,7 +177,7 @@ function pegarInputsDoForm(form_name) {
   const form = document.forms[form_name];
 
   const area = form["area"].value;
-  const categoria_gramatical = form["cat_morfo"].value;
+  const categoria_morfologica = form["cat_morfo"].value;
   const entrada = form["entrada"].value;
   if(entrada == ""){
     alert("Preencha todos os campos")
@@ -202,7 +202,7 @@ function pegarInputsDoForm(form_name) {
   const contexto_de_uso2 = form["context_uso_2"].value;
   const contexto_de_uso3 = form["context_uso_3"].value;
   const remissiva = form["remissivas"].value;
-  const hiperonimo = form["hiperonimos"].value;
+  const hiperonimo = form["hiperonimo"].value;
   const co_hiponimo = form["co-hiponimo"].value;
   const data_de_registro = form["data_registro"].value;
   const revisao_linguistica = form["revisao_linguistica"].value;
@@ -233,7 +233,7 @@ function pegarInputsDoForm(form_name) {
 
   return {
     area,
-    categoria_gramatical,
+    categoria_morfologica,
     data_de_registro,
     entrada,
     genero,
@@ -292,7 +292,7 @@ async function carregarDadosTermo() {
     const form = document.forms["edit_term"];
 
     form["entrada"].value = json.entrada;
-    form["cat_morfo"].value = json.categoria_gramatical;
+    form["cat_morfo"].value = json.categoria_morfologica;
     form["genero_grupo"].value = json.genero;
     form["num_grupo"].value = json.numero;
     form["variante"].value = json.variantes;
@@ -312,8 +312,8 @@ async function carregarDadosTermo() {
     form["context_uso_1"].value = json.contexto_de_uso1;
     form["context_uso_2"].value = json.contexto_de_uso2;
     form["context_uso_3"].value = json.contexto_de_uso3;
-    form["remissivas"].value = json.remissivas;
-    form["hiperonimos"].value = json.hiperonimos;
+    //form["remissivas"].value = json.remissivas;
+    form["hiperonimo"].value = json.hiperonimo;
     form["co-hiponimo"].value = json.co_hiponimo;
     form["data_registro"].value = json.data_de_registro;
     form["revisao_linguistica"].value = json.revisao_linguistica;

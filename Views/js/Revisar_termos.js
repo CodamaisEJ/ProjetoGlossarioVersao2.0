@@ -150,7 +150,7 @@ function pegarInputsDoForm(form_name) {
   const form = document.forms[form_name];
 
   const area = form["area"].value;
-  const categoria_gramatical = form["cat_morfo"].value;
+  const categoria_morfologica = form["cat_morfo"].value;
   const entrada = form["entrada"].value;
   const autor = form["autor"].value;
   const genero = form["genero_grupo"].value;
@@ -170,7 +170,7 @@ function pegarInputsDoForm(form_name) {
   const contexto_de_uso2 = form["context_uso_2"].value;
   const contexto_de_uso3 = form["context_uso_3"].value;
   const remissiva = form["remissivas"].value;
-  const hiperonimo = form["hiperonimos"].value;
+  const hiperonimo = form["hiperonimo"].value;
   const co_hiponimo = form["co-hiponimo"].value;
   // const data_registro = form["data_registro"].value;
   const revisao_linguistica = form["revisao_linguistica"].value;
@@ -195,6 +195,10 @@ function pegarInputsDoForm(form_name) {
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
   const status = form["status"].value;
 
+  if(status== ""){
+    alert("Preencha todos os campos")
+    status.attr('required', true);
+  }
   
 
   //if (situacao_termo == ""){
@@ -207,7 +211,7 @@ function pegarInputsDoForm(form_name) {
 
   return {
     area,
-    categoria_gramatical,
+    categoria_morfologica,
     entrada,
     genero,
     nota,
@@ -269,7 +273,7 @@ async function carregarDadosTermo() {
     const form = document.forms["edit_term"];
 
     form["entrada"].value = json.entrada;
-    form["cat_morfo"].value = json.categoria_gramatical;
+    form["cat_morfo"].value = json.categoria_morfologica;
     form["genero_grupo"].value = json.genero;
     form["num_grupo"].value = json.numero;
     form["variante"].value = json.variantes;
@@ -289,8 +293,8 @@ async function carregarDadosTermo() {
     form["context_uso_1"].value = json.contexto_de_uso1;
     form["context_uso_2"].value = json.contexto_de_uso2;
     form["context_uso_3"].value = json.contexto_de_uso3;
-    form["remissivas"].value = json.remissivas;
-    form["hiperonimos"].value = json.hiperonimos;
+    //form["remissivas"].value = json.remissivas;
+    form["hiperonimo"].value = json.hiperonimo;
     form["co-hiponimo"].value = json.co_hiponimo;
     form["data_registro"].value = json.data_de_registro;
     form["revisao_linguistica"].value = json.revisao_linguistica;
@@ -314,10 +318,12 @@ async function carregarDadosTermo() {
     form["data_ultima_revisao"].value = json.data_da_ultima_revisao;
     form["frequencia_termo_corpus"].value = json.frequencia_termo_corpus;
     form["status"].value = json.status;
+
     
-    if(form["status"].value === "validado"){
-      alert("Por favor preencha os campos.");
-    }
+    
+   // if(form["status"].value === "validado"){
+      //alert("Por favor preencha os campos.");
+  //  }
     console.log(`dados do termo carregados`);
   } catch (error) {
     console.log(`Erro ao carregar dados do termo`, error);
@@ -395,24 +401,3 @@ async function verTermoEspecifico(termo_id) {
 }
 
   
-
-async function carregar() {
-
-  try {
-    const result = await fetch(`${URL}/terms/list`);
-
-    const json = await result.json();
-    console.log(`json`, json);
-    const form = document.forms["edit_term"];
-
-    form["status"].value = json.status;
-    
-    if(form["status"].value === "validado"){
-      alert("Por favor preencha os campos.");
-    }
-    console.log(`dados do termo carregados`);
-  } catch (error) {
-    console.log(`Erro ao carregar dados do termo`, error);
-  }
-
-}
