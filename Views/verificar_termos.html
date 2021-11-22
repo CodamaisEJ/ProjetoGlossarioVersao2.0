@@ -11,14 +11,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/header-footer.css" />
-    <link rel="stylesheet" href="./css/tela_cadastrar_termos_style.css" />
+    <link rel="stylesheet" href="./css/verifcar_termos.css" />
     <link rel="stylesheet" href="css/dropdown_user_icon.css">
-    
+   
 
-    <title>Edição</title>
+    <title>Cadastro</title>
   </head>
-  <body onload="carregarDadosTermo()">
-    
+  <body>   
 
     <header id="header" class="header">
       <div class="logo">
@@ -48,9 +47,11 @@
       </div>
     </header>
     <main class="conteudo container">
-      <form id="Cadastrar_termos" name="edit_term">
+      <form id="Cadastrar_termos" name="create_term">
         <fieldset>
-          <legend>Edição</legend>
+          <div id="titu">
+          <legend>Cadastrar</legend>  <a href="./tela_cadastrar_termos.html"><img id="fim" src="./img/X.png" alt=""></a>
+          </div>
           <div class="page-block">
             <div class="list-block">
               <div class="input-block">
@@ -60,6 +61,7 @@
                   type="text"
                   name="entrada"
                   id="entrada"
+                  required
                 />
               </div>
               <div class="radio-block">
@@ -140,36 +142,12 @@
                   name="dicio-lingua-comu-def"
                   id="dicio-lingua-comu-def"
                 ></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMais('dicio-espe-def-block');"
-                    class="butao_status"
-                  >
-                    (+)
-                  </button>
-                </div>
+                
               </div>
               <div id="dicio-espe-def-block" class="input-block">
                 <label for="dicio-espe-def">Dicionário Especializado:</label>
                 <textarea name="dicio-espe-def" id="dicio-espe-def"></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMenos('dicio-espe-def-block',true,['dicio-espe2-def-block','prop_defini-block'])"
-                    class="butao_status"
-                  >
-                    (-)
-                  </button>
-                  <button
-                    type="button"
-                    onclick="butaoMais('dicio-espe2-def-block')"
-                    id="butao_menos_dicio_espe_def"
-                    class="butao_status"
-                  >
-                    (+)
-                  </button>
-                </div>
+                
               </div>
               <div id="dicio-espe2-def-block" class="input-block">
                 <label for="dicio-espe2-def">Dicionário Especializado 2:</label>
@@ -177,36 +155,12 @@
                   name="dicio-espe2-def"
                   id="dicio-espe2-def"
                 ></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMenos('dicio-espe2-def-block',true,['prop_defini-block'])"
-                    class="butao_status"
-                  >
-                    (-)
-                  </button>
-                  <button
-                    type="button"
-                    onclick="butaoMais('prop_defini-block')"
-                    id="butao_menos_dicio_espe_def"
-                    class="butao_status"
-                  >
-                    (+)
-                  </button>
-                </div>
+                
               </div>
               <div id="prop_defini-block" class="input-block">
                 <label for="prop_defini">Proposta de definição:</label>
                 <textarea name="prop_defini" id="prop_defini"></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMenos('prop_defini-block',true,[])"
-                    class="butao_status"
-                  >
-                    (-)
-                  </button>
-                </div>
+                
               </div>
 
               <div class="input-block">
@@ -222,48 +176,17 @@
               <div id="context_uso_1_block" class="input-block">
                 <label for="context_uso_1">Contexto de uso 1:</label>
                 <textarea name="context_uso_1" id="context_uso_1"></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMais('context_uso_2_block')"
-                    class="butao_status"
-                  >
-                    (+)
-                  </button>
-                </div>
+                
               </div>
               <div id="context_uso_2_block" class="input-block">
                 <label for="context_uso_2">Contexto de uso 2:</label>
                 <textarea name="context_uso_2" id="context_uso_2"></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMenos('context_uso_2_block',true,['context_uso_3-block'])"
-                    class="butao_status"
-                  >
-                    (-)
-                  </button>
-                  <button
-                    type="button"
-                    onclick="butaoMais('context_uso_3-block')"
-                    class="butao_status"
-                  >
-                    (+)
-                  </button>
-                </div>
+                
               </div>
               <div id="context_uso_3-block" class="input-block">
                 <label for="context_uso_3">Contexto de uso 3:</label>
                 <textarea name="context_uso_3" id="context_uso_3"></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMenos('context_uso_3-block',false,[])"
-                    class="butao_status"
-                  >
-                    (-)
-                  </button>
-                </div>
+                
               </div>
 
               <div class="input-block">
@@ -294,8 +217,8 @@
                 <input type="text" name="autor" id="autor" />
               </div>
               <div class="input-block">
-                <label for="data_de_registro">Data de Registro:</label>
-                <input disabled type="date"  name="data_de_registro" id="data_de_registro" />
+                <label for="data_registro">Data de Registro:</label>
+                <input type="date"  name="data_registro" id="data_registro" />
               </div>
               <div class="input-block">
                 <label for="revisao_linguistica">Revisão Linguistica:</label>
@@ -323,27 +246,6 @@
               <div id="termo-italiano-block" class="input-block">
                 <label for="termo-Italiano">Termo em Italiano:</label>
                 <input type="text" name="termo-Italiano" id="termo-Italiano" />
-              </div>
-              <div id="termo-italiano-definicao-block" class="input-block">
-                <label for="definicao_italiano"
-                  >Definicão em Italiano:</label
-                >
-                <textarea
-                  type="text"
-                  name="definicao_italiano"
-                  id="definicao_italiano"
-                ></textarea>
-                
-              </div>
-              <div id="termo-italiano-contexto-block" class="input-block">
-                <label for="contexto_italiano"
-                  >Contexto de Uso em Italiano:</label
-                >
-                <textarea
-                  name="contexto_italiano"
-                  id="contexto_italiano"
-                ></textarea>
-                
               </div>
               <div id="termo-frances-block" class="input-block">
                 <label for="termo-frances">Termo em Francês:</label>
@@ -404,13 +306,7 @@
                   id="font-dici-lingua-comum"
                 ></textarea>
                 <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMais('font-dici-especi-1_block')"
-                    class="butao_status"
-                  >
-                    (+)
-                  </button>
+                  
                 </div>
               </div>
               <div id="font-dici-especi-1_block" class="input-block">
@@ -421,23 +317,7 @@
                   name="font-dici-especi-1"
                   id="font-dici-especi-1"
                 ></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMenos('font-dici-especi-1_block',true,['font-dici-especi-2_block','font-prop-defi_block'])"
-                    class="butao_status"
-                  >
-                    (-)
-                  </button>
-                  <button
-                    type="button"
-                    onclick="butaoMais('font-dici-especi-2_block')"
-                    id="butao_menos_dicio_espe_def"
-                    class="butao_status"
-                  >
-                    (+)
-                  </button>
-                </div>
+                
               </div>
               <div id="font-dici-especi-2_block" class="input-block">
                 <label for="font-dici-especi-2"
@@ -447,36 +327,12 @@
                   name="font-dici-especi-2"
                   id="font-dici-especi-2"
                 ></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMenos('font-dici-especi-2_block',true,['font-prop-defi_block'])"
-                    class="butao_status"
-                  >
-                    (-)
-                  </button>
-                  <button
-                    type="button"
-                    onclick="butaoMais('font-prop-defi_block')"
-                    id="butao_menos_dicio_espe_def"
-                    class="butao_status"
-                  >
-                    (+)
-                  </button>
-                </div>
+               
               </div>
               <div id="font-prop-defi_block" class="input-block">
                 <label for="font-prop-defi">Fonte - Proposta Definição:</label>
                 <textarea name="font-prop-defi" id="font-prop-defi"></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMenos('font-prop-defi_block',false,[])"
-                    class="butao_status"
-                  >
-                    (-)
-                  </button>
-                </div>
+                
               </div>
 
               <div class="input-block">
@@ -497,15 +353,7 @@
                   name="font_contexto_uso_1"
                   id="font_contexto_uso_1"
                 ></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMais('font_contexto_uso_2_block')"
-                    class="butao_status"
-                  >
-                    (+)
-                  </button>
-                </div>
+                
               </div>
               <div id="font_contexto_uso_2_block" class="input-block">
                 <label for="font_contexto_uso_2"
@@ -515,23 +363,7 @@
                   name="font_contexto_uso_2"
                   id="font_contexto_uso_2"
                 ></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMenos('font_contexto_uso_2_block',true,['font_contexto_uso_3_block'])"
-                    class="butao_status"
-                  >
-                    (-)
-                  </button>
-                  <button
-                    type="button"
-                    onclick="butaoMais('font_contexto_uso_3_block')"
-                    id="butao_menos_dicio_espe_def"
-                    class="butao_status"
-                  >
-                    (+)
-                  </button>
-                </div>
+                
               </div>
               <div id="font_contexto_uso_3_block" class="input-block">
                 <label for="font_contexto_uso_3"
@@ -541,15 +373,7 @@
                   name="font_contexto_uso_3"
                   id="font_contexto_uso_3"
                 ></textarea>
-                <div id="button_mais-block">
-                  <button
-                    type="button"
-                    onclick="butaoMenos('font_contexto_uso_3_block',false,[])"
-                    class="butao_status"
-                  >
-                    (-)
-                  </button>
-                </div>
+                
               </div>
 
               <div class="input-block">
@@ -558,7 +382,7 @@
               </div>
 
               <div class="input-block">
-                <label for="redator">Redator:</label>
+                <label for="redator">Redador:</label>
                 <input type="text" name="redator" id="redator" />
               </div>
 
@@ -596,22 +420,10 @@
             </div>
           </div>
 
-          <div class="button-block">
-            <div class="verificar_button">
-              <button type="button">Verificar</button>
-            </div>
-            <div class="salvar">
-              <button type="submit" onclick="editarTermo(event)">
-                Salvar
-              </button>
-            </div>
-          </div>
+        
         </fieldset>
       </form>
     </main>
-
-    
-
     <footer id="footer">
       <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
@@ -619,6 +431,6 @@
     <script src="js/ficha_script.js"></script>
     <script src="js/Crud_terms.js"></script>
     <script src="js/menu_dropdown.js"></script>
-    <script defer src="./js/tela_cadastrar_termos_input.js"></script>
+    
   </body>
 </html>

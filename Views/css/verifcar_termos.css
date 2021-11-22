@@ -108,6 +108,7 @@
 #definicao,
 #context_uso,
 #remissivas,
+#idiomas,
 #fonte_definicao,
 #font_contexto_uso {
   grid-column-start: 1;
@@ -131,43 +132,18 @@
   background-position: center right 20px;
   padding-left: 1rem;
 }
-
-#idiomas{
-  text-align: left;
-  width: 626px;
-  height: 48px;
-  background: #ffffff;
-  border: 2px solid #7b8ca7;
-  box-sizing: border-box;
-  border-radius: 8px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
-  color: #7b8ca7;
-  appearance: none;
-  background-image: url("../img/Polygon\ 6.png");
-  background-repeat: no-repeat;
-  background-position: center right 20px;
-  padding-left: 1rem;
-}
-
 #verbo {
   margin-left: 4rem;
 }
-
 #feminino,
 #dois-generos {
   margin-left: 2rem;
 }
-
 #plural,
 #validado-com-adaptacoes,
 #rejeitado {
   margin-left: 3rem;
 }
-
 .button-block {
   display: flex;
   justify-content: center;
@@ -270,8 +246,6 @@ input[type="date"]::-webkit-inner-spin-button {
 #co-hiponimo-block,
 #termo-ingles-block,
 #termo-italiano-block,
-#termo-italiano-definicao-block,
-#termo-italiano-contexto-block,
 #termo-Espanhol-block,
 #termo-frances-block,
 #font-dici-lingua-comum_block,
@@ -281,9 +255,18 @@ input[type="date"]::-webkit-inner-spin-button {
 #font_contexto_uso_1_block,
 #font_contexto_uso_2_block,
 #font_contexto_uso_3_block {
-  display: none;
+  display: flex;
 }
-
+#titu{
+  display: flex;
+  margin-bottom: 20px;
+}
+#fim{ 
+  margin-top: 60px;
+  text-align: right;
+  cursor: pointer;
+  position: fixed;
+}
 #button_mais-block,
 #button_menos-block {
   width: 100%;
@@ -299,18 +282,6 @@ input[type="date"]::-webkit-inner-spin-button {
   font-size: 1rem;
   line-height: 42px;
   color: #101564;
-}
-
-#titu{
-  display: flex;
-  margin-bottom: 20px;
-}
-#fim{ 
-  display: none;
-  margin-top: 60px;
-  text-align: right;
-  cursor: pointer;
-  position: fixed;
 }
 
 .disabled > * {

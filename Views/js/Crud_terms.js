@@ -247,9 +247,11 @@ function pegarInputsDoForm(form_name) {
   const nota = form["nota"].value;
   const redator = form["redator"].value;
   const revisao_especialista = form["revisao_especialista"].value;
-  const data_da_ultima_revisao = form["data_ultima_revisao"].value;
+  const data_da_ultima_revisao = new Date();
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
-
+  const definicao_italiano = form["definicao_italiano"].value;
+  const contexto_italiano = form["contexto_italiano"].value;
+  
   // if (entrada === "" || cat_morfo === "" || genero_grupo === "") {
   //   alert("Por favor preencha os campos.");
   //   return;
@@ -268,8 +270,9 @@ function pegarInputsDoForm(form_name) {
     hiperonimo,
     co_hiponimo,
     termo_ingles,
-    termo_italiano, //definição e contexto faltando
-
+    termo_italiano, 
+    definicao_italiano,
+    contexto_italiano,
     termo_espanhol,
     termo_frances,
     // termo_alemao,
@@ -357,9 +360,11 @@ async function carregarDadosTermo() {
     form["nota"].value = json.nota;
     form["redador"].value = json.redator;
     form["revisao_especialista"].value = json.revisao_linguistica;
-    form["data_ultima_revisao"].value = json.data_da_ultima_revisao;
+    form["data_da_ultima_revisao"].value = json.data_da_ultima_revisao;
     form["frequencia_termo_corpus"].value = json.frequencia_termo_corpus;
-
+    form["definicao_italiano"].value = json.definicao_italiano;
+    form["contexto_italiano"].value = json.contexto_italiano;
+    
     console.log(`dados do termo carregados`);
   } catch (error) {
     console.log(`Erro ao carregar dados do termo`, error);
@@ -439,5 +444,5 @@ async function verTermoEspecifico(termo_id) {
 }
 
 function verificar() {
-  location.href = "tela_verificar.html";
+  location.href = "verificar_termos.html";
 }

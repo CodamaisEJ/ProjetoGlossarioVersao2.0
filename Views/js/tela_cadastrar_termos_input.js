@@ -65,12 +65,12 @@ function butaoRemissivas(){
 function butaoIdiomas(){
     if(IdiomasStatus == false){
         bckgroundImgPolygonRotacion(true,"idiomas");
-        displayOnIds(['termo-ingles-block','termo-italiano-block','termo-frances-block','termo-Espanhol-block']);
+        displayOnIds(['termo-ingles-block','termo-italiano-block', 'termo-italiano-contexto-block', 'termo-italiano-definicao-block' ,'termo-frances-block','termo-Espanhol-block']);
         IdiomasStatus  = true;
     }
     else{
         bckgroundImgPolygonRotacion(false,"idiomas");
-        displayNoneIds(['termo-ingles-block','termo-italiano-block','termo-frances-block','termo-Espanhol-block']);
+        displayNoneIds(['termo-ingles-block','termo-italiano-block', 'termo-italiano-contexto-block', 'termo-italiano-definicao-block' ,'termo-frances-block','termo-Espanhol-block']);
         IdiomasStatus  = false;
     }
 }
