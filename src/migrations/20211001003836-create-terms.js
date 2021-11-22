@@ -48,6 +48,12 @@ module.exports = {
       termo_italiano: {
         type: Sequelize.STRING
       },
+      definicao_italiano: {
+        type: Sequelize.STRING
+      },
+     	contexto_italiano: {
+        type: Sequelize.STRING
+      },
       termo_espanhol: {
         type: Sequelize.STRING
       },
