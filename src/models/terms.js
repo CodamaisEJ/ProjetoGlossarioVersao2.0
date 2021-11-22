@@ -27,6 +27,8 @@ module.exports = (sequelize, DataTypes) => {
     co_hiponimo: DataTypes.STRING,
     termo_ingles: DataTypes.STRING,
     termo_italiano: DataTypes.STRING,
+    definicao_italiano: DataTypes.STRING,
+    contexto_italiano: DataTypes.STRING,
     termo_espanhol: DataTypes.STRING,
     termo_frances: DataTypes.STRING,
     numero: DataTypes.STRING,
