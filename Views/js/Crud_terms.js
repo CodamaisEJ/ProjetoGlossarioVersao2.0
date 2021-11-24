@@ -56,7 +56,7 @@ const SearchTerms = (Termos) => {
   const htmlString = Termos
   .map((Termo) => {
     return`
-    <div class="termo_block" id="termo_block${Termo.id}">
+    <div class="termo_block" id="termo_block${Termo.entrada}">
            <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
            <img src="./img/icon_lixo.png" onclick="DeletandoTerms(${Termo.id})">       
     </div>
@@ -232,6 +232,8 @@ function pegarInputsDoForm(form_name) {
   const revisao_linguistica = form["revisao_linguistica"].value;
   const termo_ingles = form["termo-ingles"].value;
   const termo_italiano = form["termo-Italiano"].value;
+  const definicao_italiano = form["definicao_italiano"].value;
+  const contexto_italiano = form["context_italiano"].value;
   const termo_frances = form["termo-frances"].value;
   const termo_espanhol = form["termo-Espanhol"].value;
   // const verbo = form["verbo"].value;
@@ -249,8 +251,7 @@ function pegarInputsDoForm(form_name) {
   const revisao_especialista = form["revisao_especialista"].value;
   const data_da_ultima_revisao = new Date();
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
-  const definicao_italiano = form["definicao_italiano"].value;
-  const contexto_italiano = form["contexto_italiano"].value;
+ 
   
   // if (entrada === "" || cat_morfo === "" || genero_grupo === "") {
   //   alert("Por favor preencha os campos.");
@@ -345,6 +346,8 @@ async function carregarDadosTermo() {
     form["revisao_linguistica"].value = json.revisao_linguistica;
     form["termo-ingles"].value = json.termo_ingles;
     form["termo-Italiano"].value = json.termo_italiano;
+    form["definicao_italiano"].value = json.definicao_italiano;
+    form["contexto_italiano"].value = json.contexto_italiano;
     form["termo-frances"].value = json.termo_frances;
     form["termo-Espanhol"].value = json.termo_espanhol;
    // form["verbo"].value = json.verbo;
@@ -362,8 +365,7 @@ async function carregarDadosTermo() {
     form["revisao_especialista"].value = json.revisao_linguistica;
     form["data_da_ultima_revisao"].value = json.data_da_ultima_revisao;
     form["frequencia_termo_corpus"].value = json.frequencia_termo_corpus;
-    form["definicao_italiano"].value = json.definicao_italiano;
-    form["contexto_italiano"].value = json.contexto_italiano;
+    
     
     console.log(`dados do termo carregados`);
   } catch (error) {

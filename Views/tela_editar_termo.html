@@ -50,7 +50,9 @@
     <main class="conteudo container">
       <form id="Cadastrar_termos" name="edit_term">
         <fieldset>
-          <legend>Edição</legend>
+          <div id="titu">
+            <legend>Cadastrar</legend>  <a ><img onclick="fechadisplay()" id="fim" src="./img/X.png" alt=""></a>
+          </div>
           <div class="page-block">
             <div class="list-block">
               <div class="input-block">
@@ -325,18 +327,17 @@
                 <input type="text" name="termo-Italiano" id="termo-Italiano" />
               </div>
               <div id="termo-italiano-definicao-block" class="input-block">
-                <label for="definicao_italiano"
+                <label for="termo-Italiano_definicao"
                   >Definicão em Italiano:</label
                 >
                 <textarea
-                  type="text"
                   name="definicao_italiano"
                   id="definicao_italiano"
                 ></textarea>
                 
               </div>
               <div id="termo-italiano-contexto-block" class="input-block">
-                <label for="contexto_italiano"
+                <label for="termo-Italiano_contexto"
                   >Contexto de Uso em Italiano:</label
                 >
                 <textarea
@@ -596,11 +597,11 @@
             </div>
           </div>
 
-          <div class="button-block">
-            <div class="verificar_button">
-              <button type="button">Verificar</button>
+          <div class="button-block" id="button-block">
+            <div class="verificar_button" id="verificar_button">
+              <button type="button" onclick="display()">Verificar</button>
             </div>
-            <div class="salvar">
+            <div class="salvar" id="salvar">
               <button type="submit" onclick="editarTermo(event)">
                 Salvar
               </button>
@@ -620,5 +621,6 @@
     <script src="js/Crud_terms.js"></script>
     <script src="js/menu_dropdown.js"></script>
     <script defer src="./js/tela_cadastrar_termos_input.js"></script>
+    <script defer src="./js/verificar_termos.js"></script>
   </body>
 </html>

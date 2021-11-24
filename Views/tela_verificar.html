@@ -10,75 +10,61 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/termos_style.css">
     <link rel="stylesheet" href="./css/header-footer.css" />
     <link rel="stylesheet" href="./css/tela_cadastrar_termos_style.css" />
     <link rel="stylesheet" href="css/dropdown_user_icon.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
-    <style>
-      #logo_notificacao{
-        background-color: #430D64;
-      }
-    </style>
-    <title>Revisão</title>
+
+    <title>Edição</title>
   </head>
-  <body onload="carregarDadosTermo(); mudaCor()">
-   
+  <body onload="carregarDadosTermo()">
+    
 
     <header id="header" class="header">
       <div class="logo">
-          <img src="./img/Lexic.jpg" alt="">
-          <h1>Ficha Terminológica</h1>
+        <img src="./img/Lexic.jpg" alt="" />
+        <h1>Ficha Terminológica</h1>
       </div>
       <div id="button-block" class="links">
-          <ul>
-              <li id="logo_notificacao">
+        <ul>
+          <li id="logo_notificacao">
+              <a href="./tela_notificacoes.html"><img src="./img/sino-de-notificacao 1.png" alt=""></a>
+          </li>
+          <li id="dropdown" class="dropdown">
+              <button onclick="myFunction()" class="dropbtn"></button>
+              <div id="myDropdown" class="dropdown-content">
+                <p id="nome_usuario">Flavia Maia</p>
+                <p id="status_user">Administrador</p>
+                <p id="alt" id="text">Alternar Perfis:</p>
+                <div class="a-block" id="block">
+                    <a href="">Administrador</a>
+                    <a href="">Especialista</a>
+                    <a href="">Pesquisador</a>
                   
-              </li>
-              <li id="dropdown" class="dropdown">
-                  <button onclick="myFunction()" class="dropbtn"></button>
-                  <div id="myDropdown" class="dropdown-content">
-                      <p id="nome_usuario">Flavia Maia</p>
-                      <p id="status_user">Especialista</p>
-                      
-                      <button onclick="deslogar()">Logout</button>
-                  </div>
-              </li>
-          </ul>
+                  <button onclick="deslogar()">Logout</button>
+              </div>
+          </li>
+      </ul>
       </div>
     </header>
-
-    <!-- ALERT -->
-    <div
-      class="alert alert-success alert-dismissible"
-      id="alert-revisar-termo"
-      style="display: none"
-    >
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <strong>Sucesso!</strong> O termo foi revisado.
-    </div>
-
     <main class="conteudo container">
       <form id="Cadastrar_termos" name="edit_term">
         <fieldset>
-          <legend>Revisão</legend>
+          <legend>Edição</legend>
           <div class="page-block">
             <div class="list-block">
-              <div class="input-block disabled">
+              <div class="input-block">
                 <label for="entrada">Entrada</label>
                 <input
-                  disabled
                   placeholder="Entrada"
                   type="text"
                   name="entrada"
                   id="entrada"
                 />
               </div>
-              <div class="radio-block disabled">
+              <div class="radio-block">
                 <p>Gênero:</p>
                 <input
-                  disabled
                   type="radio"
                   id="masculino"
                   name="genero_grupo"
@@ -86,7 +72,6 @@
                 />
                 <label for="masculino">Masculino</label>
                 <input
-                  disabled
                   type="radio"
                   id="feminino"
                   name="genero_grupo"
@@ -94,7 +79,6 @@
                 />
                 <label for="feminino">Feminino</label>
                 <input
-                  disabled
                   type="radio"
                   id="dois-generos"
                   name="genero_grupo"
@@ -102,10 +86,9 @@
                 />
                 <label for="dois-generos">Dois Gêneros</label>
               </div>
-              <div class="input-block disabled">
-                <label for="variante">Variante:</label>
+              <div class="input-block">
+                <label for="variantes">Variante:</label>
                 <input
-                  disabled
                   onclick="butaoVariante()"
                   type="button"
                   id="variante"
@@ -115,12 +98,7 @@
               </div>
               <div id="ortografia-block" class="input-block">
                 <label for="ortografia">Ortográfica:</label>
-                <input
-                  class="disabled"
-                  type="text"
-                  name="ortografia"
-                  id="ortografia"
-                />
+                <input type="text" name="ortografia" id="ortografia" />
               </div>
               <div id="geografica-block" class="input-block">
                 <label for="geografica">Geográfica:</label>
@@ -288,8 +266,8 @@
                 </div>
               </div>
 
-              <div class="input-block disabled">
-                <label for="remissivas">Remissivas:</label>
+              <div class="input-block">
+                <label for="remissivas">Remissivas::</label>
                 <input
                   onclick="butaoRemissivas()"
                   type="button"
@@ -311,13 +289,13 @@
                 <input type="text" name="co-hiponimo" id="co-hiponimo" />
               </div>
 
-              <div class="input-block disabled">
+              <div class="input-block">
                 <label for="autor">Autor:</label>
                 <input type="text" name="autor" id="autor" />
               </div>
-              <div class="input-block disabled">
+              <div class="input-block">
                 <label for="data_registro">Data de Registro:</label>
-                <input type="date" name="data_registro" id="data_registro" />
+                <input type="date"  name="data_registro" id="data_registro" />
               </div>
               <div class="input-block">
                 <label for="revisao_linguistica">Revisão Linguistica:</label>
@@ -338,7 +316,6 @@
                   value="Selecione para preencher a correlação com o termo"
                 />
               </div>
-
               <div id="termo-ingles-block" class="input-block">
                 <label for="termo-ingles">Termo em Inglês:</label>
                 <input type="text" name="termo-ingles" id="termo-ingles" />
@@ -355,62 +332,19 @@
                 <label for="termo-Espanhol">Termo em Espanhol:</label>
                 <input type="text" name="termo-Espanhol" id="termo-Espanhol" />
               </div>
-
-              <!-- STATUS -->
-
-              <div class="radio-block">
-                <p>Status:</p>
-                <input
-                  type="radio"
-                  id="validado"
-                  name="status"
-                  value="validado"
-                />
-                <label for="validado">Validado</label>
-                <input
-                  type="radio"
-                  id="validado-com-adaptacoes"
-                  name="status"
-                  value="Validado com adaptações"
-                />
-                <label for="validado_com_adaptacoes"
-                  >Validado com adaptações</label
-                >
-                
-                <input
-                  type="radio"
-                  id="rejeitado"
-                  name="status"
-                  value="rejeitado"
-                />
-                <label for="rejeitado">Rejeitado</label>
-              </div>
             </div>
 
             <div class="list-block">
-              <div class="radio-block disabled">
+              <div class="radio-block">
                 <p>Categoria Morfológica:</p>
-                <input
-                  disabled
-                  type="radio"
-                  id="nome"
-                  name="cat_morfo"
-                  value="nome"
-                />
+                <input type="radio" id="nome" name="cat_morfo" value="nome" />
                 <label for="nome">Nome</label>
-                <input
-                  disabled
-                  type="radio"
-                  id="verbo"
-                  name="cat_morfo"
-                  value="verbo"
-                />
+                <input type="radio" id="verbo" name="cat_morfo" value="verbo" />
                 <label for="verbo">Verbo</label>
               </div>
-              <div class="radio-block disabled">
+              <div class="radio-block">
                 <p>Número:</p>
                 <input
-                  disabled
                   type="radio"
                   id="singular"
                   name="num_grupo"
@@ -418,7 +352,6 @@
                 />
                 <label for="singular">Singular</label>
                 <input
-                  disabled
                   type="radio"
                   id="plural"
                   name="num_grupo"
@@ -426,7 +359,7 @@
                 />
                 <label for="plural">Plural</label>
               </div>
-              <div class="input-block disabled">
+              <div class="input-block">
                 <label for="area">Área:</label>
                 <input type="text" name="area" id="area" />
               </div>
@@ -437,6 +370,7 @@
                   onclick="butaoFonteDefinicao()"
                   type="button"
                   id="fonte_definicao"
+                  name="fonte_definicao"
                   value="Selecione para preencher as fontes das definições"
                 />
               </div>
@@ -597,14 +531,14 @@
                 </div>
               </div>
 
-              <div class="input-block disabled">
+              <div class="input-block">
                 <label for="nota">Nota:</label>
                 <input type="text" name="nota" id="nota" />
               </div>
 
-              <div class="input-block disabled">
-                <label for="redador">Redador:</label>
-                <input type="text" name="redador" id="redador" />
+              <div class="input-block">
+                <label for="redator">Redador:</label>
+                <input type="text" name="redator" id="redator" />
               </div>
 
               <div class="input-block">
@@ -618,7 +552,7 @@
                 />
               </div>
 
-              <div class="input-block disabled">
+              <div class="input-block">
                 <label for="data_ultima_revisao">Data da ultima revisão:</label>
                 <input
                   type="date"
@@ -627,12 +561,12 @@
                 />
               </div>
 
-              <div class="input-block disabled">
+              <div class="input-block">
                 <label for="frequencia_termo_corpus"
                   >Frequência do termo no corpus:</label
                 >
                 <input
-                  placeholder="100000000"
+                  placeholder="0"
                   type="number"
                   name="frequencia_termo_corpus"
                   id="frequencia_termo_corpus"
@@ -642,16 +576,8 @@
           </div>
 
           <div class="button-block">
-            <!-- <div class="verificar_button">
-              <button id="verificar-button-especialista"></button>
-            </div> -->
             <div class="salvar">
-              <button
-                type="button"
-                data-toggle="modal"
-                data-target="#meuModal"
-                id="verificar-button-especialista"
-              >
+              <button type="submit" onclick="editarTermo(event)">
                 Salvar
               </button>
             </div>
@@ -660,51 +586,15 @@
       </form>
     </main>
 
-    <!-- MODAL -->
+    
 
-    <div id="meuModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <h4 class="modal-title">Confirmação</h4>
-          <p>Tem certeza de que quer salvar?</p>
-          <div>
-            <button
-              type="button"
-              class="btn btn-cancel"
-              data-dismiss="modal"
-              id="fechar"
-            >
-              Fechar
-            </button>
-            <button
-              type="button"
-              class="btn btn-danger"
-              id="salvar"
-              onclick="revisarTermo(event); Check();"
-              data-dismiss="modal"
-            >
-              Salvar Alterações
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer id="footer-especialista">
+    <footer id="footer">
       <h2>Desenvolvido por Codamais @ 2021</h2>
     </footer>
 
+    <script src="js/ficha_script.js"></script>
+    <script src="js/Crud_terms.js"></script>
     <script src="js/menu_dropdown.js"></script>
-    <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-   />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="js/ficha_script.js"></script>
-  <script src="js/Revisar_termos.js"></script>
-  <script defer src="./js/tela_cadastrar_termos_input.js"></script>
-  <script src="js/cadastro_script.js"></script>
+    <script defer src="./js/tela_cadastrar_termos_input.js"></script>
   </body>
 </html>

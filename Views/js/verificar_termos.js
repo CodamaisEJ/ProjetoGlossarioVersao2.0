@@ -17,6 +17,8 @@ function display(){
   document.getElementById("co-hiponimo-block").style.display = "flex";
   document.getElementById("termo-ingles-block").style.display = "flex";
   document.getElementById("termo-italiano-block").style.display = "flex";
+  document.getElementById("termo-italiano-definicao-block").style.display = "flex";
+  document.getElementById("termo-italiano-contexto-block").style.display = "flex";
   document.getElementById("termo-Espanhol-block").style.display = "flex";
   document.getElementById("termo-frances-block").style.display = "flex";
   document.getElementById("font-dici-lingua-comum_block").style.display = "flex";
@@ -29,8 +31,8 @@ function display(){
   document.getElementById("fim").style.display = "flex";
   document.getElementById("verificar_button").style.display = "none";
   document.getElementById("salvar").style.display = "none";
-  document.getElementById("termo-italiano-definicao-block").style.display = "flex";
-  document.getElementById("termo-italiano-contexto-block").style.display = "flex";
+  
+  
 }
 
 function fechadisplay(){
@@ -52,6 +54,8 @@ function fechadisplay(){
   document.getElementById("co-hiponimo-block").style.display = "none";
   document.getElementById("termo-ingles-block").style.display = "none";
   document.getElementById("termo-italiano-block").style.display = "none";
+  document.getElementById("termo-italiano-definicao-block").style.display = "none";
+  document.getElementById("termo-italiano-contexto-block").style.display = "none";
   document.getElementById("termo-Espanhol-block").style.display = "none";
   document.getElementById("termo-frances-block").style.display = "none";
   document.getElementById("font-dici-lingua-comum_block").style.display = "none";
@@ -64,6 +68,5 @@ function fechadisplay(){
   document.getElementById("fim").style.display = "none";
   document.getElementById("verificar_button").style.display = "flex";
   document.getElementById("salvar").style.display = "flex";
-  document.getElementById("termo-italiano-definicao-block").style.display = "none";
-  document.getElementById("termo-italiano-contexto-block").style.display = "none";
+  
 }
