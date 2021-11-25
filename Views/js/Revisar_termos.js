@@ -45,41 +45,50 @@ mostrarTotalDeTermos(Terms.length);
 }
 
 }
+var Termo 
 
 const SearchTerms = (Termos) => {
   const htmlString = Termos
   .map((Termo) => {
+    console.log(Termo.status)
+    
     return`
     <style>
     #sta{
       font-weight: bold;
     }
-
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-    <script src="meusjavascripts/jquery-2.1.3.min.js" type="text/javascript"></script>
-
-    <div class="termo_block" id="termo_block${Termo.id}">
+    <div class="termo_block" id="termo_block${Termo.entrada}">
            <p onclick="irParaTelaEditarTermoEspecialista(${Termo.id})">${Termo.entrada}</p>  
-           <img id="revisar" onclick='Check()' src="./img/Input -senha.png" > <p id="sta">${Termo.status} </p>        
+           <img id="revisar" onload="teste()" src="./img/Input -senha.png" > <p id="sta">${Termo.status} </p>        
     </div>
-
-    <script>
-    var it = ${Termo.status}
-    if (it == "validado"){
-      const demoClasses = document.querySelectorAll("#revisar");
-      demoClasses.setAttribute("src", "./img/ok.png");
-      <img id="revisar" onload='Check()' src="./img/Input -senha.png" >
-    }
-    </script>
-
     `; 
+    
     }).sort(function(a, b) {
       return a.localeCompare(b);
     }).join('');
-   
-
+  
+    //console.log(htmlString)
     Termoslist.innerHTML =  htmlString;
+}
+
+const Trocaimg = (Termos) => {
+  const htmlString = Termos
+  .map((Termo) => {
+    console.log(Termo.status)
+    
+  
+    if(Termo.status == "validado"){
+      const img = document.querySelectorAll("#revisar");
+      img.setAttribute('src', './img/ok.png'); 
+    }; 
+    
+    }).sort(function(a, b) {
+      return a.localeCompare(b);
+    }).join('');
+  
+    //console.log(htmlString)
+    Termoslist =  htmlString;
 }
 
 
@@ -106,7 +115,12 @@ function Check() {
 
 }
   
-
+function teste(){
+  if(Termo.status == "validado"){
+    const img = document.querySelectorAll("#revisar");
+    img.setAttribute('src', './img/ok.png'); 
+  }
+}
 
 function irParaTelaEditarTermoEspecialista(term_id) {
   history.pushState(term_id, "", "tela_revisar_termo.html");
@@ -133,7 +147,7 @@ async function revisarTermo(event) {
 
     if (result.ok) {
       // Criando notificação
-      const { id, entrada, autor, status } = await result.json();
+      const { id, entrada, autor } = await result.json();
 
       criarNotificacao(event, id, entrada, autor, "PUT");
 
@@ -158,7 +172,7 @@ function pegarInputsDoForm(form_name) {
   const form = document.forms[form_name];
 
   const area = form["area"].value;
-  const categoria_morfologica = form["categoria_morfologica"].value;
+  const categoria_morfologica = form["cat_morfo"].value;
   const entrada = form["entrada"].value;
   const autor = form["autor"].value;
   const genero = form["genero_grupo"].value;
@@ -184,6 +198,8 @@ function pegarInputsDoForm(form_name) {
   const revisao_linguistica = form["revisao_linguistica"].value;
   const termo_ingles = form["termo-ingles"].value;
   const termo_italiano = form["termo-Italiano"].value;
+  const definicao_italiano = form["definicao_italiano"].value;
+  const contexto_italiano = form["contexto_italiano"].value;
   const termo_frances = form["termo-frances"].value;
   const termo_espanhol = form["termo-Espanhol"].value;
   // const verbo = form["verbo"].value;
@@ -199,7 +215,7 @@ function pegarInputsDoForm(form_name) {
   const nota = form["nota"].value;
   // const redador = form["redador"].value;
   const revisao_especialista = form["revisao_especialista"].value;
-  // const data_ultima_revisao = form["data_ultima_revisao"].value;
+  const data_da_ultima_revisao = new Date();
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
   const status = form["status"].value;
 
@@ -227,12 +243,15 @@ function pegarInputsDoForm(form_name) {
     co_hiponimo,
     termo_ingles,
     termo_italiano,
+    definicao_italiano,
+    contexto_italiano,
     termo_espanhol,
     termo_frances,
+    status,
     // termo_alemao,
     // numero,
     revisao_especialista,
-    // data_da_ultima_revisao,
+    data_da_ultima_revisao,
     freq_no_termo_corpus,
     autor,
     revisao_linguistica,
@@ -262,7 +281,7 @@ function pegarInputsDoForm(form_name) {
     sinomica,
     siglas,
     acronimos,
-    status,
+    
   };
 }
 
@@ -277,7 +296,7 @@ async function carregarDadosTermo() {
     const form = document.forms["edit_term"];
 
     form["entrada"].value = json.entrada;
-    form["categoria_morfologica"].value = json.categoria_morfologica;
+    form["cat_morfo"].value = json.categoria_morfologica;
     form["genero_grupo"].value = json.genero;
     form["num_grupo"].value = json.numero;
     form["variante"].value = json.variantes;
@@ -297,16 +316,19 @@ async function carregarDadosTermo() {
     form["context_uso_1"].value = json.contexto_de_uso1;
     form["context_uso_2"].value = json.contexto_de_uso2;
     form["context_uso_3"].value = json.contexto_de_uso3;
-    form["remissivas"].value = json.remissivas;
-    form["hiperonimos"].value = json.hiperonimos;
+    //form["remissivas"].value = json.remissivas;
+    form["hiperonimo"].value = json.hiperonimo;
     form["co-hiponimo"].value = json.co_hiponimo;
-    form["data_registro"].value = json.data_de_registro;
+    form["data_de_registro"].value = json.data_de_registro;
     form["revisao_linguistica"].value = json.revisao_linguistica;
     form["termo-ingles"].value = json.termo_ingles;
     form["termo-Italiano"].value = json.termo_italiano;
+    form["definicao_italiano"].value = json.definicao_italiano;
+    form["contexto_italiano"].value = json.contexto_italiano;
     form["termo-frances"].value = json.termo_frances;
     form["termo-Espanhol"].value = json.termo_espanhol;
-    form["verbo"].value = json.verbo;
+    form["status"].value = json.status;
+   // form["verbo"].value = json.verbo;
     // form["fonte_definicao"].value = json.fonte_da_definicao;
     form["font-dici-lingua-comum"].value = json.fonte_dicionario_lingua_comum;
     form["font-dici-especi-1"].value = json.fonte_dicionario_especializado1;
@@ -321,23 +343,11 @@ async function carregarDadosTermo() {
     form["revisao_especialista"].value = json.revisao_linguistica;
     form["data_ultima_revisao"].value = json.data_da_ultima_revisao;
     form["frequencia_termo_corpus"].value = json.frequencia_termo_corpus;
-    form["status"].value = json.status;
     
-    
-    
+
     console.log(`dados do termo carregados`);
   } catch (error) {
     console.log(`Erro ao carregar dados do termo`, error);
-  }
-}
-
-function teste(){
-  const form = document.forms["edit_term"];
-
-  if(form["status"].value === "validado"){
-    var img = document.getElementById("revisar");
-    img.src = "./img/ok.png";
-   
   }
 }
 
@@ -350,15 +360,15 @@ async function criarNotificacao(event, id, entrada, autor, status) {
   let situacao;
   switch (status) {
     case "POST":
-      situacao = "Validado";
+      situacao = "Cadastrado";
       break;
 
     case "PUT":
-      situacao = "Validado com adaptações";
+      situacao = "Editado";
       break;
 
     case "DELETE":
-      situacao = "Rejeitado";
+      situacao = "Removido";
       break;
 
     default:

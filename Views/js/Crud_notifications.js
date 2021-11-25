@@ -30,3 +30,8 @@ function ListNotications(Notificacaos) {
 }
 
 consultaNotifications();
+
+function voltar() {
+  location.href = "tela_termos.html";
+}
+

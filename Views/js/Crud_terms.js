@@ -60,6 +60,9 @@ const SearchTerms = (Termos) => {
            <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
            <img src="./img/icon_lixo.png" onclick="DeletandoTerms(${Termo.id})">       
     </div>
+    <script>
+      if (Termo.id)
+    </script>
     `; 
       }).sort(function(a, b) {
         return a.localeCompare(b);
@@ -190,7 +193,6 @@ async function editarTermo(event) {
     alert("Erro ao cadastrar termo");
     console.log(`error.message`, error.message);
   }
-  trocaImg();
 }
 
 function mostrarTotalDeTermos(total_termos) {
@@ -249,7 +251,7 @@ function pegarInputsDoForm(form_name) {
   const nota = form["nota"].value;
   const redator = form["redator"].value;
   const revisao_especialista = form["revisao_especialista"].value;
-  const data_da_ultima_revisao = new Date();
+  //const data_da_ultima_revisao = form["frequencia_termo_corpus"].value;
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
  
   
@@ -365,8 +367,7 @@ async function carregarDadosTermo() {
     form["revisao_especialista"].value = json.revisao_linguistica;
     form["data_da_ultima_revisao"].value = json.data_da_ultima_revisao;
     form["frequencia_termo_corpus"].value = json.frequencia_termo_corpus;
-    
-    
+      
     console.log(`dados do termo carregados`);
   } catch (error) {
     console.log(`Erro ao carregar dados do termo`, error);

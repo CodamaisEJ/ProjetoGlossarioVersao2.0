@@ -1,7 +1,8 @@
 .conteudo {
   text-align: center;
 }
-.conteudo h2 {
+#titu {
+  display: flex;
   margin-top: 2rem;
   font-family: Poppins;
   font-size: 28px;
@@ -18,6 +19,15 @@
   letter-spacing: 0em;
 
 }
+
+legend{
+  width: 1650px;
+}
+
+#fim{
+  cursor: pointer;
+}
+
 .tabela-block {
   margin-top: 2rem;
   display: flex;
