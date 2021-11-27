@@ -47,7 +47,9 @@
     <main class="conteudo container">
       <form id="Cadastrar_termos" name="create_term">
         <fieldset>
-          <legend>Cadastrar</legend>
+          <div id="titu">
+            <legend>Cadastrar</legend>  <a ><img onclick="fechadisplay()" id="fim" src="./img/X.png" alt=""></a>
+            </div>
           <div class="page-block">
             <div class="list-block">
               <div class="input-block">
@@ -57,6 +59,7 @@
                   type="text"
                   name="entrada"
                   id="entrada"
+                  required
                 />
               </div>
               <div class="radio-block">
@@ -148,7 +151,7 @@
                 </div>
               </div>
               <div id="dicio-espe-def-block" class="input-block">
-                <label for="dicio-espe-def">Dicionário Especializado:</label>
+                <label for="dicio-espe-def">Dicionário Especializado: 1</label>
                 <textarea name="dicio-espe-def" id="dicio-espe-def"></textarea>
                 <div id="button_mais-block">
                   <button
@@ -264,7 +267,7 @@
               </div>
 
               <div class="input-block">
-                <label for="remissivas">Remissivas::</label>
+                <label for="remissivas">Remissivas:</label>
                 <input
                   onclick="butaoRemissivas()"
                   type="button"
@@ -303,6 +306,7 @@
                 />
               </div>
 
+              
               <div class="input-block">
                 <label for="remissivas">Idiomas:</label>
                 <input
@@ -320,6 +324,26 @@
               <div id="termo-italiano-block" class="input-block">
                 <label for="termo-Italiano">Termo em Italiano:</label>
                 <input type="text" name="termo-Italiano" id="termo-Italiano" />
+              </div>
+              <div id="termo-italiano-definicao-block" class="input-block">
+                <label for="termo-Italiano_definicao"
+                  >Definicão em Italiano:</label
+                >
+                <textarea
+                  name="definicao_italiano"
+                  id="definicao_italiano"
+                ></textarea>
+                
+              </div>
+              <div id="termo-italiano-contexto-block" class="input-block">
+                <label for="termo-Italiano_contexto"
+                  >Contexto de Uso em Italiano:</label
+                >
+                <textarea
+                  name="contexto_italiano"
+                  id="contexto_italiano"
+                ></textarea>
+                
               </div>
               <div id="termo-frances-block" class="input-block">
                 <label for="termo-frances">Termo em Francês:</label>
@@ -478,6 +502,7 @@
                     type="button"
                     onclick="butaoMais('font_contexto_uso_2_block')"
                     class="butao_status"
+                    id="butao_status"
                   >
                     (+)
                   </button>
@@ -550,7 +575,7 @@
               </div>
 
               <div class="input-block">
-                <label for="data_ultima_revisao">Data da ultima revisão:</label>
+                <label for="data_da_ultima_revisao">Data da ultima revisão:</label>
                 <input
                   type="date"
                   name="data_ultima_revisao"
@@ -572,11 +597,11 @@
             </div>
           </div>
 
-          <div class="button-block">
-            <div class="verificar_button">
-              <button type="button">Verificar</button>
+          <div class="button-block" id="button-block">
+            <div class="verificar_button" id="verificar_button">
+              <button type="button" onclick="display()">Verificar</button>
             </div>
-            <div class="salvar">
+            <div class="salvar" id="salvar">
               <button type="submit" onclick="cadastrarTermo(event)">
                 Salvar
               </button>
@@ -592,6 +617,7 @@
     <script src="js/menu_dropdown.js"></script>
     <script src="js/ficha_script.js"></script>
     <script src="js/Termos.js"></script> 
+    <script defer src="./js/verificar_termos.js"></script>
     <script defer src="./js/tela_cadastrar_termos_input.js"></script>
   </body>
 </html>

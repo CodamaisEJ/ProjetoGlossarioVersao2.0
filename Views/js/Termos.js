@@ -52,7 +52,7 @@ const SearchTerms = (Termos) => {
   const htmlString = Termos
   .map((Termo) => {
     return`
-    <div class="termo_block" id="termo_block${Termo.id}">
+    <div class="termo_block" id="termo_block${Termo.entrada}">
            <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
                  
     </div>
@@ -63,21 +63,6 @@ const SearchTerms = (Termos) => {
 
     Termoslist.innerHTML =  htmlString;
 }
-
-function ListTerms(Termos) {
-
-  Termos.map((Termo) => {
-    TermoHTML = `
-    <div class="termo_block" id="termo_block${Termo.id}">
-           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
-                  
-    </div>
-      `;
-      Termoslist.innerHTML += TermoHTML;
-    });
- 
-}
-
 
 consultaTermos();
 
@@ -204,11 +189,12 @@ function pegarInputsDoForm(form_name) {
   const remissiva = form["remissivas"].value;
   const hiperonimo = form["hiperonimo"].value;
   const co_hiponimo = form["co-hiponimo"].value;
-  const data_de_registro = form["data_registro"].value;
+  const data_de_registro = new Date();
   const revisao_linguistica = form["revisao_linguistica"].value;
   const termo_ingles = form["termo-ingles"].value;
   const termo_italiano = form["termo-Italiano"].value;
   const definicao_italiano = form["definicao_italiano"].value;
+  const contexto_italiano = form["contexto_italiano"].value;
   const termo_frances = form["termo-frances"].value;
   const termo_espanhol = form["termo-Espanhol"].value;
   // const verbo = form["verbo"].value;
@@ -226,9 +212,8 @@ function pegarInputsDoForm(form_name) {
   const revisao_especialista = form["revisao_especialista"].value;
   const data_da_ultima_revisao = form["data_ultima_revisao"].value;
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
+ 
   
-  const contexto_italiano = form["contexto_italiano"].value;
-
   // if (entrada === "" || cat_morfo === "" || genero_grupo === "") {
   //   alert("Por favor preencha os campos.");
   //   return;
@@ -247,7 +232,7 @@ function pegarInputsDoForm(form_name) {
     hiperonimo,
     co_hiponimo,
     termo_ingles,
-    termo_italiano, //definição e contexto faltando
+    termo_italiano, 
     definicao_italiano,
     contexto_italiano,
     termo_espanhol,
@@ -319,7 +304,7 @@ async function carregarDadosTermo() {
     //form["remissivas"].value = json.remissivas;
     form["hiperonimo"].value = json.hiperonimo;
     form["co-hiponimo"].value = json.co_hiponimo;
-    form["data_registro"].value = json.data_de_registro;
+    form["data_de_registro"].value = json.data_de_registro;
     form["revisao_linguistica"].value = json.revisao_linguistica;
     form["termo-ingles"].value = json.termo_ingles;
     form["termo-Italiano"].value = json.termo_italiano;
@@ -327,7 +312,7 @@ async function carregarDadosTermo() {
     form["contexto_italiano"].value = json.contexto_italiano;
     form["termo-frances"].value = json.termo_frances;
     form["termo-Espanhol"].value = json.termo_espanhol;
-    form["verbo"].value = json.verbo;
+   // form["verbo"].value = json.verbo;
     // form["fonte_definicao"].value = json.fonte_da_definicao;
     form["font-dici-lingua-comum"].value = json.fonte_dicionario_lingua_comum;
     form["font-dici-especi-1"].value = json.fonte_dicionario_especializado1;
@@ -338,12 +323,11 @@ async function carregarDadosTermo() {
     form["font_contexto_uso_2"].value = json.fonte_do_contexto_de_uso2;
     form["font_contexto_uso_3"].value = json.fonte_do_contexto_de_uso2;
     form["nota"].value = json.nota;
-    form["redador"].value = json.redator;
-    form["revisao_especialista"].value = json.revisao_linguistica;
+    form["redator"].value = json.redator;
+    form["revisao_especialista"].value = json.revisao_especialista;
     form["data_ultima_revisao"].value = json.data_da_ultima_revisao;
-    form["frequencia_termo_corpus"].value = json.frequencia_termo_corpus;
-    
-
+    form["frequencia_termo_corpus"].value = json.freq_no_termo_corpus;
+      
     console.log(`dados do termo carregados`);
   } catch (error) {
     console.log(`Erro ao carregar dados do termo`, error);

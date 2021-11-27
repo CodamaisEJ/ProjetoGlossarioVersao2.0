@@ -60,9 +60,6 @@ const SearchTerms = (Termos) => {
            <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
            <img src="./img/icon_lixo.png" onclick="DeletandoTerms(${Termo.id})">       
     </div>
-    <script>
-      if (Termo.id)
-    </script>
     `; 
       }).sort(function(a, b) {
         return a.localeCompare(b);
@@ -146,14 +143,8 @@ async function cadastrarTermo(event) {
   
 }
 
-function trocaImg(){
-  const img = document.getElementById("sin");
-  img.src="./img/icone-sino-da-notificação.jpg"; 
-}
-function destrocaImg(){
-  const img = document.getElementById("sin");
-  img.src="./img/sino-de-notificacao 1.png"; 
-}
+
+
 
 function irParaTelaEditarTermo(term_id) {
   history.pushState(term_id, "", "tela_editar_termo.html");
@@ -185,6 +176,7 @@ async function editarTermo(event) {
       criarNotificacao(event, id, entrada, autor, "PUT");
 
       alert("Termo editado com sucesso.");
+     
       location.href = "tela_termos.html";
     } else {
       alert("Termo já existe.");
@@ -193,6 +185,9 @@ async function editarTermo(event) {
     alert("Erro ao cadastrar termo");
     console.log(`error.message`, error.message);
   }
+  const sin = document.getElementById("sin");
+  // img.src="./img/icone-sino-da-notificação.jpg"; 
+   sin.setAttribute('src', './img/icone-sino-da-notificação.jpg');
 }
 
 function mostrarTotalDeTermos(total_termos) {
@@ -251,9 +246,9 @@ function pegarInputsDoForm(form_name) {
   const nota = form["nota"].value;
   const redator = form["redator"].value;
   const revisao_especialista = form["revisao_especialista"].value;
-  //const data_da_ultima_revisao = form["frequencia_termo_corpus"].value;
+  const data_da_ultima_revisao = form["data_ultima_revisao"].value;
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
- 
+  const status = "./img/square.png"
   
   // if (entrada === "" || cat_morfo === "" || genero_grupo === "") {
   //   alert("Por favor preencha os campos.");
@@ -307,6 +302,7 @@ function pegarInputsDoForm(form_name) {
     sinonimica,
     siglas,
     acronimos,
+    status,
   };
 }
 
@@ -349,7 +345,7 @@ async function carregarDadosTermo() {
     form["termo-ingles"].value = json.termo_ingles;
     form["termo-Italiano"].value = json.termo_italiano;
     form["definicao_italiano"].value = json.definicao_italiano;
-    form["contexto_italiano"].value = json.contexto_italiano;
+    form["context_italiano"].value = json.contexto_italiano;
     form["termo-frances"].value = json.termo_frances;
     form["termo-Espanhol"].value = json.termo_espanhol;
    // form["verbo"].value = json.verbo;
@@ -363,16 +359,46 @@ async function carregarDadosTermo() {
     form["font_contexto_uso_2"].value = json.fonte_do_contexto_de_uso2;
     form["font_contexto_uso_3"].value = json.fonte_do_contexto_de_uso2;
     form["nota"].value = json.nota;
-    form["redador"].value = json.redator;
-    form["revisao_especialista"].value = json.revisao_linguistica;
-    form["data_da_ultima_revisao"].value = json.data_da_ultima_revisao;
-    form["frequencia_termo_corpus"].value = json.frequencia_termo_corpus;
+    form["redator"].value = json.redator;
+    form["revisao_especialista"].value = json.revisao_especialista;
+    form["data_ultima_revisao"].value = json.data_da_ultima_revisao;
+    form["frequencia_termo_corpus"].value = json.freq_no_termo_corpus;
       
     console.log(`dados do termo carregados`);
   } catch (error) {
     console.log(`Erro ao carregar dados do termo`, error);
   }
 }
+
+function trocaImg(){
+  var xi = localStorage.getItem("tipoUsuario");
+  if (xi == "") {
+    const example = document.getElementsByClassName('sin');
+    example.src = 'icone-sino-da-notificação';
+    var backgroundColor = "#9D1C33";
+    document.getElementById("sin").style.backgroundColor = backgroundColor;
+    console.log(xi)
+    xi = - 1
+    console.log(xi)
+    //img.setAttribute("src", "./img/icon_lixo.png");
+  }
+}
+trocaImg();
+
+function destrocaImg(){
+  //var xi = 2
+  
+  //if (xi == "2") {
+    const example = document.getElementsByClassName('sin');
+    example.src = 'icone-sino-da-notificação';
+    var backgroundColor = "#314C85";
+    document.getElementById("sin").style.backgroundColor = backgroundColor;
+    //img.setAttribute("src", "./img/icon_lixo.png");
+  //  console.log(xi)
+ // }
+ // location.href = "tela_notificacoes.html";
+}
+
 
 // NOTIFICAÇÃO
 async function criarNotificacao(event, id, entrada, autor, situacao_termo) {
@@ -382,11 +408,11 @@ async function criarNotificacao(event, id, entrada, autor, situacao_termo) {
 
   let situacao;
   switch (situacao_termo) {
-    case "POST":
+    case "POST":{
       situacao = "Cadastrado";
       
       break;
-
+    }
     case "PUT":
       situacao = "Editado";
       break;
@@ -415,12 +441,16 @@ async function criarNotificacao(event, id, entrada, autor, situacao_termo) {
         "Content-Type": "application/json",
         // Authorization: "token " + TOKEN,
       },
+      
       body: JSON.stringify(data),
+      
     });
-
+    
     if (result.status === 201) {
       console.log(`Notificação criada com suesso.`);
-     
+   //   var val = 1;
+   //  localStorage.setItem("tipoUsuario",val);
+     // alert("Notificação criada com suesso.");
     } else if (result.status === 401) {
       console.log("Ocorreu um erro: Não autorizado.");
     }

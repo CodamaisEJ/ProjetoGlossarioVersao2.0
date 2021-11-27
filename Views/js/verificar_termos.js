@@ -30,9 +30,7 @@ function display(){
   document.getElementById("font_contexto_uso_3_block").style.display = "flex";
   document.getElementById("fim").style.display = "flex";
   document.getElementById("verificar_button").style.display = "none";
-  document.getElementById("salvar").style.display = "none";
-  
-  
+  document.getElementById("salvar").style.display = "none"; 
 }
 
 function fechadisplay(){
@@ -68,5 +66,5 @@ function fechadisplay(){
   document.getElementById("fim").style.display = "none";
   document.getElementById("verificar_button").style.display = "flex";
   document.getElementById("salvar").style.display = "flex";
-  
+  document.getElementById("button-block").style.display = "flex";
 }

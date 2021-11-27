@@ -60,7 +60,7 @@ const SearchTerms = (Termos) => {
     </style>
     <div class="termo_block" id="termo_block${Termo.entrada}">
            <p onclick="irParaTelaEditarTermoEspecialista(${Termo.id})">${Termo.entrada}</p>  
-           <img id="revisar" onload="teste()" src="./img/Input -senha.png" > <p id="sta">${Termo.status} </p>        
+           <img id="revisar" onload="teste()" src="${Termo.status}" > 
     </div>
     `; 
     
@@ -218,8 +218,6 @@ function pegarInputsDoForm(form_name) {
   const data_da_ultima_revisao = new Date();
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
   const status = form["status"].value;
-
-  
 
   //if (situacao_termo == ""){
    // alert("Por favor preencha os campos.");

@@ -45,7 +45,9 @@
     <main class="conteudo container">
       <form id="Cadastrar_termos" name="edit_term">
         <fieldset>
-          <legend>Edição</legend>
+          <div id="titu">
+            <legend>Edição</legend>  <a ><img onclick="fechadisplay()" id="fim" src="./img/X.png" alt=""></a>
+          </div>
           <div class="page-block">
             <div class="list-block">
               <div class="input-block">
@@ -289,8 +291,8 @@
                 <input type="text" name="autor" id="autor" />
               </div>
               <div class="input-block">
-                <label for="data_registro">Data de Registro:</label>
-                <input type="date"  name="data_registro" id="data_registro" />
+                <label for="data_de_registro">Data de Registro:</label>
+                <input disabled type="date"  name="data_de_registro" id="data_de_registro" />
               </div>
               <div class="input-block">
                 <label for="revisao_linguistica">Revisão Linguistica:</label>
@@ -318,6 +320,26 @@
               <div id="termo-italiano-block" class="input-block">
                 <label for="termo-Italiano">Termo em Italiano:</label>
                 <input type="text" name="termo-Italiano" id="termo-Italiano" />
+              </div>
+              <div id="termo-italiano-definicao-block" class="input-block">
+                <label for="termo-Italiano_definicao"
+                  >Definicão em Italiano:</label
+                >
+                <textarea
+                  name="definicao_italiano"
+                  id="definicao_italiano"
+                ></textarea>
+                
+              </div>
+              <div id="termo-italiano-contexto-block" class="input-block">
+                <label for="termo-Italiano_contexto"
+                  >Contexto de Uso em Italiano:</label
+                >
+                <textarea
+                  name="contexto_italiano"
+                  id="contexto_italiano"
+                ></textarea>
+                
               </div>
               <div id="termo-frances-block" class="input-block">
                 <label for="termo-frances">Termo em Francês:</label>
@@ -563,18 +585,18 @@
                 <input
                   placeholder="0"
                   type="number"
-                  name="frequencia_termo_corpus"
+                  name="freq_no_termo_corpus"
                   id="frequencia_termo_corpus"
                 />
               </div>
             </div>
           </div>
 
-          <div class="button-block">
-            <div class="verificar_button">
-              <button type="button">Verificar</button>
+          <div class="button-block" id="button-block">
+            <div class="verificar_button" id="verificar_button">
+              <button type="button" onclick="display()">Verificar</button>
             </div>
-            <div class="salvar">
+            <div class="salvar" id="salvar">
               <button type="submit" onclick="editarTermo(event)">
                 Salvar
               </button>
@@ -590,6 +612,7 @@
     <script src="js/menu_dropdown.js"></script>    
     <script src="js/ficha_script.js"></script>
     <script src="js/Termos.js"></script>
+    <script defer src="./js/verificar_termos.js"></script>
     <script defer src="./js/tela_cadastrar_termos_input.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
