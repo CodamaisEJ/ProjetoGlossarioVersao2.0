@@ -163,6 +163,10 @@ function pegarInputsDoForm(form_name) {
 
   const area = form["area"].value;
   const categoria_morfologica = form["cat_morfo"].value;
+  if(categoria_morfologica == ""){
+    alert("Preencha todos os campos")
+    categoria_morfologica.attr('required', true);
+  }
   const entrada = form["entrada"].value;
   if(entrada == ""){
     alert("Preencha todos os campos")
@@ -170,8 +174,16 @@ function pegarInputsDoForm(form_name) {
   }
   const autor = form["autor"].value;
   const genero = form["genero_grupo"].value;
+  if(genero == ""){
+    alert("Preencha todos os campos")
+    genero.attr('required', true);
+  }
   const numero = form["num_grupo"].value;
   const variantes = form["variante"].value;
+  if(variantes == ""){
+    alert("Preencha todos os campos")
+    variantes.attr('required', true);
+  }
   const ortografica = form["ortografia"].value;
   const geografica = form["geografica"].value;
   const sinonimica = form["sinonimica"].value;
@@ -187,6 +199,10 @@ function pegarInputsDoForm(form_name) {
   const contexto_de_uso2 = form["context_uso_2"].value;
   const contexto_de_uso3 = form["context_uso_3"].value;
   const remissiva = form["remissivas"].value;
+  if(remissiva == ""){
+    alert("Preencha todos os campos")
+    remissiva.attr('required', true);
+  }
   const hiperonimo = form["hiperonimo"].value;
   const co_hiponimo = form["co-hiponimo"].value;
   const data_de_registro = new Date();
@@ -208,6 +224,10 @@ function pegarInputsDoForm(form_name) {
   const fonte_do_contexto_de_uso2 = form["font_contexto_uso_2"].value;
   const fonte_do_contexto_de_uso3 = form["font_contexto_uso_3"].value;
   const nota = form["nota"].value;
+  if(nota == ""){
+    alert("Preencha todos os campos")
+    nota.attr('required', true);
+  }
   const redator = form["redator"].value;
   const revisao_especialista = form["revisao_especialista"].value;
   const data_da_ultima_revisao = form["data_ultima_revisao"].value;

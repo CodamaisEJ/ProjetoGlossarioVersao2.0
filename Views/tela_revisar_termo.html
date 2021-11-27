@@ -87,6 +87,7 @@
                 />
                 <label for="masculino">Masculino</label>
                 <input
+                  disabled
                   type="radio"
                   id="feminino"
                   name="genero_grupo"
@@ -94,6 +95,7 @@
                 />
                 <label for="feminino">Feminino</label>
                 <input
+                disabled
                   type="radio"
                   id="dois-generos"
                   name="genero_grupo"
@@ -101,9 +103,10 @@
                 />
                 <label for="dois-generos">Dois Gêneros</label>
               </div>
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="variantes">Variante:</label>
                 <input
+                  disabled
                   onclick="butaoVariante()"
                   type="button"
                   id="variante"
@@ -281,9 +284,10 @@
                 </div>
               </div>
 
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="remissivas">Remissivas:</label>
                 <input
+                  disabled
                   onclick="butaoRemissivas()"
                   type="button"
                   id="remissivas"
@@ -304,11 +308,11 @@
                 <input type="text" name="co-hiponimo" id="co-hiponimo" />
               </div>
 
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="autor">Autor:</label>
-                <input type="text" name="autor" id="autor" />
+                <input disabled type="text" name="autor" id="autor" />
               </div>
-              <div class="input-block">
+              <div class="input-block  disabled">
                 <label for="data_de_registro">Data de Registro:</label>
                 <input disabled type="date"  name="data_de_registro" id="data_de_registro" />
               </div>
@@ -377,14 +381,14 @@
                   type="radio"
                   id="validado"
                   name="status"
-                  value="./img/ok.png"
+                  value="./img/validado.jpg"
                 />
                 <label for="validado">Validado</label>
                 <input
                   type="radio"
                   id="validado-com-adaptacoes"
                   name="status"
-                  value="./img/square.png"
+                  value="./img/vali.jpg"
                 />
                 <label for="validado_com_adaptacoes"
                   >Validado com adaptações</label
@@ -613,12 +617,12 @@
 
               <div class="input-block disabled">
                 <label for="nota">Nota:</label>
-                <input type="text" name="nota" id="nota" />
+                <input disabled type="text" name="nota" id="nota" />
               </div>
 
               <div class="input-block disabled">
                 <label for="redador">Redador:</label>
-                <input type="text" name="redador" id="redador" />
+                <input disabled type="text" name="redador" id="redador" />
               </div>
 
               <div class="input-block">
@@ -635,6 +639,7 @@
               <div class="input-block disabled">
                 <label for="data_ultima_revisao">Data da ultima revisão:</label>
                 <input
+                  disabled
                   type="date"
                   name="data_ultima_revisao"
                   id="data_ultima_revisao"
@@ -646,7 +651,8 @@
                   >Frequência do termo no corpus:</label
                 >
                 <input
-                  placeholder="100000000"
+                disabled
+                  placeholder="0"
                   type="number"
                   name="frequencia_termo_corpus"
                   id="frequencia_termo_corpus"
@@ -705,7 +711,7 @@
     </div>
 
     <footer id="footer-especialista">
-      <h2>Desenvolvido por Codamais @ 2021</h2>
+      <h2>Desenvolvido por Codamais &copy; 2021</h2>
     </footer>
 
     <script src="js/menu_dropdown.js"></script>

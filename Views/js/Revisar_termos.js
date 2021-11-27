@@ -60,7 +60,7 @@ const SearchTerms = (Termos) => {
     </style>
     <div class="termo_block" id="termo_block${Termo.entrada}">
            <p onclick="irParaTelaEditarTermoEspecialista(${Termo.id})">${Termo.entrada}</p>  
-           <img id="revisar" onload="teste()" src="${Termo.status}" > 
+           <img id="revisar" onclick="irParaTelaEditarTermoEspecialista(${Termo.id})" src="${Termo.status}" > 
     </div>
     `; 
     
@@ -340,7 +340,7 @@ async function carregarDadosTermo() {
     form["redador"].value = json.redator;
     form["revisao_especialista"].value = json.revisao_linguistica;
     form["data_ultima_revisao"].value = json.data_da_ultima_revisao;
-    form["frequencia_termo_corpus"].value = json.frequencia_termo_corpus;
+    form["frequencia_termo_corpus"].value = json.freq_no_termo_corpus;
     
 
     console.log(`dados do termo carregados`);

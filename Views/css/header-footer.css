@@ -144,6 +144,31 @@ body {
   flex: 1 0 auto;
 }
 
+#info{
+  display:flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  height: 5px;
+}
+
+#ajuste, #revi{
+  margin-right: 30px;
+  text-decoration: none;
+  font-family: Poppins;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 27px;
+  line-height: 100%;
+  text-align: Left;
+  vertical-align: Top;
+  fill: Solid;
+  color: #000000;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+}
+
 /* Footer ------------------------------------------------ */
 #footer-especialista {
   background-color: #430d64;
@@ -154,7 +179,8 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
-  margin: re;
+ 
+  height: 65px
 }
 footer h2 {
   font-family: "Poppins", sans-serif;
