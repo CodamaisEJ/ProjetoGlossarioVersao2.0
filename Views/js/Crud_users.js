@@ -50,11 +50,13 @@ async function DeletandoUser(user_id) {
   alert("" + json.message);
   console.log(json);
   DeleteUsers(user_id);
+  location.reload();
 }
 
 function DeleteUsers(user_id) {
   const el_user = document.querySelector(`#users${user_id}`);
   Userslist.removeChild(el_user);
+  location.reload();
 }
 
 consultaUsers();

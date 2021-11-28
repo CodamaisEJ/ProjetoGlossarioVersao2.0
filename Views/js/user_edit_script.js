@@ -44,3 +44,7 @@ async function carregarDadosUsuario() {
     console.log(`Erro ao carregar dados do usuário`, error);
   }
 }
+
+function deslogar() {
+  location.href = "index.html";
+}

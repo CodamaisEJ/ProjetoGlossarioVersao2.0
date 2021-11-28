@@ -118,4 +118,4 @@ function trocaPagina() {
   location.href = "tela_termos.html";
 }
 
-function name(params) {}
+

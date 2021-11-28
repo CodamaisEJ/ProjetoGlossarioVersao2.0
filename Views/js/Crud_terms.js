@@ -44,6 +44,7 @@ const consultaTerms = async() =>{
   
   SearchTerms(Terms);
   mostrarTotalDeTermos(Terms.length);
+  mostraruser(Terms.user);
 
   
   } catch (err) {
@@ -98,7 +99,7 @@ async function DeletandoTerms(termo_id) {
     console.log(`Erro ao deletar termo`, error.message);
   }
   location.reload();
-  trocaImg();
+ 
 }
 
 
@@ -192,6 +193,10 @@ async function editarTermo(event) {
 
 function mostrarTotalDeTermos(total_termos) {
   document.querySelector("#total-de-termos").innerHTML = total_termos;
+}
+
+function mostraruser(mostrar_user) {
+  document.querySelector("#nome_usuario").innerHTML = mostrar_user;
 }
 
 function pegarInputsDoForm(form_name) {
