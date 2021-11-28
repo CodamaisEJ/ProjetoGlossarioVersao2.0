@@ -35,3 +35,6 @@ function voltar() {
   location.href = "tela_termos.html";
 }
 
+function voltarTermo() {
+  location.href = "termo.html";
+}

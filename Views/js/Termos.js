@@ -232,7 +232,7 @@ function pegarInputsDoForm(form_name) {
   const revisao_especialista = form["revisao_especialista"].value;
   const data_da_ultima_revisao = form["data_ultima_revisao"].value;
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
- 
+  const status = "./img/square.png"
   
   // if (entrada === "" || cat_morfo === "" || genero_grupo === "") {
   //   alert("Por favor preencha os campos.");
@@ -286,6 +286,7 @@ function pegarInputsDoForm(form_name) {
     sinonimica,
     siglas,
     acronimos,
+    status,
   };
 }
 

@@ -391,36 +391,6 @@ async function carregarDadosTermo() {
   }
 }
 
-function trocaImg(){
-  var xi = localStorage.getItem("tipoUsuario");
-  if (xi == "") {
-    const example = document.getElementsByClassName('sin');
-    example.src = 'icone-sino-da-notificação';
-    var backgroundColor = "#9D1C33";
-    document.getElementById("sin").style.backgroundColor = backgroundColor;
-    console.log(xi)
-    xi = - 1
-    console.log(xi)
-    //img.setAttribute("src", "./img/icon_lixo.png");
-  }
-}
-trocaImg();
-
-function destrocaImg(){
-  //var xi = 2
-  
-  //if (xi == "2") {
-    const example = document.getElementsByClassName('sin');
-    example.src = 'icone-sino-da-notificação';
-    var backgroundColor = "#314C85";
-    document.getElementById("sin").style.backgroundColor = backgroundColor;
-    //img.setAttribute("src", "./img/icon_lixo.png");
-  //  console.log(xi)
- // }
- // location.href = "tela_notificacoes.html";
-}
-
-
 // NOTIFICAÇÃO
 async function criarNotificacao(event, id, entrada, autor, situacao_termo) {
   if (event !== null) {

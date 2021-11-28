@@ -218,7 +218,10 @@ function pegarInputsDoForm(form_name) {
   const data_da_ultima_revisao = new Date();
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
   const status = form["status"].value;
-
+  if(status  == ""){
+    alert("Preencha todos os campos")
+    status.attr('required', true);
+  }
   //if (situacao_termo == ""){
    // alert("Por favor preencha os campos.");
  // }
@@ -357,14 +360,12 @@ async function criarNotificacao(event, id, entrada, autor, status) {
 
   let situacao;
   switch (status) {
-    case "POST":
-      situacao = "Cadastrado";
-      break;
+    
 
-    case "PUT":
-      situacao = "Editado";
+    case "PUT":{
+      situacao = "Revisado";
       break;
-
+    }
     case "DELETE":
       situacao = "Removido";
       break;
