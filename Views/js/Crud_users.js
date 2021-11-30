@@ -6,7 +6,10 @@ async function consultaUsers() {
   );
   const Users = await retorno.json();
   ListUsers(Users);
+ 
 }
+
+
 
 let UserHTML;
 
@@ -37,8 +40,12 @@ function ListUsers(Users) {
       
       `;
 
-    Userslist.innerHTML = Userslist.innerHTML + UserHTML;
+    Userslist.innerHTML +=  UserHTML;
   });
+}
+
+function nomeuser(nome_user) {
+  document.querySelector("#nome_user").innerHTML = nome_user;
 }
 
 async function DeletandoUser(user_id) {
@@ -112,7 +119,7 @@ function irParaTelaEditarUsuario(user_id) {
 async function editarUsuario(event) {
   const user_id = history.state;
 
-  event.preventDefault();
+  
 
   const form = document.forms["edit_user"];
 
@@ -123,7 +130,7 @@ async function editarUsuario(event) {
 
   if (nome === "" || email === "" || tipo_de_usuario === "") {
     alert("Por favor preencha os campos.");
-    return;
+    
   }
 
   const data = {

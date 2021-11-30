@@ -19,7 +19,7 @@
 
 <body onload="mudaCor(), carregarDadosUsuario()">
   
-
+  <script src="js/dropdown.js"></script>
     <header id="header" class="header">
         <div class="logo">
             <img src="./img/Lexic.jpg" alt="" />
@@ -36,14 +36,9 @@
                 <li id="dropdown" class="dropdown">
                     <button onclick="myFunction()" class="dropbtn"></button>
                     <div id="myDropdown" class="dropdown-content">
-                        <p id="nome_usuario">Flavia Maia</p>
+                      <p id="nome_usuario"><span id="nome"></p>
                         <p id="status_user">Administrador</p>
-                        <p id="alt">Alternar Perfis:</p>
-                        <div class="a-block">
-                            <a href="">Administrador</a>
-                            <a href="">Especialista</a>
-                            <a href="">Pesquisador</a>
-                        </div>
+                       
                         <button onclick="deslogar()">Logout</button>
                     </div>
                 </li>
@@ -112,7 +107,7 @@
                     />
                   </div>
                 <div class="button-block">
-                    <button id="return" onclick="history.go(-1)">Voltar</button>
+                    <button id="return" onclick="Voltar_usuarios()">Voltar</button>
                     <button id="save" type="submit" onclick="editarUsuario(event)">
             Salvar
           </button>

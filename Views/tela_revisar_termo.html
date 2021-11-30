@@ -25,7 +25,7 @@
     <title>Revisão</title>
   </head>
   <body onload="carregarDadosTermo(); mudaCor()">
-   
+    <script src="js/dropdown.js"></script>
 
     <header id="header" class="header">
       <div class="logo">
@@ -40,7 +40,7 @@
               <li id="dropdown" class="dropdown">
                   <button onclick="myFunction()" class="dropbtn"></button>
                   <div id="myDropdown" class="dropdown-content">
-                      <p id="nome_usuario">Flavia Maia</p>
+                    <p id="nome_usuario"><span id="nome"></p>
                       <p id="status_user">Especialista</p>
                       
                       <button onclick="deslogar()">Logout</button>

@@ -27,15 +27,14 @@ const consultaTermos = async() =>{
 
   try{
   const retorno = await fetch(`${URL}/terms/list`);
-  STerms = await retorno.json();
-
-  
+  STerms = await retorno.json(); 
 
   } catch (err) {
       console.error(err);
   }
   
 }
+
 const consultaTerms = async() =>{
   
   try{
@@ -44,12 +43,26 @@ const consultaTerms = async() =>{
   
   SearchTerms(Terms);
   mostrarTotalDeTermos(Terms.length);
-  mostraruser(Terms.user);
-
   
   } catch (err) {
       console.error(err);
   }
+
+  const retornouser = await fetch(
+     `${URL}/users/list`
+  );
+  Users = await retornouser.json();
+
+  var login = localStorage.getItem("nomeuser");
+ // var tipouser = localStorage.getItem("tipouser");
+
+
+  mostraruser(login)
+
+  
+
+  console.log(login)
+  
   
 }
 
@@ -69,7 +82,7 @@ const SearchTerms = (Termos) => {
     Termoslist.innerHTML =  htmlString;   
 }
 
-consultaTermos();
+
 
 
 async function DeletandoTerms(termo_id) {
@@ -196,8 +209,9 @@ function mostrarTotalDeTermos(total_termos) {
 }
 
 function mostraruser(mostrar_user) {
-  document.querySelector("#nome_usuario").innerHTML = mostrar_user;
+ document.querySelector("#nome_usuario").innerHTML = mostrar_user;
 }
+
 
 function pegarInputsDoForm(form_name) {
   const form = document.forms[form_name];

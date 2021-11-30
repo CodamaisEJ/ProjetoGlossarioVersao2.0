@@ -38,6 +38,7 @@ async function carregarDadosUsuario() {
     form["email"].value = json.email;
     form["type_user_group"].value = json.tipo_de_usuario;
     form["password"].value = json.senha;
+    
 
     console.log(`dados do usuário carregados`);
   } catch (error) {
@@ -48,3 +49,4 @@ async function carregarDadosUsuario() {
 function deslogar() {
   location.href = "index.html";
 }
+

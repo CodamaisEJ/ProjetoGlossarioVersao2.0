@@ -19,6 +19,7 @@
     <title>Cadastro</title>
   </head>
   <body>   
+    <script src="js/dropdown.js"></script>
 
     <header id="header" class="header">
       <div class="logo">
@@ -33,16 +34,11 @@
           <li id="dropdown" class="dropdown">
               <button onclick="myFunction()" class="dropbtn"></button>
               <div id="myDropdown" class="dropdown-content">
-                <p id="nome_usuario">Flavia Maia</p>
+                <p id="nome_usuario"><span id="nome"></p>
                 <p id="status_user">Administrador</p>
-                <p id="alt" id="text">Alternar Perfis:</p>
-                <div class="a-block" id="block">
-                    <a href="">Administrador</a>
-                    <a href="">Especialista</a>
-                    <a href="">Pesquisador</a>
-                  
+                
                   <button onclick="deslogar()">Logout</button>
-              </div>
+             
           </li>
       </ul>
       </div>

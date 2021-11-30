@@ -23,11 +23,12 @@ function mudaCor() {
 
 
 async function consultaUsers() {
-  const retorno = await fetch(
+  const retornouser = await fetch(
     "https://ficha-terminologica-backend.herokuapp.com/users/list"
   );
-  const Users = await retorno.json();
+  const Users = await retornouser.json();
   ListUsers(Users);
+  
 }
 
 let UserHTML;
@@ -36,14 +37,14 @@ let UserHTML;
 
 
 function ListUsers(Users) {
-  Users.forEach((User) => {
-    
-  
-     
+  Users.forEach((User) => {   
 
     var z = localStorage.getItem("tipoUsuario");
     if (z == 1) {
       var x = document.querySelector("#user");
+     
+      localStorage.setItem("nomeuser", x.value);
+      console.log(x.value)
       var y = document.querySelector("#password");
       var adm = "administrador"
       var user = x.value;
@@ -53,6 +54,8 @@ function ListUsers(Users) {
        location.href = "tela_termos.html";
         var value = 1;
         localStorage.setItem("tipoUsuario", value);
+        user_id = User.nome
+        localStorage.setItem("#user", user_id);
       }
     } 
 
@@ -61,16 +64,15 @@ function ListUsers(Users) {
       var x = document.querySelector("#user");
       var y = document.querySelector("#password");
       var adm = "pesquisador"
+      var admin = "administrador"
       var user = x.value;
       var password = y.value;
 
-      if (user === User.nome && password === User.senha && adm == User.tipo_de_usuario) {
+      if (user === User.nome && password === User.senha && adm == User.tipo_de_usuario ||admin == User.tipo_de_usuario) {
        location.href = "termo.html";
         var value = 2;
         localStorage.setItem("tipoUsuario", value);
-      } else{
-        
-      }
+      } 
     } 
 
     var z = localStorage.getItem("tipoUsuario");
@@ -78,10 +80,11 @@ function ListUsers(Users) {
       var x = document.querySelector("#user");
       var y = document.querySelector("#password");
       var adm = "especialista"
+      var admin = "administrador"
       var user = x.value;
       var password = y.value;
 
-      if (user === User.nome && password === User.senha && adm == User.tipo_de_usuario) {
+      if (user === User.nome && password === User.senha && adm == User.tipo_de_usuario ||admin == User.tipo_de_usuario) {
        location.href = "tela_termos_especialista.html";
         var value = 3;
         localStorage.setItem("tipoUsuario", value);
