@@ -62,13 +62,16 @@ function ListUsers(Users) {
     var z = localStorage.getItem("tipoUsuario");
     if (z == 2) {
       var x = document.querySelector("#user");
+
+      localStorage.setItem("nomeuser", x.value);
+      console.log(x.value)
       var y = document.querySelector("#password");
       var adm = "pesquisador"
-      var admin = "administrador"
+      //var admin = "administrador"
       var user = x.value;
       var password = y.value;
 
-      if (user === User.nome && password === User.senha && adm == User.tipo_de_usuario ||admin == User.tipo_de_usuario) {
+      if (user === User.nome && password === User.senha && adm == User.tipo_de_usuario /*||admin == User.tipo_de_usuario*/) {
        location.href = "termo.html";
         var value = 2;
         localStorage.setItem("tipoUsuario", value);
@@ -78,13 +81,16 @@ function ListUsers(Users) {
     var z = localStorage.getItem("tipoUsuario");
     if (z == 3) {
       var x = document.querySelector("#user");
+      
+      localStorage.setItem("nomeuser", x.value);
+      console.log(x.value)
       var y = document.querySelector("#password");
       var adm = "especialista"
-      var admin = "administrador"
+     // var admin = "administrador"
       var user = x.value;
       var password = y.value;
 
-      if (user === User.nome && password === User.senha && adm == User.tipo_de_usuario ||admin == User.tipo_de_usuario) {
+      if (user === User.nome && password === User.senha && adm == User.tipo_de_usuario /*||admin == User.tipo_de_usuario*/) {
        location.href = "tela_termos_especialista.html";
         var value = 3;
         localStorage.setItem("tipoUsuario", value);

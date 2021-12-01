@@ -219,24 +219,28 @@ function pegarInputsDoForm(form_name) {
   const area = form["area"].value;
   const categoria_morfologica = form["cat_morfo"].value;
   if(categoria_morfologica == ""){
-    alert("Preencha todos os campos")
+    alert("Preencha todos os campos *")
     categoria_morfologica.attr('required', true);
   }
   const entrada = form["entrada"].value;
   if(entrada == ""){
-    alert("Preencha todos os campos")
+    alert("Preencha todos os campos *")
     entrada.attr('required', true);
   }
   const autor = form["autor"].value;
+  if(autor == ""){
+    alert("Preencha todos os campos *")
+    autor.attr('required', true);
+  }
   const genero = form["genero_grupo"].value;
   if(genero == ""){
-    alert("Preencha todos os campos")
+    alert("Preencha todos os campos *")
     genero.attr('required', true);
   }
   const numero = form["num_grupo"].value;
   const variantes = form["variante"].value;
   if(variantes == ""){
-    alert("Preencha todos os campos")
+    alert("Preencha todos os campos *")
     variantes.attr('required', true);
   }
   const ortografica = form["ortografia"].value;
@@ -255,7 +259,7 @@ function pegarInputsDoForm(form_name) {
   const contexto_de_uso3 = form["context_uso_3"].value;
   const remissiva = form["remissivas"].value;
   if(remissiva == ""){
-    alert("Preencha todos os campos")
+    alert("Preencha todos os campos *")
     remissiva.attr('required', true);
   }
   
@@ -281,7 +285,7 @@ function pegarInputsDoForm(form_name) {
   const fonte_do_contexto_de_uso3 = form["font_contexto_uso_3"].value;
   const nota = form["nota"].value;
   if(nota == ""){
-    alert("Preencha todos os campos")
+    alert("Preencha todos os campos *")
     nota.attr('required', true);
   }
   const redator = form["redator"].value;

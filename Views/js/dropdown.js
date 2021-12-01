@@ -1,4 +1,5 @@
 
+ 
 const consultandoUser = async() =>{
   
  
@@ -25,8 +26,8 @@ function mostraruser(mostrar_user) {
   document.querySelector("#nome_usuario").innerHTML = mostrar_user;
  }
 
+
+
  consultandoUser();
 
- function Voltar_usuarios() {
-  location.href = "tela_usuarios.html";
-}
+ 

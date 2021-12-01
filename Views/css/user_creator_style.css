@@ -101,6 +101,18 @@
 }
 #return {
   background-color: #a1b2cd;
+ 
+}
+
+#volt{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #fafafa;
+  border-color: rgba(255, 255, 255, 0);
+  text-decoration: none;
 }
 #save {
   background-color: #314c85;

@@ -65,7 +65,7 @@ const SearchTerms = (Termos) => {
 }
 
 consultaTermos();
-
+consultaTerms();
 
 async function cadastrarTermo(event) {
   event.preventDefault();
@@ -408,7 +408,7 @@ async function criarNotificacao(event, id, entrada, autor, situacao_termo) {
   }
 }
 
-consultaTerms();
+
 
 async function verTermoEspecifico(termo_id) {
   try {

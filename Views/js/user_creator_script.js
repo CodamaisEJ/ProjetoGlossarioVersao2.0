@@ -18,6 +18,4 @@ function mudaCor() {
   }
 }
 
-function trocarPagina() {
-  location.href = "tela_usuarios.html";
-}
+

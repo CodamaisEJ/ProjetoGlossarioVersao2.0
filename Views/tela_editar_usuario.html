@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="./img/Lexic.jpg" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/header-footer.css" />
     <link rel="stylesheet" href="css/termos_style.css" />
     <link rel="stylesheet" href="./css/user_creator_style.css" />
@@ -13,40 +19,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <!-- CSS Personalizado -->
      <link rel="stylesheet" href="./css/meucss.css" />
-    <link rel="shortcut icon" href="./img/Lexic.jpg" type="image/x-icon">
-    <title>Cadastro</title>
-</head>
+
+    <title>Edição</title>
+  </head>
 
 <body onload="mudaCor(), carregarDadosUsuario()">
   
   <script src="js/dropdown.js"></script>
+
     <header id="header" class="header">
-        <div class="logo">
-            <img src="./img/Lexic.jpg" alt="" />
-            <h1>Ficha Terminológica</h1>
-        </div>
-        <div id="links" class="links">
-            <ul>
-                <li id="cadastrar_termos">
-                    <a href="tela_cadastrar_termos.html">Cadastrar Termos +</a>
-                </li>
-                <li id="logo_notificacao">
-                    <a href="tela_notificacoes.html"><img src="./img/sino-de-notificacao 1.png" alt="" /></a>
-                </li>
-                <li id="dropdown" class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn"></button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <p id="nome_usuario"><span id="nome"></p>
-                        <p id="status_user">Administrador</p>
-                       
-                        <button onclick="deslogar()">Logout</button>
-                    </div>
-                </li>
-            </ul>
-        </div>
+      <div class="logo">
+        <img src="./img/Lexic.jpg" alt="" />
+        <h1>Ficha Terminológica</h1>
+      </div>
+      <div id="button-block" class="links">
+        <ul>
+          <li id="cadastrar_termos">
+            <a href="tela_cadastrar_termos.html">Cadastrar Termos +</a>
+          </li>
+          <li id="logo_notificacao">
+            <a href="./tela_notificacoes.html"
+              ><img src="./img/sino-de-notificacao 1.png" alt=""
+            /></a>
+          </li>
+          <li id="dropdown" class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"></button>
+            <div id="myDropdown" class="dropdown-content">
+              <p id="nome_usuario"><span id="nome"></p>
+              <p id="status_user">Administrador</p>
+              
+              <button onclick="deslogar()">Logout</button>
+            </div>
+          </li>
+        </ul>
+      </div>
     </header>
 
-    <div id="elementID"></div>
+    
 
     <main class="conteudo">
         <form id="create_user" name="edit_user" action="">
@@ -59,7 +68,7 @@
                       name="complete_name"
                       id="complete_name"
                       type="text"
-                      required
+                      
                     />
                   </div>
                   <div class="input-block">
@@ -69,7 +78,7 @@
                       name="email"
                       id="email"
                       type="email"
-                      required
+                     
                     />
                   </div>
                   <div class="radio-block">
@@ -103,14 +112,14 @@
                       name="password"
                       id="password"
                       type="password"
-                      required
+                     
                     />
                   </div>
                 <div class="button-block">
-                    <button id="return" onclick="Voltar_usuarios()">Voltar</button>
+                    <button id="return" ><a id="volt" href="./tela_usuarios.html">Voltar</a></button>
                     <button id="save" type="submit" onclick="editarUsuario(event)">
-            Salvar
-          </button>
+                     Salvar
+                    </button>
                 </div>
             </fieldset>
         </form>
@@ -120,9 +129,13 @@
         <h2>Desenvolvido por Codamais &copy; 2021</h2>
     </footer>
 
-    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer src="js/user_edit_script.js"></script>
-    <script src="js/Crud_users.js"></script>
-    <script defer src="./js/menu_dropdown.js"></script>
+    
+    <script src="js/user_edit_script.js"></script>
+    <script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/user_creator_script.js"></script>
+    <script src="js/menu_dropdown.js"></script>
+    <script src="js/cadastro_script.js"></script>
+    
+  
 </body>
 </html>
