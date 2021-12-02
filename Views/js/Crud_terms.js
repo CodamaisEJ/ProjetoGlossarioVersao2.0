@@ -189,6 +189,9 @@ async function editarTermo(event) {
 
       criarNotificacao(event, id, entrada, autor, "PUT");
 
+      var vali = 1;
+      localStorage.setItem("notifica",vali);
+ 
       alert("Termo editado com sucesso.");
      
       location.href = "tela_termos.html";
@@ -462,15 +465,15 @@ async function criarNotificacao(event, id, entrada, autor, situacao_termo) {
     
     if (result.status === 201) {
       console.log(`Notificação criada com suesso.`);
-   //   var val = 1;
-   //  localStorage.setItem("tipoUsuario",val);
-     // alert("Notificação criada com suesso.");
+     
     } else if (result.status === 401) {
       console.log("Ocorreu um erro: Não autorizado.");
     }
   } catch (error) {
     console.log("Erro ao criar notificação: ", error.message);
   }
+
+  
 }
 
 consultaTerms();
@@ -488,8 +491,47 @@ async function verTermoEspecifico(termo_id) {
   } catch (error) {
     console.log(`Erro ao ver informações do termo`, error.message);
   }
+
+
 }
 
 function verificar() {
   location.href = "verificar_termos.html";
 }
+
+
+
+
+
+mudando = () => {
+
+  // verificar o estado da variavel sino 
+  sino = 0
+  localStorage.setItem("notifica", sino);
+
+  location.href = "tela_notificacoes.html";
+console.log(sino)
+}
+
+var sinomuda = 0
+    localStorage.setItem("mudandosino", sinomuda);
+
+function mudaSino() {
+  var sino = localStorage.getItem("notifica");
+  console.log(sino);
+
+  var img = document.getElementById('sin')
+  if (sino == 1) {
+      
+      img.src ='./img/sino.png';
+      alert("Existem novas notificações!") 
+  } 
+  if (sino == 0) {
+      
+  }
+  console.log(sino)
+
+
+  
+}
+

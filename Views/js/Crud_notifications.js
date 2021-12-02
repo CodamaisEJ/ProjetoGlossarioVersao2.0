@@ -2,7 +2,7 @@ const TOKEN =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjYsImlhdCI6MTYzNDQ4MDk0OSwiZXhwIjoxNjM0NTY3MzQ5fQ.xGPRFl9iCQ8RG6JOHQJHobDEhNkrEvk7pgoYMZwgoVo";
 
 const notificationslist = document.querySelector("#tabela tbody");
-let Notifications;
+
 let NotificacaoHTML;
 
 async function consultaNotifications() {
@@ -16,6 +16,7 @@ async function consultaNotifications() {
 
 function ListNotications(Notificacaos) {
   Notificacaos.forEach((Notificacao) => {
+    
     NotificacaoHTML = ` 
          <tr class="bg">      
             <td>${Notificacao.termo}</td>
@@ -27,6 +28,7 @@ function ListNotications(Notificacaos) {
       `;
     notificationslist.innerHTML += NotificacaoHTML;
   });
+  
 }
 
 consultaNotifications();
