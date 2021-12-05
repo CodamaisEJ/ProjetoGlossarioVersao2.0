@@ -29,7 +29,8 @@
       <div id="button-block" class="links">
         <ul>
           <li id="logo_notificacao">
-              <a href="./tela_notificacoes.html"><img src="./img/sino-de-notificacao 1.png" alt=""></a>
+            <a  ><img id="sin" onclick="mudando();"
+              src="./img/sinos.png" alt="" ></a>
           </li>
           <li id="dropdown" class="dropdown">
               <button onclick="myFunction()" class="dropbtn"></button>
@@ -557,23 +558,24 @@
                 <input type="text" name="nota" id="nota" placeholder=""/>
               </div>
 
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="redator">Redator:</label>
-                <input type="text" name="redator" id="redator" />
+                <input disabled type="text" name="redator" id="redator" />
               </div>
 
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="revisao_especialista"
                   >Revisão de especialista:</label
                 >
                 <input
+                  disabled
                   type="text"
                   name="revisao_especialista"
                   id="revisao_especialista"
                 />
               </div>
 
-              <div class="input-block">
+              <div class="input-block disabled">
                 <label for="data_da_ultima_revisao">Data da ultima revisão:</label>
                 <input
                    disabled
@@ -616,6 +618,7 @@
 
     <script src="js/ficha_script.js"></script>
     <script src="js/Crud_terms.js"></script>
+    <script src="js/Crud.js"></script>
     <script src="js/menu_dropdown.js"></script>
     <script defer src="./js/tela_cadastrar_termos_input.js"></script>
     <script defer src="./js/verificar_termos.js"></script>

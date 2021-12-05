@@ -36,6 +36,7 @@
   padding-left: 10px;
   width: 20vw;
   height: 5vh;
+  font-size: 20px;
   background-color: #FFFFFF;
   border: 2px solid #A1B2CD;
   box-sizing: border-box;
@@ -53,4 +54,17 @@
 }
 i{
   margin-right: 5px;
+}
+
+
+#password{
+  margin-left: 50px;
+}
+#pass {
+
+  padding-left: 15px;
+  font-size: 20px;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
 }

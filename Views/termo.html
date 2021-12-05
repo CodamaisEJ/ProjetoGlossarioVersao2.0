@@ -28,7 +28,7 @@
 
   </head>
 
-  <body onload="mudaCor()">
+  <body onload="mudaCor(),  mudaSino()">
     <script src="js/dropdown.js"></script>
     
     <header id="header" class="header">
@@ -41,8 +41,8 @@
               <li id="criar_usuario"><a href="tela_usuarios.html">Criar Usuario</a></li>
               <li id="cadastrar_termos"><a href="Cadastrar_termos.html">Cadastrar Termos +</a></li>
               <li id="logo_notificacao">
-                  <a href="./tela_notificacoes_pesquisador.html"><img id="sin" 
-                    src="./img/sino-de-notificacao 1.png" alt="" onclick="destrocaImg()"></a>
+                <a  ><img id="sin" onclick="mudando();"
+                  src="./img/sinos.png" alt="" ></a>
               </li>
               <li id="dropdown" class="dropdown">
                   <button onclick="myFunction()" class="dropbtn"></button>
@@ -127,5 +127,7 @@
     <script src="js/cadastro_script.js"></script>
     <script src="js/menu_dropdown.js"></script>
     <script src="js/Termos.js"></script>
+    <script src="js/notify.js"></script>
+    <script src="js/Crud.js"></script>
   </body>
   </html>

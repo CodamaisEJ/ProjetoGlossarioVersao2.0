@@ -358,8 +358,8 @@
                   >Contexto de Uso em Italiano:</label
                 >
                 <textarea
-                  name="contexto_italiano"
-                  id="contexto_italiano"
+                  name="context_italiano"
+                  id="context_italiano"
                 ></textarea>
                 
               </div>
@@ -376,7 +376,7 @@
               <!-- STATUS -->
 
               <div class="radio-block">
-                <p>Status:</p>
+                <p>Status: *</p>
                 <input
                   type="radio"
                   id="validado"
@@ -621,13 +621,13 @@
               </div>
 
               <div class="input-block disabled">
-                <label for="redador">Redator:</label>
-                <input disabled type="text" name="redador" id="redador" />
+                <label for="redator">Redator:</label>
+                <input disabled type="text" name="redator" id="redator" />
               </div>
 
               <div class="input-block">
                 <label for="revisao_especialista"
-                  >Revisão de especialista:</label
+                  >Revisão de especialista: *</label
                 >
                 <input
                   type="text"
@@ -700,7 +700,7 @@
               type="button"
               class="btn btn-danger"
               id="salvar"
-              onclick="revisarTermo(event)"
+              onclick="editarTermo(event)"
               data-dismiss="modal"
             >
               Salvar Alterações
@@ -723,7 +723,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="js/ficha_script.js"></script>
-  <script src="js/Revisar_termos.js"></script>
+  <script src="js/Crud.js"></script>
   <script defer src="./js/tela_cadastrar_termos_input.js"></script>
   <script src="js/cadastro_script.js"></script>
   </body>

@@ -14,8 +14,7 @@ function mudaCor() {
      
   }
   if (x == 3) {
-      var backgroundColor = "#430D64";
-      
+      var backgroundColor = "#430D64";  
       document.getElementById("header").style.backgroundColor = backgroundColor;
       document.getElementById("footer").style.backgroundColor = backgroundColor;
   }

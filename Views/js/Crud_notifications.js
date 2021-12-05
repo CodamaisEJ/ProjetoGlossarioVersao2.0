@@ -40,3 +40,5 @@ function voltar() {
 function voltarTermo() {
   location.href = "termo.html";
 }
+
+

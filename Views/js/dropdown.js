@@ -1,24 +1,18 @@
+async function consultandoUser() {
 
- 
-const consultandoUser = async() =>{
-  
- 
+
   const retornouser = await fetch(
-     `https://ficha-terminologica-backend.herokuapp.com/users/list`
+    `https://ficha-terminologica-backend.herokuapp.com/users/list`
   );
   Users = await retornouser.json();
 
   var login = localStorage.getItem("nomeuser");
- // var tipouser = localStorage.getItem("tipouser");
-
-
-  mostraruser(login)
+  // var tipouser = localStorage.getItem("tipouser");
+  mostraruser(login);
 
   //mostrar(nome)
-
-  console.log(login)
+  console.log(login);
   //console.log(nome)
-  
 }
 
 
