@@ -207,3 +207,42 @@ footer h2 {
     font-size: 25px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #aqui{
+    font-size: 20px;
+    margin-left: -210px;
+  }
+
+  #admin{
+    margin-left: -320px;
+    width: 230px;
+  }
+  #pesquisador{
+    margin-left: -320px;
+    width: 230px;
+  }
+  #especialista{
+    margin-left: -320px;
+    width: 230px;
+  }
+  footer {
+    background-color: #314c85;
+    flex-shrink: 0;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: re;
+    margin-top: 90px;
+    width: 100%;
+  }
+  footer h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: -450px;
+   
+  }
+}
