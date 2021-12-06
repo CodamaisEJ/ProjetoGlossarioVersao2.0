@@ -34,11 +34,14 @@ function ListNotications(Notificacaos) {
 consultaNotifications();
 
 function voltar() {
-  location.href = "tela_termos.html";
-}
 
-function voltarTermo() {
+  var z = localStorage.getItem("tipoUsuario");
+  if (z == 1) {
+  location.href = "tela_termos.html";
+  }
+  if (z == 2) {
   location.href = "termo.html";
+  }
 }
 
 

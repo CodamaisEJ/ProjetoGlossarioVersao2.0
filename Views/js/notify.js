@@ -4,7 +4,7 @@ mudando = () => {
   sino = 0
   localStorage.setItem("notifica", sino);
 
-  location.href = "tela_notificacoes_pesquisador.html";
+  location.href = "tela_notificacoes.html";
 console.log(sino)
 }
 

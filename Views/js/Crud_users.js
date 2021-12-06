@@ -54,7 +54,7 @@ async function DeletandoUser(user_id) {
     { method: "delete" }
   );
   const json = await retorno.json();
-  alert("" + json.message);
+  alert("Usuário deletado com sucesso");
   console.log(json);
   DeleteUsers(user_id);
   location.reload();
