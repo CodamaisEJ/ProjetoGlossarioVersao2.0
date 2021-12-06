@@ -1,7 +1,6 @@
 function myFunction() {
   document.getElementById("dropdown").style.right = "0px";
   document.getElementById("dropdown").style.marginRight = "3.5rem";
-  document.getElementById("logo_notificacao").style.display = "none";
   document.getElementById("myDropdown").classList.toggle("show");
   var Switch = document.getElementById("dropbtn");
   var toggled = document.getElementById("myDropdown");
@@ -18,11 +17,7 @@ window.onclick = function(event) {
               document.getElementById("dropdown").style.right = "0px";
               document.getElementById("dropdown").style.marginTop = "0rem";
               document.getElementById("dropdown").style.marginRight = "3.5rem";
-              if (x == 3) {
-                  document.getElementById("logo_notificacao").style.display = "none";
-              } else {
-                  document.getElementById("logo_notificacao").style.display = "flex";
-              }
+              
           }
       }
   }

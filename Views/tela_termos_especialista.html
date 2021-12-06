@@ -32,6 +32,12 @@
       img{
         width: 30px;
       }
+      #alt{
+        display: none;
+      }
+      #block{
+        display: none;
+      }
     </style>
     <title>Cadastro</title>
 
@@ -50,15 +56,19 @@
             <li id="criar_usuario" ><a href="tela_usuarios.html">Criar Usuario</a></li>
             <li id="cadastrar_termos"><a href="Cadastrar_termos.html">Cadastrar Termos +</a></li>
             <li id="logo_notificacao">
-              <a href="./tela_notificacoes_pesquisador.html"><img id="sin" 
-                src="./img/sino-de-notificacao 1.png" alt="" ></a>
+              
             </li>
             <li id="dropdown" class="dropdown">
                 <button onclick="myFunction()" class="dropbtn"></button>
                 <div id="myDropdown" class="dropdown-content">
                     <p id="nome_usuario"><span id="nome"></p>
                     <p id="status_user">Especialista</p>
-                    
+                    <p id="alt" id="text">Alternar Perfis:</p>
+                        <div class="a-block" id="block">
+                            <a href="tela_termos.html">Administrador</a>                        
+                            <a href="termo.html">Pesquisador</a>
+                            <a href="tela_termos_especialista.html">Especialista</a>
+                        </div>
                     <button onclick="deslogar()">Logout</button>
                 </div>
             </li>

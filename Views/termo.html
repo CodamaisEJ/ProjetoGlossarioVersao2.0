@@ -22,6 +22,12 @@
       #criar_usuario{
         display: none;
       }
+      #alt{
+        display: none;
+      }
+      #block{
+        display: none;
+      }
     </style>
     
     <title>Cadastro</title>
@@ -49,7 +55,12 @@
                   <div id="myDropdown" class="dropdown-content">
                     <p id="nome_usuario"><span id="nome"></p>
                       <p id="status_user">Pesquisador</p>
-                      
+                      <p id="alt" id="text">Alternar Perfis:</p>
+                        <div class="a-block" id="block">
+                            <a href="tela_termos.html">Administrador</a>                        
+                            <a href="termo.html">Pesquisador</a>
+                            <a href="tela_termos_especialista.html">Especialista</a>
+                        </div>
                       <button onclick="deslogar()">Logout</button>
                   </div>
               </li>
