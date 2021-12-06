@@ -15,7 +15,11 @@
     <link rel="stylesheet" href="./css/tela_cadastrar_termos_style.css" />
     <link rel="stylesheet" href="css/dropdown_user_icon.css">
     
-
+    <style>
+      #sin{
+        cursor: pointer;
+      }
+    </style>
     <title>Edição</title>
   </head>
   <body onload="carregarDadosTermo(); mudaCor();" >
@@ -36,7 +40,12 @@
                   <div id="myDropdown" class="dropdown-content">
                     <p id="nome_usuario"><span id="nome"></p>
                       <p id="status_user">Pesquisador</p>
-                      
+                      <p id="alt" id="text">Alternar Perfis:</p>
+                        <div class="a-block" id="block">
+                            <a href="tela_termos.html">Administrador</a>                        
+                            <a href="termo.html">Pesquisador</a>
+                            <a href="tela_termos_especialista.html">Especialista</a>
+                        </div>
                       <button onclick="deslogar()">Logout</button>
                   </div>
               </li>
@@ -618,6 +627,5 @@
     <script defer src="./js/verificar_termos.js"></script>
     <script defer src="./js/tela_cadastrar_termos_input.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/Crud.js"></script>
   </body>
 </html>

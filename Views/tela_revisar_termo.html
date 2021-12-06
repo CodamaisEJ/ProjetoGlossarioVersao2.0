@@ -18,8 +18,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <style>
-      #logo_notificacao{
-        background-color: #430D64;
+      #logo_notificacao {
+  
+        display: none;
+      }
+      #alt{
+        display: none;
+      }
+      #block{
+        display: none;
       }
     </style>
     <title>Revisão</title>
@@ -42,7 +49,12 @@
                   <div id="myDropdown" class="dropdown-content">
                     <p id="nome_usuario"><span id="nome"></p>
                       <p id="status_user">Especialista</p>
-                      
+                      <p id="alt" id="text">Alternar Perfis:</p>
+                        <div class="a-block" id="block">
+                            <a href="tela_termos.html">Administrador</a>                        
+                            <a href="termo.html">Pesquisador</a>
+                            <a href="tela_termos_especialista.html">Especialista</a>
+                        </div>
                       <button onclick="deslogar()">Logout</button>
                   </div>
               </li>
@@ -710,7 +722,7 @@
       </div>
     </div>
 
-    <footer id="footer-especialista">
+    <footer id="footer">
       <h2>Desenvolvido por Codamais &copy; 2021</h2>
     </footer>
 
@@ -722,7 +734,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="js/ficha_script.js"></script>
+  <script src="js/menu_dropdown.js"></script>    
+    <script src="js/ficha_script.js"></script>
   <script src="js/Crud.js"></script>
   <script defer src="./js/tela_cadastrar_termos_input.js"></script>
   <script src="js/cadastro_script.js"></script>

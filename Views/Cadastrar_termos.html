@@ -16,7 +16,11 @@
     <link rel="stylesheet" href="css/dropdown_user_icon.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
-
+    <style>
+      #sin{
+        cursor: pointer;
+      }
+    </style>
     <title>Cadastro</title>
   </head>
   <body onload="mudaCor()">   
@@ -38,7 +42,12 @@
                   <div id="myDropdown" class="dropdown-content">
                     <p id="nome_usuario"><span id="nome"></p>
                       <p id="status_user">Pesquisador</p>
-                      
+                      <p id="alt" id="text">Alternar Perfis:</p>
+                        <div class="a-block" id="block">
+                            <a href="tela_termos.html">Administrador</a>                        
+                            <a href="termo.html">Pesquisador</a>
+                            <a href="tela_termos_especialista.html">Especialista</a>
+                        </div>
                       <button onclick="deslogar()">Logout</button>
                   </div>
               </li>

@@ -24,18 +24,11 @@ function mudaCor() {
   }
   if (x == 3) {
     var backgroundColor = "#430D64";
-    document.getElementById("dropdown").style.marginRight = "3.5rem";
     document.getElementById("header").style.backgroundColor = backgroundColor;
     document.getElementById("footer").style.backgroundColor = backgroundColor;
     document.getElementById("fechar").style.backgroundColor = backgroundColor;
     document.getElementById("salvar").style.backgroundColor = "#9D1C33";
-    document.getElementById("logo_notificacao").style.display = "none";
-    document.getElementById("alt").style.color = "#234F90";
-    document.getElementById("alt").style.cursor = "pointer";
-    document.getElementById("alt").style.marginBottom = "-10px";
-    var text = document.querySelector("#alt");
-    text.innerHTML = "Revisar Termos";
-    document.getElementById("block").style.display = "none";
+    
     var user = document.querySelector("#status_user");
     user.innerHTML = "Especialista";
 
