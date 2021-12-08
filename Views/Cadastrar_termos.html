@@ -20,6 +20,12 @@
       #sin{
         cursor: pointer;
       }
+      #alt{
+        display: none;
+      }
+      #block{
+        display: none;
+      }
     </style>
     <title>Cadastro</title>
   </head>
@@ -34,7 +40,7 @@
       <div id="button-block" class="links">
           <ul>
               <li id="logo_notificacao">
-                <a  ><img id="sin" onclick="mudando();"
+                <a  ><img id="sin" onclick="mudando()"
                   src="./img/sinos.png" alt="" ></a>
               </li>
               <li id="dropdown" class="dropdown">
@@ -625,10 +631,19 @@
     <footer id="footer">
       <h2>Desenvolvido por Codamais &copy; 2021</h2>
     </footer>
+    <script>
+      var x = localStorage.getItem("tipoUsuario");
+    if (x == 1) {
+      document.getElementById("alt").style.display = "block";
+      document.getElementById("block").style.display = "block";  
+    }
+    </script>
 
+    
+    <script src="js/cadastro_script.js"></script>
     <script src="js/menu_dropdown.js"></script>
+    <script src="js/notify.js"></script>
     <script src="js/ficha_script.js"></script>
-    <script src="js/Termos.js"></script> 
     <script src="js/Crud.js"></script>
     <script defer src="./js/verificar_termos.js"></script>
     <script defer src="./js/tela_cadastrar_termos_input.js"></script>

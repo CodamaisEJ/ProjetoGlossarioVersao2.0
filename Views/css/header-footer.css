@@ -144,6 +144,10 @@ body {
   flex: 1 0 auto;
 }
 
+#sin{
+  cursor: pointer;
+}
+
 #info{
   display:flex;
   display: -webkit-flex;
@@ -242,7 +246,7 @@ footer h2 {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    margin-left: -450px;
+    margin-left: -400px;
    
   }
 }

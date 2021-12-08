@@ -43,19 +43,23 @@ function ListUsers(Users) {
     if (z == 1) {
       var x = document.querySelector("#user");
      
-      localStorage.setItem("nomeuser", x.value);
-      console.log(x.value)
+      
       var y = document.querySelector("#password");
       var adm = "administrador"
       var user = x.value;
       var password = y.value;
 
-      if (user === User.nome && password === User.senha && adm == User.tipo_de_usuario) {
-       location.href = "tela_termos.html";
+      if (user === User.email && password === User.senha && adm == User.tipo_de_usuario) {
+       
         var value = 1;
         localStorage.setItem("tipoUsuario", value);
+
         user_id = User.nome
-        localStorage.setItem("#user", user_id);
+        localStorage.setItem("motrar_user", user_id);
+       
+        console.log(User.nome)
+        location.href = "tela_termos.html";
+       
       }
     } 
 
@@ -63,18 +67,21 @@ function ListUsers(Users) {
     if (z == 2) {
       var x = document.querySelector("#user");
 
-      localStorage.setItem("nomeuser", x.value);
-      console.log(x.value)
+      
       var y = document.querySelector("#password");
       var adm = "pesquisador"
       var admin = "administrador"
       var user = x.value;
       var password = y.value;
 
-      if (user === User.nome && password === User.senha && adm == User.tipo_de_usuario ||admin == User.tipo_de_usuario) {
-       location.href = "termo.html";
+      if (user === User.email && password === User.senha && adm == User.tipo_de_usuario ) {
+       
         var value = 2;
         localStorage.setItem("tipoUsuario", value);
+
+        
+
+        location.href = "termo.html";
       } 
     } 
 
@@ -82,18 +89,21 @@ function ListUsers(Users) {
     if (z == 3) {
       var x = document.querySelector("#user");
       
-      localStorage.setItem("nomeuser", x.value);
-      console.log(x.value)
       var y = document.querySelector("#password");
       var adm = "especialista"
       var admin = "administrador"
       var user = x.value;
       var password = y.value;
 
-      if (user === User.nome && password === User.senha && adm == User.tipo_de_usuario ||admin == User.tipo_de_usuario) {
-       location.href = "tela_termos_especialista.html";
+      if (user === User.email && password === User.senha && adm == User.tipo_de_usuario) {
+       
         var value = 3;
         localStorage.setItem("tipoUsuario", value);
+
+        user_id = User.nome
+        localStorage.setItem("motrar_user", user_id);
+
+        location.href = "tela_termos_especialista.html";
       }
     } 
   });

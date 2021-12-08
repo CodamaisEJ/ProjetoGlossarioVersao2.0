@@ -19,6 +19,12 @@
       #sin{
         cursor: pointer;
       }
+      #alt{
+        display: none;
+      }
+      #block{
+        display: none;
+      }
     </style>
     <title>Notificação</title>
   </head>
@@ -78,7 +84,14 @@
       <h2>Desenvolvido por Codamais &copy; 2021</h2>
     </footer>
 
-    
+    <script>
+      var x = localStorage.getItem("tipoUsuario");
+      if (x == 1) {
+
+      document.getElementById("alt").style.display = "block";
+      document.getElementById("block").style.display = "block";  
+  }
+    </script>
     
     <script src="js/menu_dropdown.js"></script>
      <script src="js/ficha_script.js"></script>

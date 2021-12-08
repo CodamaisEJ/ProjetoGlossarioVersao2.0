@@ -11,17 +11,14 @@ function mudaCor() {
       var backgroundColor = "#0D4F3F";
       document.getElementById("header").style.backgroundColor = backgroundColor;
       document.getElementById("footer").style.backgroundColor = backgroundColor;
-      var sub_titulo = document.querySelector("#sub_titulo");
-      document.getElementById("alt").style.display = "none";
-      document.getElementById("block").style.display = "none";  
+      var sub_titulo = document.querySelector("#sub_titulo"); 
      
   }
   if (x == 3) {
       var backgroundColor = "#430D64";  
       document.getElementById("header").style.backgroundColor = backgroundColor;
       document.getElementById("footer").style.backgroundColor = backgroundColor;
-      document.getElementById("alt").style.display = "none";
-      document.getElementById("block").style.display = "none";
+
   }
 }
 
