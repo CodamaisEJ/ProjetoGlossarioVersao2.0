@@ -6,7 +6,7 @@ async function consultaUsers() {
   );
   const Users = await retorno.json();
   ListUsers(Users);
- 
+
 }
 
 
@@ -44,9 +44,6 @@ function ListUsers(Users) {
   });
 }
 
-function nomeuser(nome_user) {
-  document.querySelector("#nome_user").innerHTML = nome_user;
-}
 
 async function DeletandoUser(user_id) {
   const retorno = await fetch(

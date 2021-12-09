@@ -68,3 +68,97 @@ i{
   right: 10px;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  #tela_login legend{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #101564;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #aqui{
+    font-size: 20px;
+    margin-left: -210px;
+  }
+
+  .input-block input {
+    padding-left: 10px;
+    width: 50vw;
+    height: 5vh;
+    font-size: 20px;
+    background-color: #FFFFFF;
+    border: 2px solid #A1B2CD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    margin-left: -420px;
+  }
+
+  #usando{
+    font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #4D5E77;
+  margin-left: -690px;
+  margin-bottom: 10px;
+  }
+
+  #senha{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #4D5E77;
+    margin-left: -690px;
+    margin-bottom: 10px;
+  }
+
+  #password{
+    padding-left: 10px;
+    width: 50vw;
+    height: 5vh;
+    font-size: 20px;
+    background-color: #FFFFFF;
+    border: 2px solid #A1B2CD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    margin-left: -370px;
+  }
+  
+  #tela_login button {
+    background-color: #314C85;
+    margin-top: 10px;
+    width: 50vw;
+    height: 7vh;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    margin-left: -420px;
+  }
+
+  footer {
+    background-color: #314c85;
+    flex-shrink: 0;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: re;
+    margin-top: 90px;
+    width: 100%;
+  }
+  footer h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: -400px;
+   
+  }
+}

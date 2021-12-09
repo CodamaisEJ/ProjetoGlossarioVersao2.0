@@ -40,6 +40,7 @@ function ListUsers(Users) {
   Users.forEach((User) => {   
 
     var z = localStorage.getItem("tipoUsuario");
+
     if (z == 1) {
       var x = document.querySelector("#user");
      
@@ -61,16 +62,14 @@ function ListUsers(Users) {
         location.href = "tela_termos.html";
        
       }
-    } 
+    }  
 
-    var z = localStorage.getItem("tipoUsuario");
     if (z == 2) {
       var x = document.querySelector("#user");
 
       
       var y = document.querySelector("#password");
       var adm = "pesquisador"
-      var admin = "administrador"
       var user = x.value;
       var password = y.value;
 
@@ -79,19 +78,21 @@ function ListUsers(Users) {
         var value = 2;
         localStorage.setItem("tipoUsuario", value);
 
-        
+        user_id = User.nome
+        localStorage.setItem("motrar_user", user_id);
+       
+        console.log(User.nome)
 
         location.href = "termo.html";
       } 
     } 
 
-    var z = localStorage.getItem("tipoUsuario");
+    
     if (z == 3) {
       var x = document.querySelector("#user");
       
       var y = document.querySelector("#password");
       var adm = "especialista"
-      var admin = "administrador"
       var user = x.value;
       var password = y.value;
 
@@ -103,6 +104,8 @@ function ListUsers(Users) {
         user_id = User.nome
         localStorage.setItem("motrar_user", user_id);
 
+        console.log(User.nome)
+        
         location.href = "tela_termos_especialista.html";
       }
     } 

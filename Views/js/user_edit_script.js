@@ -23,53 +23,12 @@ function trocarPagina() {
 }
 
 
-async function carregarDadosUsuario() {
-  const user_id = history.state;
 
-  try {
-    const result = await fetch(
-      `https://ficha-terminologica-backend.herokuapp.com/user/${user_id}/list`
-    );
-
-    const json = await result.json();
-
-    const form = document.forms["edit_user"];
-
-    form["complete_name"].value = json.nome;
-    form["email"].value = json.email;
-    form["type_user_group"].value = json.tipo_de_usuario;
-    form["password"].value = json.senha;
-    
-
-    console.log(`dados do usuário carregados`);
-  } catch (error) {
-    console.log(`Erro ao carregar dados do usuário`, error);
-  }
-}
 
 async function editarUsuario(event) {
   const user_id = history.state;
 
-  
-
-  const form = document.forms["edit_user"];
-
-  const nome = form["complete_name"].value;
-  const email = form["email"].value;
-  const tipo_de_usuario = form["type_user_group"].value;
-  const senha = form["password"].value;
-
-  if (nome === "" || email === "" || tipo_de_usuario === "") {
-    alert("Por favor preencha os campos.");
-    
-  }
-
-  const data = {
-    nome,
-    email,
-    tipo_de_usuario,
-    senha,
-  };
+  const data = document.forms["edit_user"];
 
   try {
     const result = await fetch(
@@ -83,14 +42,16 @@ async function editarUsuario(event) {
 
     if (result.ok) {
       alert("Usuário editado com sucesso.");
-      location.href = "tela_usuarios.html";
+      
     } else {
       alert("Usuário já existe.");
     }
+    location.href = "tela_usuarios.html";
   } catch (error) {
     alert("Erro ao cadastrar usuário");
     console.log(`error.message`, error.message);
   }
+ 
 }
 
 function deslogar() {

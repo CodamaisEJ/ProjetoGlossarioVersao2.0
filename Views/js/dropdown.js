@@ -6,18 +6,15 @@ async function consultandoUser() {
   );
   Users = await retornouser.json();
 
-  var login = localStorage.getItem("nomeuser");
+  var login = localStorage.getItem("motrar_user");
   // var tipouser = localStorage.getItem("tipouser");
-  mostraruser(login);
-
-  //mostrar(nome)
-  console.log(login);
-  //console.log(nome)
+   mostraruser(login)
+   console.log(login)
 }
 
 
-function mostraruser(mostrar_user) {
-  document.querySelector("#nome_usuario").innerHTML = mostrar_user;
+function mostraruser(nome_usuario) {
+  document.querySelector("#nome_usuario").innerHTML = nome_usuario;
  }
 
 

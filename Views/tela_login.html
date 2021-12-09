@@ -13,9 +13,9 @@
       <title>Login</title>
 
     </head>
-    <body onload="mudaCor()">  
+<body onload="mudaCor()">  
 
-    <header id="header" class="header">
+  <header id="header" class="header">
       <div class="logo">
           <img src="./img/Lexic.jpg" alt="">
           <h1>Ficha Terminológica</h1>
@@ -28,12 +28,12 @@
             <legend id="aqui">Para acessar a ficha preencha os campos abaixo:</legend>
 
               <div class="input-block">
-                <label for="user">Usuário:</label> <br>
-                <input placeholder="Usuário" type="text" name="user" id="user" required>
+                <label id="usando" for="user">Usuário:</label> <br>
+                <input placeholder="Digite seu e-mail" type="text" name="user" id="user" required>
               </div>
               
             <div class="input-block">
-              <label for="password">Senha:</label> <br>
+              <label id="senha" for="password">Senha:</label> <br>
               <input placeholder="********" type="password" name="password" id="password" required>
               <i class="fa fa-eye-slash" id="pass" onclick="mostrarsenha()"></i>
               
