@@ -23,9 +23,10 @@ function trocarPagina1(){
   location.href= "tela_criar_usuarios.html";
 }
 
-async function carregarDadosUsuario() {
+async function carregarDadosUsuario(event) {
   const user_id = history.state;
 
+  
   try {
     const result = await fetch(
       `https://ficha-terminologica-backend.herokuapp.com/user/${user_id}/list`
@@ -42,6 +43,7 @@ async function carregarDadosUsuario() {
     
 
     console.log(`dados do usuário carregados`);
+    event.preventDefault();
   } catch (error) {
     console.log(`Erro ao carregar dados do usuário`, error);
   }
