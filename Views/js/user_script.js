@@ -23,9 +23,10 @@ function trocarPagina1(){
   location.href= "tela_criar_usuarios.html";
 }
 
-async function carregarDadosUsuario(event) {
+async function carregarDadosUsuario() {
   const user_id = history.state;
 
+  
   
   try {
     const result = await fetch(
@@ -43,7 +44,7 @@ async function carregarDadosUsuario(event) {
     
 
     console.log(`dados do usuário carregados`);
-    event.preventDefault();
+    
   } catch (error) {
     console.log(`Erro ao carregar dados do usuário`, error);
   }

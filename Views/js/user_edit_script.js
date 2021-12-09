@@ -28,9 +28,26 @@ function trocarPagina() {
 async function editarUsuario(event) {
   const user_id = history.state;
 
-  event.preventDefault(); 
+  event.preventDefault();
+  
+  const form = document.forms["edit_user"];
 
-  const data = document.forms["edit_user"];
+  const nome = form["complete_name"].value;
+  const email = form["email"].value;
+  const tipo_de_usuario = form["type_user_group"].value;
+  const senha = form["password"].value;
+
+  if (nome === "" || email === "" || tipo_de_usuario === "") {
+    alert("Por favor preencha os campos.");
+    
+  }
+
+  const data = {
+    nome,
+    email,
+    tipo_de_usuario,
+    senha,
+  };
 
   try {
     const result = await fetch(
@@ -48,12 +65,10 @@ async function editarUsuario(event) {
     } else {
       alert("Usuário já existe.");
     }
-   
   } catch (error) {
     alert("Erro ao cadastrar usuário");
     console.log(`error.message`, error.message);
   }
- 
 }
 
 function deslogar() {
