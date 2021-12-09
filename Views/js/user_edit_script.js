@@ -28,6 +28,8 @@ function trocarPagina() {
 async function editarUsuario(event) {
   const user_id = history.state;
 
+  event.preventDefault(); 
+
   const data = document.forms["edit_user"];
 
   try {
@@ -42,11 +44,11 @@ async function editarUsuario(event) {
 
     if (result.ok) {
       alert("Usuário editado com sucesso.");
-      
+      location.href = "tela_usuarios.html";
     } else {
       alert("Usuário já existe.");
     }
-    location.href = "tela_usuarios.html";
+   
   } catch (error) {
     alert("Erro ao cadastrar usuário");
     console.log(`error.message`, error.message);
