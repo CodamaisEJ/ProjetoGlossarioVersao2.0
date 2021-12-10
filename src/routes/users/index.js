@@ -2,6 +2,7 @@ const { Router } = require('express')
 
 const UserController = require('../../controllers/UserController')
 const TokenController = require('../../controllers/TokenController')
+const ForgotPasswordController = require('../../controllers/ForgotPasswordController')
 const middlewareAuth = require('../../middleware/auth')
 
 const router = Router()
@@ -20,6 +21,12 @@ router.put('/user/:id/update', UserController.updateUser)
 
 //atualizar seu proprio perfil
 router.put('/user/:id/updatemydata', UserController.updateUserMydata)
+
+//Recuperar senha
+router.post('/user/forgotpassword/create', ForgotPasswordController.ForgotPassword)
+
+//Resetar senha
+router.post('/user/forgotpassword/reset', ForgotPasswordController.ResetPassword)
 
 router.delete('/user/:id/delete', UserController.deleteUser)
 
