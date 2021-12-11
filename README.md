@@ -145,3 +145,21 @@ Para criar as migrations no bd:
 ### Para listar 1 termo e seus os dados lembrando substitua o :id pelo id do termo cadastrado no banco
 
     localhost:3000/user/:id/list
+
+
+### Rotas para recuperar a senha
+** Nessa rota ira enviar o email com o token para a conta que o Léo criou no mailtrap.io
+** Informe o email do usuario existente dentro das aspas duplas vazia
+** user/forgotpassword/create
+  {
+      "email": ""
+  }
+
+** Depois de anotado o email e o token que foi enviado para a conta que o Léo criou no mailtrap.io, informe nas aspas duplas a cada respectivo item
+** Resetar a senha
+** user/forgotpassword/reset
+  {
+    "email": "",
+    "token": "",
+    "senha": ""
+  }
