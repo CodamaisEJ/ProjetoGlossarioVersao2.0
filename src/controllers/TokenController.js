@@ -49,8 +49,4 @@ class TokenController {
 
 }
 
-<<<<<<< HEAD
-module.exports = TokenController;
-=======
 module.exports = TokenController
->>>>>>> parent of 47cc3f2... criptografia de senha

@@ -22,12 +22,6 @@ module.exports = {
         type: Sequelize.ENUM,
         values: ['administrador','especialista','pesquisador','pendente']
       },
-      passwordResetToken: {
-        type: Sequelize.STRING
-      },
-      passwordResetExpires: {
-        type: Sequelize.DATE
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

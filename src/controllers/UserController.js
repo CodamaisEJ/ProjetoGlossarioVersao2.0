@@ -97,8 +97,4 @@ class UserController {
     }
 }
 
-<<<<<<< HEAD
-module.exports = UserController;
-=======
 module.exports = UserController
->>>>>>> parent of 47cc3f2... criptografia de senha

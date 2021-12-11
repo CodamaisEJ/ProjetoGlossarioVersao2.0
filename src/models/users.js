@@ -31,8 +31,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.ENUM,
       values: ['administrador','especialista','pesquisador','pendente']
     },
-    passwordResetToken: DataTypes.STRING,
-    passwordResetExpires: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'Users',
