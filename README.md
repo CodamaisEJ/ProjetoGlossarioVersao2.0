@@ -136,7 +136,7 @@ Para criar as migrations no bd:
 
     localhost:3000/user/:id/updatemydata
 
-** No corpo da requisição o <code>passwordCurrentBody</code> é a senha atual ** 
+**No corpo da requisição o <code>passwordCurrentBody</code> é a senha atual** 
 
 ### Para listar 1 usuario e seus os dados lembrando substitua o :id pelo id do usuário cadastrado no banco
 
@@ -148,21 +148,28 @@ Para criar as migrations no bd:
 
 
 ### Rotas para recuperar a senha
-** Nessa rota ira enviar o email com o token para a conta que o Léo criou no mailtrap.io
-** Informe o email do usuario existente dentro das aspas duplas vazia
-** user/forgotpassword/create
-  {
-      "email": ""
-  }
 
-** Depois de anotado o email e o token que foi enviado para a conta que o Léo criou no mailtrap.io, informe nas aspas duplas a cada respectivo item
-** Resetar a senha
-** user/forgotpassword/reset
-  {
-    "email": "",
-    "token": "",
-    "senha": ""
-  }
+***Nessa rota ira enviar o email com o token para a conta que o Léo criou no mailtrap.io***
+
+**Informe o email do usuario existente dentro das aspas duplas vazia** 
+
+    user/forgotpassword/create
+
+    {
+      "email": ""
+    }
+
+**Depois de anotado o email e o token que foi enviado para a conta que o Léo criou no mailtrap.io, informe nas aspas duplas a cada respectivo item**
+
+**Resetar a senha**
+
+    **user/forgotpassword/reset
+
+    {
+        "email": "",
+        "token": "",
+        "senha": ""
+    }
 
 
 ### Em fogotPassword.html troque o site.com pelo site que voce tem já criado
