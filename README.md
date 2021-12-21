@@ -163,7 +163,7 @@ Para criar as migrations no bd:
 
 **Resetar a senha**
 
-    **user/forgotpassword/reset
+    user/forgotpassword/reset
 
     {
         "email": "",
