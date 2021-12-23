@@ -68,6 +68,9 @@ consultaTerms();
 
 
 function irParaTelaEditarTermo(term_id) {
+  var n = 3;
+  localStorage.setItem("redator_",n);
+
   history.pushState(term_id, "", "tela_editar_termo_pesquisador.html");
   window.location.href = "tela_editar_termo_pesquisador.html";
 }
@@ -94,3 +97,10 @@ async function verTermoEspecifico(termo_id) {
 }
 
 
+function irtelacadastrar() {
+  
+  var v = 2;
+  localStorage.setItem("autor_",v);
+
+  location.href = "Cadastrar_termos.html";
+}

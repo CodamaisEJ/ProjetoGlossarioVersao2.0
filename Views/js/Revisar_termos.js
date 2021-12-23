@@ -32,6 +32,7 @@ STerms = await retorno.json();
 }
 
 }
+
 const consultaTerms = async() =>{
 
 try{
@@ -53,11 +54,6 @@ const SearchTerms = (Termos) => {
     console.log(Termo.status)
     
     return`
-    <style>
-    #sta{
-      font-weight: bold;
-    }
-    </style>
     <div class="termo_block" id="termo_block${Termo.entrada}">
            <p onclick="irParaTelaEditarTermoEspecialista(${Termo.id})">${Termo.entrada}</p>  
            <img id="revisar" onclick="irParaTelaEditarTermoEspecialista(${Termo.id})" src="${Termo.status}" > 
@@ -73,6 +69,7 @@ const SearchTerms = (Termos) => {
 }
 
 consultaTermos();
+consultaTerms();
 
 function irParaTelaEditarTermoEspecialista(term_id) {
   history.pushState(term_id, "", "tela_revisar_termo.html");
@@ -85,4 +82,10 @@ function mostrarTotalDeTermos(total_termos) {
   document.querySelector("#total-de-termos").innerHTML = total_termos;
 }
 
-consultaTerms();
+function irtelacadastrar() {
+  
+  var v = 4;
+  localStorage.setItem("revisar_",v);
+
+  location.href = "tela_revisar_termo.html";
+}

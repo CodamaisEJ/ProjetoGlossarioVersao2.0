@@ -17,10 +17,7 @@ function mudaCor() {
     document.getElementById("block").style.display = "none";
     var user = document.querySelector("#status_user");
     user.innerHTML = "Pesquisador";
-    var text = document.querySelector("#alt");
-    text.innerHTML = "Voltar para a tela de Termos";
-    document.getElementById("status").style.display = "none";
-    document.getElementById("espaco").style.display = "none";
+    
   }
   if (x == 3) {
     var backgroundColor = "#430D64";

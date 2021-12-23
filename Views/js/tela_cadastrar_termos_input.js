@@ -1,6 +1,3 @@
-//Code Gabriel
-
-
 // State
 let VarianteStatus = false;
 let DefinicaoStatus = false;
@@ -123,3 +120,50 @@ let butaoMenos = (id,bool,[...args]) => {
         document.getElementById(`${id}`).style.display = "none";
     }
 }
+//-----------------------------------------------------------------------------------
+
+async function consultandoUser() {
+
+
+    const retornouser = await fetch(
+      `https://ficha-terminologica-backend.herokuapp.com/users/list`
+    );
+    Users = await retornouser.json();
+  
+    var autor = localStorage.getItem("motrar_user");
+
+    var redator = localStorage.getItem("motrar_user");
+
+    let especial = localStorage.getItem("motrar_user");
+    //var user_autor = localStorage.getItem("mostrar_user");
+    // var tipouser = localStorage.getItem("tipouser");
+    mostrar_autor(autor)
+
+    mostrar_redator(redator) 
+
+    mostrar_especialista(especial)
+     
+     console.log(autor)
+     console.log(redator)
+     console.log(especial)
+  }
+  
+  
+  function mostrar_autor(autor_name) {
+    document.querySelector("#autor").innerHTML = autor_name;
+   }
+
+   function mostrar_redator(redator_name) {
+    document.querySelector("#redator").innerHTML = redator_name;
+   }
+
+   function mostrar_especialista(especialista_name) {
+    document.querySelector("#revisao_especialista").innerHTML = especialista_name;
+   }
+   consultandoUser();
+
+
+   
+
+
+  

@@ -25,6 +25,22 @@
       #block{
         display: none;
       }
+      #redator{ 
+      width: 626px;
+      height: 48px;
+      background: #ffffff;
+      border: 2px solid #7b8ca7;
+      box-sizing: border-box;
+      border-radius: 8px;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: #314C85;
+      padding-left: 1rem;
+      text-align: center;
+     }
     </style>
     <title>Edição</title>
   </head>
@@ -352,7 +368,7 @@
                   >Contexto de Uso em Italiano:</label
                 >
                 <textarea
-                  name="context_italiano"
+                  name="contexto_italiano"
                   id="contexto_italiano"
                 ></textarea>
                 
@@ -565,13 +581,13 @@
               </div>
 
               <div class="input-block">
-                <label for="nota">Nota: *</label>
+                <label for="nota">Nota:</label>
                 <input type="text" name="nota" id="nota" />
               </div>
 
               <div class="input-block">
-                <label for="redator">Redator: *</label>
-                <input type="text" name="redator" id="redator" />
+                <label name="redator">Redator:</label>
+                <span id="redator" > </span>
               </div>
 
               <div class="input-block disabled">
@@ -614,8 +630,13 @@
             <div class="verificar_button" id="verificar_button">
               <button type="button" onclick="display()">Verificar</button>
             </div>
-            <div class="salvar" id="salvar">
-              <button type="submit" onclick="editarTermo(event)">
+            <div class="salvar">
+              <button
+                type="button"
+                data-toggle="modal"
+                data-target="#meuModal"
+                id="salvar"
+              >
                 Salvar
               </button>
             </div>
@@ -623,10 +644,50 @@
         </fieldset>
       </form>
     </main>
+
+    <!-- MODAL -->
+
+    <div id="meuModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <h4 class="modal-title">Confirmação</h4>
+          <p>Tem certeza de que quer salvar?</p>
+          <div>
+            <button
+              type="button"
+              class="btn btn-cancel"
+              data-dismiss="modal"
+              id="fechar"
+            >
+              Fechar
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="salvar"
+              onclick="editarTermo(event)"
+              data-dismiss="modal"
+            >
+              Salvar Alterações
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer id="footer">
       <h2>Desenvolvido por Codamais &copy; 2021</h2>
     </footer>
 
+
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+   />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/ficha_script.js"></script>
     <script src="js/menu_dropdown.js"></script>    
     <script src="js/ficha_script.js"></script>
     <script src="js/Crud.js"></script>

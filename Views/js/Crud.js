@@ -118,11 +118,38 @@ function pegarInputsDoForm(form_name) {
     alert("Preencha todos os campos *")
     entrada.attr('required', true);
   }
-  const autor = form["autor"].value;
-  if(autor == ""){
-    alert("Preencha todos os campos *")
-    autor.attr('required', true);
+  let autor 
+  let redator
+  
+  var user_autor = localStorage.getItem("autor_");
+  
+  if( user_autor == 2){
+    autor  =  localStorage.getItem("motrar_user");
   }
+
+  var tiporedator = localStorage.getItem("redator_");
+  let alerta = ""
+  if(tiporedator == 3){
+    redator =  localStorage.getItem("motrar_user");
+
+      if(autor == redator){
+        alert("Autor e Redator são iguais!")
+      console.log(user_autor)
+      console.log(tiporedator)
+          alerta.attr('required', true);
+      }
+  }
+
+  var z = localStorage.getItem("tipoUsuario");
+  let revisao_especialista
+  if (z == 3) {   
+     revisao_especialista = localStorage.getItem("motrar_user");
+  }
+  
+ // if(autor != redator){
+   // redator =  localStorage.getItem("motrar_user");
+ // }
+
   const genero = form["genero_grupo"].value;
   if(genero == ""){
     alert("Preencha todos os campos *")
@@ -157,16 +184,17 @@ function pegarInputsDoForm(form_name) {
   const hiperonimo = form["hiperonimo"].value;
   const co_hiponimo = form["co-hiponimo"].value;
   
-  var z = localStorage.getItem("tipoUsuario");
-  if (z == 1) {   
-      var  data_de_registro = new Date();
+ var z = localStorage.getItem("tipoUsuario");
+  if (z == 1 && z == 2) {   
+     var  data_de_registro = new Date();
+     var status = "./img/square.png";
   }
  
   const revisao_linguistica = form["revisao_linguistica"].value;
   const termo_ingles = form["termo-ingles"].value;
   const termo_italiano = form["termo-Italiano"].value;
   const definicao_italiano = form["definicao_italiano"].value;
-  const contexto_italiano = form["context_italiano"].value;
+  const contexto_italiano = form["contexto_italiano"].value;
   const termo_frances = form["termo-frances"].value;
   const termo_espanhol = form["termo-Espanhol"].value;
   // const verbo = form["verbo"].value;
@@ -180,15 +208,12 @@ function pegarInputsDoForm(form_name) {
   const fonte_do_contexto_de_uso2 = form["font_contexto_uso_2"].value;
   const fonte_do_contexto_de_uso3 = form["font_contexto_uso_3"].value;
   const nota = form["nota"].value;
-  if(nota == ""){
-    alert("Preencha todos os campos *")
-    nota.attr('required', true);
-  }
-  const redator = form["redator"].value;
 
+ 
   
-      var z = localStorage.getItem("tipoUsuario");
+     var z = localStorage.getItem("tipoUsuario");
       if (z == 2) {
+        var status = "./img/square.png";
         if(redator == ""){
           alert("Preencha todos os campos *")
           redator.attr('required', true);
@@ -196,13 +221,12 @@ function pegarInputsDoForm(form_name) {
       }
      
   
-  const revisao_especialista = form["revisao_especialista"].value;
+  
   const data_da_ultima_revisao = form["data_ultima_revisao"].value;
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
-  var status 
-  if (z == 1 && z == 2) {
-    status  = "./img/square.png"
-  }
+  
+  var z = localStorage.getItem("tipoUsuario");
+  var  status
   if(z == 3){
     status = form["status"].value;
     if(status  == ""){
@@ -305,7 +329,7 @@ async function carregarDadosTermo() {
     form["termo-ingles"].value = json.termo_ingles;
     form["termo-Italiano"].value = json.termo_italiano;
     form["definicao_italiano"].value = json.definicao_italiano;
-    form["context_italiano"].value = json.contexto_italiano;
+    form["contexto_italiano"].value = json.contexto_italiano;
     form["termo-frances"].value = json.termo_frances;
     form["termo-Espanhol"].value = json.termo_espanhol;
    // form["verbo"].value = json.verbo;
@@ -319,8 +343,14 @@ async function carregarDadosTermo() {
     form["font_contexto_uso_2"].value = json.fonte_do_contexto_de_uso2;
     form["font_contexto_uso_3"].value = json.fonte_do_contexto_de_uso2;
     form["nota"].value = json.nota;
-    form["redator"].value = json.redator;
-    form["revisao_especialista"].value = json.revisao_especialista;
+
+    let z = localStorage.getItem("tipoUsuario");
+    if(z == 3){
+      form["redator"].value = json.redator;   
+    }
+
+    
+    
     form["data_ultima_revisao"].value = json.data_da_ultima_revisao;
     form["frequencia_termo_corpus"].value = json.freq_no_termo_corpus;
       
@@ -389,9 +419,7 @@ async function criarNotificacao(event, id, entrada, autor, situacao_termo) {
     }
   } catch (error) {
     console.log("Erro ao criar notificação: ", error.message);
-  }
-
-  
+  } 
 }
 
 

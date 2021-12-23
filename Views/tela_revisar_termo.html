@@ -28,11 +28,27 @@
       #block{
         display: none;
       }
+      #revisao_especialista{ 
+      width: 626px;
+      height: 48px;
+      background: #ffffff;
+      border: 2px solid #7b8ca7;
+      box-sizing: border-box;
+      border-radius: 8px;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: #314C85;
+      padding-left: 1rem;
+      text-align: center;
+     }
     </style>
     <title>Revisão</title>
   </head>
   <body onload="carregarDadosTermo(); mudaCor()">
-    <script src="js/dropdown.js"></script>
+    
 
     <header id="header" class="header">
       <div class="logo">
@@ -370,8 +386,8 @@
                   >Contexto de Uso em Italiano:</label
                 >
                 <textarea
-                  name="context_italiano"
-                  id="context_italiano"
+                  name="contexto_italiano"
+                  id="contexto_italiano"
                 ></textarea>
                 
               </div>
@@ -638,14 +654,8 @@
               </div>
 
               <div class="input-block">
-                <label for="revisao_especialista"
-                  >Revisão de especialista: *</label
-                >
-                <input
-                  type="text"
-                  name="revisao_especialista"
-                  id="revisao_especialista"
-                />
+                <label name="revisao_especialista">Revisão de especialista:</label>
+                <span id="revisao_especialista"></span>
               </div>
 
               <div class="input-block disabled">
@@ -726,7 +736,7 @@
       <h2>Desenvolvido por Codamais &copy; 2021</h2>
     </footer>
 
-    <script src="js/menu_dropdown.js"></script>
+   
     <link
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -738,6 +748,7 @@
     <script src="js/ficha_script.js"></script>
   <script src="js/Crud.js"></script>
   <script defer src="./js/tela_cadastrar_termos_input.js"></script>
+  <script src="js/dropdown.js"></script>
   <script src="js/cadastro_script.js"></script>
   </body>
 </html>

@@ -23,5 +23,10 @@ function mudaSino() {
   if (sino == 0) {
       
   }
+  voltando_normal = 0
+  localStorage.setItem("autor_",voltando_normal);
+  localStorage.setItem("redator_",voltando_normal);
+
   console.log(sino) 
+  console.log(voltando_normal) 
 }

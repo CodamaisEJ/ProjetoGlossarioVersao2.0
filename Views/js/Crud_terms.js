@@ -54,7 +54,7 @@ const consultaTerms = async() =>{
   Users = await retornouser.json();
 
   var login = localStorage.getItem("motrar_user");
- // var tipouser = localStorage.getItem("tipouser");
+
   mostraruser(login)
   console.log(login)
 }
@@ -118,6 +118,9 @@ function DeleteTerms(termo_id) {
 
 
 function irParaTelaEditarTermo(term_id) {
+  var n = 3;
+  localStorage.setItem("redator_",n);
+  
   history.pushState(term_id, "", "tela_editar_termo.html");
   window.location.href = "tela_editar_termo.html";
 }
@@ -155,6 +158,14 @@ function verificar() {
   location.href = "verificar_termos.html";
 }
 
+
+function irtelacadastrar() {
+  
+  var v = 2;
+  localStorage.setItem("autor_",v);
+
+  location.href = "tela_cadastrar_termos.html";
+}
 
 
 
