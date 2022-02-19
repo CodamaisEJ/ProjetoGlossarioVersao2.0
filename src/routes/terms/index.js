@@ -9,7 +9,6 @@ const router = Router()
 
 router.get('/terms/list', TermController.listTerms)
 
-
 //exemplo de rota pedindo autenticação 
 router.post('/term/create', TermController.createTerm)
 

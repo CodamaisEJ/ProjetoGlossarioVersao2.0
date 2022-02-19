@@ -13,8 +13,8 @@ module.exports = app => {
     cors(),
     express.static(path.join(__dirname + '/../../../Views')),
     users,
-    terms,
     termos,
+    terms,
     notifications
   )
 }
