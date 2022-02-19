@@ -82,6 +82,34 @@ class TermController {
         return res.status(500).json(error.message)
       }
     }
+
+    static async listermos(req, res){
+      try {
+        const listermos = await database.termos.findAll(
+          {
+            order: [
+              ['id', 'DESC']
+            ],
+          }
+        )
+        return res.status(200).json(listermos)  
+      } catch (error) {
+        return res.status(500).json(error.message)
+      }
+    }
+
+    static async listOnetermo(req, res) {
+      const { id } = req.params
+      try {
+        if(isNaN(id)){
+          return res.json({ error: "id não informado ou inválido!" })
+        }
+        const oneTerm = await database.Terms.findOne( { where: { id: Number(id) }})
+        return res.status(200).json(oneTerm)
+      } catch (error) {
+        return res.status(500).json(error.message)
+      }
+    }
 }
 
 module.exports = TermController
