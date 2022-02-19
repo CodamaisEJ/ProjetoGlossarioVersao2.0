@@ -1,19 +1,19 @@
 const { Router } = require('express')
 
-const TermController = require('../../controllers/TermosController')
+const TermosController = require('../../controllers/TermosController')
 const middlewareAuth = require('../../middleware/auth')
 
 const router = Router()
 
 //Rotas dos termos abaixo acessadas atualmente somente pelo o insomnia
 
-router.get('/termos/list', TermController.listermos)
+router.get('/termos/list', TermosController.listermos)
 
 //exemplo de rota pedindo autenticação 
-router.post('/term/create', TermController.createTerm)
+router.post('/term/create', TermosController.createTerm)
 
-router.get('/term/:id/list', TermController.listOneTerm)
-router.put('/term/:id/update', TermController.updateTerm)
-router.delete('/term/:id/delete', TermController.deleteTerm)
+router.get('/term/:id/list', TermosController.listOnetermo)
+router.put('/term/:id/update', TermosController.updateTerm)
+router.delete('/term/:id/delete', TermosController.deleteTerm)
 
 module.exports = router

@@ -1,6 +1,6 @@
 const database = require('../models')
 
-class termosController {
+class TermosController {
 
     static async createTerm(req, res){
       const newTerm = req.body
@@ -84,4 +84,4 @@ class termosController {
     }
 }
 
-module.exports = termosController
+module.exports = TermosController
