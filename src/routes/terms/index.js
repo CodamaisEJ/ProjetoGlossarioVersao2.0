@@ -8,6 +8,7 @@ const router = Router()
 //Rotas dos termos abaixo acessadas atualmente somente pelo o insomnia
 
 router.get('/terms/list', TermController.listTerms)
+router.get('/termos/list', TermController.listTerms)
 
 //exemplo de rota pedindo autenticação 
 router.post('/term/create', TermController.createTerm)
