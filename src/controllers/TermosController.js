@@ -1,6 +1,6 @@
 const database = require('../models')
 
-class TermController {
+class termosController {
 
     static async createTerm(req, res){
       const newTerm = req.body
@@ -55,28 +55,28 @@ class TermController {
       }
     }
     
-    static async listtermos(req, res){
+    static async listermos(req, res){
       try {
-        const listtermos = await database.termos.findAll(
+        const listermos = await database.termos.findAll(
           {
             order: [
               ['id', 'DESC']
             ],
           }
         )
-        return res.status(200).json(listtermos)  
+        return res.status(200).json(listermos)  
       } catch (error) {
         return res.status(500).json(error.message)
       }
     }
 
-    static async listOneTerm(req, res) {
+    static async listOnetermo(req, res) {
       const { id } = req.params
       try {
         if(isNaN(id)){
           return res.json({ error: "id não informado ou inválido!" })
         }
-        const oneTerm = await database.termos.findOne( { where: { id: Number(id) }})
+        const oneTerm = await database.Terms.findOne( { where: { id: Number(id) }})
         return res.status(200).json(oneTerm)
       } catch (error) {
         return res.status(500).json(error.message)
@@ -84,4 +84,4 @@ class TermController {
     }
 }
 
-module.exports = TermController
+module.exports = termosController
