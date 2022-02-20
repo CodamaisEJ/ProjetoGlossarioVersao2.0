@@ -207,32 +207,16 @@ function pegarInputsDoForm(form_name) {
   const fonte_do_contexto_de_uso1 = form["font_contexto_uso_1"].value;
   const fonte_do_contexto_de_uso2 = form["font_contexto_uso_2"].value;
   const fonte_do_contexto_de_uso3 = form["font_contexto_uso_3"].value;
-  const nota = form["nota"].value;
-
- 
-  
-     var z = localStorage.getItem("tipoUsuario");
-      if (z == 2) {
-        var status = "./img/square.png";
-        if(redator == ""){
-          alert("Preencha todos os campos *")
-          redator.attr('required', true);
-        }
-      }
-     
-  
-  
+  const nota = form["nota"].value; 
   const data_da_ultima_revisao = form["data_ultima_revisao"].value;
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
   
+  var status = "./img/square.png";
   var z = localStorage.getItem("tipoUsuario");
-  var  status
   if(z == 3){
-    status = form["status"].value;
-    if(status  == ""){
-      alert("Preencha todos os campos")
-      status.attr('required', true);
-    }  
+    if(status == "./img/square.png"){
+      status = form["status"].value;
+    }
   }
   // if (entrada === "" || cat_morfo === "" || genero_grupo === "") {
   //   alert("Por favor preencha os campos.");
