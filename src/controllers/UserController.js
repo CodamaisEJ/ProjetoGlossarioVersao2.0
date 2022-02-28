@@ -14,7 +14,7 @@ class UserController {
       newUser = {
         nome,
         email,
-        senha: hashedPassword,
+        senha,
         tipo_de_usuario,
       };
     } catch (error) {
