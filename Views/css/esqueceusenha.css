@@ -1,0 +1,10 @@
+h1, h2, h3, h4, .button, .contact-info p, .label, .tabs, .tab-bar {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: bold;
+}
+
+body p {
+  color: #555555;
+  font-size: 25px;
+  font-weight: bold;
+}
