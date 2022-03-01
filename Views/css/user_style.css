@@ -60,12 +60,12 @@
   margin:auto;
   grid-column-start: 4;
   border: none;
-  width: 151px;
-  height: 37px;
+  width: 171px;
+  height: 42px;
   background-color: #234F90;
   border-radius: 8px;
   color: #FFFFFF;
   position:fixed;
-  right: 250px;
-  margin-top: -300px;
+  right: 150px;
+  margin-top: -500px;
 }
