@@ -28,7 +28,7 @@ async function consultaUsers() {
   );
   const Users = await retornouser.json();
   ListUsers(Users);
-  
+ 
 }
 
 let UserHTML;
@@ -103,12 +103,51 @@ function ListUsers(Users) {
 
         user_id = User.nome
         localStorage.setItem("motrar_user", user_id);
+        
+        email_id = User.email
+        localStorage.setItem("motrar_email", email_id);
 
         console.log(User.nome)
         
         location.href = "tela_termos_especialista.html";
       }
     } 
+  });
+}
+
+
+
+async function consultaPass() {
+  const retornouser = await fetch(
+    "https://ficha-terminologica-backend.herokuapp.com/users/list"
+  );
+  const Users = await retornouser.json();
+ 
+  PassUser(Users)
+}
+
+
+function PassUser(Users) {
+  Users.forEach((User) => {   
+
+    
+      var x = document.querySelector("#user");  
+     
+      var user = x.value;
+
+      if (user === User.email) {
+       
+        senha_id = User.id
+
+        localStorage.setItem("motrar_senha", senha_id);
+
+        email_id = User.email
+
+        localStorage.setItem("motrar_email", email_id);
+
+        history.pushState(senha_id, "", "redefinirsenha.html");
+        window.location.href = "redefinirsenha.html";
+      }  
   });
 }
 
