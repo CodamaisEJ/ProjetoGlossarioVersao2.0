@@ -6,7 +6,7 @@ async function consultaUsers() {
   );
   const Users = await retorno.json();
   ListUsers(Users);
-
+  console.log(Users)
 }
 
 
@@ -97,6 +97,21 @@ async function cadastrarUsuario(event) {
     );
 
     if (result.ok) {
+      
+
+        Email.send({
+        Host : "smtp.gmail.com",
+        Username : "lionidiota@gmail.com",
+        Password : "ynxfucisxpkrzors",
+        To : email,
+        From : "codamais.ej@gmail.com",
+        Subject : "Senha Ficha Terminológica",
+        Body : ` Esta é sua senha de acesso ao sistema da Ficha <br>
+                Terminológica:  ${senha} `
+        }).then(
+             
+        );
+
       alert("Usuário cadastrado com sucesso.");
       location.href = "tela_usuarios.html";
     } else {
@@ -112,7 +127,11 @@ function irParaTelaEditarUsuario(user_id) {
   history.pushState(user_id, "", "tela_editar_usuario.html");
   window.location.href = "tela_editar_usuario.html";
 }
- 
+
+function irParaTelaEditarSenha(user_id) {
+  history.pushState(user_id, "", "redefinirsenha.html");
+  window.location.href = "redefinirsenha.html";
+}
 
 function gerarSenhaAleatoriaParaUsuario() {
   const input_password = document.forms["create_user"]["password"];
