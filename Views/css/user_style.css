@@ -65,4 +65,7 @@
   background-color: #234F90;
   border-radius: 8px;
   color: #FFFFFF;
+  position:fixed;
+  right: 250px;
+  margin-top: -300px;
 }
