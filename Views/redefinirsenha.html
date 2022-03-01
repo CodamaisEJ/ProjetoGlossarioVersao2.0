@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="./img/Lexic.jpg" type="image/x-icon">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/login_style.css">
+      <link rel="stylesheet" href="css/header-footer.css">
+      <link rel="stylesheet" href="css/esqueceusenha.css">
+      <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+      <script src="https://smtpjs.com/v3/smtp.js">
+      </script>
+
+      <title>Login</title>
+
+    </head>
+<body onload="mudaCor()">  
+
+  <header id="header" class="header">
+      <div class="logo">
+          <img src="./img/Lexic.jpg" alt="">
+          <h1>Ficha Terminológica</h1>
+      </div>
+  </header>
+
+      <main class="conteudo">
+        <form id="tela_login" action="">
+          <fieldset>
+            <h2 class="logo-title">Redefinição de senha</h2>
+            <p class="msg">Digite sua nova senha de acesso</p>
+
+               <div class="input-block">
+                <label id="senha" for="password">Nova Senha:</label> <br>
+                <input placeholder="********" type="password" name="password" id="password" required>
+                <i class="fa fa-eye-slash" id="pass" onclick="mostrarsenha()"></i>
+                
+              </div>
+            
+            <button id="acesso" onclick="editarsenha(event)" type="button"><i class="fas fa-user-friends"></i>Enviar</button>
+            
+
+          </fieldset>
+          <a href="/tela_login.html" class="forgot-link">Voltar para o login</a>
+        </form>
+
+      </main>
+      
+      <footer id="footer">
+        <h2>Desenvolvido por Codamais &copy; 2021</h2>
+    </footer>
+
+    <script src="js/login_script.js"></script>
+    <script src="js/forgotpassword.js"></script>
+    </body>
+</html>
