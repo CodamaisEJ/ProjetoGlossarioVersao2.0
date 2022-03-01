@@ -43,7 +43,7 @@
   border-radius: 8px;
   margin-bottom: 25px
 }
-#tela_login button{
+#acesso{
   background-color: #314C85;
   margin-top: 10px;
   width: 20vw;
@@ -161,4 +161,12 @@ i{
     margin-left: -400px;
    
   }
+}
+
+.forgot-link{
+  font-size: 28px;
+  border: none;
+  padding: 30px;
+  background-color: white;
+  color: #314C85;
 }
