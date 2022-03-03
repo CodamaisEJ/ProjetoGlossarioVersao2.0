@@ -36,6 +36,9 @@ module.exports = {
       remissivas: {
         type: Sequelize.STRING
       },
+      remissiva: {
+        type: Sequelize.STRING
+      },
       hiponimo:{
          type: Sequelize.STRING
       },
