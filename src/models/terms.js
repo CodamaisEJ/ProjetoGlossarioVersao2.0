@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING
     },
     categoria_morfologica: DataTypes.STRING,
+    categoria_gramatical: DataTypes.STRING,
     data_de_registro: {
       type: DataTypes.DATEONLY,
       defaultValue: DataTypes.NOW,     
@@ -22,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     nota: DataTypes.STRING,
     redator: DataTypes.STRING,
     remissivas: DataTypes.STRING,
+    remissiva: DataTypes.STRING,
     hiponimo: DataTypes.STRING,
     hiperonimo: DataTypes.STRING,
     co_hiponimo: DataTypes.STRING,
