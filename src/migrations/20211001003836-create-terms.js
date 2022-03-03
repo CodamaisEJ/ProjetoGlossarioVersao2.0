@@ -14,6 +14,9 @@ module.exports = {
       categoria_morfologica: {
         type: Sequelize.STRING
       },
+      categoria_gramatical: {
+        type: Sequelize.STRING
+      },
       data_de_registro: {
         type: Sequelize.DATEONLY,
         defaultValue: Sequelize.NOW
