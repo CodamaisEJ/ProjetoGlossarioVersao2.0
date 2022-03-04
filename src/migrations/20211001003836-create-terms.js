@@ -11,9 +11,6 @@ module.exports = {
       area: {
         type: Sequelize.STRING
       },
-      categoria_morfologica: {
-        type: Sequelize.STRING
-      },
       categoria_gramatical: {
         type: Sequelize.STRING
       },
