@@ -12,7 +12,6 @@ module.exports = (sequelize, DataTypes) => {
     area: {
       type: DataTypes.STRING
     },
-    categoria_morfologica: DataTypes.STRING,
     categoria_gramatical: DataTypes.STRING,
     data_de_registro: {
       type: DataTypes.DATEONLY,
