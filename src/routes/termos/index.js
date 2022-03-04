@@ -7,13 +7,13 @@ const router = Router()
 
 //Rotas dos termos abaixo acessadas atualmente somente pelo o insomnia
 
-router.get('/termo/list', TermosController.listermos)
+router.get('/term/list', TermosController.listermos)
 
 //exemplo de rota pedindo autenticação 
-router.post('/termo/create', TermosController.createTerm)
+router.post('/term/create', TermosController.createTerm)
 
-router.get('/termo/:id/list', TermosController.listOnetermo)
-router.put('/termo/:id/update', TermosController.updateTerm)
-router.delete('/termo/:id/delete', TermosController.deleteTerm)
+router.get('/term/:id/list', TermosController.listOnetermo)
+router.put('/term/:id/update', TermosController.updateTerm)
+router.delete('/term/:id/delete', TermosController.deleteTerm)
 
 module.exports = router
