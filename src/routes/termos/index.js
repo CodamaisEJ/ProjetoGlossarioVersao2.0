@@ -10,10 +10,10 @@ const router = Router()
 router.get('/termos/list', TermosController.listermos)
 
 //exemplo de rota pedindo autenticação 
-router.post('/term/create', TermosController.createTerm)
+router.post('/termos/create', TermosController.createTerm)
 
-router.get('/term/:id/list', TermosController.listOnetermo)
-router.put('/term/:id/update', TermosController.updateTerm)
-router.delete('/term/:id/delete', TermosController.deleteTerm)
+router.get('/termos/:id/list', TermosController.listOnetermo)
+router.put('/termos/:id/update', TermosController.updateTerm)
+router.delete('/termos/:id/delete', TermosController.deleteTerm)
 
 module.exports = router
