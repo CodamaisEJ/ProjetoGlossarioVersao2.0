@@ -21,7 +21,6 @@ module.exports = (sequelize, DataTypes) => {
     genero: DataTypes.STRING,
     nota: DataTypes.STRING,
     redator: DataTypes.STRING,
-    remissivas: DataTypes.STRING,
     remissiva: DataTypes.STRING,
     hiponimo: DataTypes.STRING,
     hiperonimo: DataTypes.STRING,
