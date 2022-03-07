@@ -1,6 +1,6 @@
 const express = require('express')
 const users = require('./users')
-const terms = require('./termos')
+const terms = require('./terms')
 const termos = require('./termos')
 const notifications = require('./notifications')
 const path = require('path');
