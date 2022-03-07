@@ -30,9 +30,6 @@ module.exports = {
       redator: {
         type: Sequelize.STRING
       },
-      remissivas: {
-        type: Sequelize.STRING
-      },
       remissiva: {
         type: Sequelize.STRING
       },
