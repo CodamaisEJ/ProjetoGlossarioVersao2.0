@@ -108,10 +108,10 @@ function pegarInputsDoForm(form_name) {
   const form = document.forms[form_name];
 
   const area = form["area"].value;
-  const categoria_morfologica = form["cat_morfo"].value;
-  if(categoria_morfologica == ""){
+  const categoria_gramatical = form["cat_morfo"].value;
+  if(categoria_gramatical == ""){
     alert("Preencha todos os campos *")
-    categoria_morfologica.attr('required', true);
+    categoria_gramatical.attr('required', true);
   }
   const entrada = form["entrada"].value;
   if(entrada == ""){
@@ -175,7 +175,7 @@ function pegarInputsDoForm(form_name) {
   const contexto_de_uso1 = form["context_uso_1"].value;
   const contexto_de_uso2 = form["context_uso_2"].value;
   const contexto_de_uso3 = form["context_uso_3"].value;
-  const remissiva = form["remissivas"].value;
+  const remissiva = form["remissiva"].value;
   if(remissiva == ""){
     alert("Preencha todos os campos *")
     remissiva.attr('required', true);
@@ -225,7 +225,7 @@ function pegarInputsDoForm(form_name) {
 
   return {
     area,
-    categoria_morfologica,
+    categoria_gramatical,
     data_de_registro,
     entrada,
     genero,
@@ -285,7 +285,7 @@ async function carregarDadosTermo() {
     const form = document.forms["edit_term"];
 
     form["entrada"].value = json.entrada;
-    form["cat_morfo"].value = json.categoria_morfologica;
+    form["cat_morfo"].value = json.categoria_gramatical;
     form["genero_grupo"].value = json.genero;
     form["num_grupo"].value = json.numero;
     form["variante"].value = json.variantes;
@@ -332,10 +332,10 @@ async function carregarDadosTermo() {
     if(z == 3){
       form["redator"].value = json.redator;   
     }
-
-    
     
     form["data_ultima_revisao"].value = json.data_da_ultima_revisao;
+  
+    console.log(json.data_de_registro)
     form["frequencia_termo_corpus"].value = json.freq_no_termo_corpus;
       
     console.log(`dados do termo carregados`);
