@@ -4,20 +4,20 @@
     "host": "dicgloss.com",
     "username": "dicglo36_uglossd",
     "password": "gloss@90",
-    "database": "dicglo36_fichaterminologica"
+    "database": "dicglo36_glossdb"
   },
   "test": {
     "dialect": "mysql",
     "host": "dicgloss.com",
     "username": "dicglo36_uglossd",
     "password": "gloss@90",
-    "database": "dicglo36_fichaterminologica"
+    "database": "dicglo36_glossdb"
   },
   "production": {
     "dialect": "mysql",
     "host": "dicgloss.com",
     "username": "dicglo36_uglossd",
     "password": "gloss@90",
-    "database": "dicglo36_fichaterminologica"
+    "database": "dicglo36_glossdb"
   }
 }
