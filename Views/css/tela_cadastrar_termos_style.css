@@ -193,12 +193,13 @@
   filter: brightness(0.8);
 }
 .verificar_button button {
-  width: 117px;
+  width: 127px;
   height: 35px;
   color: white;
   background: #314c85;
   border-radius: 8px;
   border-color: rgba(255, 255, 255, 0);
+  margin-left: -430px;
 }
 .salvar {
   width: 50%;
@@ -217,7 +218,7 @@
   border-color: rgba(255, 255, 255, 0);
 }
 .salvar button {
-  width: 117px;
+  width: 127px;
   height: 35px;
   background: #9d1c33;
   border-radius: 8px;
@@ -301,9 +302,17 @@ input[type="date"]::-webkit-inner-spin-button {
   color: #101564;
 }
 
-#titu{
+#titu  legend{
   display: flex;
   margin-bottom: 20px;
+}
+#obrigatorio{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #101564;
+  padding-left: 10px;
 }
 #fim{ 
   display: none;
