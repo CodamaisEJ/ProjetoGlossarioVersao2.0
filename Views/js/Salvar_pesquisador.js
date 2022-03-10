@@ -5,7 +5,7 @@ const Termoslist = document.querySelector("#tela_termos");
 let Terms 
 async function consultaTerms() {
   const retorno = await fetch(
-    "https://ficha-terminologica-backend.herokuapp.com/terms/list"
+    "https://ficha-terminologica-backend.herokuapp.com/termos/list"
   );
   let Terms = await retorno.json();
   ListTerms(Terms);
@@ -37,7 +37,7 @@ function ListTerms(Termos) {
 
 async function DeletandoTerms() {
   const retorno = await fetch(
-    `https://ficha-terminologica-backend.herokuapp.com/term/2/delete`,
+    `https://ficha-terminologica-backend.herokuapp.com/termo/2/delete`,
     { method: "delete" }
   );
   const json = await retorno.json();
@@ -61,7 +61,7 @@ async function cadastrarTermo(event) {
 
   try {
     const result = await fetch(
-      "https://ficha-terminologica-backend.herokuapp.com/term/create",
+      "https://ficha-terminologica-backend.herokuapp.com/termo/create",
       {
         method: "POST",
         headers: {
@@ -98,7 +98,7 @@ async function editarTermo(event) {
 
   try {
     const result = await fetch(
-      `https://ficha-terminologica-backend.herokuapp.com/term/${term_id}/update`,
+      `https://ficha-terminologica-backend.herokuapp.com/termo/${term_id}/update`,
       {
         method: "PUT",
         headers: {
@@ -233,7 +233,7 @@ async function carregarDadosTermo() {
   const term_id = history.state;
 
   try {
-    const result = await fetch(`${URL}/term/${term_id}/list`);
+    const result = await fetch(`${URL}/termo/${term_id}/list`);
 
     const json = await result.json();
     console.log(`json`, json);
@@ -296,7 +296,7 @@ async function carregarDadosTermo() {
 
   try {
     const result = await fetch(
-      `https://ficha-terminologica-backend.herokuapp.com/term/${term_id}/list`
+      `https://ficha-terminologica-backend.herokuapp.com/termo/${term_id}/list`
     );
 
     const json = await result.json();

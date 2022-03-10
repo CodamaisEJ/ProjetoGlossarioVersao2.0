@@ -26,7 +26,7 @@ searchBar.addEventListener('keyup', (e) =>{
 const consultaTermos = async() =>{
 
   try{
-  const retorno = await fetch(`${URL}/terms/list`);
+  const retorno = await fetch(`${URL}/termos/list`);
   STerms = await retorno.json(); 
 
   } catch (err) {
@@ -38,7 +38,7 @@ const consultaTermos = async() =>{
 const consultaTerms = async() =>{
   
   try{
-  const retorno = await fetch(`${URL}/terms/list`);
+  const retorno = await fetch(`${URL}/termos/list`);
   Terms = await retorno.json();
   
   SearchTerms(Terms);
@@ -82,7 +82,7 @@ async function DeletandoTerms(termo_id) {
   const termo = await verTermoEspecifico(termo_id);
 
   try {
-    const result = await fetch(`${URL}/term/${termo.id}/delete`, {
+    const result = await fetch(`${URL}/termo/${termo.id}/delete`, {
       method: "DELETE",
     });
     const json = await result.json();
@@ -136,7 +136,7 @@ function mostraruser(nome_usuario) {
 
 async function verTermoEspecifico(termo_id) {
   try {
-    const result = await fetch(`${URL}/term/${termo_id}/list`);
+    const result = await fetch(`${URL}/termo/${termo_id}/list`);
     if (result.status === 200) {
       const json = await result.json();
       console.log(`Informações do termo: `, json);

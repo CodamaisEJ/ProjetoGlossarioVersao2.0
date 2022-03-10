@@ -6,7 +6,7 @@ async function cadastrarTermo(event) {
   const data = pegarInputsDoForm("create_term");
 
   try {
-    const result = await fetch(`https://ficha-terminologica-backend.herokuapp.com/term/create`, {
+    const result = await fetch(`https://ficha-terminologica-backend.herokuapp.com/termo/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ async function editarTermo(event) {
   const data = pegarInputsDoForm("edit_term");
 
   try {
-    const result = await fetch(`https://ficha-terminologica-backend.herokuapp.com/term/${term_id}/update`, {
+    const result = await fetch(`https://ficha-terminologica-backend.herokuapp.com/termo/${term_id}/update`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -278,7 +278,7 @@ async function carregarDadosTermo() {
   const term_id = history.state;
 
   try {
-    const result = await fetch(`https://ficha-terminologica-backend.herokuapp.com/term/${term_id}/list`);
+    const result = await fetch(`https://ficha-terminologica-backend.herokuapp.com/termo/${term_id}/list`);
 
     const json = await result.json();
     console.log(`json`, json);

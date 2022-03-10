@@ -24,7 +24,7 @@ searchBar.addEventListener('keyup', (e) =>{
 const consultaTermos = async() =>{
 
   try{
-  const retorno = await fetch(`${URL}/terms/list`);
+  const retorno = await fetch(`${URL}/termos/list`);
   STerms = await retorno.json();
   
   } catch (err) {
@@ -35,7 +35,7 @@ const consultaTermos = async() =>{
 const consultaTerms = async() =>{
 
   try{
-  const retorno = await fetch(`${URL}/terms/list`);
+  const retorno = await fetch(`${URL}/termos/list`);
   Terms = await retorno.json();
   SearchTerms(Terms);
   mostrarTotalDeTermos(Terms.length);
@@ -83,7 +83,7 @@ function mostrarTotalDeTermos(total_termos) {
 
 async function verTermoEspecifico(termo_id) {
   try {
-    const result = await fetch(`${URL}/term/${termo_id}/list`);
+    const result = await fetch(`${URL}/termo/${termo_id}/list`);
     if (result.status === 200) {
       const json = await result.json();
       console.log(`Informações do termo: `, json);

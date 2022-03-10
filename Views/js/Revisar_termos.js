@@ -23,7 +23,7 @@ searchBar.addEventListener('keyup', (e) =>{
 const consultaTermos = async() =>{
 
 try{
-const retorno = await fetch(`${URL}/terms/list`);
+const retorno = await fetch(`${URL}/termos/list`);
 STerms = await retorno.json();
 
 
@@ -36,7 +36,7 @@ STerms = await retorno.json();
 const consultaTerms = async() =>{
 
 try{
-const retorno = await fetch(`${URL}/terms/list`);
+const retorno = await fetch(`${URL}/termos/list`);
 Terms = await retorno.json();
 SearchTerms(Terms);
 mostrarTotalDeTermos(Terms.length);
