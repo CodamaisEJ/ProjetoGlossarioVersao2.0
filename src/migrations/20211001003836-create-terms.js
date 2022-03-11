@@ -14,6 +14,15 @@ module.exports = {
       categoria_gramatical: {
         type: Sequelize.STRING
       },
+      definicao: {
+        type: Sequelize.STRING
+      },
+      fonte_da_definicao: {
+        type: Sequelize.STRING
+      },
+      fonte_do_contexto_de_uso: {
+        type: Sequelize.STRING
+      },
       data_de_registro: {
         type: Sequelize.DATEONLY,
         defaultValue: Sequelize.NOW
