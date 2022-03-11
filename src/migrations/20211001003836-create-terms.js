@@ -23,6 +23,9 @@ module.exports = {
       fonte_do_contexto_de_uso: {
         type: Sequelize.STRING
       },
+      contexto_de_uso: {
+        type: Sequelize.STRING
+      },
       data_de_registro: {
         type: Sequelize.DATEONLY,
         defaultValue: Sequelize.NOW
