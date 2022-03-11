@@ -210,6 +210,8 @@
   /* padding-right: 25rem; */
 }
 #btn {
+  justify-content: center;
+  align-items: center;
   width: 117px;
   height: 35px;
   background: #9d1c33;
@@ -224,6 +226,8 @@
   border-radius: 8px;
   color: white;
   border-color: rgba(255, 255, 255, 0);
+  justify-content: center;
+  align-items: center;
 }
 .input-block input::-webkit-input-placeholder {
   font-family: Open Sans;
@@ -318,6 +322,7 @@ input[type="date"]::-webkit-inner-spin-button {
   display: none;
   margin-top: 60px;
   text-align: right;
+  margin-left:  1350px;
   cursor: pointer;
   position: fixed;
 }

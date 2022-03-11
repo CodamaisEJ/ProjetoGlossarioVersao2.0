@@ -170,19 +170,16 @@ function pegarInputsDoForm(form_name) {
   const dicionario_lingua_comum = form["dicio-lingua-comu-def"].value;
   const dicionario_especializado1 = form["dicio-espe-def"].value;
   const dicionario_especializado2 = form["dicio-espe2-def"].value;
-  const proposta_de_definicao = form["prop_defini"].value;
-  const hiponimo = form["hiponimo"].value;
+  const definicao = form["prop_defini"].value;
+ // const hiponimo = form["hiponimo"].value;
   const contexto_de_uso1 = form["context_uso_1"].value;
   const contexto_de_uso2 = form["context_uso_2"].value;
   const contexto_de_uso3 = form["context_uso_3"].value;
-  const remissiva = form["remissiva"].value;
-  if(remissiva == ""){
-    alert("Preencha todos os campos *")
-    remissiva.attr('required', true);
-  }
+  const remissiva = form["hiponimo","hiperonimo","co-hiponimo"].value;
   
-  const hiperonimo = form["hiperonimo"].value;
-  const co_hiponimo = form["co-hiponimo"].value;
+  
+  //const hiperonimo = form["hiperonimo"].value;
+  //const co_hiponimo = form["co-hiponimo"].value;
   
  var z = localStorage.getItem("tipoUsuario");
   if (z == 1 && z == 2) {   
@@ -198,13 +195,13 @@ function pegarInputsDoForm(form_name) {
   const termo_frances = form["termo-frances"].value;
   const termo_espanhol = form["termo-Espanhol"].value;
   // const verbo = form["verbo"].value;
-  const fonte_da_definicao = form["fonte_definicao"].value;
+  const fonte_da_definicao = form["font-prop-defi"].value;
   const fonte_dicionario_lingua_comum = form["font-dici-lingua-comum"].value;
   const fonte_dicionario_especializado1 = form["font-dici-especi-1"].value;
   const fonte_dicionario_especializado2 = form["font-dici-especi-2"].value;
-  const fonte_proposta_de_definicao = form["font-prop-defi"].value;
+ // const fonte_proposta_de_definicao = form["font-prop-defi"].value;
   // const fonte_do_contexto_de_uso = form["font_contexto_uso"].value;
-  const fonte_do_contexto_de_uso1 = form["font_contexto_uso_1"].value;
+  const fonte_do_contexto_de_uso = form["font_contexto_uso_1"].value;
   const fonte_do_contexto_de_uso2 = form["font_contexto_uso_2"].value;
   const fonte_do_contexto_de_uso3 = form["font_contexto_uso_3"].value;
   const nota = form["nota"].value; 
@@ -224,6 +221,7 @@ function pegarInputsDoForm(form_name) {
   // }
 
   return {
+    definicao,
     area,
     categoria_gramatical,
     data_de_registro,
@@ -232,9 +230,9 @@ function pegarInputsDoForm(form_name) {
     nota,
     redator,
     remissiva,
-    hiponimo,
-    hiperonimo,
-    co_hiponimo,
+    //hiponimo,
+   // hiperonimo,
+  //  co_hiponimo,
     termo_ingles,
     termo_italiano, 
     definicao_italiano,
@@ -252,18 +250,20 @@ function pegarInputsDoForm(form_name) {
     fonte_dicionario_especializado1,
     fonte_dicionario_especializado2,
     fonte_dicionario_lingua_comum,
-    fonte_proposta_de_definicao,
-    fonte_do_contexto_de_uso1,
+    //fonte_proposta_de_definicao,
+   // fonte_do_contexto_de_uso1,
     fonte_do_contexto_de_uso2,
     fonte_do_contexto_de_uso3,
     contexto_de_uso1,
     contexto_de_uso2,
     contexto_de_uso3,
     // proposta,
+    fonte_do_contexto_de_uso,
     dicionario_especializado1,
     dicionario_especializado2,
     dicionario_lingua_comum,
-    proposta_de_definicao,
+    fonte_da_definicao,
+   // proposta_de_definicao,
     variantes,
     ortografica,
     geografica,
@@ -300,15 +300,20 @@ async function carregarDadosTermo() {
     form["dicio-lingua-comu-def"].value = json.dicionario_lingua_comum;
     form["dicio-espe-def"].value = json.dicionario_especializado1;
     form["dicio-espe2-def"].value = json.dicionario_especializado2;
-    form["prop_defini"].value = json.proposta_de_definicao;
+    form["prop_defini"].value = json.definicao;
     form["hiponimo"].value = json.hiponimo;
+   // form["hiponimo"].value = json.remissiva;
     form["context_uso_1"].value = json.contexto_de_uso1;
     form["context_uso_2"].value = json.contexto_de_uso2;
     form["context_uso_3"].value = json.contexto_de_uso3;
     //form["remissivas"].value = json.remissivas;
     form["hiperonimo"].value = json.hiperonimo;
+    //form["hiperonimo"].value = json.remissiva;
     form["co-hiponimo"].value = json.co_hiponimo;
+    //form["co-hiponimo"].value = json.co_remissiva;
+
     form["data_de_registro"].value = json.data_de_registro;
+    
     form["revisao_linguistica"].value = json.revisao_linguistica;
     form["termo-ingles"].value = json.termo_ingles;
     form["termo-Italiano"].value = json.termo_italiano;
@@ -321,9 +326,9 @@ async function carregarDadosTermo() {
     form["font-dici-lingua-comum"].value = json.fonte_dicionario_lingua_comum;
     form["font-dici-especi-1"].value = json.fonte_dicionario_especializado1;
     form["font-dici-especi-2"].value = json.fonte_dicionario_especializado2;
-    form["font-prop-defi"].value = json.fonte_proposta_de_definicao;
+    form["font-prop-defi"].value = json.fonte_da_definicao;
     // form["font_contexto_uso"].value = json.fonte_do_contexto_de_uso1;
-    form["font_contexto_uso_1"].value = json.fonte_do_contexto_de_uso1;
+    form["font_contexto_uso_1"].value = json.fonte_do_contexto_de_uso;
     form["font_contexto_uso_2"].value = json.fonte_do_contexto_de_uso2;
     form["font_contexto_uso_3"].value = json.fonte_do_contexto_de_uso2;
     form["nota"].value = json.nota;
