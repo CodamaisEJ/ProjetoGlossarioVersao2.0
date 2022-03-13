@@ -171,15 +171,16 @@ function pegarInputsDoForm(form_name) {
   const dicionario_especializado1 = form["dicio-espe-def"].value;
   const dicionario_especializado2 = form["dicio-espe2-def"].value;
   const definicao = form["prop_defini"].value;
- // const hiponimo = form["hiponimo"].value;
+  //const hiponimo = form["hiponimo"].value;
   const contexto_de_uso1 = form["context_uso_1"].value;
   const contexto_de_uso2 = form["context_uso_2"].value;
   const contexto_de_uso3 = form["context_uso_3"].value;
-  const remissiva = form["hiponimo","hiperonimo","co-hiponimo"].value;
+  const remissiva = form["hiponimo"].value;
   
   
-  //const hiperonimo = form["hiperonimo"].value;
-  //const co_hiponimo = form["co-hiponimo"].value;
+  const hiperonimo = form["hiperonimo"].value;
+  const co_hiponimo = form["co-hiponimo"].value;
+  const sugestao = form["sugestao"].value;
   
  var z = localStorage.getItem("tipoUsuario");
   if (z == 1 && z == 2) {   
@@ -223,6 +224,7 @@ function pegarInputsDoForm(form_name) {
   return {
     definicao,
     area,
+    sugestao,
     categoria_gramatical,
     data_de_registro,
     entrada,
@@ -231,8 +233,8 @@ function pegarInputsDoForm(form_name) {
     redator,
     remissiva,
     //hiponimo,
-   // hiperonimo,
-  //  co_hiponimo,
+    hiperonimo,
+    co_hiponimo,
     termo_ingles,
     termo_italiano, 
     definicao_italiano,
@@ -301,14 +303,14 @@ async function carregarDadosTermo() {
     form["dicio-espe-def"].value = json.dicionario_especializado1;
     form["dicio-espe2-def"].value = json.dicionario_especializado2;
     form["prop_defini"].value = json.definicao;
-    form["hiponimo"].value = json.hiponimo;
+    form["hiponimo"].value = json.remissiva;
    // form["hiponimo"].value = json.remissiva;
     form["context_uso_1"].value = json.contexto_de_uso1;
     form["context_uso_2"].value = json.contexto_de_uso2;
     form["context_uso_3"].value = json.contexto_de_uso3;
     //form["remissivas"].value = json.remissivas;
     form["hiperonimo"].value = json.hiperonimo;
-    //form["hiperonimo"].value = json.remissiva;
+   // form["hiperonimo"].value = json.remissiva;
     form["co-hiponimo"].value = json.co_hiponimo;
     //form["co-hiponimo"].value = json.co_remissiva;
 
@@ -332,7 +334,8 @@ async function carregarDadosTermo() {
     form["font_contexto_uso_2"].value = json.fonte_do_contexto_de_uso2;
     form["font_contexto_uso_3"].value = json.fonte_do_contexto_de_uso2;
     form["nota"].value = json.nota;
-
+    form["sugestao"].value = json.sugestao;
+    
     let z = localStorage.getItem("tipoUsuario");
     if(z == 3){
       form["redator"].value = json.redator;   
