@@ -11,6 +11,9 @@ module.exports = {
       area: {
         type: Sequelize.STRING
       },
+      sugestao: {
+        type: Sequelize.STRING
+      },
       categoria_gramatical: {
         type: Sequelize.STRING
       },
