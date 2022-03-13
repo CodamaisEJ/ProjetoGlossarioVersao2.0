@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: DataTypes.NOW,     
     },
     entrada: DataTypes.STRING,
+    sugestao: DataTypes.STRING,
     definicao: DataTypes.STRING,
     fonte_do_contexto_de_uso: DataTypes.STRING,
     fonte_da_definicao: DataTypes.STRING,
