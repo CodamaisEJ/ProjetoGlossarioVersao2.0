@@ -171,14 +171,14 @@ function pegarInputsDoForm(form_name) {
   const dicionario_especializado1 = form["dicio-espe-def"].value;
   const dicionario_especializado2 = form["dicio-espe2-def"].value;
   const definicao = form["prop_defini"].value;
-  //const hiponimo = form["hiponimo"].value;
+  const hiponimo = form["hiponimo"].value;
   const contexto_de_uso1 = form["context_uso_1"].value;
   const contexto_de_uso2 = form["context_uso_2"].value;
   const contexto_de_uso3 = form["context_uso_3"].value;
-  const remissiva = form["hiponimo"].value;
+  const remissiva = form["hiperonimo"].value;
   
   
-  const hiperonimo = form["hiperonimo"].value;
+  //const hiperonimo = form["hiperonimo"].value;
   const co_hiponimo = form["co-hiponimo"].value;
   const sugestao = form["sugestao"].value;
   
@@ -232,8 +232,8 @@ function pegarInputsDoForm(form_name) {
     nota,
     redator,
     remissiva,
-    //hiponimo,
-    hiperonimo,
+    hiponimo,
+    //hiperonimo,
     co_hiponimo,
     termo_ingles,
     termo_italiano, 
@@ -303,13 +303,13 @@ async function carregarDadosTermo() {
     form["dicio-espe-def"].value = json.dicionario_especializado1;
     form["dicio-espe2-def"].value = json.dicionario_especializado2;
     form["prop_defini"].value = json.definicao;
-    form["hiponimo"].value = json.remissiva;
+    form["hiponimo"].value = json.hiponimo;
    // form["hiponimo"].value = json.remissiva;
     form["context_uso_1"].value = json.contexto_de_uso1;
     form["context_uso_2"].value = json.contexto_de_uso2;
     form["context_uso_3"].value = json.contexto_de_uso3;
     //form["remissivas"].value = json.remissivas;
-    form["hiperonimo"].value = json.hiperonimo;
+    form["hiperonimo"].value = json.remissiva;
    // form["hiperonimo"].value = json.remissiva;
     form["co-hiponimo"].value = json.co_hiponimo;
     //form["co-hiponimo"].value = json.co_remissiva;
