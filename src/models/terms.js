@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
     acronimos: DataTypes.STRING,
     status: {
       type: DataTypes.STRING,   
-    }
+    },
     publicar: {
       type: DataTypes.STRING,   
     }
