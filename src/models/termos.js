@@ -65,10 +65,8 @@ module.exports = (sequelize, DataTypes) => {
     sinonimica: DataTypes.STRING,
     siglas: DataTypes.STRING,
     acronimos: DataTypes.STRING,
+    publicar: DataTypes.STRING,
     status: {
-      type: DataTypes.STRING,   
-    },
-    publicar: {
       type: DataTypes.STRING,   
     }
   }, {
