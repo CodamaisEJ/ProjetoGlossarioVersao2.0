@@ -1,3 +1,5 @@
+
+
 async function cadastrarTermo(event) {
   event.preventDefault();
 
@@ -173,9 +175,9 @@ function pegarInputsDoForm(form_name) {
   const contexto_de_uso1 = form["context_uso_1"].value;
   const contexto_de_uso2 = form["context_uso_2"].value;
   const contexto_de_uso3 = form["context_uso_3"].value;
-  //const remissiva = form["remissiva"].value;
+  //const remissiva = form["remissiva"].value; 
   const hiperonimo = form["hiperonimo"].value;
-  const co_hiponimo = form["co-hiponimo"].value; 
+  const co_hiponimo = form["co-hiponimo"].value;
   const revisao_linguistica = form["revisao_linguistica"].value;
   const termo_ingles = form["termo-ingles"].value;
   const termo_italiano = form["termo-Italiano"].value;
@@ -196,24 +198,21 @@ function pegarInputsDoForm(form_name) {
   const nota = form["nota"].value; 
   const data_da_ultima_revisao = form["data_ultima_revisao"].value;
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
-
   
- var z = localStorage.getItem("tipoUsuario");
+
+  var  publicar = form["publicar"].value;
+  
+  
+  var z = localStorage.getItem("tipoUsuario");
   if (z == 1 && z == 2 ) {   
      var  data_de_registro = new Date();
-     var status = "./img/square.png";  
   }
 
-  var publicar = "./img/publicar.png";
-
   var sugestao
-  var status = "./img/square.png";  
+ 
   var z = localStorage.getItem("tipoUsuario");
   if(z == 3){
     sugestao = form["sugestao"].value;
-    if(status == "./img/square.png"){
-      status = form["status"].value; 
-    }
   }
 
   
@@ -420,5 +419,3 @@ async function criarNotificacao(event, id, entrada, autor, situacao_termo) {
     console.log("Erro ao criar notificação: ", error.message);
   } 
 }
-
-
