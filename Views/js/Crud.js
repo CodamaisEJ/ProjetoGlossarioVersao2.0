@@ -181,6 +181,7 @@ function pegarInputsDoForm(form_name) {
   const hiperonimo = form["hiperonimo"].value;
   const co_hiponimo = form["co-hiponimo"].value;
   
+  const publicar = form["publicar"].value;
   
  var z = localStorage.getItem("tipoUsuario");
   if (z == 1 && z == 2) {   
@@ -235,6 +236,7 @@ function pegarInputsDoForm(form_name) {
     redator,
     //remissiva,
     hiponimo,
+    publicar,
     hiperonimo,
     co_hiponimo,
     termo_ingles,
@@ -336,6 +338,7 @@ async function carregarDadosTermo() {
     form["font_contexto_uso_3"].value = json.fonte_do_contexto_de_uso2;
     form["nota"].value = json.nota;
     form["sugestao"].value = json.sugestao;
+    form["publicar"].value = json.publicar;
     
     let z = localStorage.getItem("tipoUsuario");
     if(z == 3){

@@ -62,10 +62,14 @@ const consultaTerms = async() =>{
 const SearchTerms = (Termos) => {
   const htmlString = Termos
   .map((Termo) => {
+    console.log(Termo.publicar)
     return`
     <div class="termo_block" id="termo_block${Termo.entrada}">
-           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>      
-           <img src="./img/icon_lixo.png" onclick="DeletandoTerms(${Termo.id})">       
+           <p onclick="irParaTelaEditarTermo(${Termo.id})">${Termo.entrada}</p>
+           <div id="butoes">      
+           <img src="./img/icon_lixo.png" onclick="DeletandoTerms(${Termo.id})">   
+           <img  id="revisar" onclick="irParaTelaEditarTermoEspecialista(${Termo.id})" src="${Termo.publicar}" >    
+           </div>
     </div>
     `; 
       }).sort(function(a, b) {

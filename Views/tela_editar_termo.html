@@ -11,6 +11,7 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/termos_style.css">
     <link rel="stylesheet" href="./css/header-footer.css" />
     <link rel="stylesheet" href="./css/tela_cadastrar_termos_style.css" />
     <link rel="stylesheet" href="css/dropdown_user_icon.css">
@@ -377,7 +378,24 @@
                 <label for="termo-Espanhol">Termo em Espanhol:</label>
                 <input type="text" name="termo-Espanhol" id="termo-Espanhol" />
               </div>
+
+               <!-- STATUS -->
+
+            <div class="radio-block">
+              <p>Status: *</p>
+              <input
+                type="radio"
+                id="publicado"
+                name="pubicar"
+                value="./img/publicado.png"
+              />
+              <label for="publicado">Publicar</label>
+              
             </div>
+            </div>
+
+           
+          
 
             <div class="list-block">
               <div class="radio-block">
@@ -694,5 +712,6 @@
     <script src="js/menu_dropdown.js"></script>
     <script defer src="./js/tela_cadastrar_termos_input.js"></script>
     <script defer src="./js/verificar_termos.js"></script>
+    <script src="js/cadastro_script.js"></script>
   </body>
 </html>
