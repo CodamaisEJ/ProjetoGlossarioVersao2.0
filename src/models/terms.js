@@ -63,6 +63,9 @@ module.exports = (sequelize, DataTypes) => {
     status: {
       type: DataTypes.STRING,   
     }
+    publicar: {
+      type: DataTypes.STRING,   
+    }
   }, {
     sequelize,
     modelName: 'Terms',
