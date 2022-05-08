@@ -197,14 +197,13 @@ function pegarInputsDoForm(form_name) {
   const data_da_ultima_revisao = form["data_ultima_revisao"].value;
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
 
-  
+  var publicar = "./img/publicar.png";
  var z = localStorage.getItem("tipoUsuario");
   if (z == 1 && z == 2 ) {   
      var  data_de_registro = new Date();
      var status = "./img/square.png";  
+    
   }
-
-  var publicar = "./img/publicar.png";
 
   var sugestao
   var status = "./img/square.png";  

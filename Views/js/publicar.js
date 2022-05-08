@@ -199,14 +199,15 @@ function pegarInputsDoForm(form_name) {
   const data_da_ultima_revisao = form["data_ultima_revisao"].value;
   const freq_no_termo_corpus = form["frequencia_termo_corpus"].value;
   
-
   var  publicar = form["publicar"].value;
-  
+    
   
   var z = localStorage.getItem("tipoUsuario");
   if (z == 1 && z == 2 ) {   
      var  data_de_registro = new Date();
   }
+
+ 
 
   var sugestao
  
@@ -216,6 +217,7 @@ function pegarInputsDoForm(form_name) {
   }
 
   
+  var status = form["status"].value; 
   // if (entrada === "" || cat_morfo === "" || genero_grupo === "") {
   //   alert("Por favor preencha os campos.");
   //   return;
@@ -223,6 +225,7 @@ function pegarInputsDoForm(form_name) {
 
   return {
     definicao,
+    status,
     area,
     sugestao,
     categoria_gramatical,
@@ -273,7 +276,7 @@ function pegarInputsDoForm(form_name) {
     sinonimica,
     siglas,
     acronimos,
-    status,
+    
   };
 }
 
