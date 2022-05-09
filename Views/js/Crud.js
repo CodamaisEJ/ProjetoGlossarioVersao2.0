@@ -140,6 +140,7 @@ function pegarInputsDoForm(form_name) {
 
   var z = localStorage.getItem("tipoUsuario");
   let revisao_especialista
+  
   if (z == 3) {   
      revisao_especialista = localStorage.getItem("motrar_user");
   }
@@ -207,6 +208,7 @@ function pegarInputsDoForm(form_name) {
 
   var sugestao
   var status = "./img/square.png";  
+
   var z = localStorage.getItem("tipoUsuario");
   if(z == 3){
     sugestao = form["sugestao"].value;
@@ -335,23 +337,14 @@ async function carregarDadosTermo() {
     form["font_contexto_uso_3"].value = json.fonte_do_contexto_de_uso2;
     form["nota"].value = json.nota;
     form["sugestao"].value = json.sugestao;
-
-    
-    
-    
     let z = localStorage.getItem("tipoUsuario");
     if(z == 3){
       form["redator"].value = json.redator;  
       
     }
-
-    
-    
     form["data_ultima_revisao"].value = json.data_da_ultima_revisao;
-  
     console.log(json.data_de_registro)
-    form["frequencia_termo_corpus"].value = json.freq_no_termo_corpus;
-      
+    form["frequencia_termo_corpus"].value = json.freq_no_termo_corpus; 
     console.log(`dados do termo carregados`);
   } catch (error) {
     console.log(`Erro ao carregar dados do termo`, error);
@@ -372,9 +365,11 @@ async function criarNotificacao(event, id, entrada, autor, situacao_termo) {
       break;
     }
     case "PUT":{
+   
       var z = localStorage.getItem("tipoUsuario");
       if (z == 3) {
         situacao = "Revisado";
+        autor = localStorage.getItem("motrar_user");
       }else{
         situacao = "Editado";
       }  
