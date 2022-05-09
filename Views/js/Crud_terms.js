@@ -91,6 +91,8 @@ async function DeletandoTerms(termo_id) {
     });
     const json = await result.json();
 
+    alert("Termo Deletado com Sucesso!");
+
     if (result.status === 200) {
       // Criando notificação
       const { id, entrada, autor } = termo;
@@ -100,7 +102,8 @@ async function DeletandoTerms(termo_id) {
       var vali = 1;
       localStorage.setItem("notifica",vali);
       
-      alert("Termo Deletado com Sucesso!");
+      
+
       DeleteTerms(termo_id);
       
     } else if (result.status === 404) {
