@@ -37,9 +37,9 @@ async function editarsenha(event) {
     if (result.ok) {
 
         Email.send({
-        Host : "smtp.gmail.com",
-        Username : "lionidiota@gmail.com",
-        Password : "ynxfucisxpkrzors",
+        Host : "mail.lexic.com.br",
+        Username : "contato@lexic.com.br",
+        Password : "Lexic2020*",
         To : send,
         From : "codamais.ej@gmail.com",
         Subject : "Senha Ficha Terminológica",
@@ -64,9 +64,9 @@ async function editarsenha(event) {
 function enviar(){
 
     Email.send({
-    Host : "smtp.gmail.com",
-    Username : "lionidiota@gmail.com",
-    Password : "ynxfucisxpkrzors",
+    Host : "mail.lexic.com.br",
+    Username : "contato@lexic.com.br",
+    Password : "Lexic2020*",
     To : send,
     From : "codamais.ej@gmail.com",
     Subject : "Senha Ficha Terminológica",
