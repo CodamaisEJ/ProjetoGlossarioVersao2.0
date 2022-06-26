@@ -35,7 +35,7 @@ app.post("/sendemail", (req, res, next) => {
                
                 let receivers = [
                     {
-                        email: emailer ,
+                        email: emailer,
                        
                     },
                 ]

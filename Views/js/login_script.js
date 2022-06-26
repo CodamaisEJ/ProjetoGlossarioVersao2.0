@@ -110,7 +110,6 @@ function ListUsers(Users) {
       }
     } 
   });
-  alert("usuarioa nao existe!");
 }
 
 
