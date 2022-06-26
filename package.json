@@ -16,7 +16,6 @@
   "license": "ISC",
   "dependencies": {
     "@sendinblue/client": "^3.2.1",
-    "@types/node": "^18.0.0",
     "cors": "^2.8.5",
     "cross-fetch": "^3.1.4",
     "dotenv": "^16.0.1",
@@ -26,8 +25,7 @@
     "nodemailer": "^6.7.2",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
-    "sib-api-v3-sdk": "^8.2.0",
-    "type": "module"
+    "sib-api-v3-sdk": "^8.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12",
