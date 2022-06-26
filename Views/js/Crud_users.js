@@ -65,6 +65,8 @@ function DeleteUsers(user_id) {
 
 consultaUsers();
 
+
+
 async function cadastrarUsuario(event) {
   event.preventDefault();
   const form = document.forms["create_user"];
@@ -72,12 +74,14 @@ async function cadastrarUsuario(event) {
   const nome = form["complete_name"].value;
   const email = form["email"].value;
   const tipo_de_usuario = form["type_user_group"].value;
-  const senha = form["password"].value;
+  var senha = form["password"].value;
 
   if (nome === "" || email === "" || tipo_de_usuario === "") {
     alert("Por favor preencha os campos.");
     return;
   }
+  
+  var send = email
 
   const data = {
     nome,
@@ -98,22 +102,11 @@ async function cadastrarUsuario(event) {
 
     if (result.ok) {
       
-
-        Email.send({
-        Host : "smtp.gmail.com",
-        Username : "lionidiota@gmail.com",
-        Password : "ynxfucisxpkrzors",
-        To : email,
-        From : "codamais.ej@gmail.com",
-        Subject : "Senha Ficha Terminológica",
-        Body : ` Esta é sua senha de acesso ao sistema da Ficha <br>
-                Terminológica:  ${senha} `
-        }).then(
-             
-        );
+      enviar(senha, send);
+       
 
       alert("Usuário cadastrado com sucesso.");
-      location.href = "tela_usuarios.html";
+      
     } else {
       alert("Usuário já existe.");
     }

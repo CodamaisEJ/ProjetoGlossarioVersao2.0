@@ -1,26 +1,18 @@
+
 var login = localStorage.getItem("motrar_senha");
 console.log(login)
 
-var send= localStorage.getItem("motrar_email");
+var send = localStorage.getItem("motrar_email");
 console.log(send)
 
-
-
-
-
-async function editarsenha(event) {
+ async function editarsenha(event) {
   const user_id = history.state;
-
+  
   event.preventDefault();
   
   const form = document.forms["tela_login"];
-
- 
-  const senha = form["password"].value;
-
-
-
-  const data = {
+  var senha = form["password"].value;
+  var data = {
     senha,
   };
 
@@ -35,11 +27,12 @@ async function editarsenha(event) {
     );
 
     if (result.ok) {
-
+      enviar(senha, send);
         Email.send({
-        Host : "mail.lexic.com.br",
-        Username : "contato@lexic.com.br",
-        Password : "Lexic2020*",
+        Host : "smtp-relay.sendinblue.com",
+        Username : "codamais.ej@gmail.com",
+        Password : "ZYHc1FWBXa6PbAfg",
+        port: 587,
         To : send,
         From : "codamais.ej@gmail.com",
         Subject : "Senha Ficha Terminológica",
@@ -47,32 +40,17 @@ async function editarsenha(event) {
                 Terminológica:  ${senha} `
         }).then(
              
-        );
-
-       
+        );   
       alert("Nova senha enviada para o seu e-mail");
-
-      window.location.href = "tela_login.html";
+      
+      
+      //window.location.href = "/send-email";    
+     // window.location.href = "tela_login.html";
       
     } 
   } catch (error) {
    
     console.log(`error.message`, error.message);
   }
-}
+ }
 
-function enviar(){
-
-    Email.send({
-    Host : "mail.lexic.com.br",
-    Username : "contato@lexic.com.br",
-    Password : "Lexic2020*",
-    To : send,
-    From : "codamais.ej@gmail.com",
-    Subject : "Senha Ficha Terminológica",
-    Body : ` Esta é sua senha de acesso ao sistema da Ficha <br>
-            Terminológica:  ${senha} `
-    }).then(
-         
-    );
-}

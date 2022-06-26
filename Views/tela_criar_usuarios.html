@@ -130,6 +130,37 @@
       <h2>Desenvolvido por Codamais &copy; 2021</h2>
     </footer>
 
+    <script>
+            
+      let email = localStorage.getItem("motrar_email");
+      console.log(email)
+      function enviar(send, senha) { 
+          console.log(senha) 
+          console.log(send)
+          var data = {
+            senha,
+            send
+          };  
+          fetch(`/sendemail?send=${send}&senha=${senha}`, {
+              method: "POST",
+              body: JSON.stringify(data),
+             
+          }).then((res) => {
+
+              // success
+             // alert("success")
+             window.location.href = "tela_usuarios.html";
+              return res.json([
+                 send
+              ]);
+              console.log(send)
+          }).catch((err) => {
+              // error 
+              alert(err)
+          })
+          }
+  </script>
+
 
     <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/user_creator_script.js"></script>

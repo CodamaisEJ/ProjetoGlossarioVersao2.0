@@ -33,9 +33,6 @@ async function consultaUsers() {
 
 let UserHTML;
 
-
-
-
 function ListUsers(Users) {
   Users.forEach((User) => {   
 
@@ -113,6 +110,7 @@ function ListUsers(Users) {
       }
     } 
   });
+  alert("usuarioa nao existe!");
 }
 
 
